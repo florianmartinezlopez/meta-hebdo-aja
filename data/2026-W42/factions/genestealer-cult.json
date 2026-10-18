@@ -1,0 +1,773 @@
+{
+ "nom": "Genestealer Cult",
+ "slug": "genestealer-cult",
+ "periode": {
+  "wins": 27,
+  "losses": 33,
+  "total": 60,
+  "winRate": "45.00"
+ },
+ "joueurs": 16,
+ "invaincus": 0,
+ "x1": 1,
+ "victoires_tournoi": 0,
+ "sur_representation": "0.80",
+ "dispositions": {
+  "Priority Assets": 8,
+  "Purge the Foe": 1,
+  "Reconnaissance": 3,
+  "Take and Hold": 4
+ },
+ "combinaisons": [
+  {
+   "detachment": "Biosanctic Broodsurge | Xenocult Masses",
+   "players": 5,
+   "fieldPercent": 31.25,
+   "wins": 11,
+   "losses": 7,
+   "total": 18,
+   "winRate": "61.11"
+  },
+  {
+   "detachment": "Biosanctic Broodsurge | Purestrain Broodswarm",
+   "players": 3,
+   "fieldPercent": 18.75,
+   "wins": 5,
+   "losses": 6,
+   "total": 11,
+   "winRate": "45.45"
+  },
+  {
+   "detachment": "Heroes of the Uprising | Purestrain Broodswarm | Xenocult Masses",
+   "players": 3,
+   "fieldPercent": 18.75,
+   "wins": 4,
+   "losses": 6,
+   "total": 10,
+   "winRate": "40.00"
+  },
+  {
+   "detachment": "Final Day | Purestrain Broodswarm",
+   "players": 1,
+   "fieldPercent": 6.25,
+   "wins": 1,
+   "losses": 2,
+   "total": 3,
+   "winRate": "33.33"
+  },
+  {
+   "detachment": "Final Day | Xenocult Masses",
+   "players": 1,
+   "fieldPercent": 6.25,
+   "wins": 4,
+   "losses": 1,
+   "total": 5,
+   "winRate": "80.00"
+  },
+  {
+   "detachment": "Outlander Claw | Purestrain Broodswarm",
+   "players": 1,
+   "fieldPercent": 6.25,
+   "wins": 0,
+   "losses": 5,
+   "total": 5,
+   "winRate": "0.00"
+  },
+  {
+   "detachment": "Purestrain Broodswarm",
+   "players": 1,
+   "fieldPercent": 6.25,
+   "wins": 1,
+   "losses": 4,
+   "total": 5,
+   "winRate": "20.00"
+  },
+  {
+   "detachment": "Purestrain Broodswarm | Xenocreed Congregation",
+   "players": 1,
+   "fieldPercent": 6.25,
+   "wins": 1,
+   "losses": 2,
+   "total": 3,
+   "winRate": "33.33"
+  }
+ ],
+ "adversaires": [
+  {
+   "opponentFaction": "Astra Militarum",
+   "wins": 4,
+   "losses": 0,
+   "total": 4,
+   "winRate": "100.00",
+   "avgDifferential": 29,
+   "differentialGames": 4,
+   "goingFirst": {
+    "wins": 4,
+    "losses": 0,
+    "total": 4,
+    "winRate": "100.00",
+    "avgDifferential": 29,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "Blood Angels",
+   "wins": 1,
+   "losses": 2,
+   "total": 3,
+   "winRate": "33.33",
+   "avgDifferential": -9.666666666666666,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": -7.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Chaos Daemons",
+   "wins": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": 16.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": 16.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Chaos Space Marines",
+   "wins": 2,
+   "losses": 1,
+   "total": 3,
+   "winRate": "66.67",
+   "avgDifferential": -6.666666666666667,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": "100.00",
+    "avgDifferential": 10,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Dark Angels",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 23,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Death Guard",
+   "wins": 1,
+   "losses": 2,
+   "total": 3,
+   "winRate": "33.33",
+   "avgDifferential": -13.666666666666666,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": -5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Emperor's Children",
+   "wins": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": -11.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 30,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Grey Knights",
+   "wins": 2,
+   "losses": 1,
+   "total": 3,
+   "winRate": "66.67",
+   "avgDifferential": 33.666666666666664,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": "100.00",
+    "avgDifferential": 51,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Necrons",
+   "wins": 2,
+   "losses": 0,
+   "total": 2,
+   "winRate": "100.00",
+   "avgDifferential": 34,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": "100.00",
+    "avgDifferential": 34,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Orks",
+   "wins": 1,
+   "losses": 3,
+   "total": 4,
+   "winRate": "25.00",
+   "avgDifferential": 0,
+   "differentialGames": 4,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 2,
+    "total": 2,
+    "winRate": "0.00",
+    "avgDifferential": -19.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Space Marines (Astartes)",
+   "wins": 3,
+   "losses": 5,
+   "total": 8,
+   "winRate": "37.50",
+   "avgDifferential": -11,
+   "differentialGames": 8,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 2,
+    "total": 4,
+    "winRate": "50.00",
+    "avgDifferential": -1.75,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "T'au Empire",
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00",
+   "avgDifferential": -18,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 2,
+    "total": 3,
+    "winRate": "33.33",
+    "avgDifferential": -22.666666666666668,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Tyranids",
+   "wins": 1,
+   "losses": 3,
+   "total": 4,
+   "winRate": "25.00",
+   "avgDifferential": -32,
+   "differentialGames": 4,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 10,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "World Eaters",
+   "wins": 5,
+   "losses": 2,
+   "total": 7,
+   "winRate": "71.43",
+   "avgDifferential": 18,
+   "differentialGames": 7,
+   "goingFirst": {
+    "wins": 5,
+    "losses": 2,
+    "total": 7,
+    "winRate": "71.43",
+    "avgDifferential": 18,
+    "differentialGames": 7
+   }
+  },
+  {
+   "opponentFaction": "Adeptus Custodes",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -14,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -14,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Aeldari",
+   "wins": 0,
+   "losses": 2,
+   "total": 2,
+   "winRate": "0.00",
+   "avgDifferential": -38.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Leagues of Votann",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -8,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -8,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Space Wolves",
+   "wins": 0,
+   "losses": 3,
+   "total": 3,
+   "winRate": "0.00",
+   "avgDifferential": -35,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 2,
+    "total": 2,
+    "winRate": "0.00",
+    "avgDifferential": -32.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Thousand Sons",
+   "wins": 0,
+   "losses": 2,
+   "total": 2,
+   "winRate": "0.00",
+   "avgDifferential": -17,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  }
+ ],
+ "listes_recentes": [
+  {
+   "playerName": "Adrian Nanez",
+   "playerUid": "b63a414f15ea130f89",
+   "eventName": "BZU 40K 2026",
+   "eventUid": "b5306acfabc2222445",
+   "numberOfPlayers": 48,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Final Day | Xenocult Masses",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Floof Cox",
+   "playerUid": "c3754343f1e11be616",
+   "eventName": "LVO 2026 - Warhammer 40k Championships - Las Vegas Open",
+   "eventUid": "1f5cf8ab5f28571388",
+   "numberOfPlayers": 652,
+   "numberOfRounds": 10,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Purestrain Broodswarm | Heroes of the Uprising | Xenocult Masses",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-02"
+  },
+  {
+   "playerName": "Simon Warren",
+   "playerUid": "6f735763c2c5c03ce5",
+   "eventName": "The London Grand Tournament - 40k Main Event (LGT 40k GT)",
+   "eventUid": "4848688a4a9990005c",
+   "numberOfPlayers": 1049,
+   "numberOfRounds": 10,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Final Day | Xenocult Masses",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-25"
+  },
+  {
+   "playerName": "Jeremy Drugeot",
+   "playerUid": "4c3daef3f3f0cced05",
+   "eventName": "Grand Pitounerie 2 Open 40k de Loire Atlantique",
+   "eventUid": "1bc469b11620503166",
+   "numberOfPlayers": 86,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Biosanctic Broodsurge | Xenocult Masses",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-26"
+  },
+  {
+   "playerName": "Vilmer Cedervad",
+   "playerUid": "a9b9f990c12df0ecc8",
+   "eventName": "Wettcon höst 2026",
+   "eventUid": "c91805a4a970f420cb",
+   "numberOfPlayers": 44,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Biosanctic Broodsurge | Xenocult Masses",
+   "disposition": "Take and Hold",
+   "startDate": "2026-09-26"
+  },
+  {
+   "playerName": "Floof Cox",
+   "playerUid": "c3754343f1e11be616",
+   "eventName": "MAD Warhammer 40k 11th Edition Iron Man Grand Tournament",
+   "eventUid": "47a0673a99e68fcf28",
+   "numberOfPlayers": 18,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 1,
+   "losses": 0,
+   "detachment": "Xenocreed Congregation | Xenocult Masses",
+   "disposition": "Priority Assets",
+   "startDate": "2026-09-19"
+  },
+  {
+   "playerName": "Loukas Benard",
+   "playerUid": "e150df7777dbbafaac",
+   "eventName": "Open des 3 Frontières",
+   "eventUid": "da852dce0c941171b7",
+   "numberOfPlayers": 66,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Host of Ascension",
+   "disposition": "Take and Hold",
+   "startDate": "2026-09-19"
+  },
+  {
+   "playerName": "Nik Rudzitis",
+   "playerUid": "ccf09a32851e73bf67",
+   "eventName": "Warlords of the Keep 40k GT",
+   "eventUid": "128f59fbc2a74ab435",
+   "numberOfPlayers": 19,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Biosanctic Broodsurge | Xenocult Masses",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-19"
+  },
+  {
+   "playerName": "John Indellicate",
+   "playerUid": "234b3da624272ae25c",
+   "eventName": "Flying Monkey Con 26 Warhammer 40k GT",
+   "eventUid": "5e00deb6028dcfed93",
+   "numberOfPlayers": 112,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 1,
+   "losses": 0,
+   "detachment": "Xenocreed Congregation | Xenocult Masses",
+   "disposition": "Priority Assets",
+   "startDate": "2026-09-12"
+  },
+  {
+   "playerName": "Justin Bunting",
+   "playerUid": "41a65087cca0b7b566",
+   "eventName": "MtG Humphreys Tabletop Brew and Battle \"GRAND TOURNAMENT\" Golden Ticket Event",
+   "eventUid": "1b3a8f7738f25b49d6",
+   "numberOfPlayers": 20,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 1,
+   "losses": 0,
+   "detachment": "Xenocreed Congregation | Xenocult Masses",
+   "disposition": "Priority Assets",
+   "startDate": "2026-09-11"
+  },
+  {
+   "playerName": "Lewis Davie",
+   "playerUid": "ef635fb51e58466330",
+   "eventName": "Doonhamer Open 2026",
+   "eventUid": "5574f042700b973dda",
+   "numberOfPlayers": 124,
+   "numberOfRounds": 7,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Final Day | Xenocult Masses",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-12"
+  },
+  {
+   "playerName": "Tomislav Turic",
+   "playerUid": "1ec6d80dc78e3419a2",
+   "eventName": "Aemona Grand Tournament vol. 5",
+   "eventUid": "5a2aca24222a7adf93",
+   "numberOfPlayers": 31,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Purestrain Broodswarm | Heroes of the Uprising | Xenocult Masses",
+   "disposition": "Disruption",
+   "startDate": "2026-09-12"
+  },
+  {
+   "playerName": "Stanley Peddle",
+   "playerUid": "f56fd8709f307d3624",
+   "eventName": "Overwatch 2026 - Two Day Warhammer 40,000 Tournament",
+   "eventUid": "016ccf740e346cc97b",
+   "numberOfPlayers": 20,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Biosanctic Broodsurge | Xenocult Masses",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-12"
+  },
+  {
+   "playerName": "Xylioxs",
+   "playerUid": "9f161b6ef2afb54e8a",
+   "eventName": "Les stratèges d ambre le retour",
+   "eventUid": "27f760f09af524b1e4",
+   "numberOfPlayers": 36,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Heroes of the Uprising | Biosanctic Broodsurge",
+   "disposition": "Disruption",
+   "startDate": "2026-09-05"
+  },
+  {
+   "playerName": "Lucas",
+   "playerUid": "e0bed2019eb1c07072",
+   "eventName": "Skövde Battleforge VIII",
+   "eventUid": "7fe79cf9de1609c0de",
+   "numberOfPlayers": 71,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 1,
+   "losses": 0,
+   "detachment": "Purestrain Broodswarm | Heroes of the Uprising | Xenocult Masses",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-08-29"
+  },
+  {
+   "playerName": "Sean McQuaid",
+   "playerUid": "043cc3ecf7edc85067",
+   "eventName": "The MANCHESTER 40k SUPER-MAJOR  - SUMMER",
+   "eventUid": "e14e48034cdb21fe3c",
+   "numberOfPlayers": 226,
+   "numberOfRounds": 8,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Biosanctic Broodsurge | Xenocult Masses",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-08-29"
+  },
+  {
+   "playerName": "Wilson Annichiarico",
+   "playerUid": "a852db780b16099f1c",
+   "eventName": "HWP Saltier Classic GT 2026 (August)",
+   "eventUid": "4d9d46fb8f808fb480",
+   "numberOfPlayers": 30,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Purestrain Broodswarm | Heroes of the Uprising | Xenocult Masses",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-08-29"
+  },
+  {
+   "playerName": "John Helbig",
+   "playerUid": "3f7f29f054b346ba84",
+   "eventName": "Summer Slaughter: Warhammer 40K Grand Tournament",
+   "eventUid": "fb7a58a1fb0658cfa4",
+   "numberOfPlayers": 73,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Brood Brothers Auxilia | Xenocult Masses",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-08-15"
+  },
+  {
+   "playerName": "Charlie Andre",
+   "playerUid": "c61ce303fceebc5d80",
+   "eventName": "NSO 2026",
+   "eventUid": "0ea39e748a6e6d26c9",
+   "numberOfPlayers": 58,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Biosanctic Broodsurge | Heroes of the Uprising",
+   "disposition": "Take and Hold",
+   "startDate": "2026-08-15"
+  },
+  {
+   "playerName": "Christopher (C42) Naujoks",
+   "playerUid": "f75f8c710a3f49c759",
+   "eventName": "ELBCOAST CUP 24",
+   "eventUid": "b0414f352b8f2df000",
+   "numberOfPlayers": 31,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Biosanctic Broodsurge | Xenocult Masses",
+   "disposition": "Take and Hold",
+   "startDate": "2026-08-15"
+  },
+  {
+   "playerName": "Pan_Jacek",
+   "playerUid": "ce3bcbd54b3d15ad01",
+   "eventName": "BMC Cup",
+   "eventUid": "67a0113f16704359d4",
+   "numberOfPlayers": 84,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Xenocreed Congregation",
+   "disposition": "Priority Assets",
+   "startDate": "2026-08-07"
+  },
+  {
+   "playerName": "Dale Welten",
+   "playerUid": "11d2c0245b82fd1770",
+   "eventName": "Auspicious Northern Showdown",
+   "eventUid": "b458256c28331902d4",
+   "numberOfPlayers": 18,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Biosanctic Broodsurge | Xenocult Masses",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-08-07"
+  },
+  {
+   "playerName": "TJ Lanigan",
+   "playerUid": "c1e7e5d748e3b1008b",
+   "eventName": "Your Hobby Place Road to NOVA Hosted by Away Games",
+   "eventUid": "d2bdac30fdc8804eb9",
+   "numberOfPlayers": 53,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Xenocreed Congregation | Xenocult Masses",
+   "disposition": "Priority Assets",
+   "startDate": "2026-08-01"
+  },
+  {
+   "playerName": "Eric Tadt",
+   "playerUid": "54c8d86f4c6163e8a6",
+   "eventName": "Lone Star Open 2026 - Warhammer 40k Champs",
+   "eventUid": "72a8ebac7234c9df7c",
+   "numberOfPlayers": 328,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Final Day | Xenocult Masses",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-08-01"
+  },
+  {
+   "playerName": "Dominic Gierber",
+   "playerUid": "5fbf536d0f38344234",
+   "eventName": "Lone Star Open 2026 - Warhammer 40k Champs",
+   "eventUid": "72a8ebac7234c9df7c",
+   "numberOfPlayers": 328,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Biosanctic Broodsurge | Xenocult Masses",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-08-01"
+  }
+ ],
+ "listes_total_site": 34
+}

@@ -1,0 +1,692 @@
+{
+ "nom": "Deathwatch",
+ "slug": "deathwatch",
+ "periode": {
+  "wins": 16,
+  "losses": 11,
+  "total": 27,
+  "winRate": "59.26"
+ },
+ "joueurs": 6,
+ "invaincus": 0,
+ "x1": 0,
+ "victoires_tournoi": 0,
+ "sur_representation": "0.00",
+ "dispositions": {
+  "Priority Assets": 2,
+  "Purge the Foe": 4
+ },
+ "combinaisons": [
+  {
+   "detachment": "Black Spear Task Force",
+   "players": 4,
+   "fieldPercent": 66.66666666666666,
+   "wins": 11,
+   "losses": 7,
+   "total": 18,
+   "winRate": "61.11"
+  },
+  {
+   "detachment": "Assault Brethren | Stormlance Task Force | Terminator Storm Force",
+   "players": 1,
+   "fieldPercent": 16.666666666666664,
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00"
+  },
+  {
+   "detachment": "Ironstorm Spearhead | Phobos Shadow Force | Terminator Storm Force",
+   "players": 1,
+   "fieldPercent": 16.666666666666664,
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00"
+  }
+ ],
+ "adversaires": [
+  {
+   "opponentFaction": "Adeptus Mechanicus",
+   "wins": 1,
+   "losses": 3,
+   "total": 4,
+   "winRate": "25.00",
+   "avgDifferential": -36.75,
+   "differentialGames": 4,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -41,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Chaos Daemons",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 6,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Drukhari",
+   "wins": 2,
+   "losses": 0,
+   "total": 2,
+   "winRate": "100.00",
+   "avgDifferential": 33,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Emperor's Children",
+   "wins": 2,
+   "losses": 0,
+   "total": 2,
+   "winRate": "100.00",
+   "avgDifferential": 35,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": "100.00",
+    "avgDifferential": 35,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Grey Knights",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 16,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Imperial Knights",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 57,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 57,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Orks",
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00",
+   "avgDifferential": -0.2,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 84,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Space Wolves",
+   "wins": 2,
+   "losses": 0,
+   "total": 2,
+   "winRate": "100.00",
+   "avgDifferential": 41.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "T'au Empire",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 39,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 39,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Tyranids",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 34,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 34,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "World Eaters",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 20,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 20,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Adepta Sororitas",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -47,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -47,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Astra Militarum",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -80,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Blood Angels",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -34,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -34,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Death Guard",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -62,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Leagues of Votann",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -10,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Space Marines (Astartes)",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -39,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  }
+ ],
+ "listes_recentes": [
+  {
+   "playerName": "Jeff Cope",
+   "playerUid": "1ab35ab47f4c3e26e5",
+   "eventName": "LVO 2026 - Warhammer 40k Championships - Las Vegas Open",
+   "eventUid": "1f5cf8ab5f28571388",
+   "numberOfPlayers": 652,
+   "numberOfRounds": 10,
+   "wins": 8,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-02"
+  },
+  {
+   "playerName": "Travis Finell",
+   "playerUid": "aa16334f42414b7060",
+   "eventName": "LVO 2026 - Warhammer 40k Championships - Las Vegas Open",
+   "eventUid": "1f5cf8ab5f28571388",
+   "numberOfPlayers": 652,
+   "numberOfRounds": 10,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Librarius Conclave | Bastion Task Force",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-02"
+  },
+  {
+   "playerName": "David Zapletal",
+   "playerUid": "206f8d3998f73bd302",
+   "eventName": "Pilsen Meta Rift Fall 2026",
+   "eventUid": "4c91f3f991ad5848e5",
+   "numberOfPlayers": 40,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-03"
+  },
+  {
+   "playerName": "Joshua Gray",
+   "playerUid": "9b54742047a37d9762",
+   "eventName": "Whitby Autumn GT",
+   "eventUid": "a8a29587f872f910a1",
+   "numberOfPlayers": 27,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-03"
+  },
+  {
+   "playerName": "Nicky 🐿️ Myland",
+   "playerUid": "dca955b4decd654056",
+   "eventName": "Whitby Autumn GT",
+   "eventUid": "a8a29587f872f910a1",
+   "numberOfPlayers": 27,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-03"
+  },
+  {
+   "playerName": "Feliks Bartkiewicz",
+   "playerUid": "a594493ea93fe1f6e5",
+   "eventName": "The London Grand Tournament - 40k Main Event (LGT 40k GT)",
+   "eventUid": "4848688a4a9990005c",
+   "numberOfPlayers": 1049,
+   "numberOfRounds": 10,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-09-25"
+  },
+  {
+   "playerName": "Guy Miscampbell",
+   "playerUid": "3da9be40725867f8d9",
+   "eventName": "The London Grand Tournament - 40k Main Event (LGT 40k GT)",
+   "eventUid": "4848688a4a9990005c",
+   "numberOfPlayers": 1049,
+   "numberOfRounds": 10,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-09-25"
+  },
+  {
+   "playerName": "Travis Finell",
+   "playerUid": "aa16334f42414b7060",
+   "eventName": "THERE IS ONLY WAR V 40k GT",
+   "eventUid": "f539ce8ac647900f83",
+   "numberOfPlayers": 52,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Librarius Conclave | Bastion Task Force",
+   "disposition": "Take and Hold",
+   "startDate": "2026-09-19"
+  },
+  {
+   "playerName": "Tobias Möllmann",
+   "playerUid": "027550aea80569dad5",
+   "eventName": "Münsterland Major 5",
+   "eventUid": "e2ca9a8017b78a78b8",
+   "numberOfPlayers": 91,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-09-19"
+  },
+  {
+   "playerName": "Kyle Sams",
+   "playerUid": "8ab287adba4237a07a",
+   "eventName": "The Innsmouth Slaughter 40k GT",
+   "eventUid": "8707992ec18ef655a2",
+   "numberOfPlayers": 32,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-09-12"
+  },
+  {
+   "playerName": "Tim Royers",
+   "playerUid": "63fb4bdde245d628cc",
+   "eventName": "Flying Monkey Con 26 Warhammer 40k GT",
+   "eventUid": "5e00deb6028dcfed93",
+   "numberOfPlayers": 112,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-09-12"
+  },
+  {
+   "playerName": "Jackson Grant",
+   "playerUid": "b083d0a32ceeda2c5d",
+   "eventName": "Springs Thundercluckers September 2026 GT WCW Qualifier",
+   "eventUid": "979cde4fa72cda17cc",
+   "numberOfPlayers": 48,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Librarius Conclave | Bastion Task Force",
+   "disposition": "Take and Hold",
+   "startDate": "2026-09-12"
+  },
+  {
+   "playerName": "Nick Gunderson",
+   "playerUid": "8376c68c6c23e98dd4",
+   "eventName": "Springs Thundercluckers September 2026 GT WCW Qualifier",
+   "eventUid": "979cde4fa72cda17cc",
+   "numberOfPlayers": 48,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-09-12"
+  },
+  {
+   "playerName": "Mark Hertel",
+   "playerUid": "01440747805f09b0e5",
+   "eventName": "NOVA Open 2026 Grand Tournament",
+   "eventUid": "d9e49ae9b30f03cb4b",
+   "numberOfPlayers": 373,
+   "numberOfRounds": 9,
+   "wins": 8,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-09-04"
+  },
+  {
+   "playerName": "Nguyên Lỏd",
+   "playerUid": "e4419d0743dc3de818",
+   "eventName": "The Fall of Empire 4",
+   "eventUid": "478d0e864df0229fa2",
+   "numberOfPlayers": 20,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-09-05"
+  },
+  {
+   "playerName": "Travis Finell",
+   "playerUid": "aa16334f42414b7060",
+   "eventName": "Smite Club Open 2026 - 40K Worlds Qualifier & Fundraiser",
+   "eventUid": "e9c14b77bb6d7540ac",
+   "numberOfPlayers": 126,
+   "numberOfRounds": 6,
+   "wins": 6,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Librarius Conclave | Bastion Task Force",
+   "disposition": "Take and Hold",
+   "startDate": "2026-08-22"
+  },
+  {
+   "playerName": "Luke Jakins",
+   "playerUid": "6af88a7cc64204cf79",
+   "eventName": "ITA 40K SINGLES GT AUGUST 2026",
+   "eventUid": "71af660cfd3228bf45",
+   "numberOfPlayers": 32,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-08-21"
+  },
+  {
+   "playerName": "Sam Nowell",
+   "playerUid": "6fefe47c711a6c4b60",
+   "eventName": "Fellowship Two-Day 2k 40k",
+   "eventUid": "250bc1ef24c2793e62",
+   "numberOfPlayers": 23,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-08-22"
+  },
+  {
+   "playerName": "Mark Hertel",
+   "playerUid": "01440747805f09b0e5",
+   "eventName": "21st Legion Wargaming Presents: Heart of War 2026 40K hosted by Away Games",
+   "eventUid": "65906de559a681c048",
+   "numberOfPlayers": 60,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-08-15"
+  },
+  {
+   "playerName": "Lane DeLong",
+   "playerUid": "0b41ac21c8caf4e337",
+   "eventName": "Summer Showdown Warhammer 40K GT",
+   "eventUid": "12a9e2f96d537c7049",
+   "numberOfPlayers": 26,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-08-15"
+  },
+  {
+   "playerName": "Tim Royers",
+   "playerUid": "63fb4bdde245d628cc",
+   "eventName": "Iowaaagh! Moose-tacular 2026",
+   "eventUid": "f8c9de83a9652d0cc2",
+   "numberOfPlayers": 76,
+   "numberOfRounds": 6,
+   "wins": 6,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-08-08"
+  },
+  {
+   "playerName": "Sam Nowell",
+   "playerUid": "6fefe47c711a6c4b60",
+   "eventName": "The Wyldlands Burns GT - Summer 2026",
+   "eventUid": "011854ceab267dc579",
+   "numberOfPlayers": 31,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Priority Assets",
+   "startDate": "2026-07-25"
+  },
+  {
+   "playerName": "Tim Royers",
+   "playerUid": "63fb4bdde245d628cc",
+   "eventName": "Northern Maelstrom 2026 Warhammer 40,000 Grand Tournament",
+   "eventUid": "c318ae15732384acd2",
+   "numberOfPlayers": 132,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-07-25"
+  },
+  {
+   "playerName": "Phillip Schwan",
+   "playerUid": "9107f34d4a7ac5737a",
+   "eventName": "War in the Wastelands GT",
+   "eventUid": "0da18f0ecfb935406e",
+   "numberOfPlayers": 40,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-07-25"
+  },
+  {
+   "playerName": "Stephen Unger",
+   "playerUid": "58bb39f7a7cde8cf66",
+   "eventName": "The Silver State Classic 2026",
+   "eventUid": "76c0edbd5f2a566d77",
+   "numberOfPlayers": 44,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Black Spear Task Force",
+   "disposition": "Priority Assets",
+   "startDate": "2026-07-11"
+  }
+ ],
+ "listes_total_site": 28
+}

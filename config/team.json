@@ -1,0 +1,10 @@
+{
+  "nom": "AJA",
+  "armees": [
+    {"nom": "T'au Empire",        "court": "T'au",               "slug": "tau-empire",         "couleur": "#d9640f", "couleur_sombre": "#f58a3d"},
+    {"nom": "Space Marines",      "court": "Space Marines",      "slug": "space-marines",      "couleur": "#1e40af", "couleur_sombre": "#6d8ff0"},
+    {"nom": "Emperor's Children", "court": "Emperor's Children", "slug": "emperors-children",  "couleur": "#c2337a", "couleur_sombre": "#ec6aa8"},
+    {"nom": "Necrons",            "court": "Necrons",            "slug": "necrons",            "couleur": "#16956a", "couleur_sombre": "#3fcf98"},
+    {"nom": "Adeptus Mechanicus", "court": "AdMech",             "slug": "adeptus-mechanicus", "couleur": "#9c3510", "couleur_sombre": "#e2683c"}
+  ]
+}

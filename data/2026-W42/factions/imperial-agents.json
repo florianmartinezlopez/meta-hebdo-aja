@@ -1,0 +1,323 @@
+{
+ "nom": "Imperial Agents",
+ "slug": "imperial-agents",
+ "periode": {
+  "wins": 6,
+  "losses": 10,
+  "total": 16,
+  "winRate": "37.50"
+ },
+ "joueurs": 4,
+ "invaincus": 0,
+ "x1": 0,
+ "victoires_tournoi": 0,
+ "sur_representation": "0.00",
+ "dispositions": {
+  "Disruption": 2,
+  "Reconnaissance": 2
+ },
+ "combinaisons": [
+  {
+   "detachment": "Imperialis Fleet | Veiled Blade Elimination Force",
+   "players": 3,
+   "fieldPercent": 75,
+   "wins": 4,
+   "losses": 7,
+   "total": 11,
+   "winRate": "36.36"
+  },
+  {
+   "detachment": "Ordo Hereticus, Purgation Force | Veiled Blade Elimination Force",
+   "players": 1,
+   "fieldPercent": 25,
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00"
+  }
+ ],
+ "adversaires": [
+  {
+   "opponentFaction": "Emperor's Children",
+   "wins": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": -4.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": -4.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Necrons",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 57,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 57,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Orks",
+   "wins": 3,
+   "losses": 3,
+   "total": 6,
+   "winRate": "50.00",
+   "avgDifferential": 3.8333333333333335,
+   "differentialGames": 6,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 2,
+    "total": 2,
+    "winRate": "0.00",
+    "avgDifferential": -32.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Space Marines (Astartes)",
+   "wins": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": -1,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Chaos Space Marines",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -9,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Grey Knights",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -36,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Imperial Knights",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -22,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Tyranids",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -38,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -38,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "World Eaters",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -23,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -23,
+    "differentialGames": 1
+   }
+  }
+ ],
+ "listes_recentes": [
+  {
+   "playerName": "Christopher Cockburn",
+   "playerUid": "b3676b8cb207fd0de8",
+   "eventName": "Roskilde Tabletop Gathering - 40k GT",
+   "eventUid": "effce4038e0699b30b",
+   "numberOfPlayers": 30,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Imperialis Fleet | Veiled Blade Elimination Force",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Sam Fagan",
+   "playerUid": "917409ee15b27a9c55",
+   "eventName": "Bendigo open 2026",
+   "eventUid": "75b3bf40f2dc2cae0c",
+   "numberOfPlayers": 51,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 1,
+   "losses": 0,
+   "detachment": "Imperialis Fleet | Veiled Blade Elimination Force",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-02"
+  },
+  {
+   "playerName": "Joseph Sault",
+   "playerUid": "d94ed4f6bd81a97c33",
+   "eventName": "2026 Wars on the Shore GT",
+   "eventUid": "dd4c1a879f0f238c01",
+   "numberOfPlayers": 31,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Imperialis Fleet | Veiled Blade Elimination Force",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-26"
+  },
+  {
+   "playerName": "Matt Stadnik",
+   "playerUid": "c4863b3551d7f157fe",
+   "eventName": "Turbulent Games Warhammer 40K GT @Siouxper Con",
+   "eventUid": "690a0047e7a5095bf0",
+   "numberOfPlayers": 25,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Imperialis Fleet | Veiled Blade Elimination Force",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-26"
+  },
+  {
+   "playerName": "Joseph Sault",
+   "playerUid": "d94ed4f6bd81a97c33",
+   "eventName": "The Port City GT ",
+   "eventUid": "d8baa3da2926eb0cd6",
+   "numberOfPlayers": 38,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Imperialis Fleet | Veiled Blade Elimination Force",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-12"
+  },
+  {
+   "playerName": "Derrick Ramsey",
+   "playerUid": "c69110f0788c9556ff",
+   "eventName": "Wasteland Wars GT V",
+   "eventUid": "932703f48c89df0500",
+   "numberOfPlayers": 58,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Imperialis Fleet | Veiled Blade Elimination Force",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-05"
+  },
+  {
+   "playerName": "Pascal Peter Semmler",
+   "playerUid": "2690d82321dedb6d28",
+   "eventName": "HUXLEYS OPEN 2026 - WARHAMMER 40K",
+   "eventUid": "f7dc4545f047ec5de9",
+   "numberOfPlayers": 99,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Veiled Blade Elimination Force",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-08-21"
+  },
+  {
+   "playerName": "Matt Stadnik",
+   "playerUid": "c4863b3551d7f157fe",
+   "eventName": "Northern Maelstrom 2026 Warhammer 40,000 Grand Tournament",
+   "eventUid": "c318ae15732384acd2",
+   "numberOfPlayers": 132,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Imperialis Fleet | Veiled Blade Elimination Force",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-07-25"
+  },
+  {
+   "playerName": "Sam Young",
+   "playerUid": "c86684f170878a08c9",
+   "eventName": "[9IQ] Checkmate GT @ AVCon",
+   "eventUid": "55059e0c1bc024f41d",
+   "numberOfPlayers": 64,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Imperialis Fleet",
+   "disposition": "Disruption",
+   "startDate": "2026-07-04"
+  }
+ ],
+ "listes_total_site": 9
+}

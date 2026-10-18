@@ -1,0 +1,183 @@
+{
+ "semaine": "2026-W42",
+ "aja": {
+  "T'au Empire": 46.27,
+  "Space Marines": 50.68,
+  "Emperor's Children": 49.02,
+  "Necrons": 51.96,
+  "Adeptus Mechanicus": 56.79
+ },
+ "dispositions": {
+  "Reconnaissance": 50.91,
+  "Purge the Foe": 51.72,
+  "Take and Hold": 48.15,
+  "Priority Assets": 50.5,
+  "Disruption": 47.71
+ },
+ "classement": [
+  [
+   "Adepta Sororitas",
+   58.06,
+   155
+  ],
+  [
+   "Leagues of Votann",
+   57.8,
+   173
+  ],
+  [
+   "Adeptus Mechanicus",
+   56.79,
+   162
+  ],
+  [
+   "World Eaters",
+   56.22,
+   370
+  ],
+  [
+   "Space Wolves",
+   56.13,
+   155
+  ],
+  [
+   "Tyranids",
+   54.81,
+   270
+  ],
+  [
+   "Dark Angels",
+   52.08,
+   288
+  ],
+  [
+   "Necrons",
+   51.96,
+   306
+  ],
+  [
+   "Orks",
+   51.68,
+   416
+  ],
+  [
+   "Chaos Knights",
+   50.94,
+   106
+  ],
+  [
+   "Space Marines",
+   50.68,
+   517
+  ],
+  [
+   "Blood Angels",
+   50.0,
+   178
+  ],
+  [
+   "Death Guard",
+   49.8,
+   249
+  ],
+  [
+   "Emperor's Children",
+   49.02,
+   204
+  ],
+  [
+   "Aeldari",
+   48.34,
+   151
+  ],
+  [
+   "Drukhari",
+   46.9,
+   113
+  ],
+  [
+   "Grey Knights",
+   46.4,
+   125
+  ],
+  [
+   "T'au Empire",
+   46.27,
+   268
+  ],
+  [
+   "Imperial Knights",
+   45.63,
+   160
+  ],
+  [
+   "Adeptus Custodes",
+   45.59,
+   204
+  ],
+  [
+   "Chaos Space Marines",
+   42.53,
+   174
+  ],
+  [
+   "Black Templars",
+   40.98,
+   122
+  ],
+  [
+   "Astra Militarum",
+   40.76,
+   157
+  ],
+  [
+   "Chaos Daemons",
+   38.62,
+   145
+  ]
+ ],
+ "archetypes": [
+  {
+   "sig": "strong",
+   "faction": "Tyranids",
+   "arch": "Subterranean Assault, Reconnaissance",
+   "n": 2
+  },
+  {
+   "sig": "strong",
+   "faction": "Space Wolves",
+   "arch": "Assault Brethren + Saga of the Beastslayer + Stormlance Task Force, Purge the Foe",
+   "n": 2
+  },
+  {
+   "sig": "watch",
+   "faction": "Space Marines",
+   "arch": "Assault Brethren + Ironstorm Spearhead + Stormlance Task Force, Reconnaissance",
+   "n": 1
+  },
+  {
+   "sig": "watch",
+   "faction": "Necrons",
+   "arch": "Canoptek Court + Hand of the Dynasty, Take and Hold",
+   "n": 1
+  },
+  {
+   "sig": "watch",
+   "faction": "Imperial Knights",
+   "arch": "Freeblade Company, Purge the Foe",
+   "n": 1
+  },
+  {
+   "sig": "down",
+   "faction": "Necrons",
+   "arch": "Cursed Legion + Skyshroud Spearhead, Purge the Foe",
+   "n": 10
+  }
+ ],
+ "brief": [
+  "AdMech au-dessus de 52 %. Space Marines et Necrons à l'équilibre. T'au et Emperor's Children sous 50 %.",
+  "Purge the Foe mène à 51,7 % sur 959 parties. Disruption ferme la marche à 47,7 %.",
+  "Adepta Sororitas (58,1 %) et Leagues of Votann (57,8 %) en tête du classement. Leagues of Votann compte 3 listes invaincues.",
+  "Tyranids en Subterranean Assault, Space Wolves en Assault Brethren + Saga of the Beastslayer + Stormlance Task Force, Space Marines en Assault Brethren + Ironstorm Spearhead + Stormlance Task Force."
+ ]
+}

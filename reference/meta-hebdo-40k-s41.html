@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meta Hebdo 40K</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: briefing de team en une colonne, nav collante par section, cartes par armée en grille 2 colonnes qui passe en 1 sur mobile */
+:root{
+  --bg:#eef0f3; --surface:#fbfcfd; --ink:#15181e; --muted:#5b6370; --line:#d5d9e0; --soft:#e3e6eb;
+  --accent:#b3261e; --good:#1f7a4d; --bad:#b3261e; --warn:#a86a00;
+  --d-th:#2f5d9e; --d-ptf:#b3261e; --d-pa:#a86a00; --d-rec:#1f7a4d; --d-dis:#6b3fa0;
+  --f-tau:#d9640f; --f-sm:#1e40af; --f-ec:#c2337a; --f-nec:#16956a; --f-adm:#9c3510;
+  --display:"Saira Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111419; --surface:#181c23; --ink:#e8ebf0; --muted:#98a1ae; --line:#2c323c; --soft:#222831;
+  --accent:#ef6a5f; --good:#4cc28a; --bad:#ef6a5f; --warn:#e3a53a;
+  --d-th:#6f9be0; --d-ptf:#ef6a5f; --d-pa:#e3a53a; --d-rec:#4cc28a; --d-dis:#a982dc;
+  --f-tau:#f58a3d; --f-sm:#6d8ff0; --f-ec:#ec6aa8; --f-nec:#3fcf98; --f-adm:#e2683c;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111419; --surface:#181c23; --ink:#e8ebf0; --muted:#98a1ae; --line:#2c323c; --soft:#222831;
+  --accent:#ef6a5f; --good:#4cc28a; --bad:#ef6a5f; --warn:#e3a53a;
+  --d-th:#6f9be0; --d-ptf:#ef6a5f; --d-pa:#e3a53a; --d-rec:#4cc28a; --d-dis:#a982dc;
+  --f-tau:#f58a3d; --f-sm:#6d8ff0; --f-ec:#ec6aa8; --f-nec:#3fcf98; --f-adm:#e2683c;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:14px;padding-block:20px 56px}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:.01em;text-wrap:balance;margin:0;line-height:1.05}
+h1{font-size:clamp(2.4rem,6vw,3.6rem);font-weight:800;text-transform:uppercase}
+h2{font-size:1.6rem;text-transform:uppercase}
+h3{font-size:1.35rem}
+p{margin:0}
+.num,.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.muted{color:var(--muted)}
+
+/* header */
+header.top{display:grid;gap:14px;padding-bottom:22px;border-bottom:3px solid var(--ink)}
+.stamp{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline}
+.stamp .eyebrow b{color:var(--ink);font-weight:500}
+.coverage{display:flex;flex-wrap:wrap;gap:10px}
+.chip{font-family:var(--mono);font-size:.78rem;padding:4px 9px;border:1px solid var(--line);border-radius:3px;background:var(--surface)}
+.chip.warn{border-color:var(--warn);color:var(--warn)}
+.mock{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border:1px dashed var(--accent);padding:3px 8px;border-radius:3px;justify-self:start}
+
+nav.sec{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-bottom:8px}
+nav.sec .links{display:flex;gap:4px;overflow-x:auto;padding-block:10px}
+nav.sec .bar{display:none;align-items:center;gap:10px;padding-block:8px}
+nav.sec.collapsed .bar{display:flex}
+nav.sec.collapsed .links{display:none}
+nav.sec.collapsed.open .links{display:grid;gap:2px;padding-block:4px 12px}
+nav.sec.collapsed.open .links a{padding:10px 8px;font-size:1.15rem}
+nav.sec .links a.on{color:var(--ink);background:var(--soft)}
+#burger{display:grid;place-items:center;width:40px;height:40px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink);cursor:pointer}
+#burger:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+nav.sec .cur{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:1.1rem;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+nav.sec .wk{flex:none}
+nav.sec a{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:1rem;color:var(--muted);text-decoration:none;padding:4px 10px;border-radius:3px;white-space:nowrap}
+nav.sec a:hover,nav.sec a:focus-visible{color:var(--ink);background:var(--soft);outline:none}
+
+section{padding-top:40px;display:grid;gap:18px;scroll-margin-top:56px}
+.sec-head{display:grid;gap:6px}
+.sec-head p{max-width:68ch;color:var(--muted)}
+
+/* brief */
+.brief{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.take{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:14px 16px;display:grid;gap:6px;align-content:start}
+.take .k{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+.take p{font-size:.95rem}
+
+/* army cards */
+.armies{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:16px}
+.army{background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--fc);border-radius:4px;padding:14px;display:grid;gap:16px;align-content:start;min-width:0}
+.army-h{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.army-h h3{font-size:1.6rem;text-transform:uppercase}
+.kpis{display:flex;gap:10px 14px;flex-wrap:wrap}
+.kpi{display:grid}
+.kpi .v{font-family:var(--mono);font-size:1.15rem;font-weight:500;font-variant-numeric:tabular-nums}
+.kpi .l{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.read{font-size:.93rem;border-left:3px solid var(--fc);padding-left:10px}
+.sub{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th{font-family:var(--mono);font-weight:500;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:4px 6px;border-bottom:1px solid var(--line)}
+td{padding:7px 4px;border-bottom:1px solid var(--soft);vertical-align:middle}
+th{padding-inline:4px}
+.cell-sub{display:block;font-size:.78rem;color:var(--muted);margin-top:3px;line-height:1.35}
+.hide-m{display:none}
+td.r,th.r{text-align:right}
+.tscroll{overflow-x:auto}
+.det{min-width:0}
+.wrbar{display:flex;align-items:center;gap:8px;justify-content:flex-end}
+.wrbar .track{position:relative;width:52px;height:8px;background:var(--soft);border-radius:2px;flex:none}
+.wrbar .track::after{content:"";position:absolute;left:50%;top:-3px;bottom:-3px;width:1px;background:var(--muted)}
+.wrbar .fill{position:absolute;top:0;bottom:0;border-radius:2px}
+.na{color:var(--muted);font-family:var(--mono);font-size:.78rem}
+
+.fdbar{display:flex;height:22px;border-radius:3px;overflow:hidden;gap:2px}
+.fdbar span{display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.68rem;color:#fff;min-width:0;overflow:hidden;white-space:nowrap}
+.legend{display:flex;flex-wrap:wrap;gap:6px 12px;margin-top:8px;font-size:.78rem;color:var(--muted)}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+
+.lists{display:grid;gap:6px}
+.li{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;font-size:.86rem;padding:7px 0;border-bottom:1px dashed var(--line)}
+.li:last-child{border-bottom:0}
+.rec{font-family:var(--mono);font-weight:500;grid-row:span 2;align-self:center;padding:3px 7px;border-radius:3px;background:var(--soft);font-size:.82rem;min-width:46px;text-align:center}
+.rec.x0{background:var(--good);color:#fff}
+.li .who{font-weight:600}
+.li .what{color:var(--muted);font-size:.8rem}
+.fd{display:inline-block;font-family:var(--mono);font-size:.66rem;letter-spacing:.04em;padding:1px 6px;border-radius:2px;color:#fff;vertical-align:1px;margin-right:4px}
+a{color:inherit;text-decoration-color:var(--line);text-underline-offset:2px}
+a:hover{text-decoration-color:currentColor}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* dispositions */
+.fd-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px}
+.fdcard{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--dc);border-radius:4px;padding:14px;display:grid;gap:12px;align-content:start;min-width:0}
+.fdcard-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.fdcard-h .wr{font-family:var(--mono);font-size:1.4rem;font-weight:500}
+.who-plays{display:grid;gap:4px}
+.wp{display:grid;grid-template-columns:120px 1fr 28px;gap:8px;align-items:center;font-size:.82rem}
+.wp .b{height:7px;background:var(--dc);border-radius:2px;opacity:.85}
+.wp .team{font-weight:600}
+
+/* emerging */
+.emerg{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px}
+.em{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:16px;display:grid;gap:8px;align-content:start}
+.sig{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:2px;justify-self:start}
+.sig.strong{background:var(--good);color:#fff}
+.sig.watch{border:1px solid var(--warn);color:var(--warn)}
+.em .arch{font-family:var(--display);font-weight:700;font-size:1.2rem;line-height:1.1}
+.em p{font-size:.9rem}
+.teamtag{font-family:var(--mono);font-size:.66rem;padding:1px 6px;border-radius:2px;border:1px solid var(--ink);margin-left:6px;vertical-align:2px}
+
+.rowteam td:first-child{font-weight:600}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;vertical-align:0}
+
+.fdmatrix th.c,.fdmatrix td.c{text-align:center;width:13%;padding-inline:2px}
+.fdmatrix td.c{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:.8rem;line-height:1.2;border-left:2px solid var(--bg)}
+.fdmatrix td.c small{display:block;font-size:.68rem;color:var(--ink);opacity:.75}
+.fdmatrix td.c small.hit{font-weight:600;opacity:1}
+.fdmatrix th.c span{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:3px;vertical-align:0}
+.fdmatrix td.f{font-size:.84rem}
+.note{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:16px;display:grid;gap:8px;font-size:.88rem}
+.note ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.discord-unused{font-family:var(--mono);font-size:.82rem;background:var(--soft);border-radius:4px;padding:14px;white-space:pre-wrap;line-height:1.55;overflow-x:auto}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);display:grid;gap:4px}
+@media (max-width:520px){
+  .wp{grid-template-columns:104px 1fr 24px}
+  nav.sec a{font-size:.95rem;padding:6px 9px}
+}
+@media (min-width:720px){
+  .wrap{padding-inline:24px;padding-block:28px 64px}
+  h2{font-size:1.9rem}
+  .army,.fdcard{padding:18px}
+  .kpis{gap:16px}
+  td{padding:7px 6px} th{padding-inline:6px}
+  .wrbar .track{width:90px}
+  .hide-m{display:table-cell}
+}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+body{margin:0}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <div class="stamp">
+      <span class="eyebrow">Semaine 41 · <b>8 au 13 oct. 2026</b></span>
+      <span class="eyebrow">Relevé le <b>lun. 12 oct., 14h</b></span>
+    </div>
+    <h1>Meta Hebdo 40K</h1>
+    <p class="muted" style="max-width:66ch">Le point du lundi pour l'AJA : performances de nos cinq armées, des forces de disposition et des factions, archétypes émergents.</p>
+    <div class="coverage">
+      <span class="chip">25 tournois</span>
+      <span class="chip">1 037 joueurs</span>
+      <span class="chip">GT 16+ joueurs, 5+ rondes</span>
+      <span class="chip warn">12 tournois encore en cours</span>
+    </div>
+  </header>
+
+  <div id="navsentinel" aria-hidden="true"></div>
+  <nav class="sec" id="nav" aria-label="Sections">
+    <div class="bar">
+      <button type="button" id="burger" aria-expanded="false" aria-controls="navlinks" aria-label="Ouvrir le menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+      </button>
+      <span class="cur" id="cur">Synthèse</span>
+      <span class="eyebrow wk">S41</span>
+    </div>
+    <div class="links" id="navlinks">
+      <a href="#bref">Synthèse</a>
+      <a href="#armees">Nos armées</a>
+      <a href="#fd">Forces de disposition</a>
+      <a href="#perf">Factions</a>
+      <a href="#emerge">Archétypes</a>
+      <a href="#face">Field</a>
+    </div>
+  </nav>
+
+  <section id="bref">
+    <div class="sec-head"><span class="eyebrow">01 · Synthèse</span><h2>Synthèse de la semaine</h2></div>
+    <div class="brief" id="brief"></div>
+  </section>
+
+  <section id="armees">
+    <div class="sec-head">
+      <span class="eyebrow">02 · Nos armées</span>
+      <h2>Détachements et forces de disposition</h2>
+      <p>Pour chaque armée : win rate du week-end, détachements joués (part des joueurs et win rate), répartition des forces de disposition, et les meilleures listes. Le site n'affiche pas de win rate de détachement sous 10 parties : ces lignes sont marquées n.d.</p>
+    </div>
+    <div class="armies" id="armies"></div>
+  </section>
+
+  <section id="fd">
+    <div class="sec-head">
+      <span class="eyebrow">03 · Forces de disposition</span>
+      <h2>Performances par force de disposition</h2>
+      <p>Win rate global de chaque disposition, les armées qui la jouent le plus (nombre de joueurs, 28 factions) et les meilleurs résultats du week-end, toutes factions confondues. Les armées AJA sont en gras. Chaque résultat renvoie vers la liste sur Listhammer.</p>
+    </div>
+    <div class="fd-grid" id="fdgrid"></div>
+  </section>
+
+  <section id="perf">
+    <div class="sec-head">
+      <span class="eyebrow">04 · Factions</span>
+      <h2>Classement des factions</h2>
+      <p>Les 21 factions avec au moins 100 parties ce week-end, triées par win rate. Le trait central marque 50 %. La sur-représentation compare la part dans les tops à la part dans le field.</p>
+    </div>
+    <div class="tscroll"><table id="factions"></table></div>
+    <h3 style="margin-top:10px">Meilleures combinaisons de détachements</h3>
+    <div class="tscroll"><table id="combos"></table></div>
+  </section>
+
+  <section id="emerge">
+    <div class="sec-head">
+      <span class="eyebrow">05 · Archétypes</span>
+      <h2>Archétypes émergents</h2>
+      <p>Comparaison des listes X-0 / X-1 de ce week-end avec celles des trois semaines précédentes. « Signal fort » quand plusieurs résultats vont dans le même sens, « à surveiller » sur un résultat isolé.</p>
+    </div>
+    <div class="emerg" id="emerg"></div>
+  </section>
+
+  <section id="face">
+    <div class="sec-head">
+      <span class="eyebrow">06 · Field</span>
+      <h2>Factions les plus jouées</h2>
+      <p>Les armées les plus présentes dans le field, avec leur disposition favorite et leur détachement le plus joué. À tester en priorité à l'entraînement.</p>
+    </div>
+    <div class="tscroll"><table id="opp"></table></div>
+  </section>
+
+
+  <section>
+    <div class="note">
+      <strong>À noter</strong>
+      <ul>
+        <li>Chiffres relevés lundi en début d'après-midi : 12 tournois n'étaient pas terminés, les win rates bougeront encore.</li>
+        <li>Les listes complètes (unités, améliorations) ne sont pas lisibles automatiquement : le site l'interdit pour les pages joueurs. La section « unités récurrentes » demandera une autre source.</li>
+        <li>La matrice disposition contre disposition existe sur le site mais nécessite un clic : à intégrer en V2.</li>
+        <li>Classement limité aux factions avec au moins 100 parties : Aeldari, Blood Angels, Drukhari, Black Templars, Genestealer Cult, Deathwatch et Imperial Agents en sont exclus.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <span>Source : listhammer.info (stats « This Weekend », hors miroirs, 11e édition uniquement).</span>
+    <span>Généré par Claude pour l'AJA · semaine 41.</span>
+  </footer>
+</div>
+
+<script>
+const FD = {
+  th:{n:"Take and Hold",c:"var(--d-th)"}, ptf:{n:"Purge the Foe",c:"var(--d-ptf)"},
+  pa:{n:"Priority Assets",c:"var(--d-pa)"}, rec:{n:"Reconnaissance",c:"var(--d-rec)"},
+  dis:{n:"Disruption",c:"var(--d-dis)"}
+};
+const LH = "https://listhammer.info";
+const fdTag = k => `<span class="fd" style="background:${FD[k].c}">${FD[k].n}</span>`;
+const pct = v => v==null ? '<span class="na">n.d.</span>' : v.toFixed(1).replace('.',',')+' %';
+const wrBar = (v, color) => {
+  if (v==null) return '<span class="na">n.d.</span>';
+  const lo=30, hi=80, x=Math.max(lo,Math.min(hi,v)), mid=(50-lo)/(hi-lo)*100, pos=(x-lo)/(hi-lo)*100;
+  const left=Math.min(mid,pos), w=Math.abs(pos-mid);
+  const c = color || (v>=50?'var(--good)':'var(--bad)');
+  return `<span class="wrbar"><span class="num">${pct(v)}</span><span class="track"><span class="fill" style="left:${left}%;width:${Math.max(w,1)}%;background:${c}"></span></span></span>`;
+};
+
+/* ---------- données ---------- */
+const ARMIES = [
+ {name:"T'au Empire", slug:"tau-empire", c:"var(--f-tau)", wr:53.3, games:169, players:36, x0:1, x1:2, over:0.81,
+  read:"Experimental Prototype Cadre + Kauyon fait le travail : un tiers des joueurs, 61,7 % de victoires. Mont'ka et Retaliation Cadre passent sous les 50 %.",
+  det:[["Experimental Prototype Cadre + Kauyon",33.3,61.7],["Retaliation Cadre",30.6,49.2],["Mont'ka",25.0,46.3],["Experimental Prototype Cadre + Kroot Hunting Pack",5.6,null]],
+  fd:{pa:18,ptf:11,rec:5,th:3},
+  lists:[["5-0","Lyle Dixon","EPC + Kauyon","rec","Games4Life's 2-Day 40k GT",28],
+         ["4-0-1","Mario Hadiwana","EPC + Kauyon","pa","The Hunt for the Red Ork-tober",28],
+         ["5-1","Tomas Hicklin","Mont'ka","pa","The Cornish Big Bash",37]]},
+ {name:"Space Marines", slug:"space-marines", c:"var(--f-sm)", wr:52.8, games:428, players:106, x0:2, x1:6, over:1.05,
+  read:"Le trio Terminator Storm Force + Deathwatch Support + Assault Brethren tourne à 72 % sur 13 % du field : c'est l'archétype à copier. Plus de la moitié des joueurs prend Take and Hold.",
+  det:[["Assault Brethren + Deathwatch Support + Terminator Storm Force",13.2,72.0],["Assault Brethren + Ironstorm Spearhead + Terminator Storm Force",6.6,52.9],["Assault Brethren + Shadowmark Talon",4.7,38.9],["Assault Brethren + Ironclad Champions + Terminator Storm Force",4.7,35.3],["Assault Brethren + Forgefather's Seekers",1.9,80.0]],
+  fd:{th:56,pa:26,ptf:14,rec:8,dis:3},
+  lists:[["7-1","John Lennon","Terminator Storm Force + Deathwatch Support + Assault Brethren","th","BFS GT 2026 Super Major",131],
+         ["6-0","John Gianforte","Ironstorm Spearhead + Forgefather's Seekers","pa","Denver 40K Fight Club Oct. Open",105],
+         ["6-0","Colin Kay","Stormlance Task Force + Assault Brethren + Ironstorm Spearhead","ptf","Denver 40K Fight Club Oct. Open",105]]},
+ {name:"Emperor's Children", slug:"emperors-children", c:"var(--f-ec)", wr:51.0, games:151, players:31, x0:1, x1:4, over:1.26,
+  read:"Coterie of the Conceited reste le choix majoritaire (42 % des joueurs) mais plafonne à 50 %. Le seul 5-0 vient de Spectacle of Slaughter + Mercurial Host en Reconnaissance.",
+  det:[["Coterie of the Conceited",41.9,50.0],["Court of the Phoenician + Frenzied Host",16.1,46.7],["Peerless Bladesmen + Spectacle of Slaughter",9.7,46.2],["Court of the Phoenician + Slaanesh's Chosen",6.5,60.0],["Mercurial Host + Spectacle of Slaughter",6.5,80.0]],
+  fd:{pa:12,ptf:11,dis:4,rec:3,th:1},
+  lists:[["5-0","Anders Petersen","Spectacle of Slaughter + Mercurial Host","rec","Roskilde Tabletop Gathering GT",30],
+         ["5-1","Brook Bennett","Coterie of the Conceited","pa","BFS GT 2026 Super Major",131],
+         ["4-1","Juan Guzman","Peerless Bladesmen","dis","GT Washin Revenge",34]]},
+ {name:"Necrons", slug:"necrons", c:"var(--f-nec)", wr:48.1, games:268, players:55, x0:1, x1:6, over:1.22,
+  read:"Cursed Legion + Skyshroud Spearhead en Purge the Foe est la liste standard (42 % des joueurs, 51,8 %). Le meilleur résultat vient pourtant d'ailleurs : Cryptek Conclave + Hand of the Dynasty à 6-0.",
+  det:[["Cursed Legion + Skyshroud Spearhead",41.8,51.8],["Awakened Dynasty",18.2,49.0],["Starshatter Arsenal",9.1,50.0],["Cryptek Conclave + Hand of the Dynasty",7.3,47.4],["Obeisance Phalanx + The Phaeron's Armoury",5.5,37.5]],
+  fd:{ptf:26,th:13,pa:10,rec:5,dis:1},
+  lists:[["6-0","Marshall Peterson","Cryptek Conclave + Hand of the Dynasty","pa","Rook's 40k Open",78],
+         ["5-1","Jacob Collins","Cursed Legion + Skyshroud Spearhead","ptf","Rook's 40k Open",78],
+         ["4-1","Rich Dudley","Cursed Legion + Skyshroud Spearhead","ptf","Gongaii GT, The Great Game",48]]},
+ {name:"Adeptus Mechanicus", slug:"adeptus-mechanicus", c:"var(--f-adm)", wr:47.5, games:139, players:26, x0:2, x1:1, over:1.11,
+  read:"Bascule nette : Cohort Cybernetica + Eradication Cohort signe les trois tops du week-end, alors que Lords of the Forge dominait les semaines précédentes et tombe à 40,5 %.",
+  det:[["Cohort Cybernetica + Eradication Cohort",38.5,54.2],["Cohort Cybernetica + Lords of the Forge",30.8,40.5],["Cohort Cybernetica + Explorator Maniple",7.7,66.7],["Haloscreed Battle Clade",7.7,23.1]],
+  fd:{pa:11,th:11,ptf:3,rec:1},
+  lists:[["5-0","Mr. Beef","Cohort Cybernetica + Eradication Cohort","th","FlatCon Grand Tournament",30],
+         ["5-0","Toby Barnwell","Cohort Cybernetica + Eradication Cohort","ptf","Black Crow Gaming RAGNAR GT",16],
+         ["4-1","Jerome Connolly","Cohort Cybernetica + Eradication Cohort","th","Black Crow Gaming RAGNAR GT",16]]}
+];
+const TEAM = new Set(ARMIES.map(a=>a.name));
+
+/* Listes X-0 / X-1 du week-end (9-10 oct.), toutes factions : [bilan, joueur, id Listhammer, faction, détachements, disposition, tournoi, joueurs] */
+const WEEK = [
+ ["7-1","John Lennon","334048f8dfe8f79d5a","Space Marines","Terminator Storm Force + Deathwatch Support + Assault Brethren","th","BFS GT 2026 Super Major",131],
+ ["7-1","Sam Pope","b485e859e596db8e41","World Eaters","Berzerker Warband + Vessels of Wrath","ptf","BFS GT 2026 Super Major",131],
+ ["7-1","Jack Murphy","187869583df9f9b9cc","Space Marines","Devastator Brethren + Medusa's Wrath","ptf","BFS GT 2026 Super Major",131],
+ ["7-1","Zach Point","69cfb09a4385a21e8a","Space Marines","Deathwatch Support + Assault Brethren + Ironstorm Spearhead","th","BFS GT 2026 Super Major",131],
+ ["5-1","Brook Bennett","15193b00813c42fe3d","Emperor's Children","Coterie of the Conceited","pa","BFS GT 2026 Super Major",131],
+ ["5-1","Cole McAneeny","3f5c06015dcf71f61d","Orks","Brute Bosses + Bully Boyz + Da Big Hunt","ptf","BFS GT 2026 Super Major",131],
+ ["5-1","Sean .","11b509f4a7490bdfa0","Orks","War Horde","th","BFS GT 2026 Super Major",131],
+ ["6-0","John Gianforte","8a5bc4f9856beac7ad","Space Marines","Ironstorm Spearhead + Forgefather's Seekers","pa","Denver 40K Fight Club Oct. Open",105],
+ ["6-0","Colin Kay","6d163bd0b46006db59","Space Marines","Stormlance Task Force + Assault Brethren + Ironstorm Spearhead","ptf","Denver 40K Fight Club Oct. Open",105],
+ ["5-1","Stoic Nauj","6b15537e957a3b75dd","Death Guard","Paragons of Putrescence + Champions of Contagion","pa","Denver 40K Fight Club Oct. Open",105],
+ ["5-1","Mike Pestilens","7fc5898577e3198947","Chaos Daemons","Daemonic Incursion","th","Denver 40K Fight Club Oct. Open",105],
+ ["5-1","Brandon Roddy","4219a22fd0e90978e3","Grey Knights","Warpbane Task Force","th","Denver 40K Fight Club Oct. Open",105],
+ ["5-1","Zak Engelbrecht","e8e95f05ed99c70a34","Thousand Sons","Ritual of Regeneration + Warpmeld Pact","ptf","Denver 40K Fight Club Oct. Open",105],
+ ["6-0","Marshall Peterson","8bb24d7283c6b113f7","Necrons","Cryptek Conclave + Hand of the Dynasty","pa","Rook's 40k Open",78],
+ ["5-1","Jacob Collins","9e23939862f90b0ee2","Necrons","Cursed Legion + Skyshroud Spearhead","ptf","Rook's 40k Open",78],
+ ["5-1","Adam Willmarth","b16c2750f5c87bb47f","Chaos Daemons","Blood Legion + Cavalcade of Chaos","ptf","Rook's 40k Open",78],
+ ["5-1","Matthew Hartnett","6f40f9acb4db4c0c25","Orks","Wreckas + Shoota Boyz + Dread Mob","pa","Rook's 40k Open",78],
+ ["5-1","James Walsh","99c1a348ddbe58c986","Grey Knights","Fires of Purgation + Sanctic Spearhead","dis","Rook's 40k Open",78],
+ ["5-1","Michael Pendergrass","73794e851765425223","Thousand Sons","Grand Coven","pa","Rook's 40k Open",78],
+ ["4-1","Zach Peterson","bead6a11c955ecfcd5","Adeptus Custodes","Lions of the Emperor","th","Rook's 40k Open",78],
+ ["5-0","Ken Bush","4486e60ba026908cc3","Adepta Sororitas","Chorus of Condemnation + Bringers of Flame","pa","Gongaii GT, The Great Game",48],
+ ["5-0","Ian Swallow","","World Eaters","Berzerker Warband + Vessels of Wrath","ptf","Gongaii GT, The Great Game",48],
+ ["4-1","Rich Dudley","83375506d61ddaee55","Necrons","Cursed Legion + Skyshroud Spearhead","ptf","Gongaii GT, The Great Game",48],
+ ["4-1","Lukas Troller","2e3083dcf4cf49e8ed","Orks","Bully Boyz + Wreckas + Dread Mob","pa","Gongaii GT, The Great Game",48],
+ ["4-1","Derek Dominquez","d9a9aeb9d3b4af8cb6","Adepta Sororitas","Bringers of Flame + Sacred Champions","pa","Gongaii GT, The Great Game",48],
+ ["4-1","Perry Besore","4f6d2c2c0dca1051d2","Adeptus Custodes","Might of the Moritoi + Shield Host","th","Gongaii GT, The Great Game",48],
+ ["5-0","Levi Chester","05ff24a4e90fd1ea63","Drukhari","Kabalite Cartel + Exhibition of Slaughter","rec","BZU 40K",48],
+ ["5-0","Douglas Labov","9964f65e2c16ec0ced","World Eaters","Khorne Daemonkin + Vessels of Wrath","pa","BZU 40K",48],
+ ["4-1","Derek Swift","adbd60eec794dcc4be","Chaos Knights","Houndpack Lance + Hunting Warpack","rec","BZU 40K",48],
+ ["4-1","Alex Nanez","a3996a4bd6253346b3","Grey Knights","Banishers + Argent Assault","pa","BZU 40K",48],
+ ["5-0","Ryan Schaum","53144b615b04936eb4","Death Guard","Virulent Vectorium","ptf","Call to Arms, Away Games",44],
+ ["4-1","Chris Cardamone","01dbc17a9e31fd59af","World Eaters","Berzerker Warband + Butchers of Khorne","ptf","Call to Arms, Away Games",44],
+ ["4-1","Dustin Zeliff","b47c498861c0e2eb0e","Orks","Kult of Speed + Flyboyz + Wreckas","rec","Call to Arms, Away Games",44],
+ ["4-1","Jonathon Hefner","909a62cf818edb3d70","Chaos Knights","Houndpack Lance + Hunting Warpack","rec","Call to Arms, Away Games",44],
+ ["4-1","Ronnie Kinney","534b0790473ae021d7","Leagues of Votann","Needgaârd Oathband + Armoured Trailblazers","dis","Call to Arms, Away Games",44],
+ ["5-0","Sam Anderson","b03fd9eccaf8cf2526","Chaos Daemons","Blood Legion + Warptide","ptf","Miniature Market Warehouse GT",43],
+ ["5-0","Nicholas Rupel","e60e0d62552608a489","Chaos Daemons","Blood Legion + Warptide","ptf","Miniature Market Warehouse GT",43],
+ ["4-1","Kris Schmidt","70139d785c23a5e692","Necrons","Cursed Legion + Skyshroud Spearhead","ptf","Miniature Market Warehouse GT",43],
+ ["4-1","Jake Durham","8c449579b5d7253774","Orks","Blitz Brigade + Wreckas + Dread Mob","ptf","Miniature Market Warehouse GT",43],
+ ["4-1","Kylen Davis","9a7ab31e4c0523e250","Grey Knights","Banishers + Argent Assault","pa","Miniature Market Warehouse GT",43],
+ ["4-1","Connor Johnson","42906c64fc571f8b5a","Thousand Sons","Grand Coven","pa","Miniature Market Warehouse GT",43],
+ ["5-0","Oliver Leaver","3092ee637710ddd423","Space Marines","Stormlance Task Force + Terminator Storm Force + Assault Brethren","th","Da Summer Waaagh",42],
+ ["4-1","Andy Quas-Cohen","30de3a91079c4ae44e","Necrons","Awakened Dynasty","th","Da Summer Waaagh",42],
+ ["4-1","Michael Duff","93162bf47607461c98","Death Guard","Virulent Vectorium","th","Da Summer Waaagh",42],
+ ["4-1","Peter Duff","de5717cf7823bf177c","Chaos Knights","Houndpack Lance + Hunting Warpack","rec","Da Summer Waaagh",42],
+ ["4-1","Markus Hinson","10845c5810f6976391","Imperial Knights","Valourstrike Lance + Dominus Foebreakers","ptf","Da Summer Waaagh",42],
+ ["5-0","Kass Kielly-Burke","63e445e72301f301c4","Death Guard","Virulent Vectorium","th","LVNO 40k GT",38],
+ ["4-1","Cory Burns","3ef3c0249c7253fa83","Orks","Bully Boyz + Wreckas + Green Tide","th","LVNO 40k GT",38],
+ ["4-1","David Coren","dae6a8a572841237c6","Grey Knights","Warpbane Task Force","th","LVNO 40k GT",38],
+ ["5-1","Tomas Hicklin","2dad5725dbf68020b3","T'au Empire","Mont'ka","pa","The Cornish Big Bash",37],
+ ["5-1","Robin Glasson","04b27772ddc5b29ad0","Emperor's Children","Coterie of the Conceited","pa","The Cornish Big Bash",37],
+ ["5-1","Mikey Rzasa","87c431eed97bb75d3f","World Eaters","Berzerker Warband + Brazen Engines","ptf","The Cornish Big Bash",37],
+ ["5-1","George McCoulough","684d7ea945d123932c","Space Wolves","Stormlance Task Force + Assault Brethren + Saga of the Beastslayer","ptf","The Cornish Big Bash",37],
+ ["5-0","Matias Oteiza","e5d5c79b11c011a5fa","Dark Angels","Stormlance Task Force + Assault Brethren + Darkflight Pursuit","rec","GT Washin Revenge",34],
+ ["4-1","Juan Guzman","8f5dc78f7a7dd56dd3","Emperor's Children","Peerless Bladesmen","dis","GT Washin Revenge",34],
+ ["4-1","Rodrigo Larreteguy","e01e7c4966d650891f","Tyranids","Subterranean Assault","rec","GT Washin Revenge",34],
+ ["4-1","Walter Roble","79caf7b0375d43909b","Adepta Sororitas","Hallowed Martyrs","th","GT Washin Revenge",34],
+ ["4-1","Martin Vedia","73c8f5eb2cbc802f05","Adeptus Custodes","Lions of the Emperor","th","GT Washin Revenge",34],
+ ["4-1","Santiago Brassiolo","581c99e3b8a0ff1a2c","Leagues of Votann","Needgaârd Oathband + Hearthguard Covenant","pa","GT Washin Revenge",34],
+ ["5-0","Niklas Frerichs","d4316ba024631b4582","Dark Angels","Terminator Storm Force + Deathwatch Support + Assault Brethren","th","Down the Rabbit Hole",34],
+ ["4-1","Daniel Klammer","f1846b5dfc7866926e","Necrons","Awakened Dynasty","pa","Down the Rabbit Hole",34],
+ ["4-1","Patrick Schmitt","31c5fa70638e47ab20","Tyranids","Invasion Fleet","pa","Down the Rabbit Hole",34],
+ ["4-1","Jasper Lange","cbdcb40e089eef3a56","Leagues of Votann","Needgaard Oathband","pa","Down the Rabbit Hole",34],
+ ["5-0","Anders Petersen","e8fd2ba214a21c5ceb","Emperor's Children","Spectacle of Slaughter + Mercurial Host","rec","Roskilde Tabletop Gathering GT",30],
+ ["4-1","matthias marinakis","c5821ab1b3eb235ddb","Death Guard","Paragons of Putrescence + Champions of Contagion","pa","Roskilde Tabletop Gathering GT",30],
+ ["4-1","Alexander Mortensen","cafcf8a7fe0aaf9c6d","Chaos Knights","Houndpack Lance + Hunting Warpack","rec","Roskilde Tabletop Gathering GT",30],
+ ["5-0","Mr. Beef","1f95736931e7c6e47e","Adeptus Mechanicus","Cohort Cybernetica + Eradication Cohort","th","FlatCon Grand Tournament",30],
+ ["4-1","Marc Hadley","deb839cf3cf7cb8954","Emperor's Children","Slaanesh's Chosen + Court of the Phoenician","ptf","FlatCon Grand Tournament",30],
+ ["4-1","Jonathan Brandt","60ec13ff6c926acf0b","World Eaters","Berzerker Warband + Vessels of Wrath","pa","FlatCon Grand Tournament",30],
+ ["4-1","Landon Nixon","b9d3a6aa342c421b31","Death Guard","Virulent Vectorium","th","FlatCon Grand Tournament",30],
+ ["4-1","Connor Benenati","ca61f74fea2e263a98","Adepta Sororitas","Hallowed Martyrs","pa","FlatCon Grand Tournament",30],
+ ["5-0","Daniel Grieves","1635c6918d120715a1","World Eaters","Berzerker Warband + Vessels of Wrath","ptf","Imps Gaming + Hive City GT",29],
+ ["4-1","James Underwood","17a40a018c6eb1a6f4","World Eaters","Berzerker Warband + Butchers of Khorne","th","Imps Gaming + Hive City GT",29],
+ ["4-1","Josh Brayford","9a383bcf4309b53e9b","Adeptus Custodes","Lions of the Emperor","th","Imps Gaming + Hive City GT",29],
+ ["4-1","Dale Kane","4dff799b077008c6c7","Chaos Space Marines","Veterans of the Long War + Cabal of Chaos","dis","Imps Gaming + Hive City GT",29],
+ ["4-1","Danish Mahboob","1f2980288282814a89","Space Wolves","Terminator Storm Force + Saga of the Great Wolf","th","Imps Gaming + Hive City GT",29],
+ ["5-0","Bahrunur Bahrunur","bd13bf669b6f031d73","Space Marines","Assault Brethren + Forgefather's Seekers","pa","The Hunt for the Red Ork-tober",28],
+ ["4-0-1","Mario Hadiwana","a9be789191404c4dc5","T'au Empire","Experimental Prototype Cadre + Kauyon","pa","The Hunt for the Red Ork-tober",28],
+ ["4-1","Hendy D","fcd1b2c7f8f4a68a80","Adeptus Custodes","Lions of the Emperor","th","The Hunt for the Red Ork-tober",28],
+ ["4-1","Seb Kranzer","5bfb72394ca7373552","Thousand Sons","Changehost of Deceit + Ritual of Regeneration","th","The Hunt for the Red Ork-tober",28],
+ ["5-0","Lyle Dixon","a6c9b14a9172e903cc","T'au Empire","Experimental Prototype Cadre + Kauyon","rec","Games4Life's 2-Day 40k GT",28],
+ ["4-1","Stephen Olszewski","0d733b32424df6c73b","Chaos Daemons","Blood Legion + Warptide","ptf","Games4Life's 2-Day 40k GT",28],
+ ["5-0","Camerom Hayes","51131a925a7c4a81c2","Drukhari","Spectacle of Spite + Exhibition of Slaughter","rec","Autumn Slaughter GT, Red October",26],
+ ["4-1","Lewis Archer","1c1ea40846536f992a","Orks","Bully Boyz + Wreckas + Dread Mob","pa","Autumn Slaughter GT, Red October",26],
+ ["4-1","David Leniewski","a637f446399d4fa9db","Grey Knights","Warpbane Task Force","ptf","Autumn Slaughter GT, Red October",26],
+ ["4-1","Craig Pendlington","57c50fc3323cbefb4b","Adeptus Custodes","Lions of the Emperor","th","Autumn Slaughter GT, Red October",26],
+ ["5-0","Sebastián Dominguez","ae0cdfa95805bf1d59","Tyranids","Subterranean Assault","dis","Golden Dawn IV",26],
+ ["4-1","Nicolas Francone","819a9862846c29a5a8","Chaos Daemons","Plague Legion + Warptide","th","Golden Dawn IV",26],
+ ["4-1","Juan Ochoa","cd0d343de9db4e4b86","Space Wolves","Stormlance Task Force + Terminator Storm Force + Saga of the Beastslayer","ptf","Golden Dawn IV",26],
+ ["4-0-1","seby","489053fb19ef26c280","Death Guard","Virulent Vectorium","th","Le Tournoi des Irréductibles",22],
+ ["4-1","hishari","06b765f3bc696b4654","Orks","Blitz Brigade + Brute Bosses + Da Big Hunt","ptf","Le Tournoi des Irréductibles",22],
+ ["4-0","Nicolo Gili","78843fb6392e4d44ce","World Eaters","Berzerker Warband + Brazen Engines","ptf","Torneo in Legio",18],
+ ["5-0","Niklas Nies","0a415cc288e7244eec","Chaos Knights","Houndpack Lance + Hunting Warpack","rec","2. Ruhrpott War",18],
+ ["4-1","Bastian Kry","65a39bd797186d9e2b","Space Marines","Terminator Storm Force + Deathwatch Support + Assault Brethren","th","2. Ruhrpott War",18],
+ ["4-1","Mario Titz","15d8d603c51407e7a4","World Eaters","Berzerker Warband","th","2. Ruhrpott War",18],
+ ["4-1","Martin Anders","da445efd1ee62a58db","Orks","Wreckas + Shoota Boyz + Madcap Meks","dis","2. Ruhrpott War",18],
+ ["4-1","Ben Ristine","d3730b159f664145a0","Orks","Blitz Brigade + Brute Bosses + Da Big Hunt","th","2nd Annual Bigfoot Open GT",17],
+ ["4-1","Robert Cripps","3ef96ea489d8e42b8c","Orks","Wreckas + Shoota Boyz + Dread Mob","pa","2nd Annual Bigfoot Open GT",17],
+ ["4-1","Erik Herman","35a8839d29e5a9a6f4","Space Wolves","Terminator Storm Force + Saga of the Great Wolf","th","2nd Annual Bigfoot Open GT",17],
+ ["5-0","Toby Barnwell","0dc274d176932fcdb3","Adeptus Mechanicus","Cohort Cybernetica + Eradication Cohort","ptf","Black Crow Gaming RAGNAR GT",16],
+ ["4-1","Jerome Connolly","746f51ab93f8242083","Adeptus Mechanicus","Cohort Cybernetica + Eradication Cohort","th","Black Crow Gaming RAGNAR GT",16],
+ ["4-1","Harry Thorn","47b56679b5f8c329e7","Adepta Sororitas","Chorus of Condemnation + Bringers of Flame","pa","Black Crow Gaming RAGNAR GT",16],
+ ["4-1","Mikko Pellinen","6799c9b87cc79ec7a4","Necrons","Cursed Legion + Skyshroud Spearhead","ptf","Class 40k",16],
+ ["4-1","Joni Barsk","949a5ba34909fa2f89","Adepta Sororitas","Hallowed Martyrs","pa","Class 40k",16],
+ ["4-1","Arttu Ansamaa","dd72540eadd95aaf54","Astra Militarum","Steel Hammer + Abhuman Auxiliaries","th","Class 40k",16],
+ ["4-1","Rasmus Särkinen","78ec55fe0af6274c24","Chaos Space Marines","Veterans of the Long War + Cabal of Chaos","th","Class 40k",16]
+];
+
+/* Joueurs par disposition, 28 factions (stats week-end) */
+const DISPO = {
+ "Space Marines":{th:56,pa:26,ptf:14,rec:8,dis:3},"Orks":{ptf:31,th:17,pa:16,dis:3,rec:1},"World Eaters":{ptf:36,th:12,pa:10,dis:3,rec:3},
+ "Dark Angels":{th:33,rec:10,pa:6,ptf:6,dis:1},"Necrons":{ptf:26,th:13,pa:10,rec:5,dis:1},"Tyranids":{th:23,rec:17,dis:9,pa:3,ptf:2},
+ "Death Guard":{th:22,pa:14,rec:7,dis:6,ptf:3},"Chaos Space Marines":{th:13,dis:12,pa:11,ptf:11,rec:3},"Adeptus Custodes":{th:40,ptf:4,pa:2,rec:2,dis:1},
+ "T'au Empire":{pa:18,ptf:11,rec:5,th:3},"Chaos Daemons":{ptf:15,th:15,pa:4,dis:2,rec:1},"Leagues of Votann":{pa:23,th:5,ptf:4,dis:2,rec:2},
+ "Astra Militarum":{pa:12,ptf:10,th:9,dis:1},"Emperor's Children":{pa:12,ptf:11,dis:4,rec:3,th:1},"Chaos Knights":{rec:16,pa:7,th:4,dis:3,ptf:3},
+ "Space Wolves":{th:20,ptf:7,pa:1},"Adeptus Mechanicus":{pa:11,th:11,ptf:3,rec:1},"Imperial Knights":{ptf:16,pa:5,th:3,dis:2},
+ "Grey Knights":{pa:8,ptf:8,th:4,dis:3,rec:2},"Blood Angels":{th:11,pa:7,ptf:4,dis:2},"Adepta Sororitas":{pa:14,th:8,dis:1,rec:1},
+ "Aeldari":{pa:10,rec:8,dis:2,ptf:2,th:1},"Thousand Sons":{th:10,pa:9,dis:2,ptf:1},"Black Templars":{th:10,ptf:4,pa:2},
+ "Drukhari":{rec:10,pa:4},"Genestealer Cult":{rec:7,th:4,dis:2,pa:1},"Deathwatch":{pa:2,rec:1},"Imperial Agents":{rec:1}
+};
+
+const FDSTATS = [
+ {k:"rec", wr:54.0, games:463, field:11.0},
+ {k:"ptf", wr:51.6, games:809, field:23.2},
+ {k:"th",  wr:49.7, games:1030, field:34.5},
+ {k:"pa",  wr:48.1, games:806, field:24.6},
+ {k:"dis", wr:45.0, games:260, field:6.7}
+];
+
+const FACTIONS = [
+ ["Orks",56.7,344,66,0,12,0,1.16],["Adepta Sororitas",56.4,126,23,1,5,1,1.25],["Leagues of Votann",56.4,172,36,1,5,0,1.35],
+ ["World Eaters",54.0,285,62,3,8,2,1.57],["Tyranids",53.7,255,52,1,2,1,0.55],["T'au Empire",53.3,169,36,1,2,0,0.81],
+ ["Space Marines",52.8,428,106,2,6,2,1.05],["Adeptus Custodes",51.7,238,46,0,6,0,0.83],["Chaos Daemons",51.4,185,36,2,4,1,1.06],
+ ["Emperor's Children",51.0,151,31,1,4,2,1.26],["Chaos Knights",50.7,154,31,1,4,1,1.54],["Dark Angels",50.3,173,55,0,0,0,1.41],
+ ["Grey Knights",48.8,125,24,0,6,0,0.80],["Necrons",48.1,268,55,1,6,1,1.22],["Space Wolves",48.0,150,28,0,4,0,1.37],
+ ["Death Guard",47.6,250,52,2,5,2,0.92],["Adeptus Mechanicus",47.5,139,26,2,1,2,1.11],["Thousand Sons",44.6,112,22,0,4,0,1.31],
+ ["Imperial Knights",43.7,126,26,0,1,0,0.37],["Chaos Space Marines",43.2,197,48,0,3,0,0.84],["Astra Militarum",42.8,131,32,0,1,1,0.32]
+];
+
+const COMBOS = [
+ ["Space Marines","Assault Brethren + Deathwatch Support + Terminator Storm Force",13.2,72.0],
+ ["Orks","Blitz Brigade + Brute Bosses + Da Big Hunt",7.6,68.2],
+ ["Grey Knights","Warpbane Task Force",29.2,65.8],
+ ["Adepta Sororitas","Hallowed Martyrs",30.4,65.7],
+ ["Dark Angels","Assault Brethren + Darkflight Pursuit + Stormlance Task Force",10.9,65.2],
+ ["Chaos Daemons","Blood Legion + Warptide",19.4,62.5],
+ ["T'au Empire","Experimental Prototype Cadre + Kauyon",33.3,61.7],
+ ["Chaos Knights","Houndpack Lance + Hunting Warpack",51.6,61.3],
+ ["World Eaters","Berzerker Warband + Vessels of Wrath",30.6,59.8],
+ ["Tyranids","Subterranean Assault",36.5,57.7]
+];
+
+const EMERG = [
+ {sig:"strong", team:true, f:"Adeptus Mechanicus", arch:"Cohort Cybernetica + Eradication Cohort",
+  p:"Trois listes sur trois dans les tops du week-end (deux 5-0), contre zéro sur les trois semaines précédentes où Lords of the Forge raflait tout.",
+  lists:["Mr. Beef","Toby Barnwell","Jerome Connolly"]},
+ {sig:"strong", team:true, f:"Space Marines", arch:"Stormlance Task Force en tri-détachement",
+  p:"Absent des tops de la LGT et de la LVO, il signe un 6-0 à Denver et un 5-0 au Da Summer Waaagh. Dark Angels et Space Wolves l'adoptent aussi (5-0 et 5-1).",
+  lists:["Colin Kay","Oliver Leaver","Matias Oteiza"]},
+ {sig:"strong", team:false, f:"Chaos Knights", arch:"Houndpack Lance + Hunting Warpack, Reconnaissance",
+  p:"Cinq listes X-0 / X-1 ce week-end, toutes sur la même combinaison et en Reconnaissance. La moitié des joueurs Chaos Knights l'alignent, à 61 % de victoires.",
+  lists:["Niklas Nies","Derek Swift","Jonathon Hefner"]},
+ {sig:"watch", team:true, f:"Emperor's Children", arch:"Spectacle of Slaughter + Mercurial Host, Reconnaissance",
+  p:"Seul 5-0 Emperor's Children du week-end, alors que Coterie of the Conceited en Priority Assets occupait presque tous les tops depuis fin septembre. Une seule liste : à confirmer.",
+  lists:["Anders Petersen"]},
+ {sig:"watch", team:true, f:"Necrons", arch:"Cryptek Conclave + Hand of the Dynasty",
+  p:"6-0 au Rook's Open (78 joueurs) par le joueur qui avait fait 5-1 à la LVO, et un 5-1 à la LGT fin septembre. Moins de 8 % des joueurs Necrons l'alignent.",
+  lists:["Marshall Peterson","Mark Crombleholme"]},
+ {sig:"watch", team:false, f:"Dark Angels", arch:"Sortie de Darkflight + Company of Hunters",
+  p:"L'archétype Reconnaissance qui dominait la LGT disparaît des tops ; 59 % des Dark Angels jouent désormais Take and Hold.",
+  lists:["Matias Oteiza","Niklas Frerichs"]}
+];
+
+const OPP = [
+ ["Space Marines",106,52.8,"th","Assault Brethren + Deathwatch Support + Terminator Storm Force"],
+ ["Orks",66,56.7,"ptf","Blitz Brigade + Dread Mob + Wreckas"],
+ ["World Eaters",62,54.0,"ptf","Berzerker Warband + Vessels of Wrath"],
+ ["Dark Angels",55,50.3,"th","Assault Brethren + Wrath of the Rock"],
+ ["Necrons",55,48.1,"ptf","Cursed Legion + Skyshroud Spearhead"],
+ ["Tyranids",52,53.7,"th","Subterranean Assault"],
+ ["Death Guard",52,47.6,"th","Virulent Vectorium"],
+ ["Chaos Space Marines",48,43.2,"th","Creations of Bile"],
+ ["Adeptus Custodes",46,51.7,"th","Lions of the Emperor"]
+];
+
+const BRIEF = [
+ {k:"AJA", c:"var(--f-tau)", t:"T'au et Space Marines au-dessus de 52 %. Emperor's Children à l'équilibre, Necrons et AdMech sous 50 %."},
+ {k:"Disposition", c:"var(--d-rec)", t:"Reconnaissance mène à 54 % sur 463 parties. Disruption ferme la marche à 45 %."},
+ {k:"Meta", c:"var(--accent)", t:"Orks (56,7 %) et Votann (56,4 %) en tête ; World Eaters à 54 % avec 3 invaincus."},
+ {k:"Émergent", c:"var(--f-adm)", t:"AdMech passe en Eradication Cohort, Stormlance Task Force s'installe chez les Space Marines, Chaos Knights trustent la Reconnaissance."}
+];
+
+/* ---------- rendu ---------- */
+const isX0 = r => /-0(-\d+)?$/.test(r);
+const PLAYERS = {};
+WEEK.forEach(w=>{ if(w[2]) PLAYERS[w[1]] = w[2]; });
+PLAYERS["Mark Crombleholme"] = "027bb18397c980f4d1";
+const ARCH = {};
+WEEK.forEach(w=>{ ARCH[w[1]] = w; });
+ARCH["Mark Crombleholme"] = ["5-1","Mark Crombleholme","027bb18397c980f4d1","Necrons","Cryptek Conclave + Hand of the Dynasty","th","The London GT (fin sept.)",1049];
+const plink = n => PLAYERS[n] ? `<a href="${LH}/players/${PLAYERS[n]}" target="_blank" rel="noopener" title="Voir la liste sur Listhammer">${n} ↗</a>` : n;
+const $ = id => document.getElementById(id);
+const slugOf = n => n.toLowerCase().replace(/'/g,'').replace(/ /g,'-');
+const recKey = r => { const p=r.split('-').map(Number); return [p[0], p[1]]; };
+const byResult = (a,b) => { const [wa,la]=recKey(a[0]), [wb,lb]=recKey(b[0]); return (wb-wa)||(la-lb)||(b[7]-a[7]); };
+
+$('brief').innerHTML = BRIEF.map(b=>`<div class="take"><span class="k" style="color:${b.c}">${b.k}</span><p>${b.t}</p></div>`).join('');
+
+$('armies').innerHTML = ARMIES.map(a=>{
+  const tot = Object.values(a.fd).reduce((s,v)=>s+v,0);
+  const order = Object.entries(a.fd).sort((x,y)=>y[1]-x[1]);
+  const bar = order.map(([k,v])=>{const w=v/tot*100;return `<span style="width:${w}%;background:${FD[k].c}" title="${FD[k].n} : ${v} joueurs">${w>=9?Math.round(w)+'%':''}</span>`}).join('');
+  const leg = order.map(([k,v])=>`<span><i style="background:${FD[k].c}"></i>${FD[k].n} ${v}</span>`).join('');
+  const det = a.det.map(([n,f,w])=>`<tr><td class="det">${n}</td><td class="r num">${f.toFixed(1).replace('.',',')} %</td><td class="r">${wrBar(w)}</td></tr>`).join('');
+  const lists = a.lists.map(([r,who,what,fd,ev,sz])=>`<div class="li"><span class="rec ${isX0(r)?'x0':''}">${r}</span><span class="who">${plink(who)}</span><span class="what">${fdTag(fd)}${what} · ${ev} (${sz})</span></div>`).join('');
+  return `<article class="army" style="--fc:${a.c}">
+    <div class="army-h"><h3><a href="${LH}/factions/${a.slug}" target="_blank" rel="noopener">${a.name}</a></h3>
+      <div class="kpis">
+        <div class="kpi"><span class="v" style="color:${a.wr>=50?'var(--good)':'var(--bad)'}">${pct(a.wr)}</span><span class="l">Win rate</span></div>
+        <div class="kpi"><span class="v">${a.games}</span><span class="l">Parties</span></div>
+        <div class="kpi"><span class="v">${a.players}</span><span class="l">Joueurs</span></div>
+        <div class="kpi"><span class="v">${a.x0} / ${a.x1}</span><span class="l">X-0 / X-1</span></div>
+      </div></div>
+    <p class="read">${a.read}</p>
+    <div><div class="sub">Détachements</div><div class="tscroll"><table><thead><tr><th>Combinaison</th><th class="r">Part</th><th class="r">Win rate</th></tr></thead><tbody>${det}</tbody></table></div></div>
+    <div><div class="sub">Forces de disposition (${tot} joueurs)</div><div class="fdbar">${bar}</div><div class="legend">${leg}</div></div>
+    <div><div class="sub">Meilleures listes du week-end</div><div class="lists">${lists}</div></div>
+  </article>`;
+}).join('');
+
+$('fdgrid').innerHTML = FDSTATS.map(d=>{
+  const plays = Object.entries(DISPO).map(([f,c])=>[f,c[d.k]||0]).filter(x=>x[1]>0).sort((x,y)=>y[1]-x[1]).slice(0,6);
+  const max = plays[0][1];
+  const playsH = plays.map(([f,n])=>`<div class="wp"><span class="${TEAM.has(f)?'team':''}">${f}</span><span class="b" style="width:${n/max*100}%"></span><span class="num r">${n}</span></div>`).join('');
+  const all = WEEK.filter(w=>w[5]===d.k).sort(byResult);
+  const x0 = all.filter(w=>isX0(w[0])).length;
+  const best = all.slice(0,6).map(([r,who,id,f,what,fd,ev,sz])=>`<div class="li"><span class="rec ${isX0(r)?'x0':''}">${r}</span><span class="who">${plink(who)} <span class="muted" style="font-weight:400">· <span style="${TEAM.has(f)?'font-weight:600;color:var(--ink)':''}">${f}</span></span></span><span class="what">${what} · ${ev} (${sz})</span></div>`).join('');
+  return `<article class="fdcard" style="--dc:${FD[d.k].c}">
+    <div class="fdcard-h"><h3>${FD[d.k].n}</h3><span class="wr" style="color:${d.wr>=50?'var(--good)':'var(--bad)'}">${pct(d.wr)}</span></div>
+    <p class="muted" style="font-size:.82rem">${d.games} parties · ${d.field.toFixed(1).replace('.',',')} % du field · ${all.length} listes X-0 / X-1 dont ${x0} invaincue${x0>1?'s':''}</p>
+    <div><div class="sub">Qui la joue (joueurs)</div><div class="who-plays">${playsH}</div></div>
+    <div><div class="sub">Meilleurs résultats${all.length>6?' (6 sur '+all.length+')':''}</div><div class="lists">${best}</div></div>
+  </article>`;
+}).join('');
+
+$('factions').innerHTML = `<thead><tr><th>Faction</th><th class="r">Win rate</th><th class="r">Parties</th><th class="r hide-m">Joueurs</th><th class="r hide-m">X-0</th><th class="r hide-m">X-1</th><th class="r hide-m">Victoires</th><th class="r">Sur-repr.</th></tr></thead><tbody>`+
+ FACTIONS.map(([f,wr,g,p,x0,x1,ew,ov])=>{
+   const a = ARMIES.find(x=>x.name===f);
+   return `<tr class="${a?'rowteam':''}"><td><a href="${LH}/factions/${slugOf(f)}" target="_blank" rel="noopener">${f}</a>${a?'<span class="teamtag">AJA</span>':''}</td><td class="r">${wrBar(wr)}</td><td class="r num">${g}</td><td class="r num hide-m">${p}</td><td class="r num hide-m">${x0}</td><td class="r num hide-m">${x1}</td><td class="r num hide-m">${ew}</td><td class="r num" style="color:${ov>=1.2?'var(--good)':ov<0.8?'var(--bad)':'inherit'}">${ov.toFixed(2).replace('.',',')}x</td></tr>`;
+ }).join('')+'</tbody>';
+
+$('combos').innerHTML = `<thead><tr><th>Combinaison</th><th class="r">Part</th><th class="r">Win rate</th></tr></thead><tbody>`+
+ COMBOS.map(([f,c,fi,wr])=>`<tr class="${TEAM.has(f)?'rowteam':''}"><td><strong>${f}</strong><span class="cell-sub">${c}</span></td><td class="r num">${fi.toFixed(1).replace('.',',')} %</td><td class="r">${wrBar(wr)}</td></tr>`).join('')+'</tbody>';
+
+$('emerg').innerHTML = EMERG.map(e=>{
+  const ls = e.lists.map(n=>ARCH[n]).filter(Boolean).map(([r,who,id,f,what,fd,ev,sz])=>`<div class="li"><span class="rec ${isX0(r)?'x0':''}">${r}</span><span class="who">${plink(who)}${f!==e.f?` <span class="muted" style="font-weight:400">· ${f}</span>`:''}</span><span class="what">${fdTag(fd)}${ev} (${sz})</span></div>`).join('');
+  return `<article class="em"><span class="sig ${e.sig}">${e.sig==='strong'?'Signal fort':'À surveiller'}</span>
+  <span class="eyebrow">${e.f}${e.team?'<span class="teamtag">AJA</span>':''}</span>
+  <span class="arch">${e.arch}</span><p>${e.p}</p>
+  <div><div class="sub">${e.lists.length>1?'Meilleures listes':'La liste'}</div><div class="lists">${ls}</div></div></article>`;
+}).join('');
+
+$('opp').innerHTML = `<thead><tr><th>Armée · disposition et détachement favoris</th><th class="r">Joueurs</th><th class="r">Win rate</th></tr></thead><tbody>`+
+ OPP.map(([f,p,wr,fd,det])=>`<tr class="${TEAM.has(f)?'rowteam':''}"><td><strong>${f}</strong><span class="cell-sub">${fdTag(fd)}${det}</span></td><td class="r num">${p}</td><td class="r">${wrBar(wr)}</td></tr>`).join('')+'</tbody>';
+
+
+/* ---------- navigation : burger au scroll ---------- */
+(function(){
+  const nav=$('nav'), burger=$('burger'), cur=$('cur'), links=[...nav.querySelectorAll('.links a')];
+  const setOpen=o=>{nav.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');};
+  burger.addEventListener('click',()=>setOpen(!nav.classList.contains('open')));
+  links.forEach(a=>a.addEventListener('click',()=>setOpen(false)));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)});
+  new IntersectionObserver(([e])=>{
+    const c=!e.isIntersecting && e.boundingClientRect.top<0;
+    nav.classList.toggle('collapsed',c); if(!c) setOpen(false);
+  }).observe($('navsentinel'));
+  const ids=links.map(a=>a.getAttribute('href').slice(1));
+  const secs=ids.map(id=>document.getElementById(id)).filter(Boolean);
+  const onScroll=()=>{
+    let active=secs[0];
+    for(const sec of secs){ if(sec.getBoundingClientRect().top<120) active=sec; }
+    links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+active.id));
+    const l=links.find(a=>a.getAttribute('href')==='#'+active.id); if(l) cur.textContent=l.textContent;
+  };
+  addEventListener('scroll',onScroll,{passive:true}); onScroll();
+})();
+</script>
+
+</body>
+</html>
