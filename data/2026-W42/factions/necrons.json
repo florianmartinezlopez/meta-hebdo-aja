@@ -629,6 +629,20 @@
  ],
  "listes_recentes": [
   {
+   "playerName": "Steve Scott",
+   "playerUid": "b721b47fbfa7becb58",
+   "eventName": "Gothic Games Canterbury: October GT",
+   "eventUid": "16368df8246a3a8169",
+   "numberOfPlayers": 32,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Starshatter Arsenal",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-17"
+  },
+  {
    "playerName": "Dean Vincent",
    "playerUid": "3e773a0858edca49cd",
    "eventName": "Auspicious End Game",
@@ -963,21 +977,7 @@
    "detachment": "The Phaeron's Armoury | Cursed Legion",
    "disposition": "Priority Assets",
    "startDate": "2026-09-25"
-  },
-  {
-   "playerName": "Ben Martin",
-   "playerUid": "377b1bbccaa0e2be2d",
-   "eventName": "The London Grand Tournament - 40k Main Event (LGT 40k GT)",
-   "eventUid": "4848688a4a9990005c",
-   "numberOfPlayers": 1049,
-   "numberOfRounds": 10,
-   "wins": 4,
-   "draws": 0,
-   "losses": 1,
-   "detachment": "The Phaeron's Armoury | Obeisance Phalanx",
-   "disposition": "Priority Assets",
-   "startDate": "2026-09-25"
   }
  ],
- "listes_total_site": 183
+ "listes_total_site": 184
 }

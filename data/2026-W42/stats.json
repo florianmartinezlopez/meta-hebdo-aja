@@ -1,6 +1,6 @@
 {
  "semaine": "2026-W42",
- "releve_le": "2026-10-18T17:11+00:00",
+ "releve_le": "2026-10-18T17:28+00:00",
  "fenetre": {
   "debut": "2026-10-15",
   "fin": "2026-10-20",
@@ -657,7 +657,7 @@
    "overrep": "1.12"
   },
   {
-   "faction": "Space Marines (Astartes)",
+   "faction": "Space Marines",
    "wins": 262,
    "losses": 255,
    "total": 517,
