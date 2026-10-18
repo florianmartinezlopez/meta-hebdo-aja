@@ -1,0 +1,96 @@
+name: Récap hebdo
+
+on:
+  schedule:
+    - cron: "0 7 * * 1"   # lundi 9h à Paris en heure d'été
+    - cron: "0 8 * * 1"   # lundi 9h à Paris en heure d'hiver
+  workflow_dispatch:
+    inputs:
+      discord:
+        description: "Poster le message sur Discord"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: recap-hebdo
+  cancel-in-progress: false
+
+jobs:
+  recap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Garder le seul déclenchement qui tombe à 9h à Paris
+        id: heure
+        run: |
+          offset=$(TZ=Europe/Paris date +%z)
+          lancer=oui
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            if [ "${{ github.event.schedule }}" = "0 7 * * 1" ] && [ "$offset" != "+0200" ]; then lancer=non; fi
+            if [ "${{ github.event.schedule }}" = "0 8 * * 1" ] && [ "$offset" != "+0100" ]; then lancer=non; fi
+          fi
+          echo "Décalage Paris : $offset, lancement : $lancer"
+          echo "lancer=$lancer" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        if: steps.heure.outputs.lancer == 'oui'
+
+      - uses: actions/setup-python@v5
+        if: steps.heure.outputs.lancer == 'oui'
+        with:
+          python-version: "3.12"
+
+      - name: Installer le navigateur de test
+        if: steps.heure.outputs.lancer == 'oui'
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Relevé Listhammer
+        id: releve
+        if: steps.heure.outputs.lancer == 'oui'
+        run: |
+          semaine=$(python scripts/releve.py)
+          echo "semaine=$semaine" >> "$GITHUB_OUTPUT"
+
+      - name: Calculs et génération de la page
+        if: steps.heure.outputs.lancer == 'oui'
+        run: python scripts/construire.py "${{ steps.releve.outputs.semaine }}" --url "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+
+      - name: Test d'affichage (380 px et grand écran)
+        if: steps.heure.outputs.lancer == 'oui'
+        run: python scripts/verifier_affichage.py docs/index.html captures
+
+      - name: Enregistrer les données et publier la page
+        id: publier
+        if: steps.heure.outputs.lancer == 'oui'
+        run: |
+          git config user.name "meta-hebdo-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data docs
+          git commit -m "Récap ${{ steps.releve.outputs.semaine }}" || echo "Rien de nouveau à enregistrer"
+          git push
+
+      - name: Message Discord
+        if: steps.heure.outputs.lancer == 'oui' && (github.event_name == 'schedule' || inputs.discord)
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python scripts/discord.py "${{ steps.releve.outputs.semaine }}"
+
+      - name: Captures d'écran du test
+        if: always() && steps.heure.outputs.lancer == 'oui'
+        uses: actions/upload-artifact@v4
+        with:
+          name: captures
+          path: captures
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Signaler l'échec sur Discord
+        if: failure() && steps.heure.outputs.lancer == 'oui' && steps.publier.outcome != 'success' && (github.event_name == 'schedule' || inputs.discord)
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python scripts/discord.py --echec
