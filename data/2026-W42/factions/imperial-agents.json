@@ -2,34 +2,34 @@
  "nom": "Imperial Agents",
  "slug": "imperial-agents",
  "periode": {
-  "wins": 6,
-  "losses": 10,
-  "total": 16,
-  "winRate": "37.50"
+  "wins": 10,
+  "losses": 14,
+  "total": 24,
+  "winRate": "41.67"
  },
- "joueurs": 4,
+ "joueurs": 5,
  "invaincus": 0,
  "x1": 0,
  "victoires_tournoi": 0,
  "sur_representation": "0.00",
  "dispositions": {
   "Disruption": 2,
-  "Reconnaissance": 2
+  "Reconnaissance": 3
  },
  "combinaisons": [
   {
    "detachment": "Imperialis Fleet | Veiled Blade Elimination Force",
-   "players": 3,
-   "fieldPercent": 75,
-   "wins": 4,
-   "losses": 7,
-   "total": 11,
-   "winRate": "36.36"
+   "players": 4,
+   "fieldPercent": 80,
+   "wins": 8,
+   "losses": 11,
+   "total": 19,
+   "winRate": "42.11"
   },
   {
    "detachment": "Ordo Hereticus, Purgation Force | Veiled Blade Elimination Force",
    "players": 1,
-   "fieldPercent": 25,
+   "fieldPercent": 20,
    "wins": 2,
    "losses": 3,
    "total": 5,
@@ -37,6 +37,23 @@
   }
  ],
  "adversaires": [
+  {
+   "opponentFaction": "Death Guard",
+   "wins": 2,
+   "losses": 0,
+   "total": 2,
+   "winRate": "100.00",
+   "avgDifferential": 14.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 28,
+    "differentialGames": 1
+   }
+  },
   {
    "opponentFaction": "Emperor's Children",
    "wins": 1,
@@ -57,18 +74,18 @@
   {
    "opponentFaction": "Necrons",
    "wins": 1,
-   "losses": 0,
-   "total": 1,
-   "winRate": "100.00",
-   "avgDifferential": 57,
-   "differentialGames": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": -4,
+   "differentialGames": 2,
    "goingFirst": {
     "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": "100.00",
-    "avgDifferential": 57,
-    "differentialGames": 1
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": -4,
+    "differentialGames": 2
    }
   },
   {
@@ -96,6 +113,57 @@
    "winRate": "50.00",
    "avgDifferential": -1,
    "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Space Wolves",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 4,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Thousand Sons",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 3,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Black Templars",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -42,
+   "differentialGames": 1,
    "goingFirst": {
     "wins": 0,
     "losses": 0,
@@ -157,6 +225,23 @@
    }
   },
   {
+   "opponentFaction": "Leagues of Votann",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -18,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -18,
+    "differentialGames": 1
+   }
+  },
+  {
    "opponentFaction": "Tyranids",
    "wins": 0,
    "losses": 1,
@@ -176,11 +261,11 @@
   {
    "opponentFaction": "World Eaters",
    "wins": 0,
-   "losses": 1,
-   "total": 1,
+   "losses": 2,
+   "total": 2,
    "winRate": "0.00",
-   "avgDifferential": -23,
-   "differentialGames": 1,
+   "avgDifferential": -13,
+   "differentialGames": 2,
    "goingFirst": {
     "wins": 0,
     "losses": 1,

@@ -2,100 +2,100 @@
  "nom": "Leagues of Votann",
  "slug": "leagues-of-votann",
  "periode": {
-  "wins": 100,
-  "losses": 73,
-  "total": 173,
-  "winRate": "57.80"
+  "wins": 129,
+  "losses": 110,
+  "total": 239,
+  "winRate": "53.97"
  },
- "joueurs": 47,
- "invaincus": 3,
- "x1": 2,
- "victoires_tournoi": 0,
- "sur_representation": "1.91",
+ "joueurs": 52,
+ "invaincus": 5,
+ "x1": 9,
+ "victoires_tournoi": 1,
+ "sur_representation": "2.07",
  "dispositions": {
   "Disruption": 3,
-  "Priority Assets": 33,
+  "Priority Assets": 35,
   "Purge the Foe": 3,
-  "Reconnaissance": 7,
-  "Take and Hold": 1
+  "Reconnaissance": 8,
+  "Take and Hold": 3
  },
  "combinaisons": [
   {
    "detachment": "Hearthguard Covenant | Needgaârd Oathband",
-   "players": 25,
-   "fieldPercent": 53.191489361702125,
-   "wins": 52,
-   "losses": 39,
-   "total": 91,
-   "winRate": "57.14"
+   "players": 27,
+   "fieldPercent": 51.92307692307693,
+   "wins": 70,
+   "losses": 55,
+   "total": 125,
+   "winRate": "56.00"
+  },
+  {
+   "detachment": "Hearthguard Covenant | Mercenary Oathband",
+   "players": 5,
+   "fieldPercent": 9.615384615384617,
+   "wins": 10,
+   "losses": 12,
+   "total": 22,
+   "winRate": "45.45"
   },
   {
    "detachment": "Farseekers | Needgaârd Oathband",
    "players": 4,
-   "fieldPercent": 8.51063829787234,
-   "wins": 10,
-   "losses": 4,
-   "total": 14,
-   "winRate": "71.43"
+   "fieldPercent": 7.6923076923076925,
+   "wins": 12,
+   "losses": 8,
+   "total": 20,
+   "winRate": "60.00"
   },
   {
    "detachment": "Dêlve Assault Shift | Hearthguard Covenant",
    "players": 3,
-   "fieldPercent": 6.382978723404255,
-   "wins": 8,
-   "losses": 2,
-   "total": 10,
-   "winRate": "80.00"
-  },
-  {
-   "detachment": "Hearthguard Covenant | Mercenary Oathband",
-   "players": 3,
-   "fieldPercent": 6.382978723404255,
-   "wins": 7,
-   "losses": 4,
-   "total": 11,
-   "winRate": "63.64"
-  },
-  {
-   "detachment": "Dêlve Assault Shift | Farseekers",
-   "players": 2,
-   "fieldPercent": 4.25531914893617,
-   "wins": 7,
-   "losses": 1,
-   "total": 8,
-   "winRate": "87.50"
-  },
-  {
-   "detachment": "Farseekers | Mercenary Oathband",
-   "players": 2,
-   "fieldPercent": 4.25531914893617,
-   "wins": 4,
+   "fieldPercent": 5.769230769230769,
+   "wins": 9,
    "losses": 3,
-   "total": 7,
-   "winRate": "57.14"
+   "total": 12,
+   "winRate": "75.00"
   },
   {
    "detachment": "Needgaârd Oathband",
-   "players": 2,
-   "fieldPercent": 4.25531914893617,
+   "players": 3,
+   "fieldPercent": 5.769230769230769,
    "wins": 4,
    "losses": 6,
    "total": 10,
    "winRate": "40.00"
   },
   {
+   "detachment": "Dêlve Assault Shift | Farseekers",
+   "players": 2,
+   "fieldPercent": 3.8461538461538463,
+   "wins": 9,
+   "losses": 1,
+   "total": 10,
+   "winRate": "90.00"
+  },
+  {
+   "detachment": "Farseekers | Mercenary Oathband",
+   "players": 2,
+   "fieldPercent": 3.8461538461538463,
+   "wins": 5,
+   "losses": 6,
+   "total": 11,
+   "winRate": "45.45"
+  },
+  {
    "detachment": "Armoured Trailblazers | Brandfast Oathband",
    "players": 1,
-   "fieldPercent": 2.127659574468085,
-   "wins": 2,
+   "fieldPercent": 1.9230769230769231,
+   "wins": 4,
    "losses": 1,
-   "total": 3,
-   "winRate": "66.67"
+   "total": 5,
+   "winRate": "80.00"
   },
   {
    "detachment": "Armoured Trailblazers | Hearthfyre Arsenal",
    "players": 1,
-   "fieldPercent": 2.127659574468085,
+   "fieldPercent": 1.9230769230769231,
    "wins": 1,
    "losses": 4,
    "total": 5,
@@ -104,25 +104,25 @@
   {
    "detachment": "Armoured Trailblazers | Mercenary Oathband",
    "players": 1,
-   "fieldPercent": 2.127659574468085,
+   "fieldPercent": 1.9230769230769231,
    "wins": 1,
-   "losses": 2,
-   "total": 3,
-   "winRate": "33.33"
+   "losses": 4,
+   "total": 5,
+   "winRate": "20.00"
   },
   {
    "detachment": "Armoured Trailblazers | Needgaârd Oathband",
    "players": 1,
-   "fieldPercent": 2.127659574468085,
+   "fieldPercent": 1.9230769230769231,
    "wins": 3,
-   "losses": 1,
-   "total": 4,
-   "winRate": "75.00"
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00"
   },
   {
    "detachment": "Dêlve Assault Shift",
    "players": 1,
-   "fieldPercent": 2.127659574468085,
+   "fieldPercent": 1.9230769230769231,
    "wins": 0,
    "losses": 5,
    "total": 5,
@@ -131,79 +131,113 @@
   {
    "detachment": "Mercenary Oathband",
    "players": 1,
-   "fieldPercent": 2.127659574468085,
+   "fieldPercent": 1.9230769230769231,
    "wins": 1,
-   "losses": 1,
-   "total": 2,
-   "winRate": "50.00"
+   "losses": 3,
+   "total": 4,
+   "winRate": "25.00"
   }
  ],
  "adversaires": [
   {
    "opponentFaction": "Adepta Sororitas",
-   "wins": 3,
-   "losses": 3,
-   "total": 6,
-   "winRate": "50.00",
-   "avgDifferential": 1.1666666666666667,
-   "differentialGames": 6,
-   "goingFirst": {
-    "wins": 1,
-    "losses": 1,
-    "total": 2,
-    "winRate": "50.00",
-    "avgDifferential": 20,
-    "differentialGames": 2
-   }
-  },
-  {
-   "opponentFaction": "Adeptus Custodes",
-   "wins": 6,
-   "losses": 3,
-   "total": 9,
-   "winRate": "66.67",
-   "avgDifferential": 10.222222222222221,
-   "differentialGames": 9,
-   "goingFirst": {
-    "wins": 2,
-    "losses": 2,
-    "total": 4,
-    "winRate": "50.00",
-    "avgDifferential": 10.5,
-    "differentialGames": 4
-   }
-  },
-  {
-   "opponentFaction": "Adeptus Mechanicus",
-   "wins": 7,
-   "losses": 1,
-   "total": 8,
-   "winRate": "87.50",
-   "avgDifferential": 25.25,
-   "differentialGames": 8,
-   "goingFirst": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": "100.00",
-    "avgDifferential": 32,
-    "differentialGames": 1
-   }
-  },
-  {
-   "opponentFaction": "Black Templars",
    "wins": 4,
-   "losses": 3,
-   "total": 7,
-   "winRate": "57.14",
-   "avgDifferential": 0.8571428571428571,
-   "differentialGames": 7,
+   "losses": 4,
+   "total": 8,
+   "winRate": "50.00",
+   "avgDifferential": -3,
+   "differentialGames": 8,
    "goingFirst": {
     "wins": 2,
     "losses": 1,
     "total": 3,
     "winRate": "66.67",
-    "avgDifferential": 27.333333333333332,
+    "avgDifferential": 14.333333333333334,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Adeptus Custodes",
+   "wins": 8,
+   "losses": 4,
+   "total": 12,
+   "winRate": "66.67",
+   "avgDifferential": 8.25,
+   "differentialGames": 12,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 3,
+    "total": 6,
+    "winRate": "50.00",
+    "avgDifferential": 5.666666666666667,
+    "differentialGames": 6
+   }
+  },
+  {
+   "opponentFaction": "Adeptus Mechanicus",
+   "wins": 9,
+   "losses": 2,
+   "total": 11,
+   "winRate": "81.82",
+   "avgDifferential": 19.727272727272727,
+   "differentialGames": 11,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": -3,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Astra Militarum",
+   "wins": 1,
+   "losses": 6,
+   "total": 7,
+   "winRate": "14.29",
+   "avgDifferential": -18,
+   "differentialGames": 7,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 4,
+    "total": 4,
+    "winRate": "0.00",
+    "avgDifferential": -14.75,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "Black Templars",
+   "wins": 5,
+   "losses": 3,
+   "total": 8,
+   "winRate": "62.50",
+   "avgDifferential": 1.625,
+   "differentialGames": 8,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 1,
+    "total": 4,
+    "winRate": "75.00",
+    "avgDifferential": 22.25,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "Blood Angels",
+   "wins": 1,
+   "losses": 5,
+   "total": 6,
+   "winRate": "16.67",
+   "avgDifferential": -35.833333333333336,
+   "differentialGames": 6,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 2,
+    "total": 3,
+    "winRate": "33.33",
+    "avgDifferential": -19,
     "differentialGames": 3
    }
   },
@@ -226,70 +260,70 @@
   },
   {
    "opponentFaction": "Chaos Knights",
-   "wins": 4,
-   "losses": 0,
-   "total": 4,
-   "winRate": "100.00",
-   "avgDifferential": 31.75,
-   "differentialGames": 4,
+   "wins": 5,
+   "losses": 2,
+   "total": 7,
+   "winRate": "71.43",
+   "avgDifferential": 19,
+   "differentialGames": 7,
    "goingFirst": {
     "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": "100.00",
-    "avgDifferential": 3,
-    "differentialGames": 1
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": -2,
+    "differentialGames": 2
    }
   },
   {
    "opponentFaction": "Chaos Space Marines",
-   "wins": 3,
-   "losses": 4,
-   "total": 7,
-   "winRate": "42.86",
-   "avgDifferential": -7,
-   "differentialGames": 7,
+   "wins": 5,
+   "losses": 7,
+   "total": 12,
+   "winRate": "41.67",
+   "avgDifferential": -6,
+   "differentialGames": 12,
    "goingFirst": {
-    "wins": 2,
-    "losses": 4,
-    "total": 6,
+    "wins": 3,
+    "losses": 6,
+    "total": 9,
     "winRate": "33.33",
-    "avgDifferential": -14.666666666666666,
-    "differentialGames": 6
+    "avgDifferential": -15.777777777777779,
+    "differentialGames": 9
    }
   },
   {
    "opponentFaction": "Dark Angels",
-   "wins": 5,
-   "losses": 5,
-   "total": 10,
-   "winRate": "50.00",
-   "avgDifferential": 1.9,
-   "differentialGames": 10,
+   "wins": 6,
+   "losses": 7,
+   "total": 13,
+   "winRate": "46.15",
+   "avgDifferential": -0.46153846153846156,
+   "differentialGames": 13,
    "goingFirst": {
-    "wins": 2,
-    "losses": 2,
-    "total": 4,
+    "wins": 3,
+    "losses": 3,
+    "total": 6,
     "winRate": "50.00",
-    "avgDifferential": 0.5,
-    "differentialGames": 4
+    "avgDifferential": 0.3333333333333333,
+    "differentialGames": 6
    }
   },
   {
    "opponentFaction": "Death Guard",
-   "wins": 8,
-   "losses": 3,
-   "total": 11,
-   "winRate": "72.73",
-   "avgDifferential": 4.090909090909091,
-   "differentialGames": 11,
+   "wins": 9,
+   "losses": 4,
+   "total": 13,
+   "winRate": "69.23",
+   "avgDifferential": 2.4615384615384617,
+   "differentialGames": 13,
    "goingFirst": {
-    "wins": 3,
-    "losses": 2,
-    "total": 5,
-    "winRate": "60.00",
-    "avgDifferential": 0,
-    "differentialGames": 5
+    "wins": 4,
+    "losses": 3,
+    "total": 7,
+    "winRate": "57.14",
+    "avgDifferential": -1.8571428571428572,
+    "differentialGames": 7
    }
   },
   {
@@ -329,27 +363,61 @@
   {
    "opponentFaction": "Emperor's Children",
    "wins": 3,
-   "losses": 3,
-   "total": 6,
-   "winRate": "50.00",
-   "avgDifferential": -6,
-   "differentialGames": 6,
+   "losses": 4,
+   "total": 7,
+   "winRate": "42.86",
+   "avgDifferential": -6.714285714285714,
+   "differentialGames": 7,
    "goingFirst": {
     "wins": 2,
-    "losses": 1,
-    "total": 3,
-    "winRate": "66.67",
-    "avgDifferential": 0.3333333333333333,
-    "differentialGames": 3
+    "losses": 2,
+    "total": 4,
+    "winRate": "50.00",
+    "avgDifferential": -2.5,
+    "differentialGames": 4
    }
   },
   {
    "opponentFaction": "Genestealer Cult",
+   "wins": 2,
+   "losses": 1,
+   "total": 3,
+   "winRate": "66.67",
+   "avgDifferential": 6.333333333333333,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": 5.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Grey Knights",
+   "wins": 1,
+   "losses": 3,
+   "total": 4,
+   "winRate": "25.00",
+   "avgDifferential": -4.5,
+   "differentialGames": 4,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": -2.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Imperial Agents",
    "wins": 1,
    "losses": 0,
    "total": 1,
    "winRate": "100.00",
-   "avgDifferential": 8,
+   "avgDifferential": 18,
    "differentialGames": 1,
    "goingFirst": {
     "wins": 0,
@@ -358,23 +426,6 @@
     "winRate": "0",
     "avgDifferential": null,
     "differentialGames": 0
-   }
-  },
-  {
-   "opponentFaction": "Grey Knights",
-   "wins": 1,
-   "losses": 2,
-   "total": 3,
-   "winRate": "33.33",
-   "avgDifferential": -1.3333333333333333,
-   "differentialGames": 3,
-   "goingFirst": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": "100.00",
-    "avgDifferential": 9,
-    "differentialGames": 1
    }
   },
   {
@@ -396,63 +447,63 @@
   },
   {
    "opponentFaction": "Necrons",
-   "wins": 2,
-   "losses": 4,
-   "total": 6,
-   "winRate": "33.33",
-   "avgDifferential": -20.666666666666668,
-   "differentialGames": 6,
+   "wins": 4,
+   "losses": 5,
+   "total": 9,
+   "winRate": "44.44",
+   "avgDifferential": -7.444444444444445,
+   "differentialGames": 9,
    "goingFirst": {
-    "wins": 1,
-    "losses": 3,
-    "total": 4,
-    "winRate": "25.00",
-    "avgDifferential": -27.5,
-    "differentialGames": 4
+    "wins": 2,
+    "losses": 4,
+    "total": 6,
+    "winRate": "33.33",
+    "avgDifferential": -11.333333333333334,
+    "differentialGames": 6
    }
   },
   {
    "opponentFaction": "Orks",
    "wins": 14,
-   "losses": 7,
-   "total": 21,
-   "winRate": "66.67",
-   "avgDifferential": 12.714285714285714,
-   "differentialGames": 21,
+   "losses": 9,
+   "total": 23,
+   "winRate": "60.87",
+   "avgDifferential": 10.565217391304348,
+   "differentialGames": 23,
+   "goingFirst": {
+    "wins": 6,
+    "losses": 7,
+    "total": 13,
+    "winRate": "46.15",
+    "avgDifferential": -3.6923076923076925,
+    "differentialGames": 13
+   }
+  },
+  {
+   "opponentFaction": "Space Marines (Astartes)",
+   "wins": 10,
+   "losses": 12,
+   "total": 22,
+   "winRate": "45.45",
+   "avgDifferential": 4.5,
+   "differentialGames": 22,
    "goingFirst": {
     "wins": 6,
     "losses": 6,
     "total": 12,
     "winRate": "50.00",
-    "avgDifferential": -3.6666666666666665,
+    "avgDifferential": 15.583333333333334,
     "differentialGames": 12
    }
   },
   {
-   "opponentFaction": "Space Marines (Astartes)",
-   "wins": 7,
-   "losses": 8,
-   "total": 15,
-   "winRate": "46.67",
-   "avgDifferential": 5.466666666666667,
-   "differentialGames": 15,
-   "goingFirst": {
-    "wins": 4,
-    "losses": 5,
-    "total": 9,
-    "winRate": "44.44",
-    "avgDifferential": 11.88888888888889,
-    "differentialGames": 9
-   }
-  },
-  {
    "opponentFaction": "Space Wolves",
-   "wins": 6,
-   "losses": 3,
-   "total": 9,
-   "winRate": "66.67",
-   "avgDifferential": 0.1111111111111111,
-   "differentialGames": 9,
+   "wins": 7,
+   "losses": 4,
+   "total": 11,
+   "winRate": "63.64",
+   "avgDifferential": 0.5454545454545454,
+   "differentialGames": 11,
    "goingFirst": {
     "wins": 1,
     "losses": 0,
@@ -464,125 +515,105 @@
   },
   {
    "opponentFaction": "T'au Empire",
-   "wins": 1,
-   "losses": 3,
-   "total": 4,
+   "wins": 2,
+   "losses": 6,
+   "total": 8,
    "winRate": "25.00",
-   "avgDifferential": 0.25,
-   "differentialGames": 4,
+   "avgDifferential": -7.625,
+   "differentialGames": 8,
    "goingFirst": {
     "wins": 1,
-    "losses": 2,
-    "total": 3,
-    "winRate": "33.33",
-    "avgDifferential": 9.333333333333334,
-    "differentialGames": 3
+    "losses": 5,
+    "total": 6,
+    "winRate": "16.67",
+    "avgDifferential": -7.5,
+    "differentialGames": 6
    }
   },
   {
    "opponentFaction": "Thousand Sons",
-   "wins": 3,
-   "losses": 0,
-   "total": 3,
-   "winRate": "100.00",
-   "avgDifferential": 25.333333333333332,
-   "differentialGames": 3,
+   "wins": 4,
+   "losses": 1,
+   "total": 5,
+   "winRate": "80.00",
+   "avgDifferential": 16.6,
+   "differentialGames": 5,
    "goingFirst": {
-    "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": "100.00",
-    "avgDifferential": 25.333333333333332,
-    "differentialGames": 3
+    "wins": 4,
+    "losses": 1,
+    "total": 5,
+    "winRate": "80.00",
+    "avgDifferential": 16.6,
+    "differentialGames": 5
    }
   },
   {
    "opponentFaction": "Tyranids",
-   "wins": 4,
-   "losses": 3,
-   "total": 7,
-   "winRate": "57.14",
-   "avgDifferential": 13.428571428571429,
-   "differentialGames": 7,
+   "wins": 7,
+   "losses": 4,
+   "total": 11,
+   "winRate": "63.64",
+   "avgDifferential": 8.363636363636363,
+   "differentialGames": 11,
    "goingFirst": {
-    "wins": 0,
-    "losses": 0,
-    "total": 0,
-    "winRate": "0",
-    "avgDifferential": null,
-    "differentialGames": 0
+    "wins": 2,
+    "losses": 1,
+    "total": 3,
+    "winRate": "66.67",
+    "avgDifferential": -2,
+    "differentialGames": 3
    }
   },
   {
    "opponentFaction": "World Eaters",
-   "wins": 8,
-   "losses": 4,
-   "total": 12,
-   "winRate": "66.67",
-   "avgDifferential": 8.5,
-   "differentialGames": 12,
+   "wins": 11,
+   "losses": 6,
+   "total": 17,
+   "winRate": "64.71",
+   "avgDifferential": 7.470588235294118,
+   "differentialGames": 17,
    "goingFirst": {
-    "wins": 4,
+    "wins": 6,
     "losses": 3,
-    "total": 7,
-    "winRate": "57.14",
-    "avgDifferential": 8.571428571428571,
-    "differentialGames": 7
+    "total": 9,
+    "winRate": "66.67",
+    "avgDifferential": 9.444444444444445,
+    "differentialGames": 9
    }
   },
   {
    "opponentFaction": "Aeldari",
    "wins": 0,
-   "losses": 1,
-   "total": 1,
+   "losses": 4,
+   "total": 4,
    "winRate": "0.00",
-   "avgDifferential": -24,
-   "differentialGames": 1,
+   "avgDifferential": -26,
+   "differentialGames": 4,
    "goingFirst": {
     "wins": 0,
-    "losses": 1,
-    "total": 1,
+    "losses": 2,
+    "total": 2,
     "winRate": "0.00",
-    "avgDifferential": -24,
-    "differentialGames": 1
-   }
-  },
-  {
-   "opponentFaction": "Astra Militarum",
-   "wins": 0,
-   "losses": 5,
-   "total": 5,
-   "winRate": "0.00",
-   "avgDifferential": -23.2,
-   "differentialGames": 5,
-   "goingFirst": {
-    "wins": 0,
-    "losses": 4,
-    "total": 4,
-    "winRate": "0.00",
-    "avgDifferential": -14.75,
-    "differentialGames": 4
-   }
-  },
-  {
-   "opponentFaction": "Blood Angels",
-   "wins": 0,
-   "losses": 1,
-   "total": 1,
-   "winRate": "0.00",
-   "avgDifferential": -66,
-   "differentialGames": 1,
-   "goingFirst": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": "0.00",
-    "avgDifferential": -66,
-    "differentialGames": 1
+    "avgDifferential": -34,
+    "differentialGames": 2
    }
   }
  ],
  "listes_recentes": [
+  {
+   "playerName": "Leonardo Vertuš",
+   "playerUid": "65fcdd59d8ebfe7417",
+   "eventName": "Alba GT 2026",
+   "eventUid": "cf04740b3b9b3d8e89",
+   "numberOfPlayers": 100,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Needgaârd Oathband | Hearthguard Covenant",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-17"
+  },
   {
    "playerName": "Ben Ashton",
    "playerUid": "ba5afa6bc64259370a",
@@ -596,6 +627,146 @@
    "detachment": "Dêlve Assault Shift | Hearthguard Covenant",
    "disposition": "Priority Assets",
    "startDate": "2026-10-16"
+  },
+  {
+   "playerName": "Matt Pedersen",
+   "playerUid": "73ce9d3527ca5bb803",
+   "eventName": "Rumble on the Rivers 40k GT 2026",
+   "eventUid": "3c3cb27168cf6ee568",
+   "numberOfPlayers": 93,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Dêlve Assault Shift | Farseekers",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Gregory Hunter",
+   "playerUid": "a30d0877c1785829fa",
+   "eventName": " 1st Annual King of the Mountains 40K GT",
+   "eventUid": "50f6ef04c4ccc99330",
+   "numberOfPlayers": 23,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Needgaârd Oathband | Hearthguard Covenant",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Mikael D",
+   "playerUid": "a66710a3d9c4f9da63",
+   "eventName": "Malmö Wargaming Weekend X",
+   "eventUid": "4a41b46ebf7978f2ac",
+   "numberOfPlayers": 176,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Needgaârd Oathband | Hearthguard Covenant",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Eli Diehr",
+   "playerUid": "e589efed872bf29867",
+   "eventName": "Rumble on the Rivers 40k GT 2026",
+   "eventUid": "3c3cb27168cf6ee568",
+   "numberOfPlayers": 93,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Needgaârd Oathband | Hearthguard Covenant",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Vyasar Ganesan",
+   "playerUid": "383530cd25431e94d0",
+   "eventName": "Odin's Place Open 2026",
+   "eventUid": "e96d7b1b71a02c269b",
+   "numberOfPlayers": 59,
+   "numberOfRounds": 6,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Needgaârd Oathband | Hearthguard Covenant",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Jacob Lenhardt",
+   "playerUid": "cc8987326de8374434",
+   "eventName": "Garden City Open GT",
+   "eventUid": "17b244d867da7cc30f",
+   "numberOfPlayers": 43,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Armoured Trailblazers | Brandfast Oathband",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Brendan Muller",
+   "playerUid": "778202749e7c7605fb",
+   "eventName": "MobTown Mayhem",
+   "eventUid": "89b46c94d9aa9b28ca",
+   "numberOfPlayers": 41,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Needgaârd Oathband | Hearthguard Covenant",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Alex Ginns",
+   "playerUid": "500bec5b575cada25d",
+   "eventName": "Inspired Gaming Golden Ticket Grand Tournament!",
+   "eventUid": "3e3edd107dd8f600e9",
+   "numberOfPlayers": 37,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Needgaârd Oathband | Hearthguard Covenant",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Ed Soltys",
+   "playerUid": "9635aee36d53a0cb37",
+   "eventName": "Hallowtide Redux",
+   "eventUid": "c3409a97a29aa0627b",
+   "numberOfPlayers": 35,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Needgaârd Oathband | Hearthguard Covenant",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "John Miller",
+   "playerUid": "4347f9ea0abbc85264",
+   "eventName": "Gamehole Con 40K Event Hosted by Away Games - 2 Golden Tickets",
+   "eventUid": "50f20b25cd68ccd882",
+   "numberOfPlayers": 34,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Needgaârd Oathband | Hearthguard Covenant",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-17"
   },
   {
    "playerName": "Caleb Lefor",
@@ -778,161 +949,7 @@
    "detachment": "Needgaârd Oathband | Hearthguard Covenant",
    "disposition": "Priority Assets",
    "startDate": "2026-09-25"
-  },
-  {
-   "playerName": "Rhys Mollison-White",
-   "playerUid": "dcfc70834f0dbdb345",
-   "eventName": "The London Grand Tournament - 40k Main Event (LGT 40k GT)",
-   "eventUid": "4848688a4a9990005c",
-   "numberOfPlayers": 1049,
-   "numberOfRounds": 10,
-   "wins": 4,
-   "draws": 0,
-   "losses": 1,
-   "detachment": "Needgaârd Oathband | Hearthguard Covenant",
-   "disposition": "Priority Assets",
-   "startDate": "2026-09-25"
-  },
-  {
-   "playerName": "George McFarlane",
-   "playerUid": "18a0795498dd158a4a",
-   "eventName": "The London Grand Tournament - 40k Main Event (LGT 40k GT)",
-   "eventUid": "4848688a4a9990005c",
-   "numberOfPlayers": 1049,
-   "numberOfRounds": 10,
-   "wins": 4,
-   "draws": 0,
-   "losses": 1,
-   "detachment": "Needgaârd Oathband | Hearthguard Covenant",
-   "disposition": "Priority Assets",
-   "startDate": "2026-09-25"
-  },
-  {
-   "playerName": "Alex Ginns",
-   "playerUid": "500bec5b575cada25d",
-   "eventName": "The London Grand Tournament - 40k Main Event (LGT 40k GT)",
-   "eventUid": "4848688a4a9990005c",
-   "numberOfPlayers": 1049,
-   "numberOfRounds": 10,
-   "wins": 4,
-   "draws": 0,
-   "losses": 1,
-   "detachment": "Needgaârd Oathband | Hearthguard Covenant",
-   "disposition": "Priority Assets",
-   "startDate": "2026-09-25"
-  },
-  {
-   "playerName": "Dominic Mathews",
-   "playerUid": "1a42a315ee0d23982b",
-   "eventName": "The London Grand Tournament - 40k Main Event (LGT 40k GT)",
-   "eventUid": "4848688a4a9990005c",
-   "numberOfPlayers": 1049,
-   "numberOfRounds": 10,
-   "wins": 4,
-   "draws": 0,
-   "losses": 1,
-   "detachment": "Hearthguard Covenant | Mercenary Oathband",
-   "disposition": "Priority Assets",
-   "startDate": "2026-09-25"
-  },
-  {
-   "playerName": "Charlie Davey",
-   "playerUid": "e2fc763ef8073fef46",
-   "eventName": "The London Grand Tournament - 40k Main Event (LGT 40k GT)",
-   "eventUid": "4848688a4a9990005c",
-   "numberOfPlayers": 1049,
-   "numberOfRounds": 10,
-   "wins": 4,
-   "draws": 0,
-   "losses": 1,
-   "detachment": "Needgaârd Oathband | Hearthguard Covenant",
-   "disposition": "Priority Assets",
-   "startDate": "2026-09-25"
-  },
-  {
-   "playerName": "Ben Piddington",
-   "playerUid": "30c3b596182625375a",
-   "eventName": "The London Grand Tournament - 40k Main Event (LGT 40k GT)",
-   "eventUid": "4848688a4a9990005c",
-   "numberOfPlayers": 1049,
-   "numberOfRounds": 10,
-   "wins": 4,
-   "draws": 0,
-   "losses": 1,
-   "detachment": "Needgaârd Oathband | Hearthguard Covenant",
-   "disposition": "Purge the Foe",
-   "startDate": "2026-09-25"
-  },
-  {
-   "playerName": "André LE PUIL",
-   "playerUid": "66725c93a19ab4b104",
-   "eventName": "Grand Pitounerie 2 Open 40k de Loire Atlantique",
-   "eventUid": "1bc469b11620503166",
-   "numberOfPlayers": 86,
-   "numberOfRounds": 5,
-   "wins": 4,
-   "draws": 0,
-   "losses": 1,
-   "detachment": "Needgaârd Oathband",
-   "disposition": "Priority Assets",
-   "startDate": "2026-09-26"
-  },
-  {
-   "playerName": "Dominic Galeano",
-   "playerUid": "cef2c9bcb89708dcd6",
-   "eventName": "New York Open: 40k",
-   "eventUid": "1341e5c76c1b60695a",
-   "numberOfPlayers": 63,
-   "numberOfRounds": 5,
-   "wins": 4,
-   "draws": 0,
-   "losses": 1,
-   "detachment": "Needgaârd Oathband | Hearthguard Covenant",
-   "disposition": "Priority Assets",
-   "startDate": "2026-09-26"
-  },
-  {
-   "playerName": "Kylan Wilson",
-   "playerUid": "024db7168ddfdd4afb",
-   "eventName": "Battle Under the Zia Sun II",
-   "eventUid": "285c6bc7bcdde1de81",
-   "numberOfPlayers": 55,
-   "numberOfRounds": 5,
-   "wins": 4,
-   "draws": 0,
-   "losses": 1,
-   "detachment": "Needgaârd Oathband | Farseekers",
-   "disposition": "Reconnaissance",
-   "startDate": "2026-09-26"
-  },
-  {
-   "playerName": "Pierre Dahlgren",
-   "playerUid": "f425889b2da7c5224f",
-   "eventName": "Wettcon höst 2026",
-   "eventUid": "c91805a4a970f420cb",
-   "numberOfPlayers": 44,
-   "numberOfRounds": 5,
-   "wins": 4,
-   "draws": 0,
-   "losses": 1,
-   "detachment": "Needgaârd Oathband | Hearthguard Covenant",
-   "disposition": "Priority Assets",
-   "startDate": "2026-09-26"
-  },
-  {
-   "playerName": "Marcus Butler",
-   "playerUid": "e43ed6f299152576a4",
-   "eventName": "Roll for Damage GT - Presented by Dragon's Lair",
-   "eventUid": "62cee250c715aa8360",
-   "numberOfPlayers": 85,
-   "numberOfRounds": 6,
-   "wins": 6,
-   "draws": 0,
-   "losses": 0,
-   "detachment": "Needgaârd Oathband | Hearthguard Covenant",
-   "disposition": "Priority Assets",
-   "startDate": "2026-09-18"
   }
  ],
- "listes_total_site": 108
+ "listes_total_site": 119
 }

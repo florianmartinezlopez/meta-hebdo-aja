@@ -2,43 +2,43 @@
  "nom": "Deathwatch",
  "slug": "deathwatch",
  "periode": {
-  "wins": 16,
-  "losses": 11,
-  "total": 27,
-  "winRate": "59.26"
+  "wins": 19,
+  "losses": 15,
+  "total": 34,
+  "winRate": "55.88"
  },
- "joueurs": 6,
+ "joueurs": 7,
  "invaincus": 0,
  "x1": 0,
  "victoires_tournoi": 0,
  "sur_representation": "0.00",
  "dispositions": {
   "Priority Assets": 2,
-  "Purge the Foe": 4
+  "Purge the Foe": 5
  },
  "combinaisons": [
   {
    "detachment": "Black Spear Task Force",
-   "players": 4,
-   "fieldPercent": 66.66666666666666,
-   "wins": 11,
-   "losses": 7,
-   "total": 18,
-   "winRate": "61.11"
+   "players": 5,
+   "fieldPercent": 71.42857142857143,
+   "wins": 14,
+   "losses": 10,
+   "total": 24,
+   "winRate": "58.33"
   },
   {
    "detachment": "Assault Brethren | Stormlance Task Force | Terminator Storm Force",
    "players": 1,
-   "fieldPercent": 16.666666666666664,
+   "fieldPercent": 14.285714285714285,
    "wins": 2,
-   "losses": 2,
-   "total": 4,
-   "winRate": "50.00"
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00"
   },
   {
    "detachment": "Ironstorm Spearhead | Phobos Shadow Force | Terminator Storm Force",
    "players": 1,
-   "fieldPercent": 16.666666666666664,
+   "fieldPercent": 14.285714285714285,
    "wins": 3,
    "losses": 2,
    "total": 5,
@@ -47,13 +47,30 @@
  ],
  "adversaires": [
   {
-   "opponentFaction": "Adeptus Mechanicus",
+   "opponentFaction": "Adeptus Custodes",
    "wins": 1,
-   "losses": 3,
-   "total": 4,
-   "winRate": "25.00",
-   "avgDifferential": -36.75,
-   "differentialGames": 4,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 21,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Adeptus Mechanicus",
+   "wins": 2,
+   "losses": 5,
+   "total": 7,
+   "winRate": "28.57",
+   "avgDifferential": -34.142857142857146,
+   "differentialGames": 7,
    "goingFirst": {
     "wins": 0,
     "losses": 1,
@@ -150,12 +167,12 @@
   },
   {
    "opponentFaction": "Orks",
-   "wins": 3,
+   "wins": 4,
    "losses": 2,
-   "total": 5,
-   "winRate": "60.00",
-   "avgDifferential": -0.2,
-   "differentialGames": 5,
+   "total": 6,
+   "winRate": "66.67",
+   "avgDifferential": 10.166666666666666,
+   "differentialGames": 6,
    "goingFirst": {
     "wins": 1,
     "losses": 0,
@@ -285,13 +302,30 @@
    }
   },
   {
-   "opponentFaction": "Death Guard",
+   "opponentFaction": "Dark Angels",
    "wins": 0,
    "losses": 1,
    "total": 1,
    "winRate": "0.00",
-   "avgDifferential": -62,
+   "avgDifferential": -6,
    "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -6,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Death Guard",
+   "wins": 0,
+   "losses": 2,
+   "total": 2,
+   "winRate": "0.00",
+   "avgDifferential": -48,
+   "differentialGames": 2,
    "goingFirst": {
     "wins": 0,
     "losses": 0,

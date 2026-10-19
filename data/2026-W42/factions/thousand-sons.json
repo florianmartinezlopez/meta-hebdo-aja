@@ -2,63 +2,63 @@
  "nom": "Thousand Sons",
  "slug": "thousand-sons",
  "periode": {
-  "wins": 40,
-  "losses": 59,
-  "total": 99,
-  "winRate": "40.40"
+  "wins": 47,
+  "losses": 72,
+  "total": 119,
+  "winRate": "39.50"
  },
- "joueurs": 26,
+ "joueurs": 27,
  "invaincus": 0,
- "x1": 2,
+ "x1": 3,
  "victoires_tournoi": 0,
- "sur_representation": "1.48",
+ "sur_representation": "0.89",
  "dispositions": {
   "Disruption": 1,
-  "Priority Assets": 12,
+  "Priority Assets": 13,
   "Reconnaissance": 2,
-  "Take and Hold": 11
+  "Take and Hold": 12
  },
  "combinaisons": [
   {
    "detachment": "Grand Coven",
    "players": 10,
-   "fieldPercent": 38.46153846153847,
-   "wins": 17,
-   "losses": 25,
-   "total": 42,
-   "winRate": "40.48"
+   "fieldPercent": 37.03703703703704,
+   "wins": 20,
+   "losses": 27,
+   "total": 47,
+   "winRate": "42.55"
   },
   {
    "detachment": "Rubricae Phalanx",
-   "players": 6,
-   "fieldPercent": 23.076923076923077,
-   "wins": 8,
-   "losses": 14,
-   "total": 22,
-   "winRate": "36.36"
+   "players": 7,
+   "fieldPercent": 25.925925925925924,
+   "wins": 10,
+   "losses": 18,
+   "total": 28,
+   "winRate": "35.71"
   },
   {
    "detachment": "Hexwarp Thrallband",
    "players": 3,
-   "fieldPercent": 11.538461538461538,
-   "wins": 4,
-   "losses": 6,
-   "total": 10,
-   "winRate": "40.00"
+   "fieldPercent": 11.11111111111111,
+   "wins": 5,
+   "losses": 9,
+   "total": 14,
+   "winRate": "35.71"
   },
   {
    "detachment": "Sekhetar Cohort | Warpforged Cabal",
    "players": 2,
-   "fieldPercent": 7.6923076923076925,
-   "wins": 4,
-   "losses": 2,
-   "total": 6,
-   "winRate": "66.67"
+   "fieldPercent": 7.4074074074074066,
+   "wins": 5,
+   "losses": 4,
+   "total": 9,
+   "winRate": "55.56"
   },
   {
    "detachment": "Changehost of Deceit | Grand Coven | Ritual of Regeneration",
    "players": 1,
-   "fieldPercent": 3.8461538461538463,
+   "fieldPercent": 3.7037037037037033,
    "wins": 0,
    "losses": 5,
    "total": 5,
@@ -67,7 +67,7 @@
   {
    "detachment": "Ritual of Regeneration | Sekhetar Cohort | Servants of Change",
    "players": 1,
-   "fieldPercent": 3.8461538461538463,
+   "fieldPercent": 3.7037037037037033,
    "wins": 1,
    "losses": 0,
    "total": 1,
@@ -76,16 +76,16 @@
   {
    "detachment": "Ritual of Regeneration | Warpforged Cabal",
    "players": 1,
-   "fieldPercent": 3.8461538461538463,
+   "fieldPercent": 3.7037037037037033,
    "wins": 2,
-   "losses": 1,
-   "total": 3,
-   "winRate": "66.67"
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00"
   },
   {
    "detachment": "Ritual of Regeneration | Warpmeld Pact",
    "players": 1,
-   "fieldPercent": 3.8461538461538463,
+   "fieldPercent": 3.7037037037037033,
    "wins": 2,
    "losses": 3,
    "total": 5,
@@ -94,7 +94,7 @@
   {
    "detachment": "Warpbane Task Force",
    "players": 1,
-   "fieldPercent": 3.8461538461538463,
+   "fieldPercent": 3.7037037037037033,
    "wins": 2,
    "losses": 3,
    "total": 5,
@@ -105,18 +105,18 @@
   {
    "opponentFaction": "Adeptus Custodes",
    "wins": 3,
-   "losses": 3,
-   "total": 6,
-   "winRate": "50.00",
-   "avgDifferential": -6.666666666666667,
-   "differentialGames": 6,
+   "losses": 5,
+   "total": 8,
+   "winRate": "37.50",
+   "avgDifferential": -17.125,
+   "differentialGames": 8,
    "goingFirst": {
     "wins": 1,
-    "losses": 3,
-    "total": 4,
-    "winRate": "25.00",
-    "avgDifferential": -17.75,
-    "differentialGames": 4
+    "losses": 5,
+    "total": 6,
+    "winRate": "16.67",
+    "avgDifferential": -28,
+    "differentialGames": 6
    }
   },
   {
@@ -138,19 +138,19 @@
   },
   {
    "opponentFaction": "Astra Militarum",
-   "wins": 1,
-   "losses": 0,
-   "total": 1,
-   "winRate": "100.00",
-   "avgDifferential": 47,
-   "differentialGames": 1,
+   "wins": 3,
+   "losses": 3,
+   "total": 6,
+   "winRate": "50.00",
+   "avgDifferential": -1.5,
+   "differentialGames": 6,
    "goingFirst": {
-    "wins": 0,
-    "losses": 0,
-    "total": 0,
-    "winRate": "0",
-    "avgDifferential": null,
-    "differentialGames": 0
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": -2.5,
+    "differentialGames": 2
    }
   },
   {
@@ -224,11 +224,11 @@
   {
    "opponentFaction": "Dark Angels",
    "wins": 1,
-   "losses": 3,
-   "total": 4,
-   "winRate": "25.00",
-   "avgDifferential": -22,
-   "differentialGames": 4,
+   "losses": 4,
+   "total": 5,
+   "winRate": "20.00",
+   "avgDifferential": -31.6,
+   "differentialGames": 5,
    "goingFirst": {
     "wins": 1,
     "losses": 1,
@@ -240,19 +240,19 @@
   },
   {
    "opponentFaction": "Death Guard",
-   "wins": 3,
+   "wins": 5,
    "losses": 3,
-   "total": 6,
-   "winRate": "50.00",
-   "avgDifferential": 4.166666666666667,
-   "differentialGames": 6,
+   "total": 8,
+   "winRate": "62.50",
+   "avgDifferential": 6.125,
+   "differentialGames": 8,
    "goingFirst": {
-    "wins": 3,
+    "wins": 5,
     "losses": 1,
-    "total": 4,
-    "winRate": "75.00",
-    "avgDifferential": 33.75,
-    "differentialGames": 4
+    "total": 6,
+    "winRate": "83.33",
+    "avgDifferential": 26.5,
+    "differentialGames": 6
    }
   },
   {
@@ -291,19 +291,36 @@
   },
   {
    "opponentFaction": "Imperial Knights",
-   "wins": 2,
+   "wins": 3,
    "losses": 1,
-   "total": 3,
-   "winRate": "66.67",
-   "avgDifferential": 21.333333333333332,
-   "differentialGames": 3,
+   "total": 4,
+   "winRate": "75.00",
+   "avgDifferential": 24.75,
+   "differentialGames": 4,
    "goingFirst": {
-    "wins": 1,
+    "wins": 2,
     "losses": 1,
-    "total": 2,
-    "winRate": "50.00",
-    "avgDifferential": -7.5,
-    "differentialGames": 2
+    "total": 3,
+    "winRate": "66.67",
+    "avgDifferential": 6.666666666666667,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Leagues of Votann",
+   "wins": 1,
+   "losses": 4,
+   "total": 5,
+   "winRate": "20.00",
+   "avgDifferential": -16.6,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
    }
   },
   {
@@ -326,35 +343,35 @@
   {
    "opponentFaction": "Orks",
    "wins": 2,
-   "losses": 7,
-   "total": 9,
-   "winRate": "22.22",
-   "avgDifferential": -15.333333333333334,
-   "differentialGames": 9,
+   "losses": 8,
+   "total": 10,
+   "winRate": "20.00",
+   "avgDifferential": -16.9,
+   "differentialGames": 10,
    "goingFirst": {
     "wins": 1,
-    "losses": 3,
-    "total": 4,
-    "winRate": "25.00",
-    "avgDifferential": -18.5,
-    "differentialGames": 4
+    "losses": 4,
+    "total": 5,
+    "winRate": "20.00",
+    "avgDifferential": -21,
+    "differentialGames": 5
    }
   },
   {
    "opponentFaction": "Space Marines (Astartes)",
    "wins": 8,
-   "losses": 6,
-   "total": 14,
-   "winRate": "57.14",
-   "avgDifferential": -5.142857142857143,
-   "differentialGames": 14,
+   "losses": 7,
+   "total": 15,
+   "winRate": "53.33",
+   "avgDifferential": -6.8,
+   "differentialGames": 15,
    "goingFirst": {
     "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": "100.00",
-    "avgDifferential": 19,
-    "differentialGames": 3
+    "losses": 1,
+    "total": 4,
+    "winRate": "75.00",
+    "avgDifferential": 6.75,
+    "differentialGames": 4
    }
   },
   {
@@ -376,12 +393,12 @@
   },
   {
    "opponentFaction": "T'au Empire",
-   "wins": 1,
+   "wins": 2,
    "losses": 6,
-   "total": 7,
-   "winRate": "14.29",
-   "avgDifferential": -25.714285714285715,
-   "differentialGames": 7,
+   "total": 8,
+   "winRate": "25.00",
+   "avgDifferential": -19.75,
+   "differentialGames": 8,
    "goingFirst": {
     "wins": 0,
     "losses": 2,
@@ -411,18 +428,35 @@
   {
    "opponentFaction": "World Eaters",
    "wins": 2,
-   "losses": 3,
-   "total": 5,
-   "winRate": "40.00",
-   "avgDifferential": 7.8,
-   "differentialGames": 5,
+   "losses": 5,
+   "total": 7,
+   "winRate": "28.57",
+   "avgDifferential": -6.714285714285714,
+   "differentialGames": 7,
    "goingFirst": {
     "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": 23,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Adepta Sororitas",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -40,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
     "losses": 0,
-    "total": 1,
-    "winRate": "100.00",
-    "avgDifferential": 63,
-    "differentialGames": 1
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
    }
   },
   {
@@ -494,24 +528,38 @@
    }
   },
   {
-   "opponentFaction": "Leagues of Votann",
+   "opponentFaction": "Imperial Agents",
    "wins": 0,
-   "losses": 3,
-   "total": 3,
+   "losses": 1,
+   "total": 1,
    "winRate": "0.00",
-   "avgDifferential": -25.333333333333332,
-   "differentialGames": 3,
+   "avgDifferential": -3,
+   "differentialGames": 1,
    "goingFirst": {
     "wins": 0,
-    "losses": 0,
-    "total": 0,
-    "winRate": "0",
-    "avgDifferential": null,
-    "differentialGames": 0
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -3,
+    "differentialGames": 1
    }
   }
  ],
  "listes_recentes": [
+  {
+   "playerName": "James Piacelli",
+   "playerUid": "d07b4a37a246b0cc2e",
+   "eventName": " 1st Annual King of the Mountains 40K GT",
+   "eventUid": "50f6ef04c4ccc99330",
+   "numberOfPlayers": 23,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Sekhetar Cohort | Warpforged Cabal",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-17"
+  },
   {
    "playerName": "Zak Engelbrecht",
    "playerUid": "e8e95f05ed99c70a34",
@@ -847,21 +895,7 @@
    "detachment": "Sekhetar Cohort | Warpforged Cabal",
    "disposition": "Priority Assets",
    "startDate": "2026-09-12"
-  },
-  {
-   "playerName": "Mathew Sneed",
-   "playerUid": "c4cc2a9217a6487804",
-   "eventName": "Battle of the Littlest, Biggest",
-   "eventUid": "ec0f9cc40d072868ac",
-   "numberOfPlayers": 24,
-   "numberOfRounds": 5,
-   "wins": 4,
-   "draws": 0,
-   "losses": 1,
-   "detachment": "Grand Coven",
-   "disposition": "Priority Assets",
-   "startDate": "2026-09-12"
   }
  ],
- "listes_total_site": 105
+ "listes_total_site": 106
 }

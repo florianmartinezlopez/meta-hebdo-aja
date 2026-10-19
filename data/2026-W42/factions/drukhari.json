@@ -2,73 +2,73 @@
  "nom": "Drukhari",
  "slug": "drukhari",
  "periode": {
-  "wins": 53,
-  "losses": 60,
-  "total": 113,
-  "winRate": "46.90"
+  "wins": 65,
+  "losses": 82,
+  "total": 147,
+  "winRate": "44.22"
  },
- "joueurs": 28,
+ "joueurs": 32,
  "invaincus": 0,
- "x1": 2,
+ "x1": 3,
  "victoires_tournoi": 0,
  "sur_representation": "0.00",
  "dispositions": {
   "Disruption": 2,
   "Priority Assets": 3,
   "Purge the Foe": 1,
-  "Reconnaissance": 22,
+  "Reconnaissance": 27,
   "Take and Hold": 1
  },
  "combinaisons": [
   {
-   "detachment": "Exhibition of Slaughter | Kabalite Cartel",
-   "players": 6,
-   "fieldPercent": 21.428571428571427,
-   "wins": 10,
-   "losses": 10,
-   "total": 20,
-   "winRate": "50.00"
+   "detachment": "Exhibition of Slaughter | Skysplinter Assault",
+   "players": 8,
+   "fieldPercent": 25,
+   "wins": 15,
+   "losses": 23,
+   "total": 38,
+   "winRate": "39.47"
   },
   {
    "detachment": "Kabalite Agonysts | Skysplinter Assault",
-   "players": 6,
-   "fieldPercent": 21.428571428571427,
-   "wins": 12,
-   "losses": 11,
-   "total": 23,
-   "winRate": "52.17"
+   "players": 7,
+   "fieldPercent": 21.875,
+   "wins": 14,
+   "losses": 18,
+   "total": 32,
+   "winRate": "43.75"
   },
   {
-   "detachment": "Exhibition of Slaughter | Skysplinter Assault",
-   "players": 5,
-   "fieldPercent": 17.857142857142858,
-   "wins": 9,
-   "losses": 15,
-   "total": 24,
-   "winRate": "37.50"
+   "detachment": "Exhibition of Slaughter | Kabalite Cartel",
+   "players": 6,
+   "fieldPercent": 18.75,
+   "wins": 12,
+   "losses": 13,
+   "total": 25,
+   "winRate": "48.00"
   },
   {
    "detachment": "Exhibition of Slaughter | Realspace Raiders",
    "players": 2,
-   "fieldPercent": 7.142857142857142,
+   "fieldPercent": 6.25,
    "wins": 2,
-   "losses": 6,
-   "total": 8,
-   "winRate": "25.00"
+   "losses": 8,
+   "total": 10,
+   "winRate": "20.00"
   },
   {
    "detachment": "Kabalite Cartel | Tools of Torment",
    "players": 2,
-   "fieldPercent": 7.142857142857142,
-   "wins": 6,
-   "losses": 2,
-   "total": 8,
-   "winRate": "75.00"
+   "fieldPercent": 6.25,
+   "wins": 7,
+   "losses": 3,
+   "total": 10,
+   "winRate": "70.00"
   },
   {
    "detachment": "Realspace Raiders | Tools of Torment",
    "players": 2,
-   "fieldPercent": 7.142857142857142,
+   "fieldPercent": 6.25,
    "wins": 3,
    "losses": 5,
    "total": 8,
@@ -77,16 +77,16 @@
   {
    "detachment": "Reaper's Wager",
    "players": 2,
-   "fieldPercent": 7.142857142857142,
-   "wins": 4,
-   "losses": 3,
-   "total": 7,
-   "winRate": "57.14"
+   "fieldPercent": 6.25,
+   "wins": 5,
+   "losses": 4,
+   "total": 9,
+   "winRate": "55.56"
   },
   {
    "detachment": "Skysplinter Assault",
    "players": 2,
-   "fieldPercent": 7.142857142857142,
+   "fieldPercent": 6.25,
    "wins": 4,
    "losses": 6,
    "total": 10,
@@ -95,7 +95,7 @@
   {
    "detachment": "Exhibition of Slaughter | Spectacle of Spite",
    "players": 1,
-   "fieldPercent": 3.571428571428571,
+   "fieldPercent": 3.125,
    "wins": 3,
    "losses": 2,
    "total": 5,
@@ -121,13 +121,30 @@
    }
   },
   {
-   "opponentFaction": "Astra Militarum",
+   "opponentFaction": "Aeldari",
    "wins": 1,
    "losses": 2,
    "total": 3,
    "winRate": "33.33",
-   "avgDifferential": -9,
+   "avgDifferential": -5,
    "differentialGames": 3,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -15,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Astra Militarum",
+   "wins": 1,
+   "losses": 3,
+   "total": 4,
+   "winRate": "25.00",
+   "avgDifferential": -8,
+   "differentialGames": 4,
    "goingFirst": {
     "wins": 1,
     "losses": 0,
@@ -140,28 +157,28 @@
   {
    "opponentFaction": "Black Templars",
    "wins": 2,
-   "losses": 3,
-   "total": 5,
-   "winRate": "40.00",
-   "avgDifferential": -15.6,
-   "differentialGames": 5,
+   "losses": 4,
+   "total": 6,
+   "winRate": "33.33",
+   "avgDifferential": -17.833333333333332,
+   "differentialGames": 6,
    "goingFirst": {
     "wins": 1,
-    "losses": 1,
-    "total": 2,
-    "winRate": "50.00",
-    "avgDifferential": -27,
-    "differentialGames": 2
+    "losses": 2,
+    "total": 3,
+    "winRate": "33.33",
+    "avgDifferential": -27.666666666666668,
+    "differentialGames": 3
    }
   },
   {
    "opponentFaction": "Blood Angels",
-   "wins": 4,
+   "wins": 5,
    "losses": 0,
-   "total": 4,
+   "total": 5,
    "winRate": "100.00",
-   "avgDifferential": 12.25,
-   "differentialGames": 4,
+   "avgDifferential": 22.8,
+   "differentialGames": 5,
    "goingFirst": {
     "wins": 2,
     "losses": 0,
@@ -173,70 +190,70 @@
   },
   {
    "opponentFaction": "Chaos Daemons",
-   "wins": 2,
+   "wins": 3,
    "losses": 1,
-   "total": 3,
-   "winRate": "66.67",
-   "avgDifferential": -5.666666666666667,
-   "differentialGames": 3,
-   "goingFirst": {
-    "wins": 0,
-    "losses": 0,
-    "total": 0,
-    "winRate": "0",
-    "avgDifferential": null,
-    "differentialGames": 0
-   }
-  },
-  {
-   "opponentFaction": "Chaos Knights",
-   "wins": 1,
-   "losses": 1,
-   "total": 2,
-   "winRate": "50.00",
-   "avgDifferential": 9,
-   "differentialGames": 2,
+   "total": 4,
+   "winRate": "75.00",
+   "avgDifferential": 1.75,
+   "differentialGames": 4,
    "goingFirst": {
     "wins": 1,
     "losses": 0,
     "total": 1,
     "winRate": "100.00",
-    "avgDifferential": 36,
+    "avgDifferential": 24,
     "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Chaos Knights",
+   "wins": 1,
+   "losses": 2,
+   "total": 3,
+   "winRate": "33.33",
+   "avgDifferential": -16,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": -15,
+    "differentialGames": 2
    }
   },
   {
    "opponentFaction": "Chaos Space Marines",
    "wins": 3,
-   "losses": 2,
-   "total": 5,
-   "winRate": "60.00",
-   "avgDifferential": 10.2,
-   "differentialGames": 5,
+   "losses": 4,
+   "total": 7,
+   "winRate": "42.86",
+   "avgDifferential": -4,
+   "differentialGames": 7,
    "goingFirst": {
     "wins": 3,
-    "losses": 1,
-    "total": 4,
-    "winRate": "75.00",
-    "avgDifferential": 22.75,
-    "differentialGames": 4
+    "losses": 2,
+    "total": 5,
+    "winRate": "60.00",
+    "avgDifferential": 14.8,
+    "differentialGames": 5
    }
   },
   {
    "opponentFaction": "Dark Angels",
    "wins": 3,
-   "losses": 2,
-   "total": 5,
-   "winRate": "60.00",
-   "avgDifferential": 0,
-   "differentialGames": 5,
+   "losses": 4,
+   "total": 7,
+   "winRate": "42.86",
+   "avgDifferential": -6.142857142857143,
+   "differentialGames": 7,
    "goingFirst": {
     "wins": 2,
-    "losses": 2,
-    "total": 4,
-    "winRate": "50.00",
-    "avgDifferential": -0.25,
-    "differentialGames": 4
+    "losses": 3,
+    "total": 5,
+    "winRate": "40.00",
+    "avgDifferential": -3.4,
+    "differentialGames": 5
    }
   },
   {
@@ -259,18 +276,35 @@
   {
    "opponentFaction": "Emperor's Children",
    "wins": 2,
-   "losses": 1,
-   "total": 3,
-   "winRate": "66.67",
-   "avgDifferential": 3.3333333333333335,
-   "differentialGames": 3,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00",
+   "avgDifferential": -4.2,
+   "differentialGames": 5,
    "goingFirst": {
     "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -11,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Genestealer Cult",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 41,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
     "losses": 0,
-    "total": 0,
-    "winRate": "0",
-    "avgDifferential": null,
-    "differentialGames": 0
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 41,
+    "differentialGames": 1
    }
   },
   {
@@ -310,11 +344,11 @@
   {
    "opponentFaction": "Necrons",
    "wins": 7,
-   "losses": 2,
-   "total": 9,
-   "winRate": "77.78",
-   "avgDifferential": 7.222222222222222,
-   "differentialGames": 9,
+   "losses": 3,
+   "total": 10,
+   "winRate": "70.00",
+   "avgDifferential": 1.5,
+   "differentialGames": 10,
    "goingFirst": {
     "wins": 0,
     "losses": 1,
@@ -326,12 +360,12 @@
   },
   {
    "opponentFaction": "Orks",
-   "wins": 6,
-   "losses": 4,
-   "total": 10,
-   "winRate": "60.00",
-   "avgDifferential": -0.8,
-   "differentialGames": 10,
+   "wins": 7,
+   "losses": 5,
+   "total": 12,
+   "winRate": "58.33",
+   "avgDifferential": 2.8333333333333335,
+   "differentialGames": 12,
    "goingFirst": {
     "wins": 4,
     "losses": 2,
@@ -343,12 +377,12 @@
   },
   {
    "opponentFaction": "Space Marines (Astartes)",
-   "wins": 8,
-   "losses": 9,
-   "total": 17,
-   "winRate": "47.06",
-   "avgDifferential": 1.2941176470588236,
-   "differentialGames": 17,
+   "wins": 9,
+   "losses": 14,
+   "total": 23,
+   "winRate": "39.13",
+   "avgDifferential": -6,
+   "differentialGames": 23,
    "goingFirst": {
     "wins": 6,
     "losses": 5,
@@ -361,11 +395,11 @@
   {
    "opponentFaction": "Space Wolves",
    "wins": 2,
-   "losses": 3,
-   "total": 5,
-   "winRate": "40.00",
-   "avgDifferential": -1.2,
-   "differentialGames": 5,
+   "losses": 4,
+   "total": 6,
+   "winRate": "33.33",
+   "avgDifferential": -5.166666666666667,
+   "differentialGames": 6,
    "goingFirst": {
     "wins": 1,
     "losses": 1,
@@ -377,12 +411,12 @@
   },
   {
    "opponentFaction": "T'au Empire",
-   "wins": 1,
+   "wins": 3,
    "losses": 1,
-   "total": 2,
-   "winRate": "50.00",
-   "avgDifferential": 16,
-   "differentialGames": 2,
+   "total": 4,
+   "winRate": "75.00",
+   "avgDifferential": 15.25,
+   "differentialGames": 4,
    "goingFirst": {
     "wins": 1,
     "losses": 1,
@@ -410,20 +444,37 @@
    }
   },
   {
-   "opponentFaction": "World Eaters",
-   "wins": 4,
-   "losses": 5,
+   "opponentFaction": "Tyranids",
+   "wins": 2,
+   "losses": 7,
    "total": 9,
-   "winRate": "44.44",
-   "avgDifferential": 0.2222222222222222,
+   "winRate": "22.22",
+   "avgDifferential": -12.222222222222221,
    "differentialGames": 9,
    "goingFirst": {
-    "wins": 2,
+    "wins": 1,
     "losses": 3,
-    "total": 5,
-    "winRate": "40.00",
-    "avgDifferential": 9.8,
-    "differentialGames": 5
+    "total": 4,
+    "winRate": "25.00",
+    "avgDifferential": -14.25,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "World Eaters",
+   "wins": 6,
+   "losses": 7,
+   "total": 13,
+   "winRate": "46.15",
+   "avgDifferential": 2.6923076923076925,
+   "differentialGames": 13,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 4,
+    "total": 6,
+    "winRate": "33.33",
+    "avgDifferential": 7.833333333333333,
+    "differentialGames": 6
    }
   },
   {
@@ -446,34 +497,17 @@
   {
    "opponentFaction": "Adeptus Mechanicus",
    "wins": 0,
-   "losses": 1,
-   "total": 1,
-   "winRate": "0.00",
-   "avgDifferential": -12,
-   "differentialGames": 1,
-   "goingFirst": {
-    "wins": 0,
-    "losses": 0,
-    "total": 0,
-    "winRate": "0",
-    "avgDifferential": null,
-    "differentialGames": 0
-   }
-  },
-  {
-   "opponentFaction": "Aeldari",
-   "wins": 0,
    "losses": 2,
    "total": 2,
    "winRate": "0.00",
-   "avgDifferential": -17.5,
+   "avgDifferential": -7.5,
    "differentialGames": 2,
    "goingFirst": {
     "wins": 0,
     "losses": 1,
     "total": 1,
     "winRate": "0.00",
-    "avgDifferential": -15,
+    "avgDifferential": -3,
     "differentialGames": 1
    }
   },
@@ -510,26 +544,37 @@
     "avgDifferential": -43.666666666666664,
     "differentialGames": 3
    }
-  },
-  {
-   "opponentFaction": "Tyranids",
-   "wins": 0,
-   "losses": 5,
-   "total": 5,
-   "winRate": "0.00",
-   "avgDifferential": -30.6,
-   "differentialGames": 5,
-   "goingFirst": {
-    "wins": 0,
-    "losses": 3,
-    "total": 3,
-    "winRate": "0.00",
-    "avgDifferential": -22.666666666666668,
-    "differentialGames": 3
-   }
   }
  ],
  "listes_recentes": [
+  {
+   "playerName": "AxelRyden",
+   "playerUid": "a5fa2f391c63e41bec",
+   "eventName": "Malmö Wargaming Weekend X",
+   "eventUid": "4a41b46ebf7978f2ac",
+   "numberOfPlayers": 176,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 1,
+   "losses": 0,
+   "detachment": "Skysplinter Assault | Exhibition of Slaughter",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Łukasz (Fluke) Błaszczak",
+   "playerUid": "8803acce0942aafdbc",
+   "eventName": "Alba GT 2026",
+   "eventUid": "cf04740b3b9b3d8e89",
+   "numberOfPlayers": 100,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Kabalite Cartel | Exhibition of Slaughter",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-17"
+  },
   {
    "playerName": "Han Gallegos",
    "playerUid": "44cadea3e1b9de1fcd",
@@ -851,35 +896,7 @@
    "detachment": "Skysplinter Assault",
    "disposition": "Reconnaissance",
    "startDate": "2026-08-22"
-  },
-  {
-   "playerName": "Patrick Harrison",
-   "playerUid": "1eaffa9fb326924003",
-   "eventName": "Warhammer 40,000 Grand Tournament - Warhammer Open Newport",
-   "eventUid": "746563a79b1a0ffbe8",
-   "numberOfPlayers": 187,
-   "numberOfRounds": 8,
-   "wins": 7,
-   "draws": 0,
-   "losses": 1,
-   "detachment": "Skysplinter Assault | Exhibition of Slaughter",
-   "disposition": "Reconnaissance",
-   "startDate": "2026-08-14"
-  },
-  {
-   "playerName": "Cody Jiru",
-   "playerUid": "f18cd40ba9e0186bf4",
-   "eventName": "Free State Mid Summers GT",
-   "eventUid": "1910ba17a086f8f268",
-   "numberOfPlayers": 41,
-   "numberOfRounds": 5,
-   "wins": 5,
-   "draws": 0,
-   "losses": 0,
-   "detachment": "Spectacle of Spite | Kabalite Agonysts",
-   "disposition": "Purge the Foe",
-   "startDate": "2026-08-15"
   }
  ],
- "listes_total_site": 46
+ "listes_total_site": 48
 }
