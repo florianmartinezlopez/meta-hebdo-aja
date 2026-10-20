@@ -25,7 +25,8 @@ def wr(v, t):
     return [round(100 * v / t, 1) if t else 0, t]
 
 
-def main():
+def agreger():
+    """Chiffres Listhammer depuis le dernier dataslate (voir l'en-tête du module)."""
     dataslate = json.loads((RACINE / "config/dataslate.json").read_text())["date"]
     releves = []
     for dossier in sorted(p for p in (RACINE / "data").iterdir() if p.is_dir()):
@@ -70,15 +71,21 @@ def main():
         "det": {f: {k: wr(*x) for k, x in v.items()} for f, v in det.items()},
         "mu": {f: {k: wr(*x) for k, x in v.items()} for f, v in mu.items()},
         "disp": json.loads((dernier / "resume.json").read_text()).get("dispositions", {}),
+        "releves": [p.name for p in releves],
     }
+    return lh
+
+
+def main():
+    lh = agreger()
     html = PAGE.read_text()
     bloc = "/*LH*/" + json.dumps(lh, ensure_ascii=False, separators=(",", ":")) + "/*FIN-LH*/"
     html, n = re.subn(r"/\*LH\*/.*?/\*FIN-LH\*/", lambda _: bloc, html, flags=re.S)
     if n != 1:
         raise SystemExit("marqueurs /*LH*/ … /*FIN-LH*/ introuvables dans outils/appariement.html")
     PAGE.write_text(html)
-    print(f"depuis le dataslate du {dataslate} : WR faction sur {len(semaines)} week-ends, "
-          f"détachements et face-à-face sur {len(releves)} relevé(s) ({', '.join(p.name for p in releves)})")
+    print(f"depuis le dataslate du {lh['dataslate']} : WR faction sur {lh['weekends_faction']} week-ends, "
+          f"détachements et face-à-face sur {lh['weekends_detail']} relevé(s) ({', '.join(lh['releves'])})")
 
 
 if __name__ == "__main__":

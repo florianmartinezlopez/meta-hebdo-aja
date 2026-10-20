@@ -17,6 +17,10 @@ Tout est dans [`config/team.json`](config/team.json). Pour ajouter ou retirer un
 
 La liste des 28 factions suivies est dans [`config/factions.json`](config/factions.json) : à toucher seulement si Listhammer ajoute une faction.
 
+## Page face-à-face
+
+https://florianmartinezlopez.github.io/meta-hebdo-aja/face-a-face.html : le win rate de chaque faction contre chaque autre depuis le dernier dataslate, avec un code couleur de fiabilité. Elle est régénérée chaque lundi par `scripts/face_a_face.py`, juste après le récap, et s'appuie sur la même date de dataslate que l'outil d'appariement.
+
 ## Outil d'appariement
 
 La page d'appariement par équipe (matrice, simulateur, appariement réel) est dans [`outils/appariement.html`](outils/appariement.html), publiée comme Artifact claude.ai. Ses repères Listhammer comptent depuis le dernier dataslate, dont la date est dans [`config/dataslate.json`](config/dataslate.json) : à changer à chaque nouveau dataslate. Pour mettre les chiffres à jour après un relevé : `python3 scripts/donnees_appariement.py`, puis republier la page.

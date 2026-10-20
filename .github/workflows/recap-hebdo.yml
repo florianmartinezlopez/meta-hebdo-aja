@@ -60,6 +60,10 @@ jobs:
         if: steps.heure.outputs.lancer == 'oui'
         run: python scripts/construire.py "${{ steps.releve.outputs.semaine }}" --url "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
 
+      - name: Page face-à-face (depuis le dernier dataslate)
+        if: steps.heure.outputs.lancer == 'oui'
+        run: python scripts/face_a_face.py
+
       - name: Test d'affichage (380 px et grand écran)
         if: steps.heure.outputs.lancer == 'oui'
         run: python scripts/verifier_affichage.py docs/index.html captures

@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Face-à-face 40K</title>
+<meta name="description" content="Win rate de chaque faction Warhammer 40K contre chaque autre, depuis le dernier dataslate (données Listhammer).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout : une colonne. D'abord la fiche d'une faction (ses 27 face-à-face triés, lisible au téléphone), puis le tableau complet 28 × 28 qui défile en largeur. Identité de la page Meta Hebdo. */
+:root{
+  --bg:#eef0f3; --surface:#fbfcfd; --ink:#15181e; --muted:#5b6370; --line:#d5d9e0; --soft:#e3e6eb;
+  --accent:#b3261e; --good:#1f7a4d; --bad:#b3261e;
+  --c-bas:#c0261c; --c-mod:#b26b00; --c-ok:#1f5fbf;
+  --display:"Saira Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111419; --surface:#181c23; --ink:#e8ebf0; --muted:#98a1ae; --line:#2c323c; --soft:#222831;
+  --accent:#ef6a5f; --good:#4cc28a; --bad:#ef6a5f;
+  --c-bas:#f07167; --c-mod:#eda63f; --c-ok:#74a6f0;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111419; --surface:#181c23; --ink:#e8ebf0; --muted:#98a1ae; --line:#2c323c; --soft:#222831;
+  --accent:#ef6a5f; --good:#4cc28a; --bad:#ef6a5f;
+  --c-bas:#f07167; --c-mod:#eda63f; --c-ok:#74a6f0;
+  color-scheme:dark}
+*{box-sizing:border-box}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;overflow-wrap:anywhere}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 56px;display:grid;gap:26px}
+h1,h2{font-family:var(--display);font-weight:700;letter-spacing:.01em;text-wrap:balance;margin:0;line-height:1.05;text-transform:uppercase}
+h1{font-size:clamp(2.3rem,6vw,3.4rem);font-weight:800}
+h2{font-size:1.6rem}
+p{margin:0}
+a{color:inherit}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.muted{color:var(--muted)}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+header.top{display:grid;gap:10px;padding-bottom:18px;border-bottom:3px solid var(--ink)}
+header.top p{max-width:72ch;color:var(--muted)}
+section{display:grid;gap:14px;min-width:0}
+.help{font-size:.88rem;color:var(--muted);max-width:74ch}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.84rem;color:var(--muted);align-items:center}
+.legend i{display:inline-block;width:22px;height:14px;border-radius:2px;vertical-align:-2px;margin-right:4px;border:1px solid var(--line)}
+.legend b{font-family:var(--mono);font-weight:600}
+.conf-bas{color:var(--c-bas)} .conf-mod{color:var(--c-mod)} .conf-ok{color:var(--c-ok)}
+.controls{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:end}
+label.f{display:grid;gap:4px;font:500 .72rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);min-width:0;flex:1 1 220px;max-width:340px}
+select{font:400 1rem var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:8px 10px;min-height:42px;width:100%}
+.check{display:flex;gap:8px;align-items:center;font-size:.9rem;cursor:pointer;min-height:42px}
+select:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* fiche faction */
+.fiche{background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--fc,var(--ink));border-radius:4px;padding:14px;display:grid;gap:12px;min-width:0}
+.fiche-h{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:8px 16px}
+.fiche-h h2{font-size:1.9rem}
+.kpi{display:flex;gap:16px;flex-wrap:wrap}
+.kpi div{display:grid}
+.kpi b{font-family:var(--mono);font-size:1.15rem;font-weight:500}
+.kpi span{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+table.l{width:100%;border-collapse:collapse;font-size:.92rem}
+.l th{font:500 .68rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:4px;border-bottom:1px solid var(--line);white-space:nowrap}
+.l td{padding:7px 4px;border-bottom:1px solid var(--soft);vertical-align:middle}
+.l td.r,.l th.r{text-align:right}
+.l tr.peu td{opacity:.55}
+.bar{position:relative;height:10px;background:var(--soft);border-radius:2px;min-width:70px}
+.bar::after{content:"";position:absolute;left:50%;top:-3px;bottom:-3px;width:1px;background:var(--muted)}
+.bar i{position:absolute;top:0;bottom:0;border-radius:2px}
+.hide-s{display:table-cell}
+@media (max-width:520px){.hide-s{display:none}}
+
+/* tableau complet */
+.tscroll{overflow-x:auto;min-width:0;border:1px solid var(--line);border-radius:4px;background:var(--surface)}
+table.g{border-collapse:separate;border-spacing:0;font-size:.78rem}
+.g th{font:600 .7rem var(--mono);padding:4px 3px;white-space:nowrap;background:var(--surface)}
+.g thead th{position:sticky;top:0;z-index:2;text-align:center;vertical-align:bottom;min-width:42px;border-bottom:1px solid var(--line)}
+.g thead th.coin{left:0;z-index:3;text-align:left;font-weight:500;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-size:.6rem}
+.g tbody th{position:sticky;left:0;z-index:1;text-align:left;padding:3px 8px;border-right:1px solid var(--line);font-family:var(--body);font-weight:600;font-size:.8rem;max-width:150px;overflow:hidden;text-overflow:ellipsis}
+.g tbody th button{all:unset;cursor:pointer}
+.g tbody th button:focus-visible{outline:2px solid var(--accent)}
+.g td{padding:0;text-align:center;border:1px solid var(--surface)}
+.g td span{display:block;min-width:42px;padding:6px 2px;font-family:var(--mono);font-variant-numeric:tabular-nums;background:var(--cell);cursor:default}
+.g td.peu span{background:repeating-linear-gradient(135deg,var(--cell) 0 4px,var(--surface) 4px 7px);color:var(--muted)}
+.g td.miroir span{background:var(--soft);color:var(--muted)}
+.g tr.aja th{color:var(--accent)}
+.g tr:hover th,.g td:hover span{outline:2px solid var(--ink);outline-offset:-2px}
+footer{font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;display:grid;gap:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <span class="eyebrow">Meta Hebdo 40K · AJA</span>
+    <h1>Face-à-face</h1>
+    <p id="periode"></p>
+  </header>
+
+  <section aria-labelledby="t-fiche">
+    <h2 id="t-fiche" class="eyebrow" style="font-size:.78rem">Une faction contre toutes les autres</h2>
+    <div class="controls">
+      <label class="f">Faction<select id="faction"></select></label>
+      <label class="check"><input type="checkbox" id="fiables"> Masquer les face-à-face pas sûrs</label>
+    </div>
+    <div id="fiche" class="fiche"></div>
+  </section>
+
+  <section aria-labelledby="t-grille">
+    <h2 id="t-grille">Tableau complet</h2>
+    <p class="help">Chaque case donne le WR de la faction de la ligne contre la faction de la colonne. Les cases hachurées reposent sur trop peu de parties pour être fiables. Touche le nom d'une faction pour afficher sa fiche.</p>
+    <div class="legend" id="legende"></div>
+    <div class="tscroll"><table class="g" id="grille"></table></div>
+  </section>
+
+  <footer>
+    <span>Données <a href="https://listhammer.info/stats">Listhammer</a> (tournois de 5 rondes et 16 joueurs ou plus). WR = victoires / (victoires + défaites), nuls exclus.</span>
+    <span>Fiabilité : intervalle de confiance à 95 % (Wilson). Bleu = marge de ± 10 points ou moins, orange = ± 10 à 20 points, rouge = plus de ± 20 points.</span>
+    <span><a href="./">Récap de la semaine</a> · page mise à jour le 20 octobre 2026</span>
+  </footer>
+</div>
+
+<script>
+const D = {"dataslate":"2026-09-30","weekends_detail":1,"factions":{"Adepta Sororitas":[55.6,509],"Adeptus Custodes":[50.4,952],"Adeptus Mechanicus":[52.1,587],"Aeldari":[47.8,481],"Astra Militarum":[39.4,589],"Black Templars":[46.4,362],"Blood Angels":[45.5,563],"Chaos Daemons":[47.8,613],"Chaos Knights":[48.6,438],"Chaos Space Marines":[46.0,758],"Dark Angels":[51.0,953],"Death Guard":[49.5,824],"Deathwatch":[52.0,125],"Drukhari":[45.3,329],"Emperor's Children":[50.2,691],"Genestealer Cult":[47.5,282],"Grey Knights":[49.9,441],"Imperial Agents":[45.3,64],"Imperial Knights":[44.5,640],"Leagues of Votann":[53.0,647],"Necrons":[50.2,1057],"Orks":[56.0,1462],"Space Marines":[51.0,1595],"Space Wolves":[49.5,552],"T'au Empire":[50.4,809],"Thousand Sons":[44.8,386],"Tyranids":[53.0,974],"World Eaters":[52.9,1121]},"mu":{"Adepta Sororitas":{"Adeptus Custodes":[71.4,14],"Adeptus Mechanicus":[60.0,10],"Aeldari":[75.0,4],"Astra Militarum":[60.0,5],"Blood Angels":[60.0,5],"Chaos Daemons":[75.0,4],"Chaos Knights":[80.0,5],"Chaos Space Marines":[66.7,6],"Dark Angels":[64.3,14],"Death Guard":[83.3,12],"Deathwatch":[100.0,1],"Drukhari":[100.0,2],"Emperor's Children":[25.0,4],"Grey Knights":[57.1,7],"Imperial Knights":[66.7,3],"Leagues of Votann":[50.0,8],"Necrons":[41.7,12],"Orks":[26.7,15],"Space Marines (Astartes)":[56.7,30],"Space Wolves":[25.0,12],"T'au Empire":[50.0,6],"Thousand Sons":[100.0,1],"Tyranids":[76.9,13],"World Eaters":[47.1,17],"Black Templars":[0.0,1]},"Adeptus Custodes":{"Adepta Sororitas":[28.6,14],"Adeptus Mechanicus":[63.6,11],"Aeldari":[53.8,13],"Astra Militarum":[70.0,10],"Black Templars":[33.3,3],"Blood Angels":[50.0,10],"Chaos Daemons":[83.3,6],"Chaos Knights":[66.7,3],"Chaos Space Marines":[42.9,7],"Dark Angels":[73.3,15],"Death Guard":[44.4,9],"Drukhari":[50.0,2],"Emperor's Children":[54.5,11],"Genestealer Cult":[100.0,3],"Grey Knights":[50.0,8],"Imperial Knights":[57.1,7],"Leagues of Votann":[33.3,12],"Necrons":[25.0,16],"Orks":[40.0,25],"Space Marines (Astartes)":[32.1,28],"Space Wolves":[75.0,12],"T'au Empire":[54.5,11],"Thousand Sons":[62.5,8],"Tyranids":[62.5,16],"World Eaters":[25.0,24],"Deathwatch":[0.0,1]},"Adeptus Mechanicus":{"Adepta Sororitas":[40.0,10],"Adeptus Custodes":[36.4,11],"Aeldari":[75.0,8],"Astra Militarum":[92.3,13],"Black Templars":[40.0,5],"Blood Angels":[57.1,7],"Chaos Daemons":[71.4,7],"Chaos Knights":[50.0,2],"Chaos Space Marines":[57.1,7],"Dark Angels":[80.0,15],"Death Guard":[53.3,15],"Deathwatch":[71.4,7],"Drukhari":[100.0,2],"Emperor's Children":[57.1,14],"Grey Knights":[57.1,7],"Imperial Knights":[50.0,2],"Leagues of Votann":[18.2,11],"Necrons":[40.9,22],"Orks":[57.1,21],"Space Marines (Astartes)":[65.5,29],"Space Wolves":[28.6,7],"T'au Empire":[28.6,7],"Tyranids":[57.1,7],"World Eaters":[55.0,20],"Genestealer Cult":[0.0,1],"Thousand Sons":[0.0,1]},"Aeldari":{"Adepta Sororitas":[25.0,4],"Adeptus Custodes":[46.2,13],"Adeptus Mechanicus":[25.0,8],"Astra Militarum":[58.3,12],"Black Templars":[83.3,6],"Blood Angels":[71.4,7],"Chaos Daemons":[85.7,7],"Chaos Knights":[66.7,3],"Chaos Space Marines":[83.3,6],"Dark Angels":[33.3,6],"Death Guard":[73.3,15],"Drukhari":[66.7,3],"Emperor's Children":[33.3,6],"Genestealer Cult":[66.7,3],"Grey Knights":[40.0,5],"Imperial Knights":[37.5,8],"Leagues of Votann":[100.0,4],"Necrons":[44.4,18],"Orks":[47.6,21],"Space Marines (Astartes)":[52.0,25],"Space Wolves":[20.0,5],"T'au Empire":[50.0,10],"Thousand Sons":[100.0,1],"Tyranids":[30.0,10],"World Eaters":[27.8,18]},"Astra Militarum":{"Adepta Sororitas":[40.0,5],"Adeptus Custodes":[30.0,10],"Adeptus Mechanicus":[7.7,13],"Aeldari":[41.7,12],"Black Templars":[50.0,6],"Chaos Knights":[66.7,6],"Chaos Space Marines":[28.6,7],"Dark Angels":[35.7,14],"Death Guard":[57.1,7],"Deathwatch":[100.0,1],"Drukhari":[75.0,4],"Emperor's Children":[40.0,15],"Grey Knights":[25.0,4],"Imperial Knights":[57.1,7],"Leagues of Votann":[85.7,7],"Necrons":[61.5,13],"Orks":[42.9,21],"Space Marines (Astartes)":[34.8,23],"T'au Empire":[42.9,14],"Thousand Sons":[50.0,6],"Tyranids":[46.2,13],"World Eaters":[23.1,13],"Blood Angels":[0.0,6],"Chaos Daemons":[0.0,3],"Genestealer Cult":[0.0,4],"Space Wolves":[0.0,3]},"Black Templars":{"Adepta Sororitas":[100.0,1],"Adeptus Custodes":[66.7,3],"Adeptus Mechanicus":[60.0,5],"Aeldari":[16.7,6],"Astra Militarum":[50.0,6],"Blood Angels":[40.0,5],"Chaos Daemons":[28.6,7],"Chaos Knights":[20.0,5],"Chaos Space Marines":[42.9,7],"Dark Angels":[42.9,7],"Death Guard":[50.0,6],"Drukhari":[66.7,6],"Emperor's Children":[33.3,12],"Grey Knights":[42.9,7],"Imperial Agents":[100.0,1],"Imperial Knights":[14.3,7],"Leagues of Votann":[37.5,8],"Necrons":[33.3,6],"Orks":[66.7,12],"Space Marines (Astartes)":[40.7,27],"Space Wolves":[66.7,6],"T'au Empire":[75.0,4],"Thousand Sons":[100.0,1],"Tyranids":[44.4,9],"World Eaters":[42.9,7],"Genestealer Cult":[0.0,2]},"Blood Angels":{"Adepta Sororitas":[40.0,5],"Adeptus Custodes":[50.0,10],"Adeptus Mechanicus":[42.9,7],"Aeldari":[28.6,7],"Astra Militarum":[100.0,6],"Black Templars":[60.0,5],"Chaos Daemons":[45.5,11],"Chaos Knights":[33.3,3],"Chaos Space Marines":[60.0,5],"Dark Angels":[37.5,16],"Death Guard":[42.9,14],"Deathwatch":[100.0,1],"Emperor's Children":[33.3,9],"Genestealer Cult":[50.0,4],"Grey Knights":[30.0,10],"Imperial Knights":[14.3,7],"Leagues of Votann":[83.3,6],"Necrons":[46.2,13],"Orks":[43.8,16],"Space Marines (Astartes)":[68.0,25],"Space Wolves":[40.0,10],"T'au Empire":[41.7,12],"Thousand Sons":[50.0,2],"Tyranids":[35.7,14],"World Eaters":[52.0,25],"Drukhari":[0.0,5]},"Chaos Daemons":{"Adepta Sororitas":[25.0,4],"Adeptus Custodes":[16.7,6],"Adeptus Mechanicus":[28.6,7],"Aeldari":[14.3,7],"Astra Militarum":[100.0,3],"Black Templars":[71.4,7],"Blood Angels":[54.5,11],"Chaos Knights":[25.0,8],"Dark Angels":[33.3,12],"Death Guard":[42.9,14],"Drukhari":[25.0,4],"Emperor's Children":[14.3,7],"Genestealer Cult":[60.0,5],"Grey Knights":[66.7,3],"Imperial Knights":[80.0,5],"Leagues of Votann":[60.0,5],"Necrons":[14.3,7],"Orks":[44.8,29],"Space Marines (Astartes)":[41.7,12],"Space Wolves":[50.0,4],"T'au Empire":[53.8,13],"Thousand Sons":[60.0,5],"Tyranids":[58.3,12],"World Eaters":[38.5,13],"Chaos Space Marines":[0.0,5],"Deathwatch":[0.0,1]},"Chaos Knights":{"Adepta Sororitas":[20.0,5],"Adeptus Custodes":[33.3,3],"Adeptus Mechanicus":[50.0,2],"Aeldari":[33.3,3],"Astra Militarum":[33.3,6],"Black Templars":[80.0,5],"Blood Angels":[66.7,3],"Chaos Daemons":[75.0,8],"Chaos Space Marines":[57.1,7],"Dark Angels":[50.0,6],"Death Guard":[57.1,7],"Drukhari":[66.7,3],"Emperor's Children":[53.8,13],"Grey Knights":[100.0,2],"Imperial Knights":[66.7,6],"Leagues of Votann":[28.6,7],"Necrons":[20.0,10],"Orks":[25.0,8],"Space Marines (Astartes)":[55.6,18],"Space Wolves":[37.5,8],"T'au Empire":[66.7,6],"Thousand Sons":[75.0,4],"Tyranids":[58.3,12],"World Eaters":[18.2,11],"Genestealer Cult":[0.0,1]},"Chaos Space Marines":{"Adepta Sororitas":[33.3,6],"Adeptus Custodes":[57.1,7],"Adeptus Mechanicus":[42.9,7],"Aeldari":[16.7,6],"Astra Militarum":[71.4,7],"Black Templars":[57.1,7],"Blood Angels":[40.0,5],"Chaos Daemons":[100.0,5],"Chaos Knights":[42.9,7],"Dark Angels":[25.0,16],"Death Guard":[30.8,13],"Drukhari":[57.1,7],"Emperor's Children":[33.3,9],"Genestealer Cult":[25.0,4],"Grey Knights":[66.7,6],"Imperial Agents":[100.0,1],"Imperial Knights":[50.0,6],"Leagues of Votann":[58.3,12],"Necrons":[30.8,13],"Orks":[34.4,32],"Space Marines (Astartes)":[14.8,27],"Space Wolves":[60.0,5],"T'au Empire":[46.2,13],"Thousand Sons":[50.0,2],"Tyranids":[40.0,15],"World Eaters":[47.1,17]},"Dark Angels":{"Adepta Sororitas":[35.7,14],"Adeptus Custodes":[26.7,15],"Adeptus Mechanicus":[20.0,15],"Aeldari":[66.7,6],"Astra Militarum":[64.3,14],"Black Templars":[57.1,7],"Blood Angels":[62.5,16],"Chaos Daemons":[66.7,12],"Chaos Knights":[50.0,6],"Chaos Space Marines":[75.0,16],"Death Guard":[45.5,22],"Deathwatch":[100.0,1],"Drukhari":[57.1,7],"Emperor's Children":[50.0,10],"Grey Knights":[42.9,7],"Imperial Knights":[66.7,15],"Leagues of Votann":[53.8,13],"Necrons":[62.5,24],"Orks":[41.2,34],"Space Marines (Astartes)":[50.0,50],"Space Wolves":[54.5,11],"T'au Empire":[62.5,16],"Thousand Sons":[80.0,5],"Tyranids":[43.8,16],"World Eaters":[45.5,33],"Genestealer Cult":[0.0,2]},"Death Guard":{"Adepta Sororitas":[16.7,12],"Adeptus Custodes":[55.6,9],"Adeptus Mechanicus":[46.7,15],"Aeldari":[26.7,15],"Astra Militarum":[42.9,7],"Black Templars":[50.0,6],"Blood Angels":[57.1,14],"Chaos Daemons":[57.1,14],"Chaos Knights":[42.9,7],"Chaos Space Marines":[69.2,13],"Dark Angels":[54.5,22],"Deathwatch":[100.0,2],"Drukhari":[60.0,5],"Emperor's Children":[60.0,5],"Genestealer Cult":[66.7,6],"Grey Knights":[37.5,8],"Imperial Knights":[66.7,9],"Leagues of Votann":[30.8,13],"Necrons":[50.0,24],"Orks":[54.2,24],"Space Marines (Astartes)":[59.5,37],"Space Wolves":[66.7,6],"T'au Empire":[47.6,21],"Thousand Sons":[37.5,8],"Tyranids":[45.5,22],"World Eaters":[58.6,29],"Imperial Agents":[0.0,2]},"Deathwatch":{"Adeptus Custodes":[100.0,1],"Adeptus Mechanicus":[28.6,7],"Chaos Daemons":[100.0,1],"Drukhari":[100.0,2],"Emperor's Children":[100.0,2],"Grey Knights":[100.0,1],"Imperial Knights":[100.0,1],"Orks":[66.7,6],"Space Wolves":[100.0,2],"T'au Empire":[100.0,1],"Tyranids":[100.0,1],"World Eaters":[100.0,1],"Adepta Sororitas":[0.0,1],"Astra Militarum":[0.0,1],"Blood Angels":[0.0,1],"Dark Angels":[0.0,1],"Death Guard":[0.0,2],"Leagues of Votann":[0.0,1],"Space Marines (Astartes)":[0.0,1]},"Drukhari":{"Adeptus Custodes":[50.0,2],"Aeldari":[33.3,3],"Astra Militarum":[25.0,4],"Black Templars":[33.3,6],"Blood Angels":[100.0,5],"Chaos Daemons":[75.0,4],"Chaos Knights":[33.3,3],"Chaos Space Marines":[42.9,7],"Dark Angels":[42.9,7],"Death Guard":[40.0,5],"Emperor's Children":[40.0,5],"Genestealer Cult":[100.0,1],"Grey Knights":[33.3,3],"Leagues of Votann":[50.0,4],"Necrons":[70.0,10],"Orks":[58.3,12],"Space Marines (Astartes)":[39.1,23],"Space Wolves":[33.3,6],"T'au Empire":[75.0,4],"Thousand Sons":[100.0,1],"Tyranids":[22.2,9],"World Eaters":[46.2,13],"Adepta Sororitas":[0.0,2],"Adeptus Mechanicus":[0.0,2],"Deathwatch":[0.0,2],"Imperial Knights":[0.0,4]},"Emperor's Children":{"Adepta Sororitas":[75.0,4],"Adeptus Custodes":[45.5,11],"Adeptus Mechanicus":[42.9,14],"Aeldari":[66.7,6],"Astra Militarum":[60.0,15],"Black Templars":[66.7,12],"Blood Angels":[66.7,9],"Chaos Daemons":[85.7,7],"Chaos Knights":[46.2,13],"Chaos Space Marines":[66.7,9],"Dark Angels":[50.0,10],"Death Guard":[40.0,5],"Drukhari":[60.0,5],"Genestealer Cult":[33.3,6],"Grey Knights":[40.0,10],"Imperial Agents":[50.0,2],"Imperial Knights":[42.9,7],"Leagues of Votann":[57.1,7],"Necrons":[56.2,16],"Orks":[37.5,16],"Space Marines (Astartes)":[50.0,26],"Space Wolves":[40.0,10],"T'au Empire":[54.5,11],"Thousand Sons":[100.0,4],"Tyranids":[30.0,20],"World Eaters":[56.0,25],"Deathwatch":[0.0,2]},"Genestealer Cult":{"Adeptus Mechanicus":[100.0,1],"Aeldari":[33.3,3],"Astra Militarum":[100.0,4],"Black Templars":[100.0,2],"Blood Angels":[50.0,4],"Chaos Daemons":[40.0,5],"Chaos Knights":[100.0,1],"Chaos Space Marines":[75.0,4],"Dark Angels":[100.0,2],"Death Guard":[33.3,6],"Emperor's Children":[66.7,6],"Grey Knights":[75.0,4],"Imperial Knights":[100.0,1],"Leagues of Votann":[33.3,3],"Necrons":[100.0,4],"Orks":[33.3,6],"Space Marines (Astartes)":[28.6,14],"Space Wolves":[20.0,5],"T'au Empire":[62.5,8],"Tyranids":[40.0,5],"World Eaters":[58.3,12],"Adeptus Custodes":[0.0,3],"Drukhari":[0.0,1],"Thousand Sons":[0.0,2]},"Grey Knights":{"Adepta Sororitas":[42.9,7],"Adeptus Custodes":[50.0,8],"Adeptus Mechanicus":[42.9,7],"Aeldari":[60.0,5],"Astra Militarum":[75.0,4],"Black Templars":[57.1,7],"Blood Angels":[70.0,10],"Chaos Daemons":[33.3,3],"Chaos Space Marines":[33.3,6],"Dark Angels":[57.1,7],"Death Guard":[62.5,8],"Drukhari":[66.7,3],"Emperor's Children":[60.0,10],"Genestealer Cult":[25.0,4],"Imperial Agents":[100.0,1],"Imperial Knights":[50.0,6],"Leagues of Votann":[75.0,4],"Necrons":[25.0,8],"Orks":[66.7,9],"Space Marines (Astartes)":[35.7,14],"Space Wolves":[40.0,5],"T'au Empire":[40.0,5],"Thousand Sons":[20.0,5],"Tyranids":[40.0,10],"World Eaters":[60.0,10],"Chaos Knights":[0.0,2],"Deathwatch":[0.0,1]},"Imperial Agents":{"Death Guard":[100.0,2],"Emperor's Children":[50.0,2],"Necrons":[50.0,2],"Orks":[50.0,6],"Space Marines (Astartes)":[50.0,2],"Space Wolves":[100.0,1],"Thousand Sons":[100.0,1],"Black Templars":[0.0,1],"Chaos Space Marines":[0.0,1],"Grey Knights":[0.0,1],"Imperial Knights":[0.0,1],"Leagues of Votann":[0.0,1],"Tyranids":[0.0,1],"World Eaters":[0.0,2]},"Imperial Knights":{"Adepta Sororitas":[33.3,3],"Adeptus Custodes":[42.9,7],"Adeptus Mechanicus":[50.0,2],"Aeldari":[62.5,8],"Astra Militarum":[42.9,7],"Black Templars":[85.7,7],"Blood Angels":[85.7,7],"Chaos Daemons":[20.0,5],"Chaos Knights":[33.3,6],"Chaos Space Marines":[50.0,6],"Dark Angels":[33.3,15],"Death Guard":[33.3,9],"Drukhari":[100.0,4],"Emperor's Children":[57.1,7],"Grey Knights":[50.0,6],"Imperial Agents":[100.0,1],"Leagues of Votann":[28.6,7],"Necrons":[100.0,6],"Orks":[39.1,23],"Space Marines (Astartes)":[63.6,22],"Space Wolves":[45.5,11],"T'au Empire":[44.4,18],"Thousand Sons":[25.0,4],"Tyranids":[41.7,12],"World Eaters":[50.0,22],"Deathwatch":[0.0,1],"Genestealer Cult":[0.0,1]},"Leagues of Votann":{"Adepta Sororitas":[50.0,8],"Adeptus Custodes":[66.7,12],"Adeptus Mechanicus":[81.8,11],"Astra Militarum":[14.3,7],"Black Templars":[62.5,8],"Blood Angels":[16.7,6],"Chaos Daemons":[40.0,5],"Chaos Knights":[71.4,7],"Chaos Space Marines":[41.7,12],"Dark Angels":[46.2,13],"Death Guard":[69.2,13],"Deathwatch":[100.0,1],"Drukhari":[50.0,4],"Emperor's Children":[42.9,7],"Genestealer Cult":[66.7,3],"Grey Knights":[25.0,4],"Imperial Agents":[100.0,1],"Imperial Knights":[71.4,7],"Necrons":[44.4,9],"Orks":[60.9,23],"Space Marines (Astartes)":[45.5,22],"Space Wolves":[63.6,11],"T'au Empire":[25.0,8],"Thousand Sons":[80.0,5],"Tyranids":[63.6,11],"World Eaters":[64.7,17],"Aeldari":[0.0,4]},"Necrons":{"Adepta Sororitas":[58.3,12],"Adeptus Custodes":[75.0,16],"Adeptus Mechanicus":[59.1,22],"Aeldari":[55.6,18],"Astra Militarum":[38.5,13],"Black Templars":[66.7,6],"Blood Angels":[53.8,13],"Chaos Daemons":[85.7,7],"Chaos Knights":[80.0,10],"Chaos Space Marines":[69.2,13],"Dark Angels":[37.5,24],"Death Guard":[50.0,24],"Drukhari":[30.0,10],"Emperor's Children":[43.8,16],"Grey Knights":[75.0,8],"Imperial Agents":[50.0,2],"Leagues of Votann":[55.6,9],"Orks":[59.5,37],"Space Marines (Astartes)":[46.8,47],"Space Wolves":[55.6,9],"T'au Empire":[47.8,23],"Thousand Sons":[83.3,6],"Tyranids":[45.0,20],"World Eaters":[44.7,38],"Genestealer Cult":[0.0,4],"Imperial Knights":[0.0,6]},"Orks":{"Adepta Sororitas":[73.3,15],"Adeptus Custodes":[60.0,25],"Adeptus Mechanicus":[42.9,21],"Aeldari":[52.4,21],"Astra Militarum":[57.1,21],"Black Templars":[33.3,12],"Blood Angels":[56.2,16],"Chaos Daemons":[55.2,29],"Chaos Knights":[75.0,8],"Chaos Space Marines":[65.6,32],"Dark Angels":[58.8,34],"Death Guard":[45.8,24],"Deathwatch":[33.3,6],"Drukhari":[41.7,12],"Emperor's Children":[62.5,16],"Genestealer Cult":[66.7,6],"Grey Knights":[33.3,9],"Imperial Agents":[50.0,6],"Imperial Knights":[60.9,23],"Leagues of Votann":[39.1,23],"Necrons":[40.5,37],"Space Marines (Astartes)":[48.4,62],"Space Wolves":[38.9,18],"T'au Empire":[52.0,25],"Thousand Sons":[80.0,10],"Tyranids":[76.7,30],"World Eaters":[51.1,45]},"Space Marines":{"Adepta Sororitas":[43.3,30],"Adeptus Custodes":[67.9,28],"Adeptus Mechanicus":[34.5,29],"Aeldari":[48.0,25],"Astra Militarum":[65.2,23],"Black Templars":[59.3,27],"Blood Angels":[32.0,25],"Chaos Daemons":[58.3,12],"Chaos Knights":[44.4,18],"Chaos Space Marines":[85.2,27],"Dark Angels":[50.0,50],"Death Guard":[40.5,37],"Deathwatch":[100.0,1],"Drukhari":[60.9,23],"Emperor's Children":[50.0,26],"Genestealer Cult":[71.4,14],"Grey Knights":[64.3,14],"Imperial Agents":[50.0,2],"Imperial Knights":[36.4,22],"Leagues of Votann":[54.5,22],"Necrons":[53.2,47],"Orks":[51.6,62],"Space Wolves":[40.0,30],"T'au Empire":[55.3,38],"Thousand Sons":[46.7,15],"Tyranids":[36.1,36],"World Eaters":[49.2,59]},"Space Wolves":{"Adepta Sororitas":[75.0,12],"Adeptus Custodes":[25.0,12],"Adeptus Mechanicus":[71.4,7],"Aeldari":[80.0,5],"Astra Militarum":[100.0,3],"Black Templars":[33.3,6],"Blood Angels":[60.0,10],"Chaos Daemons":[50.0,4],"Chaos Knights":[62.5,8],"Chaos Space Marines":[40.0,5],"Dark Angels":[45.5,11],"Death Guard":[33.3,6],"Drukhari":[66.7,6],"Emperor's Children":[60.0,10],"Genestealer Cult":[80.0,5],"Grey Knights":[60.0,5],"Imperial Knights":[54.5,11],"Leagues of Votann":[36.4,11],"Necrons":[44.4,9],"Orks":[61.1,18],"Space Marines (Astartes)":[60.0,30],"T'au Empire":[66.7,9],"Thousand Sons":[33.3,3],"Tyranids":[64.3,14],"World Eaters":[20.0,20],"Deathwatch":[0.0,2],"Imperial Agents":[0.0,1]},"T'au Empire":{"Adepta Sororitas":[50.0,6],"Adeptus Custodes":[45.5,11],"Adeptus Mechanicus":[71.4,7],"Aeldari":[50.0,10],"Astra Militarum":[57.1,14],"Black Templars":[25.0,4],"Blood Angels":[58.3,12],"Chaos Daemons":[46.2,13],"Chaos Knights":[33.3,6],"Chaos Space Marines":[53.8,13],"Dark Angels":[37.5,16],"Death Guard":[52.4,21],"Drukhari":[25.0,4],"Emperor's Children":[45.5,11],"Genestealer Cult":[37.5,8],"Grey Knights":[60.0,5],"Imperial Knights":[55.6,18],"Leagues of Votann":[75.0,8],"Necrons":[52.2,23],"Orks":[48.0,25],"Space Marines (Astartes)":[44.7,38],"Space Wolves":[33.3,9],"Thousand Sons":[75.0,8],"Tyranids":[29.6,27],"World Eaters":[37.1,35],"Deathwatch":[0.0,1]},"Thousand Sons":{"Adeptus Custodes":[37.5,8],"Adeptus Mechanicus":[100.0,1],"Astra Militarum":[50.0,6],"Blood Angels":[50.0,2],"Chaos Daemons":[40.0,5],"Chaos Knights":[25.0,4],"Chaos Space Marines":[50.0,2],"Dark Angels":[20.0,5],"Death Guard":[62.5,8],"Genestealer Cult":[100.0,2],"Grey Knights":[80.0,5],"Imperial Knights":[75.0,4],"Leagues of Votann":[20.0,5],"Necrons":[16.7,6],"Orks":[20.0,10],"Space Marines (Astartes)":[53.3,15],"Space Wolves":[66.7,3],"T'au Empire":[25.0,8],"Tyranids":[50.0,4],"World Eaters":[28.6,7],"Adepta Sororitas":[0.0,1],"Aeldari":[0.0,1],"Black Templars":[0.0,1],"Drukhari":[0.0,1],"Emperor's Children":[0.0,4],"Imperial Agents":[0.0,1]},"Tyranids":{"Adepta Sororitas":[23.1,13],"Adeptus Custodes":[37.5,16],"Adeptus Mechanicus":[42.9,7],"Aeldari":[70.0,10],"Astra Militarum":[53.8,13],"Black Templars":[55.6,9],"Blood Angels":[64.3,14],"Chaos Daemons":[41.7,12],"Chaos Knights":[41.7,12],"Chaos Space Marines":[60.0,15],"Dark Angels":[56.2,16],"Death Guard":[54.5,22],"Drukhari":[77.8,9],"Emperor's Children":[70.0,20],"Genestealer Cult":[60.0,5],"Grey Knights":[60.0,10],"Imperial Agents":[100.0,1],"Imperial Knights":[58.3,12],"Leagues of Votann":[36.4,11],"Necrons":[55.0,20],"Orks":[23.3,30],"Space Marines (Astartes)":[63.9,36],"Space Wolves":[35.7,14],"T'au Empire":[70.4,27],"Thousand Sons":[50.0,4],"World Eaters":[48.0,25],"Deathwatch":[0.0,1]},"World Eaters":{"Adepta Sororitas":[52.9,17],"Adeptus Custodes":[75.0,24],"Adeptus Mechanicus":[45.0,20],"Aeldari":[72.2,18],"Astra Militarum":[76.9,13],"Black Templars":[57.1,7],"Blood Angels":[48.0,25],"Chaos Daemons":[61.5,13],"Chaos Knights":[81.8,11],"Chaos Space Marines":[52.9,17],"Dark Angels":[54.5,33],"Death Guard":[41.4,29],"Drukhari":[53.8,13],"Emperor's Children":[44.0,25],"Genestealer Cult":[41.7,12],"Grey Knights":[40.0,10],"Imperial Agents":[100.0,2],"Imperial Knights":[50.0,22],"Leagues of Votann":[35.3,17],"Necrons":[55.3,38],"Orks":[48.9,45],"Space Marines (Astartes)":[50.8,59],"Space Wolves":[80.0,20],"T'au Empire":[62.9,35],"Thousand Sons":[71.4,7],"Tyranids":[52.0,25],"Deathwatch":[0.0,1]}},"aja":[{"nom":"T'au Empire","couleur":"#d9640f","couleur_sombre":"#f58a3d"},{"nom":"Space Marines","couleur":"#1e40af","couleur_sombre":"#6d8ff0"},{"nom":"Emperor's Children","couleur":"#c2337a","couleur_sombre":"#ec6aa8"},{"nom":"Necrons","couleur":"#16956a","couleur_sombre":"#3fcf98"},{"nom":"Adeptus Mechanicus","couleur":"#9c3510","couleur_sombre":"#e2683c"},{"nom":"Orks","couleur":"#4f7a12","couleur_sombre":"#93c94a"},{"nom":"Imperial Knights","couleur":"#5b6b80","couleur_sombre":"#a3b3c8"}]};
+const CODE = {"Adepta Sororitas":"SoB","Adeptus Custodes":"Cust","Adeptus Mechanicus":"AdMech","Aeldari":"Eldar","Astra Militarum":"AM","Black Templars":"BT","Blood Angels":"BA","Chaos Daemons":"Daem","Chaos Knights":"CK","Chaos Space Marines":"CSM","Dark Angels":"DA","Death Guard":"DG","Deathwatch":"DW","Drukhari":"Dru","Emperor's Children":"EC","Genestealer Cult":"GSC","Grey Knights":"GK","Imperial Agents":"Agents","Imperial Knights":"IK","Leagues of Votann":"LoV","Necrons":"Necs","Orks":"Orks","Space Marines":"SM","Space Wolves":"SW","T'au Empire":"T'au","Thousand Sons":"TS","Tyranids":"Nids","World Eaters":"WE"};
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmt = (v, d = 1) => v.toLocaleString("fr-FR", {minimumFractionDigits: d, maximumFractionDigits: d});
+const store = {get(k){try{return localStorage.getItem(k)}catch(e){return null}}, set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const FACTIONS = Object.keys(D.factions).sort((a, b) => a.localeCompare(b, "fr"));
+const AJA = D.aja.map(a => a.nom);
+
+function marge(wr, n){
+  if (!n) return Infinity;
+  const p = wr / 100, z = 1.96, z2 = z * z;
+  return 100 * z * Math.sqrt(p * (1 - p) / n + z2 / (4 * n * n)) / (1 + z2 / n);
+}
+const conf = (wr, n) => { const m = marge(wr, n); return m <= 10 ? "conf-ok" : m <= 20 ? "conf-mod" : "conf-bas"; };
+const fiab = c => ({"conf-ok": "sûr", "conf-mod": "modéré", "conf-bas": "pas sûr"})[c];
+function couleur(wr){
+  const t = Math.max(-1, Math.min(1, (wr - 50) / 25));
+  return `color-mix(in srgb, var(${t >= 0 ? "--good" : "--bad"}) ${Math.round(Math.abs(t) * 60)}%, var(--surface))`;
+}
+const face = (a, b) => { const m = D.mu[a]?.[b]; return m && m[1] ? {wr: m[0], n: m[1]} : null; };
+const sombre = () => document.documentElement.dataset.theme === "dark" || (document.documentElement.dataset.theme !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+const coulAja = f => { const e = D.aja.find(x => x.nom === f); return e ? (sombre() ? e.couleur_sombre : e.couleur) : "var(--ink)"; };
+const dateFr = d => new Date(d + "T12:00:00").toLocaleDateString("fr-FR", {day: "numeric", month: "long", year: "numeric"});
+const pl = (n, mot) => `${n} ${mot}${n > 1 ? "s" : ""}`;
+
+$("#periode").textContent = `Win rate de chaque faction contre chaque autre depuis le dataslate du ${dateFr(D.dataslate)}, sur ${pl(D.weekends_detail, "week-end")} de tournois relevé${D.weekends_detail > 1 ? "s" : ""} (un de plus chaque lundi). Plus il y a de parties, plus le chiffre est fiable : regarde la couleur de fiabilité avant de conclure.`;
+$("#legende").innerHTML = `<span><i style="background:${couleur(30)}"></i>WR bas</span><span><i style="background:${couleur(50)}"></i>50 %</span><span><i style="background:${couleur(70)}"></i>WR haut</span><span><i style="background:repeating-linear-gradient(135deg,${couleur(60)} 0 4px,var(--surface) 4px 7px)"></i>pas sûr (marge > ± 20 pts)</span>`;
+
+const sel = $("#faction");
+sel.innerHTML = `<optgroup label="Armées de l'AJA">${AJA.map(f => `<option>${esc(f)}</option>`).join("")}</optgroup><optgroup label="Toutes les factions">${FACTIONS.filter(f => !AJA.includes(f)).map(f => `<option>${esc(f)}</option>`).join("")}</optgroup>`;
+sel.value = FACTIONS.includes(store.get("ff-faction")) ? store.get("ff-faction") : (AJA[0] || FACTIONS[0]);
+$("#fiables").checked = store.get("ff-fiables") === "1";
+
+function fiche(){
+  const f = sel.value, glob = D.factions[f], masquer = $("#fiables").checked;
+  const lignes = FACTIONS.filter(o => o !== f).map(o => ({o, m: face(f, o)}))
+    .sort((a, b) => (b.m ? b.m.wr : -1) - (a.m ? a.m.wr : -1));
+  const vis = lignes.filter(x => x.m && !(masquer && conf(x.m.wr, x.m.n) === "conf-bas"));
+  const sans = lignes.filter(x => !x.m).length, caches = lignes.filter(x => x.m).length - vis.length;
+  const cg = conf(glob[0], glob[1]);
+  $("#fiche").style.setProperty("--fc", coulAja(f));
+  $("#fiche").innerHTML = `<div class="fiche-h"><h2>${esc(f)}</h2><div class="kpi">
+      <div><b class="${cg}">${fmt(glob[0])} %</b><span>WR global</span></div>
+      <div><b>${glob[1]}</b><span>parties</span></div>
+      <div><b>${lignes.filter(x => x.m).length}</b><span>adversaires rencontrés</span></div></div></div>
+    <table class="l"><thead><tr><th>Contre</th><th class="r">WR</th><th class="hide-s"></th><th class="r">Parties</th><th class="r">Fiabilité</th></tr></thead><tbody>
+    ${vis.map(({o, m}) => { const c = conf(m.wr, m.n); const t = Math.max(0, Math.min(100, m.wr));
+      return `<tr class="${c === "conf-bas" ? "peu" : ""}"><td>${esc(o)}</td><td class="r num"><b class="${c}">${fmt(m.wr, 0)} %</b></td>
+        <td class="hide-s" style="width:28%"><div class="bar"><i style="left:${Math.min(50, t)}%;width:${Math.abs(t - 50)}%;background:${t >= 50 ? "var(--good)" : "var(--bad)"}"></i></div></td>
+        <td class="r num">${m.n}</td><td class="r ${c}">${fiab(c)} <span class="muted num">± ${fmt(marge(m.wr, m.n), 0)}</span></td></tr>`; }).join("")}
+    </tbody></table>
+    ${caches || sans ? `<p class="help">${caches ? `${pl(caches, "face-à-face")} pas sûr${caches > 1 ? "s" : ""} masqué${caches > 1 ? "s" : ""}. ` : ""}${sans ? `${pl(sans, "faction")} jamais affrontée${sans > 1 ? "s" : ""} sur la période.` : ""}</p>` : ""}`;
+}
+
+function grille(){
+  const masquer = $("#fiables").checked;
+  const ordre = [...AJA, ...FACTIONS.filter(f => !AJA.includes(f))];
+  const head = `<thead><tr><th class="coin">Ligne contre colonne</th>${FACTIONS.map(f => `<th title="${esc(f)}">${esc(CODE[f] || f)}</th>`).join("")}</tr></thead>`;
+  const body = ordre.map(a => `<tr class="${AJA.includes(a) ? "aja" : ""}"><th><button data-f="${esc(a)}" title="Voir la fiche ${esc(a)}">${esc(a)}</button></th>${FACTIONS.map(b => {
+    if (a === b) return `<td class="miroir"><span>–</span></td>`;
+    const m = face(a, b);
+    if (!m) return `<td class="miroir" title="${esc(a)} contre ${esc(b)} : aucune partie"><span>·</span></td>`;
+    const c = conf(m.wr, m.n);
+    if (masquer && c === "conf-bas") return `<td class="miroir" title="${esc(a)} contre ${esc(b)} : ${m.n} parties, pas sûr"><span>·</span></td>`;
+    return `<td class="${c === "conf-bas" ? "peu" : ""}" title="${esc(a)} contre ${esc(b)} : ${fmt(m.wr)} % sur ${m.n} parties (± ${fmt(marge(m.wr, m.n), 0)} pts, ${fiab(c)})" style="--cell:${couleur(m.wr)}"><span>${fmt(m.wr, 0)}</span></td>`;
+  }).join("")}</tr>`).join("");
+  $("#grille").innerHTML = head + `<tbody>${body}</tbody>`;
+}
+
+function tout(){ fiche(); grille(); }
+sel.addEventListener("change", () => { store.set("ff-faction", sel.value); fiche(); });
+$("#fiables").addEventListener("change", e => { store.set("ff-fiables", e.target.checked ? "1" : "0"); tout(); });
+$("#grille").addEventListener("click", e => { const b = e.target.closest("button[data-f]"); if (!b) return; sel.value = b.dataset.f; store.set("ff-faction", sel.value); fiche(); $("#fiche").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start"}); });
+matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", tout);
+tout();
+</script>
+</body>
+</html>
