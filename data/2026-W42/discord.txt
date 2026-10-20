@@ -1,6 +1,6 @@
 Meta Hebdo 40K, semaine 42 (37 tournois, 1 851 joueurs)
-AJA : AdMech 55,4 % · Necrons 52,1 % · Emperor's Children 51,4 % · Space Marines 50,9 % · T'au 46,7 %
+AJA : AdMech 55,4 % · Orks 53,6 % · Necrons 52,1 % · Emperor's Children 51,4 % · Space Marines 50,9 % · Imperial Knights 49,3 % · T'au 46,7 %
 Disposition du moment : Purge the Foe 51,3 %, Take and Hold 48,4 %
-À préparer : Adepta Sororitas 56,9 %, World Eaters 54,8 %
-Émergent : Space Marines en Assault Brethren + Deathwatch Support + Terminator Storm Force, AdMech en Cohort Cybernetica + Eradication Cohort
+À préparer : World Eaters 54,8 % (7 % du field), Orks 53,6 % (8 % du field), Adepta Sororitas 56,9 % (3 % du field)
+Émergent : Space Marines en Assault Brethren + Deathwatch Support + Terminator Storm Force (Take and Hold), AdMech en Cohort Cybernetica + Eradication Cohort (Take and Hold)
 Le détail : https://florianmartinezlopez.github.io/meta-hebdo-aja/

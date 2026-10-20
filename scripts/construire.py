@@ -33,6 +33,8 @@ JOURS = ["lun.", "mar.", "mer.", "jeu.", "ven.", "sam.", "dim."]
 MIN_PARTIES_CLASSEMENT = 100
 MIN_PARTIES_WR = 10          # Listhammer n'affiche pas de win rate en dessous
 MIN_PARTIES_COMBO_TOP = 20   # tableau « meilleures combinaisons »
+MIN_JOUEURS_LISTES = 30     # listes, tops et archétypes : GT de 30 joueurs et plus
+MIN_PARTIES_MATCHUP = 10    # matchups affichés dans les cartes d'armée
 NBSP, NNBSP = " ", " "
 LETTRES = {2: "deux", 3: "trois", 4: "quatre", 5: "cinq", 6: "six", 7: "sept", 8: "huit"}
 
@@ -86,13 +88,24 @@ def fd_tag(dispo):
 def wr_bar(v, couleur=None):
     if v is None:
         return '<span class="na">n.d.</span>'
-    lo, hi = 30, 80
+    lo, hi = 25, 75  # échelle centrée : le trait du milieu (CSS left:50%) tombe sur 50 %
     x = max(lo, min(hi, v))
     mid, pos = (50 - lo) / (hi - lo) * 100, (x - lo) / (hi - lo) * 100
     left, w = min(mid, pos), max(abs(pos - mid), 1)
     c = couleur or ("var(--good)" if v >= 50 else "var(--bad)")
     return (f'<span class="wrbar"><span class="num">{pct(v)}</span><span class="track">'
             f'<span class="fill" style="left:{left:.1f}%;width:{w:.1f}%;background:{c}"></span></span></span>')
+
+
+def delta(v, avant, court=False):
+    """Écart en points avec la semaine précédente ; rien si l'une des deux valeurs manque."""
+    if v is None or avant is None:
+        return ""
+    d = v - avant
+    if abs(d) < 0.05:
+        return '<span class="dl eq">=</span>' if court else '<span class="dl eq">= stable</span>'
+    signe, cls = ("▲ +", "up") if d > 0 else ("▼ −", "down")
+    return f'<span class="dl {cls}">{signe}{fr(abs(d))}{"" if court else NBSP + "pt" + ("s" if abs(d) >= 2 else "")}</span>'
 
 
 def wr_num(v):
@@ -122,7 +135,40 @@ def ligne_liste(l, faction=None, montrer_combo=True, montrer_fd=True, gras=False
             f'<span class="who">{qui}</span><span class="what">{quoi}</span></div>')
 
 
+def bloc_matchups(a, prep_set):
+    def ligne(m):
+        nom = e(m["adv"]) + (' <span class="tagprep">À préparer</span>' if m["adv"] in prep_set else "")
+        return (f'<tr><td>{nom}<span class="cell-sub">{m["total"]} parties</span></td>'
+                f'<td class="r">{wr_bar(m["wr"])}</td></tr>')
+
+    if not a["durs"]:
+        return f'<p class="empty">Aucun adversaire affronté sur {MIN_PARTIES_MATCHUP} parties ou plus ce week-end.</p>'
+    durs = [m for m in a["durs"] if m["wr"] < 50]
+    faciles = [m for m in a["faciles"] if m["wr"] >= 50]
+    out = '<div class="mu">'
+    out += ('<div><div class="mu-t bad">Matchups difficiles</div><table><tbody>'
+            + ("".join(ligne(m) for m in durs) or '<tr><td class="empty">Aucun sous 50 %.</td></tr>')
+            + '</tbody></table></div>')
+    out += ('<div><div class="mu-t good">Matchups favorables</div><table><tbody>'
+            + ("".join(ligne(m) for m in faciles) or '<tr><td class="empty">Aucun au-dessus de 50 %.</td></tr>')
+            + '</tbody></table></div></div>')
+    tout = "".join(
+        f'<tr><td>{e(m["adv"])}{" <span class=tagprep>À préparer</span>" if m["adv"] in prep_set else ""}</td>'
+        f'<td class="r num">{m["total"]}</td>'
+        f'<td class="r num hide-m">{"n.d." if m["ecart"] is None or m["total"] < MIN_PARTIES_WR else ("+" if m["ecart"] >= 0 else "−") + fr(abs(m["ecart"]), 0)}</td>'
+        f'<td class="r">{wr_bar(m["wr"])}</td></tr>' for m in a["matchups"])
+    out += (f'<details class="mu-all"><summary>Tous les adversaires ({len(a["matchups"])})</summary>'
+            '<div class="tscroll"><table><thead><tr><th>Adversaire</th><th class="r">Parties</th>'
+            '<th class="r hide-m">Écart pts</th><th class="r">Win rate</th></tr></thead><tbody>'
+            f'{tout}</tbody></table></div></details>')
+    return out
+
+
 # ---------- chargement ----------
+def gros_tournoi(l):
+    return int(l.get("numberOfPlayers") or 0) >= MIN_JOUEURS_LISTES
+
+
 def charger(semaine):
     d = RACINE / "data" / semaine
     stats = json.loads((d / "stats.json").read_text())
@@ -133,8 +179,20 @@ def charger(semaine):
         x = json.loads(f.read_text())
         factions[x["nom"]] = x
     with open(d / "lists.csv") as f:
-        listes = list(csv.DictReader(f))
+        listes = [l for l in csv.DictReader(f) if gros_tournoi(l)]
     return stats, factions, listes
+
+
+def semaine_precedente(semaine):
+    """Résumé de la dernière semaine relevée avant celle-ci (pour les évolutions), ou None."""
+    avant = sorted(d for d in (RACINE / "data").iterdir()
+                   if d.is_dir() and d.name < semaine and (d / "resume.json").exists())
+    if not avant:
+        return None
+    r = json.loads((avant[-1] / "resume.json").read_text())
+    return {"semaine": r["semaine"], "aja": r.get("aja", {}),
+            "factions": {f: wr for f, wr, *_ in r.get("classement", [])} | r.get("factions", {}),
+            "dispositions": r.get("dispositions", {}), "combos": r.get("combos", {})}
 
 
 def historique(semaine, stats, factions):
@@ -146,7 +204,8 @@ def historique(semaine, stats, factions):
         if not d.is_dir() or d.name >= semaine or not (d / "lists.csv").exists():
             continue
         with open(d / "lists.csv") as f:
-            rows = [r for r in csv.DictReader(f) if borne <= (r.get("startDate") or "") < debut.isoformat()]
+            rows = [r for r in csv.DictReader(f)
+                    if borne <= (r.get("startDate") or "") < debut.isoformat() and gros_tournoi(r)]
         if rows:
             semaines_stockees.append(d.name)
         for r in rows:
@@ -160,7 +219,7 @@ def historique(semaine, stats, factions):
         if len(lst) >= 25 and min((l["startDate"] or "9") for l in lst) > borne:
             tronquees.append(nom)
         for l in lst:
-            if borne <= (l["startDate"] or "") < debut.isoformat():
+            if borne <= (l["startDate"] or "") < debut.isoformat() and gros_tournoi(l):
                 k = (l.get("playerUid"), l.get("eventUid"))
                 if k not in vues:
                     vues.add(k)
@@ -212,7 +271,20 @@ def analyser(semaine, stats, factions, listes, team):
         combos = sorted(fa["combinaisons"], key=lambda c: -c["players"])
         dets = [(combo(c["detachment"]), c["fieldPercent"], wr_of(c), c["total"]) for c in combos[:5]]
         disp_a = sorted(((k, v) for k, v in fa["dispositions"].items() if v), key=lambda x: -x[1])
-        armees.append({**a, "st": st, "dets": dets, "disp": disp_a, "listes": par_faction[a["nom"]][:3],
+        mu = []
+        for m in fa.get("adversaires", []):
+            adv = re.sub(r"\s*\(.*?\)", "", m["opponentFaction"]).strip()
+            if adv != a["nom"]:
+                mu.append({"adv": adv, "wr": wr_of(m), "total": m["total"],
+                           "ecart": m.get("avgDifferential") if m.get("differentialGames") else None})
+        fiables = sorted((m for m in mu if m["total"] >= MIN_PARTIES_MATCHUP and m["wr"] is not None),
+                         key=lambda m: m["wr"])
+        tops_a = par_faction[a["nom"]]
+        armees.append({**a, "st": st, "dets": dets, "disp": disp_a, "listes": tops_a[:3],
+                       "x0": sum(1 for l in tops_a if int(l["losses"]) == 0),
+                       "x1": sum(1 for l in tops_a if int(l["losses"]) == 1),
+                       "durs": fiables[:4], "faciles": fiables[::-1][:4],
+                       "matchups": sorted(mu, key=lambda m: -m["total"]),
                        "texte": phrase_armee(a, st, combos, disp_a, par_faction[a["nom"]])})
 
     # Classement
@@ -227,22 +299,28 @@ def analyser(semaine, stats, factions, listes, team):
     tops_combos.sort(key=lambda x: -x[3])
     tops_combos = tops_combos[:10]
 
-    # Field
-    field = []
-    for r in sorted(stats["factions"], key=lambda r: -r["players"])[:9]:
+    # À préparer : chance de croiser la faction (part du field) × avance sur 50 %
+    tot_field = sum(r["players"] for r in stats["factions"]) or 1
+    prep = []
+    for r in classement:
         fa = factions.get(r["faction"])
-        if not fa:
+        if not fa or r["wr"] <= 50:
             continue
+        part = r["players"] / tot_field * 100
         dfav = max(fa["dispositions"].items(), key=lambda x: x[1])[0] if fa["dispositions"] else None
         cfav = max(fa["combinaisons"], key=lambda c: c["players"]) if fa["combinaisons"] else None
-        field.append((r["faction"], r["players"], r["wr"], dfav, combo(cfav["detachment"]) if cfav else ""))
+        prep.append({"faction": r["faction"], "part": part, "wr": r["wr"], "joueurs": r["players"],
+                     "menace": part * (r["wr"] - 50), "dispo": dfav,
+                     "combo": combo(cfav["detachment"]) if cfav else "", "listes": par_faction[r["faction"]][:3]})
+    prep = sorted(prep, key=lambda x: -x["menace"])[:6]
 
     # Archétypes
     hist, semaines_stockees, tronquees = historique(semaine, stats, factions)
     archetypes = detecter_archetypes(listes, hist, factions, noms_team)
 
     # Synthèse
-    brief = synthese(armees, fd_tri, classement, archetypes, court)
+    prec = semaine_precedente(semaine)
+    brief = synthese(armees, fd_tri, classement, archetypes, prep, court, prec)
 
     # À noter
     notes = []
@@ -264,13 +342,20 @@ def analyser(semaine, stats, factions, listes, team):
         notes.append(txt)
     notes.append("Le win rate par faction et par force de disposition n'est pas publié par Listhammer, et les pages "
                  "tournoi (appariements) sont interdites à la lecture automatique : ce croisement n'est donc pas affiché.")
-    notes.append("Les listes affichées sont les X-0 / X-1 que Listhammer met en avant sur chaque page faction "
-                 f"({len(listes)} listes ce week-end).")
+    notes.append("Les listes affichées sont les X-0 / X-1 que Listhammer met en avant sur chaque page faction, "
+                 f"limitées aux tournois de {MIN_JOUEURS_LISTES} joueurs et plus ({len(listes)} listes ce week-end). "
+                 "Les win rates, matchups et colonnes X-0 / X-1 du classement viennent de Listhammer et comptent "
+                 "tous les GT (16 joueurs et plus).")
+    if prec:
+        notes.append(f"Les évolutions (▲ ▼) comparent avec la semaine {int(prec['semaine'].split('W')[1])} "
+                     f"({prec['semaine']}), dernière semaine relevée.")
+    else:
+        notes.append("Première semaine relevée : les évolutions d'une semaine sur l'autre apparaîtront au prochain récap.")
     if not stats["fenetre"].get("lue_sur_le_site"):
         notes.append("Les dates de la fenêtre n'ont pas pu être lues sur le site : elles sont estimées.")
 
     return {"armees": armees, "fdstats": fdstats, "fd_tri": fd_tri, "classement": classement,
-            "exclues": exclues, "tops_combos": tops_combos, "field": field, "archetypes": archetypes,
+            "exclues": exclues, "tops_combos": tops_combos, "prep": prep, "prec": prec, "archetypes": archetypes,
             "brief": brief, "notes": notes, "listes": listes, "court": court, "noms_team": noms_team}
 
 
@@ -341,10 +426,15 @@ def detecter_archetypes(listes, hist, factions, noms_team):
             txt = (f"Une seule liste dans les tops ({bilan(l)} à {nom_tournoi(l['eventName'])}, "
                    f"{l['numberOfPlayers']} joueurs), absente des trois semaines précédentes : à confirmer.")
         ic = infos_combo(f, c)
-        if ic and wr_of(ic) is not None:
+        wr_c = wr_of(ic)
+        if wr_c is not None:
             txt += (f" Sur le week-end, la combinaison réunit {fr(ic['fieldPercent'], 0)}{NBSP}% des joueurs {f} "
-                    f"pour {pct(wr_of(ic))} de victoires.")
-        cartes.append({"sig": "strong" if n >= 2 else "watch", "faction": f, "team": f in noms_team,
+                    f"pour {pct(wr_c)} de victoires.")
+        # Un « signal fort » demande plusieurs tops ET une combinaison qui gagne globalement
+        fort = n >= 2 and (wr_c is None or wr_c >= 50)
+        if n >= 2 and not fort:
+            txt += " De bons résultats isolés, mais la combinaison perd plus qu'elle ne gagne : à confirmer."
+        cartes.append({"sig": "strong" if fort else "watch", "faction": f, "team": f in noms_team,
                        "arch": f"{c}, {dispo}", "combo": c, "dispo": dispo, "texte": txt, "listes": ls[:3],
                        "n": n, "score": (int(ls[0]["wins"]), -int(ls[0]["losses"]), int(ls[0]["numberOfPlayers"] or 0))})
     reculs = []
@@ -369,41 +459,59 @@ def detecter_archetypes(listes, hist, factions, noms_team):
     return choix[:6]
 
 
-def synthese(armees, fd_tri, classement, archetypes, court):
-    def liste_fr(xs):
-        return xs[0] if len(xs) == 1 else ", ".join(xs[:-1]) + " et " + xs[-1]
+def liste_fr(xs):
+    return xs[0] if len(xs) == 1 else ", ".join(xs[:-1]) + " et " + xs[-1]
 
+
+def emergents(archetypes, court, n):
+    """Archétypes en hausse regroupés par faction et combinaison (une même combinaison peut monter
+    dans plusieurs dispositions) : « AdMech en X (Take and Hold, Purge the Foe) »."""
+    groupes = {}
+    for x in archetypes:
+        if x["sig"] != "down":
+            groupes.setdefault((x["faction"], x["combo"]), []).append(x["dispo"])
+    return [f"{court.get(f, f)} en {c} ({', '.join(d)})" for (f, c), d in list(groupes.items())[:n]]
+
+
+def synthese(armees, fd_tri, classement, archetypes, prep, court, prec):
+    """Chaque encart est une liste de puces."""
     hauts = [court[a["nom"]] for a in armees if a["st"]["wr"] is not None and a["st"]["wr"] >= 52]
     milieu = [court[a["nom"]] for a in armees if a["st"]["wr"] is not None and 50 <= a["st"]["wr"] < 52]
     bas = [court[a["nom"]] for a in armees if a["st"]["wr"] is not None and a["st"]["wr"] < 50]
-    t = []
+    aja = []
     if hauts:
-        t.append(f"{liste_fr(hauts)} au-dessus de 52{NBSP}%.")
+        aja.append(f"{liste_fr(hauts)} au-dessus de 52{NBSP}%")
     if milieu:
-        t.append(f"{liste_fr(milieu)} à l'équilibre.")
+        aja.append(f"{liste_fr(milieu)} à l'équilibre")
     if bas:
-        t.append(f"{liste_fr(bas)} sous 50{NBSP}%.")
-    aja = " ".join(t)
+        aja.append(f"{liste_fr(bas)} sous 50{NBSP}%")
+    if prec:
+        evol = [(court[a["nom"]], a["st"]["wr"] - prec["aja"][a["nom"]]) for a in armees
+                if a["st"]["wr"] is not None and prec["aja"].get(a["nom"]) is not None]
+        if evol:
+            nom, d = max(evol, key=lambda x: abs(x[1]))
+            if abs(d) >= 1:
+                aja.append(f"Plus forte évolution : {nom} ({'+' if d > 0 else '−'}{fr(abs(d))}{NBSP}pts "
+                           f"depuis la semaine {int(prec['semaine'].split('W')[1])})")
+
+    pr = [f"{x['faction']} : {pct(x['wr'])}, {fr(x['part'], 0)}{NBSP}% du field" for x in prep[:3]] \
+        or [f"Aucune faction au-dessus de 50{NBSP}% ce week-end"]
 
     b, w = fd_tri[0], fd_tri[-1]
-    dispo = (f"{b['nom']} mène à {pct(b['wr'])} sur {nb(b['parties'])} parties. "
-             f"{w['nom']} ferme la marche à {pct(w['wr'])}.")
+    dispo = [f"{b['nom']} mène à {pct(b['wr'])} sur {nb(b['parties'])} parties",
+             f"{w['nom']} ferme la marche à {pct(w['wr'])}"]
 
-    meta = ""
+    meta = []
     if len(classement) >= 2:
         a1, a2 = classement[0], classement[1]
-        meta = f"{a1['faction']} ({pct(a1['wr'])}) et {a2['faction']} ({pct(a2['wr'])}) en tête du classement."
+        meta.append(f"{a1['faction']} ({pct(a1['wr'])}) et {a2['faction']} ({pct(a2['wr'])}) en tête du classement")
         inv = max(classement, key=lambda r: r.get("undefeated") or 0)
         if (inv.get("undefeated") or 0) >= 2:
-            meta += f" {inv['faction']} compte {inv['undefeated']} listes invaincues."
-    emerg = [x for x in archetypes if x["sig"] != "down"][:3]
-    if emerg:
-        em = ", ".join(f"{court.get(x['faction'], x['faction'])} en {x['combo']}" for x in emerg) + "."
-    else:
-        em = "Pas d'archétype nouveau qui se détache ce week-end."
+            meta.append(f"{inv['faction']} compte {inv['undefeated']} listes invaincues")
+    em = emergents(archetypes, court, 3) or ["Pas d'archétype nouveau qui se détache ce week-end"]
     couleur_aja = armees[0]["couleur_var"] if armees else "var(--accent)"
-    return [("AJA", couleur_aja, aja), ("Disposition", FD[b["nom"]][1], dispo),
-            ("Meta", "var(--accent)", meta), ("Émergent", "var(--good)", em)]
+    return [("AJA", couleur_aja, aja), ("À préparer", "var(--bad)", pr), ("Disposition", FD[b["nom"]][1], dispo), ("Meta", "var(--accent)", meta),
+                     ("Émergent", "var(--good)", em)]
 
 
 # ---------- rendu ----------
@@ -419,6 +527,8 @@ def rendre(semaine, stats, an, team, url, archives):
     n_t = len(stats["tournois"])
     n_j = sum(t.get("players") or 0 for t in stats["tournois"])
     team_set = set(an["noms_team"])
+    prep_set = {x["faction"] for x in an["prep"]}
+    prec = an["prec"]
     H = []
 
     H.append(f"""<header class="top">
@@ -432,6 +542,7 @@ def rendre(semaine, stats, an, team, url, archives):
     <span class="chip">{n_t} tournois</span>
     <span class="chip">{nb(n_j)} joueurs</span>
     <span class="chip">GT 16+ joueurs, 5+ rondes</span>
+    <span class="chip">Listes : GT {MIN_JOUEURS_LISTES}+ joueurs</span>
     {f'<span class="chip warn">{stats["tournois_en_cours"]} tournoi{"s" if stats["tournois_en_cours"] > 1 else ""} encore en cours</span>' if stats["tournois_en_cours"] else '<span class="chip">Tous les tournois terminés</span>'}
   </div>
 </header>
@@ -445,22 +556,25 @@ def rendre(semaine, stats, an, team, url, archives):
     <span class="eyebrow wk">S{num}</span>
   </div>
   <div class="links" id="navlinks">
-    <a href="#bref">Synthèse</a><a href="#armees">Nos armées</a><a href="#fd">Forces de disposition</a><a href="#perf">Factions</a><a href="#emerge">Archétypes</a><a href="#face">Field</a>
+    <a href="#bref">Synthèse</a><a href="#armees">Nos armées</a><a href="#prep">À préparer</a><a href="#fd">Forces de disposition</a><a href="#perf">Factions</a><a href="#emerge">Archétypes</a>
   </div>
 </nav>""")
 
     # 01 Synthèse
     H.append('<section id="bref"><div class="sec-head"><span class="eyebrow">01 · Synthèse</span>'
              '<h2>Synthèse de la semaine</h2></div><div class="brief">')
-    for k, c, t in an["brief"]:
-        H.append(f'<div class="take"><span class="k" style="color:{c}">{e(k)}</span><p>{e(t)}</p></div>')
+    for k, c, pts in an["brief"]:
+        H.append(f'<div class="take"><span class="k" style="color:{c}">{e(k)}</span><ul>'
+                 + "".join(f"<li>{e(t)}</li>" for t in pts) + "</ul></div>")
     H.append("</div></section>")
 
     # 02 Nos armées
     H.append('<section id="armees"><div class="sec-head"><span class="eyebrow">02 · Nos armées</span>'
              '<h2>Détachements et forces de disposition</h2><p>Pour chaque armée : win rate du week-end, détachements '
              'joués (part des joueurs et win rate), répartition des forces de disposition, et les meilleures listes. '
-             'Le site n\'affiche pas de win rate de détachement sous 10 parties : ces lignes sont marquées n.d.</p></div>'
+             'Le site n\'affiche pas de win rate de détachement sous 10 parties : ces lignes sont marquées n.d. '
+             f'Matchups : win rate contre chaque armée adverse, seulement au-delà de {MIN_PARTIES_MATCHUP} parties '
+             'pour les difficiles et favorables.</p></div>'
              '<div class="armies">')
     for a in an["armees"]:
         st = a["st"]
@@ -475,20 +589,47 @@ def rendre(semaine, stats, an, team, url, archives):
         H.append(f"""<article class="army" style="--fc:{a['couleur_var']}">
   <div class="army-h"><h3><a href="{LH}/factions/{a['slug']}" target="_blank" rel="noopener">{e(a['nom'])}</a></h3>
     <div class="kpis">
-      <div class="kpi"><span class="v" style="color:{'var(--good)' if (st['wr'] or 0) >= 50 else 'var(--bad)'}">{pct(st['wr'])}</span><span class="l">Win rate</span></div>
+      <div class="kpi"><span class="v" style="color:{'var(--good)' if (st['wr'] or 0) >= 50 else 'var(--bad)'}">{pct(st['wr'])}</span><span class="l">Win rate {delta(st['wr'], prec['aja'].get(a['nom']) if prec else None, court=True)}</span></div>
       <div class="kpi"><span class="v">{nb(st['total'])}</span><span class="l">Parties</span></div>
       <div class="kpi"><span class="v">{st['players']}</span><span class="l">Joueurs</span></div>
-      <div class="kpi"><span class="v">{st['undefeated']} / {st['xMinus1']}</span><span class="l">X-0 / X-1</span></div>
+      <div class="kpi"><span class="v">{a['x0']} / {a['x1']}</span><span class="l">X-0 / X-1</span></div>
     </div></div>
   <p class="read">{e(a['texte'])}</p>
+  <div class="army-body"><div class="col">
   <div><div class="sub">Détachements</div><div class="tscroll"><table><thead><tr><th>Combinaison</th><th class="r">Part</th><th class="r">Win rate</th></tr></thead><tbody>{det}</tbody></table></div></div>
   <div><div class="sub">Forces de disposition ({sum(v for _, v in a['disp'])} joueurs)</div><div class="fdbar">{bar}</div><div class="legend">{leg}</div></div>
   <div><div class="sub">Meilleures listes du week-end</div><div class="lists">{ls}</div></div>
+  </div><div class="col">
+  <div><div class="sub">Contre les autres armées</div>{bloc_matchups(a, prep_set)}</div>
+  </div></div>
 </article>""")
     H.append("</div></section>")
 
-    # 03 Dispositions
-    H.append('<section id="fd"><div class="sec-head"><span class="eyebrow">03 · Forces de disposition</span>'
+    # 03 À préparer
+    H.append('<section id="prep"><div class="sec-head"><span class="eyebrow">03 · À préparer</span>'
+             '<h2>Les adversaires à préparer</h2><p>Les factions qu\'on a le plus de chances de croiser parmi celles qui '
+             'gagnent : classement par part du field multipliée par l\'avance sur 50 %. Une faction très jouée à 54 % '
+             'pèse plus qu\'une faction rare à 57 %. Avec leur disposition et leur détachement favoris, à tester en '
+             'priorité à l\'entraînement. Déplie chaque faction pour voir ses meilleures listes du week-end.</p></div>'
+             '<div class="tscroll"><table><thead><tr><th>Faction et favoris</th>'
+             '<th class="r">Field</th><th class="r">Win rate</th></tr></thead><tbody>')
+    for x in an["prep"]:
+        H.append(f'<tr class="{"rowteam" if x["faction"] in team_set else ""}"><td><strong>{e(x["faction"])}</strong>'
+                 f'{"<span class=teamtag>AJA</span>" if x["faction"] in team_set else ""}'
+                 f'<span class="cell-sub">{fd_tag(x["dispo"])}{e(x["combo"])}</span></td>'
+                 f'<td class="r num">{fr(x["part"])}{NBSP}%<span class="cell-sub">{x["joueurs"]} j.</span></td>'
+                 f'<td class="r">{wr_bar(x["wr"])}{delta(x["wr"], prec["factions"].get(x["faction"]) if prec else None)}</td></tr>')
+        ls = "".join(ligne_liste(l) for l in x["listes"])
+        H.append(f'<tr class="prep-ls"><td colspan="3"><details><summary>Top {len(x["listes"])} des listes '
+                 f'{e(x["faction"])}</summary><div class="lists">{ls}</div></details></td></tr>' if ls else
+                 f'<tr class="prep-ls"><td colspan="3"><span class="empty">Aucune liste X-0 / X-1 en GT '
+                 f'{MIN_JOUEURS_LISTES}+ ce week-end.</span></td></tr>')
+    if not an["prep"]:
+        H.append('<tr><td colspan="3" class="empty">Aucune faction au-dessus de 50 % ce week-end.</td></tr>')
+    H.append("</tbody></table></div></section>")
+
+    # 04 Dispositions
+    H.append('<section id="fd"><div class="sec-head"><span class="eyebrow">04 · Forces de disposition</span>'
              '<h2>Performances par force de disposition</h2><p>Win rate global de chaque disposition, les armées qui '
              'la jouent le plus (nombre de joueurs, 28 factions), les meilleurs résultats du week-end toutes factions '
              'confondues, et son win rate contre chacune des autres dispositions. Les armées AJA sont en gras.</p></div>'
@@ -505,6 +646,7 @@ def rendre(semaine, stats, an, team, url, archives):
         nl = len(d["listes"])
         H.append(f"""<article class="fdcard" style="--dc:{FD[d['nom']][1]}">
   <div class="fdcard-h"><h3>{e(d['nom'])}</h3><span class="wr" style="color:{'var(--good)' if d['wr'] >= 50 else 'var(--bad)'}">{pct(d['wr'])}</span></div>
+  {f'<p style="margin-top:-8px">{delta(d["wr"], prec["dispositions"].get(d["nom"]))}</p>' if prec and prec["dispositions"].get(d["nom"]) is not None else ''}
   <p class="muted" style="font-size:.82rem">{nb(d['parties'])} parties · {fr(d['field'])}{NBSP}% du field · {nl} liste{'s' if nl > 1 else ''} X-0 / X-1 dont {d['x0']} invaincue{'s' if d['x0'] > 1 else ''}</p>
   <div><div class="sub">Qui la joue (joueurs)</div><div class="who-plays">{qui}</div></div>
   <div><div class="sub">Meilleurs résultats{f' (6 sur {nl})' if nl > 6 else ''}</div><div class="lists">{best}</div></div>
@@ -513,7 +655,7 @@ def rendre(semaine, stats, an, team, url, archives):
     H.append("</div></section>")
 
     # 04 Factions
-    H.append(f'<section id="perf"><div class="sec-head"><span class="eyebrow">04 · Factions</span>'
+    H.append(f'<section id="perf"><div class="sec-head"><span class="eyebrow">05 · Factions</span>'
              f'<h2>Classement des factions</h2><p>Les {len(an["classement"])} factions avec au moins '
              f'{MIN_PARTIES_CLASSEMENT} parties ce week-end, triées par win rate. Le trait central marque 50{NBSP}%. '
              'La sur-représentation compare la part dans les tops à la part dans le field.</p></div>'
@@ -526,7 +668,8 @@ def rendre(semaine, stats, an, team, url, archives):
         ov = r["over"]
         H.append(f'<tr class="{"rowteam" if t else ""}"><td><a href="{LH}/factions/{slugs.get(r["faction"], "")}" '
                  f'target="_blank" rel="noopener">{e(r["faction"])}</a>{"<span class=teamtag>AJA</span>" if t else ""}</td>'
-                 f'<td class="r">{wr_bar(r["wr"])}</td><td class="r num">{nb(r["total"])}</td>'
+                 f'<td class="r">{wr_bar(r["wr"])}{delta(r["wr"], prec["factions"].get(r["faction"]) if prec else None)}</td>'
+                 f'<td class="r num">{nb(r["total"])}</td>'
                  f'<td class="r num hide-m">{r["players"]}</td><td class="r num hide-m">{r["undefeated"]}</td>'
                  f'<td class="r num hide-m">{r["xMinus1"]}</td><td class="r num hide-m">{r["eventWins"]}</td>'
                  f'<td class="r num" style="color:{"var(--good)" if ov >= 1.2 else "var(--bad)" if ov < 0.8 else "inherit"}">'
@@ -537,11 +680,11 @@ def rendre(semaine, stats, an, team, url, archives):
     for f, c, part, w, g in an["tops_combos"]:
         H.append(f'<tr class="{"rowteam" if f in team_set else ""}"><td><strong>{e(f)}</strong>'
                  f'<span class="cell-sub">{e(c)} · {g} parties</span></td><td class="r num">{fr(part)}{NBSP}%</td>'
-                 f'<td class="r">{wr_bar(w)}</td></tr>')
+                 f'<td class="r">{wr_bar(w)}{delta(w, prec["combos"].get(f + " | " + c) if prec else None)}</td></tr>')
     H.append("</tbody></table></div></section>")
 
     # 05 Archétypes
-    H.append('<section id="emerge"><div class="sec-head"><span class="eyebrow">05 · Archétypes</span>'
+    H.append('<section id="emerge"><div class="sec-head"><span class="eyebrow">06 · Archétypes</span>'
              '<h2>Archétypes émergents</h2><p>Comparaison des listes X-0 / X-1 de ce week-end avec celles des trois '
              'semaines précédentes (faction, combinaison de détachements et disposition). « Signal fort » quand plusieurs '
              'résultats vont dans le même sens, « à surveiller » sur un résultat isolé, « en recul » pour un archétype '
@@ -558,18 +701,6 @@ def rendre(semaine, stats, an, team, url, archives):
     if not an["archetypes"]:
         H.append('<p class="empty">Aucun archétype nouveau ou en recul ne se détache cette semaine.</p>')
     H.append("</div></section>")
-
-    # 06 Field
-    H.append('<section id="face"><div class="sec-head"><span class="eyebrow">06 · Field</span>'
-             '<h2>Factions les plus jouées</h2><p>Les armées les plus présentes dans le field, avec leur disposition '
-             'favorite et leur détachement le plus joué. À tester en priorité à l\'entraînement.</p></div>'
-             '<div class="tscroll"><table><thead><tr><th>Armée · disposition et détachement favoris</th>'
-             '<th class="r">Joueurs</th><th class="r">Win rate</th></tr></thead><tbody>')
-    for f, p, w, d, c in an["field"]:
-        H.append(f'<tr class="{"rowteam" if f in team_set else ""}"><td><strong>{e(f)}</strong>'
-                 f'<span class="cell-sub">{fd_tag(d)}{e(c)}</span></td><td class="r num">{p}</td>'
-                 f'<td class="r">{wr_bar(w)}</td></tr>')
-    H.append("</tbody></table></div></section>")
 
     H.append('<section><div class="note"><strong>À noter</strong><ul>'
              + "".join(f"<li>{e(n)}</li>" for n in an["notes"]) + "</ul></div></section>")
@@ -604,20 +735,28 @@ def message_discord(semaine, stats, an, url):
     num = int(semaine.split("W")[1])
     n_j = sum(t.get("players") or 0 for t in stats["tournois"])
     court = an["court"]
-    aja = " · ".join(f"{court[a['nom']]} {pct(a['st']['wr'])}"
+    prec = an["prec"]
+
+    def evol(a):
+        v, avant = a["st"]["wr"], (prec["aja"].get(a["nom"]) if prec else None)
+        if v is None or avant is None or abs(v - avant) < 0.05:
+            return ""
+        return f" ({'▲ +' if v > avant else '▼ −'}{fr(abs(v - avant))})"
+
+    aja = " · ".join(f"{court[a['nom']]} {pct(a['st']['wr'])}{evol(a)}"
                      for a in sorted(an["armees"], key=lambda a: -(a["st"]["wr"] or 0)))
     b, w = an["fd_tri"][0], an["fd_tri"][-1]
-    adv = [r for r in an["classement"] if r["faction"] not in set(an["noms_team"])][:2]
-    em = [x for x in an["archetypes"] if x["sig"] != "down"][:2]
+    em = emergents(an["archetypes"], court, 2)
     lignes = [
         f"Meta Hebdo 40K, semaine {num} ({len(stats['tournois'])} tournois, {nb(n_j)} joueurs)",
         f"AJA : {aja}",
         f"Disposition du moment : {b['nom']} {pct(b['wr'])}, {w['nom']} {pct(w['wr'])}",
     ]
-    if adv:
-        lignes.append("À préparer : " + ", ".join(f"{r['faction']} {pct(r['wr'])}" for r in adv))
+    if an["prep"]:
+        lignes.append("À préparer : " + ", ".join(f"{x['faction']} {pct(x['wr'])} ({fr(x['part'], 0)} % du field)"
+                                                  for x in an["prep"][:3]))
     if em:
-        lignes.append("Émergent : " + ", ".join(f"{court.get(x['faction'], x['faction'])} en {x['combo']}" for x in em))
+        lignes.append("Émergent : " + ", ".join(em))
     lignes.append(f"Le détail : {url}")
     return "\n".join(lignes).replace(NNBSP, " ").replace(NBSP, " ")
 
@@ -654,8 +793,12 @@ def main():
         "aja": {a["nom"]: a["st"]["wr"] for a in an["armees"]},
         "dispositions": {x["nom"]: x["wr"] for x in an["fdstats"]},
         "classement": [(r["faction"], r["wr"], r["total"]) for r in an["classement"]],
+        "factions": {r["faction"]: r["wr"] for r in stats["factions"]},
+        "combos": {f"{f} | {combo(c['detachment'])}": wr_of(c) for f, fa in factions.items()
+                   for c in fa["combinaisons"] if wr_of(c) is not None},
+        "prep": [(x["faction"], round(x["part"], 2), x["wr"]) for x in an["prep"]],
         "archetypes": [{k: x[k] for k in ("sig", "faction", "arch", "n")} for x in an["archetypes"]],
-        "brief": [t for _, _, t in an["brief"]],
+        "brief": {k: pts for k, _, pts in an["brief"]},
     }, ensure_ascii=False, indent=1))
     print(msg)
 

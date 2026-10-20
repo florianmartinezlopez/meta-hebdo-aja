@@ -5,7 +5,7 @@ import sys
 
 from playwright.sync_api import sync_playwright
 
-SECTIONS = ["bref", "armees", "fd", "perf", "emerge", "face"]
+SECTIONS = ["bref", "armees", "prep", "fd", "perf", "emerge"]
 
 
 def main():
