@@ -1016,5 +1016,126 @@
    "startDate": "2026-09-12"
   }
  ],
- "listes_total_site": 59
+ "listes_total_site": 59,
+ "tendance": [
+  {
+   "week": "2026-06-28",
+   "wins": 36,
+   "losses": 39,
+   "total": 75,
+   "winRate": "48.00"
+  },
+  {
+   "week": "2026-07-05",
+   "wins": 34,
+   "losses": 42,
+   "total": 76,
+   "winRate": "44.74"
+  },
+  {
+   "week": "2026-07-12",
+   "wins": 53,
+   "losses": 58,
+   "total": 111,
+   "winRate": "47.75"
+  },
+  {
+   "week": "2026-07-19",
+   "wins": 88,
+   "losses": 137,
+   "total": 225,
+   "winRate": "39.11"
+  },
+  {
+   "week": "2026-07-26",
+   "wins": 67,
+   "losses": 60,
+   "total": 127,
+   "winRate": "52.76"
+  },
+  {
+   "week": "2026-08-02",
+   "wins": 59,
+   "losses": 76,
+   "total": 135,
+   "winRate": "43.70"
+  },
+  {
+   "week": "2026-08-09",
+   "wins": 39,
+   "losses": 61,
+   "total": 100,
+   "winRate": "39.00"
+  },
+  {
+   "week": "2026-08-16",
+   "wins": 109,
+   "losses": 127,
+   "total": 236,
+   "winRate": "46.19"
+  },
+  {
+   "week": "2026-08-23",
+   "wins": 78,
+   "losses": 52,
+   "total": 130,
+   "winRate": "60.00"
+  },
+  {
+   "week": "2026-08-30",
+   "wins": 60,
+   "losses": 61,
+   "total": 121,
+   "winRate": "49.59"
+  },
+  {
+   "week": "2026-09-06",
+   "wins": 71,
+   "losses": 95,
+   "total": 166,
+   "winRate": "42.77"
+  },
+  {
+   "week": "2026-09-13",
+   "wins": 113,
+   "losses": 119,
+   "total": 232,
+   "winRate": "48.71"
+  },
+  {
+   "week": "2026-09-20",
+   "wins": 54,
+   "losses": 70,
+   "total": 124,
+   "winRate": "43.55"
+  },
+  {
+   "week": "2026-09-27",
+   "wins": 106,
+   "losses": 141,
+   "total": 247,
+   "winRate": "42.91"
+  },
+  {
+   "week": "2026-10-04",
+   "wins": 67,
+   "losses": 76,
+   "total": 143,
+   "winRate": "46.85"
+  },
+  {
+   "week": "2026-10-11",
+   "wins": 50,
+   "losses": 64,
+   "total": 114,
+   "winRate": "43.86"
+  },
+  {
+   "week": "2026-10-18",
+   "wins": 113,
+   "losses": 111,
+   "total": 224,
+   "winRate": "50.45"
+  }
+ ]
 }

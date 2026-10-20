@@ -17,6 +17,10 @@ Tout est dans [`config/team.json`](config/team.json). Pour ajouter ou retirer un
 
 La liste des 28 factions suivies est dans [`config/factions.json`](config/factions.json) : à toucher seulement si Listhammer ajoute une faction.
 
+## Outil d'appariement
+
+La page d'appariement par équipe (matrice, simulateur, appariement réel) est dans [`outils/appariement.html`](outils/appariement.html), publiée comme Artifact claude.ai. Ses repères Listhammer comptent depuis le dernier dataslate, dont la date est dans [`config/dataslate.json`](config/dataslate.json) : à changer à chaque nouveau dataslate. Pour mettre les chiffres à jour après un relevé : `python3 scripts/donnees_appariement.py`, puis republier la page.
+
 ## Relancer le récap à la main
 
 GitHub > le repo > onglet **Actions** > **Récap hebdo** (à gauche) > bouton **Run workflow**. Décoche « Poster le message sur Discord » si tu veux juste rafraîchir la page sans prévenir l'équipe.

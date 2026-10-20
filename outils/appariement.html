@@ -1,0 +1,778 @@
+<title>Appariements AJA</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout : outil de capitaine en une colonne (liste des matchs, puis match en 3 onglets : équipes, matrice adversaires × AJA, appariement pas à pas). Reprend l'identité de la page Meta Hebdo. */
+:root{
+  --bg:#eef0f3; --surface:#fbfcfd; --ink:#15181e; --muted:#5b6370; --line:#d5d9e0; --soft:#e3e6eb;
+  --accent:#b3261e; --good:#1f7a4d; --bad:#b3261e; --warn:#a86a00; --mid:#fbfcfd;
+  --c-bas:#c0261c; --c-mod:#b26b00; --c-ok:#1f5fbf;
+  --display:"Saira Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111419; --surface:#181c23; --ink:#e8ebf0; --muted:#98a1ae; --line:#2c323c; --soft:#222831;
+  --accent:#ef6a5f; --good:#4cc28a; --bad:#ef6a5f; --warn:#e3a53a; --mid:#181c23;
+  --c-bas:#f07167; --c-mod:#eda63f; --c-ok:#74a6f0;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111419; --surface:#181c23; --ink:#e8ebf0; --muted:#98a1ae; --line:#2c323c; --soft:#222831;
+  --accent:#ef6a5f; --good:#4cc28a; --bad:#ef6a5f; --warn:#e3a53a; --mid:#181c23;
+  --c-bas:#f07167; --c-mod:#eda63f; --c-ok:#74a6f0;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;overflow-wrap:anywhere}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 56px;display:grid;gap:22px}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:.01em;text-wrap:balance;margin:0;line-height:1.05}
+h1{font-size:clamp(2.3rem,6vw,3.4rem);font-weight:800;text-transform:uppercase}
+h2{font-size:1.7rem;text-transform:uppercase}
+h3{font-size:1.25rem;text-transform:uppercase}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.muted{color:var(--muted)}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+header.top{display:grid;gap:10px;padding-bottom:18px;border-bottom:3px solid var(--ink)}
+header.top p{max-width:70ch;color:var(--muted)}
+
+.banner{border:1px solid var(--warn);color:var(--warn);background:var(--surface);border-radius:4px;padding:10px 12px;font-size:.92rem}
+.banner.bad{border-color:var(--bad);color:var(--bad)}
+
+button{font:600 .92rem var(--body);border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:4px;padding:8px 14px;cursor:pointer;min-height:40px}
+button.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+button.danger{color:var(--bad);border-color:var(--bad)}
+button:disabled{opacity:.45;cursor:not-allowed}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+input,select{font:400 .95rem var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:7px 9px;min-height:40px;min-width:0;width:100%}
+label.f{display:grid;gap:4px;font-size:.78rem;color:var(--muted);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;min-width:0}
+label.f input,label.f select{font-family:var(--body);text-transform:none;letter-spacing:0}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:end}
+.row>label.f{flex:1 1 200px}
+
+.list{display:grid;gap:10px}
+.match{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:12px 14px;text-align:left;width:100%;font-weight:400}
+.match:hover{border-color:var(--ink)}
+.match .t{font-family:var(--display);font-weight:700;font-size:1.35rem;text-transform:uppercase;line-height:1.1}
+.match .s{font-size:.85rem;color:var(--muted)}
+.match .p{grid-row:span 2;font-family:var(--mono);font-size:.8rem;text-align:right;color:var(--muted)}
+.empty{border:1px dashed var(--line);border-radius:4px;padding:18px;color:var(--muted);display:grid;gap:6px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:14px;display:grid;gap:14px;min-width:0}
+
+.back{background:none;border:none;padding:0;min-height:0;color:var(--muted);font:500 .8rem var(--mono);letter-spacing:.08em;text-transform:uppercase;justify-self:start}
+.mhead{display:grid;gap:6px}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);overflow-x:auto;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:4}
+.tabs button{background:none;border:none;border-bottom:3px solid transparent;border-radius:0;font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:1.1rem;color:var(--muted);padding:8px 12px;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.view{display:grid;gap:18px;min-width:0}
+
+/* Équipes */
+.teams{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:16px;align-items:start}
+.slots{display:grid;gap:10px}
+.slot{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:8px;padding:10px;border:1px solid var(--line);border-left:4px solid var(--fc,var(--line));border-radius:4px;background:var(--bg)}
+.slot.off{opacity:.6}
+.slot .hd{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.slot .hd b{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.slot .hd label{display:flex;gap:6px;align-items:center;font-size:.85rem;cursor:pointer}
+.slot .hd input{width:auto;min-height:0}
+.slot .full{grid-column:1/-1}
+.dets{display:flex;flex-wrap:wrap;gap:5px}
+.dets label{display:flex;gap:5px;align-items:center;border:1px solid var(--line);border-radius:3px;padding:3px 8px;cursor:pointer;background:var(--surface);font-size:.82rem;min-height:32px}
+.dets input{width:auto;min-height:0}
+.dets label:has(input:checked){border-color:var(--ink);background:var(--soft);font-weight:600}
+.dets .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);width:100%}
+.ind{font-family:var(--mono);font-size:.74rem;color:var(--muted)}
+.ind b{font-weight:600}
+
+/* Matrice */
+.tscroll{overflow-x:auto;min-width:0}
+table.mx{border-collapse:separate;border-spacing:3px}
+.mx thead th{font-weight:400;vertical-align:bottom;padding:4px 3px 6px;text-align:center;min-width:84px;max-width:110px;border-top:4px solid var(--fc,var(--line));background:var(--surface);border-radius:3px}
+.mx .nm{display:block;font-family:var(--display);font-size:1.02rem;font-weight:700;line-height:1.1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mx .fa{display:block;font-family:var(--mono);font-size:.68rem;color:var(--ink)}
+.mx .dt{display:block;font-size:.68rem;color:var(--muted);line-height:1.25}
+.mx .wh{display:block;font-family:var(--mono);font-size:.64rem;color:var(--muted);margin-top:3px;line-height:1.3}
+.mx .wh b{font-weight:600}
+.mx th.corner{background:none;border:none;text-align:left;vertical-align:bottom;font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:130px}
+.mx tbody th{position:sticky;left:0;z-index:2;text-align:left;padding:6px 8px;min-width:130px;max-width:170px;border-left:4px solid var(--line);background:var(--surface);border-radius:3px;font-weight:400}
+.mx td{padding:0;vertical-align:top}
+.cell{display:grid;gap:2px;justify-items:center;padding:3px 2px 4px;border-radius:3px;background:var(--cell,var(--soft))}
+.cell input{width:60px;height:40px;text-align:center;font:500 1.1rem var(--mono);font-variant-numeric:tabular-nums;padding:0;border-color:transparent;background:transparent}
+.cell input::placeholder{color:var(--muted);opacity:.7}
+.cell input:hover{border-color:var(--line)}
+.cell .ref{font-family:var(--mono);font-size:.62rem;line-height:1.25;text-align:center;background:var(--surface);border-radius:3px;padding:1px 4px}
+.conf-bas{color:var(--c-bas)} .conf-mod{color:var(--c-mod)} .conf-ok{color:var(--c-ok)}
+.ref b,.ind b{font-weight:600}
+.legend .k{font-family:var(--mono);font-weight:600}
+.mx .avg{font-family:var(--mono);font-size:.78rem;color:var(--muted);text-align:center;padding:4px;vertical-align:middle}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.82rem;color:var(--muted);align-items:center}
+.legend i{display:inline-block;width:22px;height:14px;border-radius:2px;vertical-align:-2px;margin-right:4px;border:1px solid var(--line)}
+
+/* Appariement */
+.step{display:grid;gap:14px}
+.stepper{display:flex;flex-wrap:wrap;gap:6px}
+.stepper span{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:3px;border:1px solid var(--line);color:var(--muted)}
+.stepper span.on{border-color:var(--ink);color:var(--ink);background:var(--soft)}
+.stepper span.ok{color:var(--good);border-color:var(--good)}
+table.rk{width:100%;border-collapse:collapse;font-size:.9rem}
+.rk th{font-family:var(--mono);font-weight:500;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:4px;border-bottom:1px solid var(--line);white-space:nowrap}
+.rk td{padding:7px 4px;border-bottom:1px solid var(--soft);vertical-align:middle}
+.rk td.r,.rk th.r{text-align:right}
+.rk tr.best td{font-weight:600}
+.rk tr.best td:first-child::before{content:"▶ ";color:var(--accent)}
+.threat{font-size:.88rem;border-left:3px solid var(--bad);padding-left:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips label{display:flex;gap:6px;align-items:center;border:1px solid var(--line);border-radius:4px;padding:6px 10px;cursor:pointer;background:var(--surface);font-size:.9rem;min-height:40px;text-transform:none;letter-spacing:0;font-family:var(--body);color:var(--ink)}
+.chips input{width:auto;min-height:0}
+.chips label:has(input:checked){border-color:var(--ink);background:var(--soft);font-weight:600}
+.games{display:grid;gap:6px}
+.game{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 10px;align-items:center;padding:8px 10px;border-radius:4px;background:var(--cell,var(--soft))}
+.game .v{font-family:var(--mono);font-weight:500;font-size:1.1rem;grid-row:span 2}
+.game .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.total{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline}
+.total .big{font-family:var(--display);font-weight:800;font-size:2.4rem;line-height:1}
+.help{font-size:.86rem;color:var(--muted);max-width:72ch}
+details.help summary{cursor:pointer;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}
+details.help ul{margin:8px 0 0;padding-left:18px;display:grid;gap:4px}
+.fil{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.fil button{min-height:32px;padding:4px 10px;font:500 .8rem var(--body)}
+.fil button b{font-family:var(--mono);font-size:.68rem;color:var(--muted);margin-right:4px}
+.opts{display:grid;gap:6px}
+.opt{border:1px solid var(--line);border-radius:4px;background:var(--surface)}
+.opt.on{border-color:var(--ink)}
+.opt>button{width:100%;display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:4px 14px;align-items:center;text-align:left;border:none;background:none;font-weight:400;padding:8px 10px}
+.opt>button .who{font-weight:600}
+.opt>button .rp{grid-column:1/-1;font-size:.8rem;color:var(--muted)}
+.opt .v{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.opt .v small{display:block;font-size:.62rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.opt.best>button .who::before{content:"▶ ";color:var(--accent)}
+.reps{display:grid;gap:4px;padding:0 10px 10px}
+.reps .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:4px}
+.reps button{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:10px;align-items:center;text-align:left;font-weight:400;padding:6px 10px;min-height:36px;background:var(--cell,var(--bg))}
+.reps button .go{font-family:var(--mono);font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.pv{display:grid;gap:6px}
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:16px;align-items:start}
+@media (prefers-reduced-motion:no-preference){.cell{transition:background-color .2s}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <span class="eyebrow">AJA · Jeu par équipe à 6 ou 8 · format WTC</span>
+    <h1>Appariements</h1>
+    <p>Chaque joueur de l'AJA remplit sa colonne : le score qu'il pense faire sur 20 contre chaque liste adverse. Sous chaque case, le win rate Listhammer du face-à-face sert de repère. Le capitaine suit ensuite l'appariement pas à pas, et l'outil classe nos options à chaque étape.</p>
+  </header>
+  <div id="status" class="banner" hidden></div>
+  <main id="app" class="view"></main>
+</div>
+
+<script>
+// Chiffres Listhammer injectés par scripts/donnees_appariement.py (ne pas éditer à la main)
+const LH = /*LH*/{"dataslate":"2026-09-30","semaine":"2026-W42","weekends_faction":3,"weekends_detail":1,"factions":{"Adepta Sororitas":[55.6,509],"Adeptus Custodes":[50.4,952],"Adeptus Mechanicus":[52.1,587],"Aeldari":[47.8,481],"Astra Militarum":[39.4,589],"Black Templars":[46.4,362],"Blood Angels":[45.5,563],"Chaos Daemons":[47.8,613],"Chaos Knights":[48.6,438],"Chaos Space Marines":[46.0,758],"Dark Angels":[51.0,953],"Death Guard":[49.5,824],"Deathwatch":[52.0,125],"Drukhari":[45.3,329],"Emperor's Children":[50.2,691],"Genestealer Cult":[47.5,282],"Grey Knights":[49.9,441],"Imperial Agents":[45.3,64],"Imperial Knights":[44.5,640],"Leagues of Votann":[53.0,647],"Necrons":[50.2,1057],"Orks":[56.0,1462],"Space Marines":[51.0,1595],"Space Wolves":[49.5,552],"T'au Empire":[50.4,809],"Thousand Sons":[44.8,386],"Tyranids":[53.0,974],"World Eaters":[52.9,1121]},"det":{"Adepta Sororitas":{"Bringers of Flame | Chorus of Condemnation":[63.2,87],"Hallowed Martyrs":[62.1,58],"Bringers of Flame | Sacred Champions":[38.2,34],"Bringers of Flame":[80.0,5],"Penitent Host | Sacred Champions":[44.4,9],"Army of Faith":[0,0],"Bringers of Flame | Sanctified Orators":[80.0,5],"Champions of Faith | Sanctified Orators":[20.0,5],"Penitent Host":[20.0,5],"Penitent Host | Sanctified Orators":[66.7,3]},"Adeptus Custodes":{"Lions of the Emperor":[47.4,137],"Shield Host | Tharanatoi Hammerblow":[50.0,32],"Might of the Moritoi | Shield Host":[47.8,23],"Emperor's Chosen | Lions of the Emperor | Might of the Moritoi":[66.7,18],"Honoured Companions | Might of the Moritoi | Solar Watch":[58.8,17],"Lions of the Emperor | Might of the Moritoi | Solar Watch":[50.0,12],"Silent Hunters | Solar Spearhead":[20.0,10],"Aquilan Shield | Honoured Companions | Lions of the Emperor":[33.3,6],"Auric Champions | Tharanatoi Hammerblow":[60.0,5],"Emissaries Imperatus | Honoured Companions | Lions of the Emperor":[25.0,4],"Emperor's Chosen | Honoured Companions | Might of the Moritoi":[60.0,5],"Grav-Assault Force | Might of the Moritoi | Solar Watch":[50.0,2],"Lions of the Emperor | Shadowkeepers":[25.0,4],"Shield Host":[40.0,5],"Solar Spearhead | Tharanatoi Hammerblow":[40.0,5],"Tharanatoi Hammerblow":[0,0]},"Adeptus Mechanicus":{"Cohort Cybernetica | Eradication Cohort":[59.2,142],"Cohort Cybernetica | Lords of the Forge":[53.2,62],"Haloscreed Battle Clade":[53.8,13],"Cohort Cybernetica":[55.6,9],"Cohort Cybernetica | Skitarii Hunter Cohort":[37.5,8],"Cohort Acquisitus | Cohort Cybernetica | Luminen Auto-Choir":[40.0,5],"Cohort Acquisitus | Eradication Cohort":[60.0,5],"Cohort Cybernetica | Explorator Maniple":[75.0,4],"Eradication Cohort | Luminen Auto-Choir":[20.0,5]},"Aeldari":{"Aspect Host":[47.9,71],"Armoured Warhost | Seer Council":[60.0,30],"Armoured Warhost | Spirit Conclave":[55.6,18],"Armoured Warhost | Serpent's Brood":[27.3,11],"Corsair Coterie | Path of the Outcast":[46.7,15],"Devoted of Ynnead | Fateful Performance":[50.0,10],"Fateful Performance | Spirit Conclave":[60.0,10],"Armoured Warhost":[0,0],"Armoured Warhost | Aspect Host | Seer Council":[80.0,5],"Armoured Warhost | Eldritch Raiders":[0.0,4],"Armoured Warhost | Guardian Battlehost":[100.0,4],"Armoured Warhost | Warhost":[20.0,5],"Fateful Performance | Seer Council":[75.0,4],"Fateful Performance | Serpent's Brood":[75.0,4],"Path of the Outcast":[20.0,5],"Path of the Outcast | Seer Council":[0.0,4],"Path of the Outcast | Spirit Conclave":[80.0,5],"Path of the Outcast | Warhost":[60.0,5],"Path of the Outcast | Windrider Host":[40.0,5],"Seer Council | Twilight Flickers":[40.0,5],"Serpent's Brood | Twilight Flickers":[66.7,3],"Spirit Conclave":[0,0],"Warhost":[0,0]},"Astra Militarum":{"Grizzled Company":[49.1,55],"Abhuman Auxiliaries | Steel Hammer":[17.5,40],"Designation Force | Steel Hammer":[45.8,24],"Bridgehead Strike | Combined Arms":[46.7,15],"Bridgehead Strike | Steel Hammer":[66.7,15],"Abhuman Auxiliaries | Armoured Infantry":[37.5,8],"Abhuman Auxiliaries | Combined Arms":[30.0,10],"Combined Arms | Designation Force":[40.0,10],"Steel Hammer":[44.4,9],"Abhuman Auxiliaries | Mechanised Assault":[40.0,5],"Armoured Infantry | Designation Force":[40.0,5],"Bridgehead Strike | Combined Arms | Steel Hammer":[0.0,5],"Bridgehead Strike | Hammer of the Emperor":[60.0,5],"Bridgehead Strike | Mechanised Assault":[40.0,5],"Bridgehead Strike | Siege Regiment":[0.0,3],"Designation Force | Siege Regiment":[40.0,5],"Hammer of the Emperor":[20.0,5],"Siege Regiment":[0.0,4]},"Black Templars":{"Assault Brethren | Vow-sworn Crusaders":[47.2,36],"Assault Brethren | Marshal's Household | Tacticus Attack Force":[43.8,16],"Assault Brethren | Ironclad Champions | Ironstorm Spearhead":[40.0,15],"Assault Brethren | Ironstorm Spearhead | Tacticus Attack Force":[53.3,15],"Ironclad Champions | Vow-sworn Crusaders":[40.0,15],"Assault Brethren | Fist of the God-Emperor | Tacticus Attack Force":[62.5,8],"Assault Brethren | Ironstorm Spearhead | Terminator Storm Force":[40.0,10],"Assault Brethren | Fist of the God-Emperor | Ironclad Champions":[0.0,2],"Assault Brethren | Fist of the God-Emperor | Marshal's Household":[60.0,5],"Assault Brethren | Gauntlet Task Force | Tacticus Attack Force":[50.0,4],"Assault Brethren | Ironclad Champions | Terminator Storm Force":[60.0,5],"Assault Brethren | Tacticus Attack Force | Terminator Storm Force":[40.0,5],"Deathwatch Support | Devastator Brethren | Ironstorm Spearhead":[40.0,5],"Devastator Brethren | Ironclad Champions | Ironstorm Spearhead":[80.0,5],"Devastator Brethren | Ironstorm Spearhead | Phobos Shadow Force":[40.0,5],"Fist of the God-Emperor | Vow-sworn Crusaders":[40.0,5],"Gladius Task Force":[0.0,5],"Ironstorm Spearhead | Vow-sworn Crusaders":[25.0,4],"Marshal's Household | Vow-sworn Crusaders":[0.0,3],"Terminator Storm Force | Vow-sworn Crusaders":[40.0,5]},"Blood Angels":{"Angelic Inheritors":[33.3,39],"Assault Brethren | Encarmine Speartip | Tacticus Attack Force":[43.5,23],"Assault Brethren | Encarmine Speartip | Ironclad Champions":[52.9,17],"Assault Brethren | Ironclad Champions | Tacticus Attack Force":[68.8,16],"Assault Brethren | Ironstorm Spearhead | Tacticus Attack Force":[47.4,19],"Assault Brethren | Tacticus Attack Force | Wrath of the Doomed":[50.0,20],"Assault Brethren | Stormlance Task Force | Tacticus Attack Force":[76.9,13],"Assault Brethren | Tacticus Attack Force | Terminator Storm Force":[23.1,13],"Assault Brethren | Deathwatch Support | Terminator Storm Force":[77.8,9],"Assault Brethren | Ironclad Champions | Terminator Storm Force":[33.3,9],"Assault Brethren":[20.0,5],"Assault Brethren | Deathwatch Support | Encarmine Speartip":[50.0,4],"Assault Brethren | Encarmine Speartip | Terminator Storm Force":[40.0,5],"Assault Brethren | Encarmine Speartip | Wrath of the Doomed":[25.0,4],"Assault Brethren | Gravis Linebreaker Force | Tacticus Firestorm Force":[40.0,5],"Assault Brethren | Gravis Linebreaker Force | Terminator Storm Force":[50.0,4],"Assault Brethren | Ironclad Champions | Stormlance Task Force":[80.0,5],"Assault Brethren | Ironstorm Spearhead | Phobos Shadow Force":[33.3,6],"Assault Brethren | Ironstorm Spearhead | Stormlance Task Force":[75.0,4],"Assault Brethren | Ironstorm Spearhead | Terminator Storm Force":[75.0,4],"Assault Brethren | Phobos Shadow Force | Tacticus Attack Force":[60.0,5],"Assault Brethren | Stormlance Task Force | Terminator Storm Force":[25.0,4],"Devastator Brethren | Gravis Linebreaker Force | Ironclad Champions":[0.0,5],"Devastator Brethren | Ironstorm Spearhead | Terminator Storm Force":[60.0,5],"Stormlance Task Force | Tacticus Firestorm Force | Terminator Storm Force":[20.0,5]},"Chaos Daemons":{"Cavalcade of Chaos | Shadow Legion":[52.6,38],"Daemonic Incursion":[29.0,31],"Plague Legion | Warptide":[42.4,33],"Blood Legion | Cavalcade of Chaos":[48.4,31],"Blood Legion | Warptide":[50.0,18],"Lords of the Warp | Shadow Legion":[37.5,8],"Legion of Excess | Warptide":[55.6,9],"Lords of the Warp | Scintillating Legion":[42.9,7],"Shadow Legion | Warptide":[30.0,10],"Blood Legion | Lords of the Warp":[25.0,4],"Legion of Excess | Lords of the Warp":[40.0,5],"Lords of the Warp | Plague Legion":[40.0,5],"Shadow Legion":[40.0,5]},"Chaos Knights":{"Houndpack Lance | Hunting Warpack":[47.6,63],"Infernal Lance":[59.4,32],"Bastions of Tyranny | Lords of Dread":[46.4,28],"Bastions of Tyranny | Helhunt Lance":[40.0,5],"Helhunt Lance | Iconoclast Fiefdom":[60.0,5],"Houndpack Lance":[40.0,5],"Houndpack Lance | Iconoclast Fiefdom":[50.0,4],"Hunting Warpack":[0,0],"Hunting Warpack | Lords of Dread":[60.0,5],"Hunting Warpack | Traitoris Lance":[0.0,2],"Iconoclast Fiefdom":[20.0,5],"Lords of Dread":[40.0,5]},"Chaos Space Marines":{"Creations of Bile":[46.2,52],"Cabal of Chaos | Veterans of the Long War":[46.4,28],"Cabal of Chaos | Soulforged Warpack":[30.0,30],"Renegade Raiders":[44.0,25],"Pactbound Zealots":[47.6,21],"Cabal of Chaos | Fellhammer Siege-host":[26.7,15],"Devotees of Destruction | Fellhammer Siege-host":[35.0,20],"Cabal of Chaos | Warpstrike Champions":[46.2,13],"Huron's Marauders":[30.8,13],"Cabal of Chaos | Chaos Cult":[80.0,5],"Cabal of Chaos | Cult of the Arkifane":[25.0,4],"Devotees of Destruction | Veterans of the Long War":[60.0,5],"Devotees of Destruction | Warpstrike Champions":[60.0,5],"Murdertalon Raiders | Veterans of the Long War":[20.0,5],"Murdertalon Raiders | Warpstrike Champions":[0.0,4],"Warpstrike Champions":[60.0,5]},"Dark Angels":{"Assault Brethren | Wrath of the Rock":[49.5,103],"Inner Circle Task Force | Wrath of the Rock":[42.9,70],"Assault Brethren | Inner Circle Task Force | Terminator Storm Force":[39.4,33],"Assault Brethren | Darkflight Pursuit | Stormlance Task Force":[82.6,23],"Assault Brethren | Darkflight Pursuit | Ironstorm Spearhead":[57.1,14],"Assault Brethren | Darkflight Pursuit | Terminator Storm Force":[42.9,7],"Assault Brethren | Inner Circle Task Force | Tacticus Attack Force":[20.0,10],"Assault Brethren | Stormlance Task Force | Terminator Storm Force":[60.0,10],"Darkflight Pursuit | Devastator Brethren | Ironstorm Spearhead":[60.0,10],"Deathwatch Support | Wrath of the Rock":[77.8,9],"Stormlance Task Force | Wrath of the Rock":[55.6,9],"Assault Brethren | Darkflight Pursuit | Phobos Shadow Force":[0.0,2],"Assault Brethren | Deathwatch Support | Ironclad Champions":[100.0,4],"Assault Brethren | Deathwatch Support | Terminator Storm Force":[50.0,4],"Assault Brethren | Gravis Siege Force | Terminator Storm Force":[75.0,4],"Assault Brethren | Ironclad Champions | Stormlance Task Force":[60.0,5],"Assault Brethren | Ironclad Champions | Terminator Storm Force":[66.7,3],"Assault Brethren | Ironstorm Spearhead | Stormlance Task Force":[60.0,5],"Assault Brethren | Phobos Shadow Force | Terminator Storm Force":[25.0,4],"Darkflight Pursuit | Deathwatch Support | Ironstorm Spearhead":[66.7,3],"Darkflight Pursuit | Devastator Brethren | Ironclad Champions":[80.0,5],"Darkflight Pursuit | Devastator Brethren | Terminator Storm Force":[20.0,5],"Darkflight Pursuit | Inner Circle Task Force | Tacticus Firestorm Force":[40.0,5],"Darkflight Pursuit | Ironclad Champions | Stormlance Task Force":[50.0,4],"Darkflight Pursuit | Ironstorm Spearhead | Stormlance Task Force":[80.0,5],"Darkflight Pursuit | Stormlance Task Force":[60.0,5],"Deathwatch Support | Devastator Brethren | Terminator Storm Force":[66.7,3],"Devastator Brethren | Gravis Siege Force | Ironstorm Spearhead":[60.0,5],"Devastator Brethren | Inner Circle Task Force | Tacticus Firestorm Force":[75.0,4],"Inner Circle Task Force | Tacticus Firestorm Force | Terminator Storm Force":[40.0,5],"Ironclad Champions | Wrath of the Rock":[20.0,5],"Tacticus Firestorm Force | Wrath of the Rock":[25.0,4]},"Death Guard":{"Virulent Vectorium":[53.6,125],"Paragons of Putrescence | Shamblerot Vectorium":[61.5,122],"Contagion Engines | Mortarion's Hammer":[30.4,23],"Contagion Engines | Shamblerot Vectorium":[53.3,15],"Death Lord's Chosen | Paragons of Putrescence":[42.9,14],"Paragons of Putrescence | Tallyband Summoners":[31.2,16],"Champions of Contagion | Paragons of Putrescence":[55.6,9],"Contagion Engines | Tallyband Summoners":[22.2,9],"Champions of Contagion | Contagion Engines":[0.0,4],"Death Lord's Chosen | Flyblown Host":[0.0,4],"Mortarion's Hammer":[40.0,5],"Mortarion's Hammer | Paragons of Putrescence":[25.0,4],"Shamblerot Vectorium":[40.0,5]},"Deathwatch":{"Black Spear Task Force":[58.3,24],"Assault Brethren | Stormlance Task Force | Terminator Storm Force":[40.0,5],"Ironstorm Spearhead | Phobos Shadow Force | Terminator Storm Force":[60.0,5]},"Drukhari":{"Exhibition of Slaughter | Skysplinter Assault":[39.5,38],"Kabalite Agonysts | Skysplinter Assault":[43.8,32],"Exhibition of Slaughter | Kabalite Cartel":[48.0,25],"Exhibition of Slaughter | Realspace Raiders":[20.0,10],"Kabalite Cartel | Tools of Torment":[70.0,10],"Realspace Raiders | Tools of Torment":[37.5,8],"Reaper's Wager":[55.6,9],"Skysplinter Assault":[40.0,10],"Exhibition of Slaughter | Spectacle of Spite":[60.0,5]},"Emperor's Children":{"Coterie of the Conceited":[44.7,85],"Court of the Phoenician | Frenzied Host":[60.0,35],"Carnival of Excess":[60.0,30],"Court of the Phoenician | Spectacle of Slaughter":[50.0,26],"Court of the Phoenician | Slaanesh's Chosen":[56.5,23],"Peerless Bladesmen | Spectacle of Slaughter":[54.5,22],"Court of the Phoenician | Elegant Brutes":[28.6,14],"Mercurial Host | Spectacle of Slaughter":[60.0,10],"Peerless Bladesmen | Slaanesh's Chosen":[78.6,14],"Elegant Brutes | Peerless Bladesmen":[33.3,9],"Mercurial Host":[50.0,4],"Mercurial Host | Slaanesh's Chosen":[40.0,5],"Peerless Bladesmen":[40.0,5]},"Genestealer Cult":{"Biosanctic Broodsurge | Xenocult Masses":[57.7,26],"Biosanctic Broodsurge | Purestrain Broodswarm":[46.7,15],"Final Day | Xenocult Masses":[53.8,13],"Heroes of the Uprising | Purestrain Broodswarm | Xenocult Masses":[40.0,15],"Biosanctic Broodsurge | Heroes of the Uprising":[75.0,4],"Final Day | Purestrain Broodswarm":[60.0,5],"Host of Ascension":[80.0,5],"Outlander Claw | Purestrain Broodswarm":[0.0,5],"Outlander Claw | Xenocult Masses":[33.3,3],"Purestrain Broodswarm":[20.0,5],"Purestrain Broodswarm | Xenocreed Congregation":[60.0,5],"Xenocreed Congregation | Xenocult Masses":[80.0,5]},"Grey Knights":{"Warpbane Task Force":[61.9,84],"Argent Assault | Banishers":[34.7,49],"Argent Assault | Hallowed Conclave":[28.6,7],"Banishers | Immaterial Interdiction":[22.2,9],"Argent Assault | Brotherhood Strike":[40.0,5],"Banishers":[0,0],"Brotherhood Strike | Fires of Purgation":[60.0,5],"Hallowed Conclave | Immaterial Interdiction":[40.0,5],"Immaterial Interdiction | Sanctic Spearhead":[60.0,5]},"Imperial Agents":{"Imperialis Fleet | Veiled Blade Elimination Force":[42.1,19],"Ordo Hereticus, Purgation Force | Veiled Blade Elimination Force":[40.0,5]},"Imperial Knights":{"Dominus Foebreakers | Valourstrike Lance":[50.6,85],"Freeblade Company":[50.6,85],"Dominus Foebreakers | Gate Warden Lance":[40.0,20],"Questoris Companions":[53.3,15],"Throne-bonded Outriders | Valourstrike Lance":[28.6,7],"Dominus Foebreakers":[0,0],"Dominus Foebreakers | Spearhead-at-Arms":[60.0,5],"Gate Warden Lance | Throne-bonded Outriders":[60.0,5],"Spearhead-at-Arms":[40.0,5],"Valourstrike Lance":[0,0]},"Leagues of Votann":{"Hearthguard Covenant | Needgaârd Oathband":[56.0,125],"Hearthguard Covenant | Mercenary Oathband":[45.5,22],"Farseekers | Needgaârd Oathband":[60.0,20],"Dêlve Assault Shift | Hearthguard Covenant":[75.0,12],"Needgaârd Oathband":[40.0,10],"Dêlve Assault Shift | Farseekers":[90.0,10],"Farseekers | Mercenary Oathband":[45.5,11],"Armoured Trailblazers | Brandfast Oathband":[80.0,5],"Armoured Trailblazers | Hearthfyre Arsenal":[20.0,5],"Armoured Trailblazers | Mercenary Oathband":[20.0,5],"Armoured Trailblazers | Needgaârd Oathband":[60.0,5],"Dêlve Assault Shift":[0.0,5],"Mercenary Oathband":[25.0,4]},"Necrons":{"Cursed Legion | Skyshroud Spearhead":[55.8,120],"Awakened Dynasty":[44.9,98],"Canoptek Court | Hand of the Dynasty":[57.7,26],"Starshatter Arsenal":[69.2,26],"Cursed Legion | The Phaeron's Armoury":[40.0,20],"Hand of the Dynasty | Obeisance Phalanx":[53.3,15],"Cryptek Conclave | Hand of the Dynasty":[66.7,15],"Cursed Legion":[35.7,14],"Obeisance Phalanx | The Phaeron's Armoury":[53.8,13],"Cursed Legion | Starshatter Arsenal":[37.5,8],"Hand of the Dynasty | Hypercrypt Legion":[55.6,9],"Hypercrypt Legion":[40.0,10],"Hypercrypt Legion | Skyshroud Spearhead":[44.4,9],"Obeisance Phalanx | Skyshroud Spearhead":[40.0,10],"Annihilation Legion | Skyshroud Spearhead":[75.0,4],"Annihilation Legion | The Phaeron's Armoury":[66.7,3],"Canoptek Court":[60.0,5],"Cursed Legion | Hand of the Dynasty":[25.0,4],"Hand of the Dynasty | Pantheon of Woe":[100.0,4],"Skyshroud Spearhead":[0,0]},"Orks":{"Blitz Brigade | Bully Boyz | Wreckas":[47.4,38],"War Horde":[48.8,43],"Bully Boyz | Dread Mob | Wreckas":[51.4,37],"Blitz Brigade | Dread Mob | Wreckas":[42.9,28],"Green Tide | Shoota Boyz | Wreckas":[58.3,24],"Blitz Brigade | Da Big Hunt | Wreckas":[68.4,19],"Bully Boyz | Dread Mob | Runt Swarm":[27.8,18],"Blitz Brigade | Bully Boyz | Dread Mob":[71.4,14],"Bully Boyz | Runt Swarm | Wreckas":[50.0,14],"Dread Mob | Madcap Meks | Runt Swarm":[16.7,12],"Runt Swarm | Shoota Boyz | Wreckas":[75.0,12],"Blitz Brigade | Bully Boyz | Green Tide":[70.0,10],"Blitz Brigade | Green Tide | Runt Swarm":[60.0,10],"Blitz Brigade | Runt Swarm | Wreckas":[72.7,11],"Brute Bosses | Bully Boyz | Kult of Speed":[70.0,10],"Brute Bosses | Flyboyz | Kult of Speed":[55.6,9],"Bully Boyz | Dread Mob | Flyboyz":[70.0,10],"Bully Boyz | Green Tide | Kult of Speed":[44.4,9],"Bully Boyz | Green Tide | Runt Swarm":[50.0,8],"Bully Boyz | Shoota Boyz | Wreckas":[50.0,6],"Dread Mob | Flyboyz | Runt Swarm":[28.6,7],"Dread Mob | Kult of Speed | Wreckas":[75.0,8],"Green Tide | Kult of Speed | Wreckas":[75.0,8],"Blitz Brigade | Bully Boyz | Da Big Hunt":[50.0,4],"Blitz Brigade | Bully Boyz | Flyboyz":[25.0,4],"Blitz Brigade | Da Big Hunt | Green Tide":[60.0,5],"Blitz Brigade | Da Big Hunt | Kult of Speed":[60.0,5],"Blitz Brigade | Da Big Hunt | Wurrband":[60.0,5],"Blitz Brigade | Dread Mob | Madcap Meks":[60.0,5],"Blitz Brigade | Shoota Boyz | Wreckas":[100.0,4],"Brute Bosses":[0.0,3],"Brute Bosses | Bully Boyz | Da Big Hunt":[100.0,4],"Brute Bosses | Bully Boyz | Dread Mob":[25.0,4],"Brute Bosses | Bully Boyz | Green Tide":[20.0,5],"Brute Bosses | Bully Boyz | Runt Swarm":[40.0,5],"Brute Bosses | Da Big Hunt | Flyboyz":[60.0,5],"Brute Bosses | Da Big Hunt | Green Tide":[50.0,4],"Brute Bosses | Da Big Hunt | Wreckas":[60.0,5],"Brute Bosses | Dread Mob | Green Tide":[33.3,3],"Brute Bosses | Green Tide | Kult of Speed":[20.0,5],"Brute Bosses | Green Tide | Wreckas":[40.0,5],"Brute Bosses | Kult of Speed | Wreckas":[40.0,5],"Bully Boyz | Da Big Hunt | Wreckas":[60.0,5],"Bully Boyz | Dread Mob | Green Tide":[50.0,4],"Bully Boyz | Flyboyz | Kult of Speed":[40.0,5],"Bully Boyz | Green Tide | Shoota Boyz":[50.0,4],"Bully Boyz | Green Tide | Wreckas":[40.0,5],"Bully Boyz | Kult of Speed | Runt Swarm":[80.0,5],"Bully Boyz | Kult of Speed | Wreckas":[75.0,4],"Bully Boyz | Madcap Meks | Wreckas":[60.0,5],"Bully Boyz | Runt Swarm | Shoota Boyz":[60.0,5],"Da Big Hunt | Dread Mob | Wreckas":[66.7,6],"Da Big Hunt | Green Tide | Runt Swarm":[60.0,5],"Da Big Hunt | Kult of Speed | Taktikal Brigade":[20.0,5],"Da Big Hunt | Kult of Speed | Wreckas":[100.0,3],"Da Big Hunt | Wreckas":[80.0,5],"Dread Mob | Flyboyz | Kult of Speed":[80.0,5],"Dread Mob | Green Tide | Runt Swarm":[25.0,4],"Dread Mob | Kult of Speed | Madcap Meks":[0.0,4],"Dread Mob | Runt Swarm | Wreckas":[50.0,4],"Dread Mob | Shoota Boyz | Wreckas":[75.0,4],"Flyboyz | Green Tide | Kult of Speed":[100.0,6],"Flyboyz | Green Tide | Taktikal Brigade":[75.0,4],"Flyboyz | Kult of Speed | Madcap Meks":[50.0,4],"Flyboyz | Kult of Speed | Runt Swarm":[50.0,4],"Flyboyz | Kult of Speed | Wreckas":[40.0,5],"Flyboyz | Runt Swarm | Taktikal Brigade":[0,0],"Flyboyz | Shoota Boyz | Wreckas":[80.0,5],"Green Tide | Kult of Speed | Runt Swarm":[50.0,4],"Green Tide | Kult of Speed | Taktikal Brigade":[33.3,3],"Green Tide | Runt Swarm | Wreckas":[40.0,5],"Green Tide | Wreckas":[60.0,5],"Kult of Speed | Madcap Meks | Wreckas":[50.0,4]},"Space Marines":{"Assault Brethren | Deathwatch Support | Terminator Storm Force":[72.3,166],"Ceramite Sentinels | Terminator Storm Force":[34.2,38],"Assault Brethren | Forgefather's Seekers":[45.2,31],"Assault Brethren | Tacticus Attack Force | Terminator Storm Force":[36.4,33],"Assault Brethren | Tacticus Firestorm Force | Terminator Storm Force":[38.5,26],"Assault Brethren | Ironclad Champions | Terminator Storm Force":[50.0,20],"Assault Brethren | Phobos Shadow Force | Terminator Storm Force":[50.0,16],"Assault Brethren | Spearpoint Task Force":[25.0,12],"Ceramite Sentinels | Gravis Siege Force":[21.1,19],"Spearpoint Task Force | Stormlance Task Force":[44.4,18],"Assault Brethren | Gravis Siege Force | Terminator Storm Force":[45.5,11],"Assault Brethren | Ironstorm Spearhead | Stormlance Task Force":[71.4,14],"Assault Brethren | Ironstorm Spearhead | Terminator Storm Force":[40.0,10],"Deathwatch Support | Forgefather's Seekers":[50.0,12],"Devastator Brethren | Forgefather's Seekers":[33.3,12],"Devastator Brethren | Gravis Linebreaker Force | Terminator Storm Force":[40.0,10],"Devastator Brethren | Ironclad Champions | Terminator Storm Force":[45.5,11],"Devastator Brethren | Medusa's Wrath":[54.5,11],"Forgefather's Seekers | Gravis Siege Force":[46.2,13],"Ironclad Champions | Medusa's Wrath":[69.2,13],"Assault Brethren | Deathwatch Support | Stormlance Task Force":[62.5,8],"Assault Brethren | Gravis Linebreaker Force | Terminator Storm Force":[44.4,9],"Assault Brethren | Ironclad Champions | Ironstorm Spearhead":[30.0,10],"Assault Brethren | Ironstorm Spearhead | Tacticus Attack Force":[37.5,8],"Ceramite Sentinels | Ironclad Champions":[50.0,8],"Deathwatch Support | Spearpoint Task Force":[62.5,8],"Devastator Brethren | Gravis Siege Force | Tacticus Firestorm Force":[33.3,9],"Devastator Brethren | Ironstorm Spearhead | Tacticus Firestorm Force":[33.3,9],"Terminator Storm Force":[50.0,8],"Assault Brethren | Ceramite Sentinels":[0.0,2],"Assault Brethren | Ceramite Sentinels | Emperor's Shield":[40.0,5],"Assault Brethren | Deathwatch Support | Ironstorm Spearhead":[80.0,5],"Assault Brethren | Gauntlet Task Force | Gravis Siege Force":[25.0,4],"Assault Brethren | Gauntlet Task Force | Tacticus Attack Force":[33.3,6],"Assault Brethren | Gravis Siege Force | Tacticus Firestorm Force":[20.0,5],"Assault Brethren | Ironstorm Spearhead | Tacticus Firestorm Force":[60.0,5],"Blade of Ultramar":[0.0,3],"Ceramite Sentinels | Gravis Linebreaker Force":[75.0,4],"Deathwatch Support | Devastator Brethren | Ironstorm Spearhead":[60.0,5],"Deathwatch Support | Gravis Linebreaker Force | Tacticus Firestorm Force":[60.0,5],"Deathwatch Support | Ironstorm Spearhead | Terminator Storm Force":[40.0,5],"Deathwatch Support | Phobos Shadow Force | Terminator Storm Force":[60.0,5],"Deathwatch Support | Shadowmark Talon":[100.0,4],"Deathwatch Support | Wrath of the Rock":[33.3,3],"Devastator Brethren | Gauntlet Task Force | Tacticus Firestorm Force":[33.3,3],"Devastator Brethren | Gravis Siege Force | Ironclad Champions":[25.0,4],"Devastator Brethren | Gravis Siege Force | Terminator Storm Force":[40.0,5],"Devastator Brethren | Ironclad Champions | Ironstorm Spearhead":[80.0,5],"Devastator Brethren | Ironclad Champions | Phobos Shadow Force":[66.7,3],"Devastator Brethren | Ironstorm Spearhead | Phobos Shadow Force":[60.0,5],"Forgefather's Seekers | Gauntlet Task Force":[40.0,5],"Forgefather's Seekers | Gravis Linebreaker Force":[25.0,4],"Forgefather's Seekers | Ironclad Champions":[0,0],"Forgefather's Seekers | Ironstorm Spearhead":[80.0,5],"Forgefather's Seekers | Terminator Storm Force":[40.0,5],"Gauntlet Task Force | Gravis Linebreaker Force":[100.0,2],"Gauntlet Task Force | Gravis Siege Force | Ironstorm Spearhead":[25.0,4],"Gauntlet Task Force | Shadowmark Talon":[40.0,5],"Gravis Linebreaker Force | Ironstorm Spearhead | Tactical Brethren":[80.0,5],"Gravis Linebreaker Force | Stormlance Task Force | Terminator Storm Force":[0,0],"Gravis Siege Force | Ironstorm Spearhead | Tactical Brethren":[40.0,5],"Gravis Siege Force | Tactical Brethren | Terminator Storm Force":[50.0,4],"Ironclad Champions":[66.7,3],"Ironclad Champions | Shadowmark Talon":[20.0,5],"Ironstorm Spearhead":[40.0,5],"Ironstorm Spearhead | Stormlance Task Force | Tacticus Firestorm Force":[60.0,5],"Medusa's Wrath | Phobos Shadow Force":[66.7,3],"Medusa's Wrath | Terminator Storm Force":[40.0,5],"Tacticus Attack Force":[50.0,4]},"Space Wolves":{"Assault Brethren | Saga of the Beastslayer | Stormlance Task Force":[59.0,78],"Assault Brethren | Saga of the Great Wolf":[57.9,57],"Saga of the Great Wolf | Terminator Storm Force":[37.7,53],"Saga of the Beastslayer | Saga of the Great Wolf":[52.0,25],"Assault Brethren | Champions of Fenris | Saga of the Great Wolf":[80.0,5],"Assault Brethren | Saga of the Beastslayer | Terminator Storm Force":[40.0,5],"Assault Brethren | Stormlance Task Force | Terminator Storm Force":[60.0,5],"Champions of Fenris | Saga of the Great Wolf":[40.0,5],"Ironclad Champions | Saga of the Great Wolf":[40.0,5],"Saga of the Beastslayer":[60.0,5]},"T'au Empire":{"Retaliation Cadre":[53.3,122],"Mont'ka":[39.0,100],"Experimental Prototype Cadre | Kauyon":[49.0,102],"Advanced Acquisition Cadre | Kauyon":[36.4,11],"Advanced Acquisition Cadre | Kroot Hunting Pack":[20.0,5],"Experimental Prototype Cadre | Kroot Hunting Pack":[40.0,5],"Kauyon":[66.7,3],"Kroot Hunting Pack":[40.0,5]},"Thousand Sons":{"Grand Coven":[42.6,47],"Rubricae Phalanx":[35.7,28],"Hexwarp Thrallband":[35.7,14],"Sekhetar Cohort | Warpforged Cabal":[55.6,9],"Changehost of Deceit | Grand Coven | Ritual of Regeneration":[0.0,5],"Ritual of Regeneration | Sekhetar Cohort | Servants of Change":[100.0,1],"Ritual of Regeneration | Warpforged Cabal":[40.0,5],"Ritual of Regeneration | Warpmeld Pact":[40.0,5],"Warpbane Task Force":[40.0,5]},"Tyranids":{"Subterranean Assault":[52.5,162],"Assimilation Swarm | Talons of the Norn Queen":[65.1,63],"Ambush Predators | Vanguard Onslaught":[60.0,35],"Invasion Fleet":[61.5,39],"Crusher Stampede | Talons of the Norn Queen":[38.7,31],"Assimilation Swarm":[20.0,5],"Synaptic Nexus | Talons of the Norn Queen":[37.5,8],"Synaptic Nexus | Warrior Bioform Onslaught":[50.0,8],"Ambush Predators | Assimilation Swarm":[40.0,5],"Ambush Predators | Talons of the Norn Queen | Warrior Bioform Onslaught":[40.0,5],"Assimilation Swarm | Warrior Bioform Onslaught":[20.0,5],"Synaptic Nexus":[40.0,5],"Talons of the Norn Queen":[0,0],"Talons of the Norn Queen | Vanguard Onslaught":[20.0,5],"Vanguard Onslaught":[40.0,5]},"World Eaters":{"Berzerker Warband | Vessels of Wrath":[56.1,255],"Berzerker Warband | Butchers of Khorne":[63.9,72],"Berzerker Warband | Brazen Engines":[50.0,44],"Goretrack Onslaught | Vessels of Wrath":[50.0,40],"Brazen Engines | Possessed Slaughterband":[57.1,28],"Khorne Daemonkin | Vessels of Wrath":[52.2,23],"Berzerker Warband":[52.9,17],"Brazen Engines | Khorne Daemonkin":[40.0,20],"Brazen Engines | Goretrack Onslaught":[50.0,10],"Possessed Slaughterband | Vessels of Wrath":[44.4,9],"Brazen Engines":[40.0,5],"Brazen Engines | Butchers of Khorne | Vessels of Wrath":[40.0,5],"Butchers of Khorne | Goretrack Onslaught":[75.0,4],"Butchers of Khorne | Khorne Daemonkin":[60.0,5],"Butchers of Khorne | Possessed Slaughterband":[60.0,5],"Khorne Daemonkin":[25.0,4],"Possessed Slaughterband":[66.7,3]}},"mu":{"Adepta Sororitas":{"Adeptus Custodes":[71.4,14],"Adeptus Mechanicus":[60.0,10],"Aeldari":[75.0,4],"Astra Militarum":[60.0,5],"Blood Angels":[60.0,5],"Chaos Daemons":[75.0,4],"Chaos Knights":[80.0,5],"Chaos Space Marines":[66.7,6],"Dark Angels":[64.3,14],"Death Guard":[83.3,12],"Deathwatch":[100.0,1],"Drukhari":[100.0,2],"Emperor's Children":[25.0,4],"Grey Knights":[57.1,7],"Imperial Knights":[66.7,3],"Leagues of Votann":[50.0,8],"Necrons":[41.7,12],"Orks":[26.7,15],"Space Marines (Astartes)":[56.7,30],"Space Wolves":[25.0,12],"T'au Empire":[50.0,6],"Thousand Sons":[100.0,1],"Tyranids":[76.9,13],"World Eaters":[47.1,17],"Black Templars":[0.0,1]},"Adeptus Custodes":{"Adepta Sororitas":[28.6,14],"Adeptus Mechanicus":[63.6,11],"Aeldari":[53.8,13],"Astra Militarum":[70.0,10],"Black Templars":[33.3,3],"Blood Angels":[50.0,10],"Chaos Daemons":[83.3,6],"Chaos Knights":[66.7,3],"Chaos Space Marines":[42.9,7],"Dark Angels":[73.3,15],"Death Guard":[44.4,9],"Drukhari":[50.0,2],"Emperor's Children":[54.5,11],"Genestealer Cult":[100.0,3],"Grey Knights":[50.0,8],"Imperial Knights":[57.1,7],"Leagues of Votann":[33.3,12],"Necrons":[25.0,16],"Orks":[40.0,25],"Space Marines (Astartes)":[32.1,28],"Space Wolves":[75.0,12],"T'au Empire":[54.5,11],"Thousand Sons":[62.5,8],"Tyranids":[62.5,16],"World Eaters":[25.0,24],"Deathwatch":[0.0,1]},"Adeptus Mechanicus":{"Adepta Sororitas":[40.0,10],"Adeptus Custodes":[36.4,11],"Aeldari":[75.0,8],"Astra Militarum":[92.3,13],"Black Templars":[40.0,5],"Blood Angels":[57.1,7],"Chaos Daemons":[71.4,7],"Chaos Knights":[50.0,2],"Chaos Space Marines":[57.1,7],"Dark Angels":[80.0,15],"Death Guard":[53.3,15],"Deathwatch":[71.4,7],"Drukhari":[100.0,2],"Emperor's Children":[57.1,14],"Grey Knights":[57.1,7],"Imperial Knights":[50.0,2],"Leagues of Votann":[18.2,11],"Necrons":[40.9,22],"Orks":[57.1,21],"Space Marines (Astartes)":[65.5,29],"Space Wolves":[28.6,7],"T'au Empire":[28.6,7],"Tyranids":[57.1,7],"World Eaters":[55.0,20],"Genestealer Cult":[0.0,1],"Thousand Sons":[0.0,1]},"Aeldari":{"Adepta Sororitas":[25.0,4],"Adeptus Custodes":[46.2,13],"Adeptus Mechanicus":[25.0,8],"Astra Militarum":[58.3,12],"Black Templars":[83.3,6],"Blood Angels":[71.4,7],"Chaos Daemons":[85.7,7],"Chaos Knights":[66.7,3],"Chaos Space Marines":[83.3,6],"Dark Angels":[33.3,6],"Death Guard":[73.3,15],"Drukhari":[66.7,3],"Emperor's Children":[33.3,6],"Genestealer Cult":[66.7,3],"Grey Knights":[40.0,5],"Imperial Knights":[37.5,8],"Leagues of Votann":[100.0,4],"Necrons":[44.4,18],"Orks":[47.6,21],"Space Marines (Astartes)":[52.0,25],"Space Wolves":[20.0,5],"T'au Empire":[50.0,10],"Thousand Sons":[100.0,1],"Tyranids":[30.0,10],"World Eaters":[27.8,18]},"Astra Militarum":{"Adepta Sororitas":[40.0,5],"Adeptus Custodes":[30.0,10],"Adeptus Mechanicus":[7.7,13],"Aeldari":[41.7,12],"Black Templars":[50.0,6],"Chaos Knights":[66.7,6],"Chaos Space Marines":[28.6,7],"Dark Angels":[35.7,14],"Death Guard":[57.1,7],"Deathwatch":[100.0,1],"Drukhari":[75.0,4],"Emperor's Children":[40.0,15],"Grey Knights":[25.0,4],"Imperial Knights":[57.1,7],"Leagues of Votann":[85.7,7],"Necrons":[61.5,13],"Orks":[42.9,21],"Space Marines (Astartes)":[34.8,23],"T'au Empire":[42.9,14],"Thousand Sons":[50.0,6],"Tyranids":[46.2,13],"World Eaters":[23.1,13],"Blood Angels":[0.0,6],"Chaos Daemons":[0.0,3],"Genestealer Cult":[0.0,4],"Space Wolves":[0.0,3]},"Black Templars":{"Adepta Sororitas":[100.0,1],"Adeptus Custodes":[66.7,3],"Adeptus Mechanicus":[60.0,5],"Aeldari":[16.7,6],"Astra Militarum":[50.0,6],"Blood Angels":[40.0,5],"Chaos Daemons":[28.6,7],"Chaos Knights":[20.0,5],"Chaos Space Marines":[42.9,7],"Dark Angels":[42.9,7],"Death Guard":[50.0,6],"Drukhari":[66.7,6],"Emperor's Children":[33.3,12],"Grey Knights":[42.9,7],"Imperial Agents":[100.0,1],"Imperial Knights":[14.3,7],"Leagues of Votann":[37.5,8],"Necrons":[33.3,6],"Orks":[66.7,12],"Space Marines (Astartes)":[40.7,27],"Space Wolves":[66.7,6],"T'au Empire":[75.0,4],"Thousand Sons":[100.0,1],"Tyranids":[44.4,9],"World Eaters":[42.9,7],"Genestealer Cult":[0.0,2]},"Blood Angels":{"Adepta Sororitas":[40.0,5],"Adeptus Custodes":[50.0,10],"Adeptus Mechanicus":[42.9,7],"Aeldari":[28.6,7],"Astra Militarum":[100.0,6],"Black Templars":[60.0,5],"Chaos Daemons":[45.5,11],"Chaos Knights":[33.3,3],"Chaos Space Marines":[60.0,5],"Dark Angels":[37.5,16],"Death Guard":[42.9,14],"Deathwatch":[100.0,1],"Emperor's Children":[33.3,9],"Genestealer Cult":[50.0,4],"Grey Knights":[30.0,10],"Imperial Knights":[14.3,7],"Leagues of Votann":[83.3,6],"Necrons":[46.2,13],"Orks":[43.8,16],"Space Marines (Astartes)":[68.0,25],"Space Wolves":[40.0,10],"T'au Empire":[41.7,12],"Thousand Sons":[50.0,2],"Tyranids":[35.7,14],"World Eaters":[52.0,25],"Drukhari":[0.0,5]},"Chaos Daemons":{"Adepta Sororitas":[25.0,4],"Adeptus Custodes":[16.7,6],"Adeptus Mechanicus":[28.6,7],"Aeldari":[14.3,7],"Astra Militarum":[100.0,3],"Black Templars":[71.4,7],"Blood Angels":[54.5,11],"Chaos Knights":[25.0,8],"Dark Angels":[33.3,12],"Death Guard":[42.9,14],"Drukhari":[25.0,4],"Emperor's Children":[14.3,7],"Genestealer Cult":[60.0,5],"Grey Knights":[66.7,3],"Imperial Knights":[80.0,5],"Leagues of Votann":[60.0,5],"Necrons":[14.3,7],"Orks":[44.8,29],"Space Marines (Astartes)":[41.7,12],"Space Wolves":[50.0,4],"T'au Empire":[53.8,13],"Thousand Sons":[60.0,5],"Tyranids":[58.3,12],"World Eaters":[38.5,13],"Chaos Space Marines":[0.0,5],"Deathwatch":[0.0,1]},"Chaos Knights":{"Adepta Sororitas":[20.0,5],"Adeptus Custodes":[33.3,3],"Adeptus Mechanicus":[50.0,2],"Aeldari":[33.3,3],"Astra Militarum":[33.3,6],"Black Templars":[80.0,5],"Blood Angels":[66.7,3],"Chaos Daemons":[75.0,8],"Chaos Space Marines":[57.1,7],"Dark Angels":[50.0,6],"Death Guard":[57.1,7],"Drukhari":[66.7,3],"Emperor's Children":[53.8,13],"Grey Knights":[100.0,2],"Imperial Knights":[66.7,6],"Leagues of Votann":[28.6,7],"Necrons":[20.0,10],"Orks":[25.0,8],"Space Marines (Astartes)":[55.6,18],"Space Wolves":[37.5,8],"T'au Empire":[66.7,6],"Thousand Sons":[75.0,4],"Tyranids":[58.3,12],"World Eaters":[18.2,11],"Genestealer Cult":[0.0,1]},"Chaos Space Marines":{"Adepta Sororitas":[33.3,6],"Adeptus Custodes":[57.1,7],"Adeptus Mechanicus":[42.9,7],"Aeldari":[16.7,6],"Astra Militarum":[71.4,7],"Black Templars":[57.1,7],"Blood Angels":[40.0,5],"Chaos Daemons":[100.0,5],"Chaos Knights":[42.9,7],"Dark Angels":[25.0,16],"Death Guard":[30.8,13],"Drukhari":[57.1,7],"Emperor's Children":[33.3,9],"Genestealer Cult":[25.0,4],"Grey Knights":[66.7,6],"Imperial Agents":[100.0,1],"Imperial Knights":[50.0,6],"Leagues of Votann":[58.3,12],"Necrons":[30.8,13],"Orks":[34.4,32],"Space Marines (Astartes)":[14.8,27],"Space Wolves":[60.0,5],"T'au Empire":[46.2,13],"Thousand Sons":[50.0,2],"Tyranids":[40.0,15],"World Eaters":[47.1,17]},"Dark Angels":{"Adepta Sororitas":[35.7,14],"Adeptus Custodes":[26.7,15],"Adeptus Mechanicus":[20.0,15],"Aeldari":[66.7,6],"Astra Militarum":[64.3,14],"Black Templars":[57.1,7],"Blood Angels":[62.5,16],"Chaos Daemons":[66.7,12],"Chaos Knights":[50.0,6],"Chaos Space Marines":[75.0,16],"Death Guard":[45.5,22],"Deathwatch":[100.0,1],"Drukhari":[57.1,7],"Emperor's Children":[50.0,10],"Grey Knights":[42.9,7],"Imperial Knights":[66.7,15],"Leagues of Votann":[53.8,13],"Necrons":[62.5,24],"Orks":[41.2,34],"Space Marines (Astartes)":[50.0,50],"Space Wolves":[54.5,11],"T'au Empire":[62.5,16],"Thousand Sons":[80.0,5],"Tyranids":[43.8,16],"World Eaters":[45.5,33],"Genestealer Cult":[0.0,2]},"Death Guard":{"Adepta Sororitas":[16.7,12],"Adeptus Custodes":[55.6,9],"Adeptus Mechanicus":[46.7,15],"Aeldari":[26.7,15],"Astra Militarum":[42.9,7],"Black Templars":[50.0,6],"Blood Angels":[57.1,14],"Chaos Daemons":[57.1,14],"Chaos Knights":[42.9,7],"Chaos Space Marines":[69.2,13],"Dark Angels":[54.5,22],"Deathwatch":[100.0,2],"Drukhari":[60.0,5],"Emperor's Children":[60.0,5],"Genestealer Cult":[66.7,6],"Grey Knights":[37.5,8],"Imperial Knights":[66.7,9],"Leagues of Votann":[30.8,13],"Necrons":[50.0,24],"Orks":[54.2,24],"Space Marines (Astartes)":[59.5,37],"Space Wolves":[66.7,6],"T'au Empire":[47.6,21],"Thousand Sons":[37.5,8],"Tyranids":[45.5,22],"World Eaters":[58.6,29],"Imperial Agents":[0.0,2]},"Deathwatch":{"Adeptus Custodes":[100.0,1],"Adeptus Mechanicus":[28.6,7],"Chaos Daemons":[100.0,1],"Drukhari":[100.0,2],"Emperor's Children":[100.0,2],"Grey Knights":[100.0,1],"Imperial Knights":[100.0,1],"Orks":[66.7,6],"Space Wolves":[100.0,2],"T'au Empire":[100.0,1],"Tyranids":[100.0,1],"World Eaters":[100.0,1],"Adepta Sororitas":[0.0,1],"Astra Militarum":[0.0,1],"Blood Angels":[0.0,1],"Dark Angels":[0.0,1],"Death Guard":[0.0,2],"Leagues of Votann":[0.0,1],"Space Marines (Astartes)":[0.0,1]},"Drukhari":{"Adeptus Custodes":[50.0,2],"Aeldari":[33.3,3],"Astra Militarum":[25.0,4],"Black Templars":[33.3,6],"Blood Angels":[100.0,5],"Chaos Daemons":[75.0,4],"Chaos Knights":[33.3,3],"Chaos Space Marines":[42.9,7],"Dark Angels":[42.9,7],"Death Guard":[40.0,5],"Emperor's Children":[40.0,5],"Genestealer Cult":[100.0,1],"Grey Knights":[33.3,3],"Leagues of Votann":[50.0,4],"Necrons":[70.0,10],"Orks":[58.3,12],"Space Marines (Astartes)":[39.1,23],"Space Wolves":[33.3,6],"T'au Empire":[75.0,4],"Thousand Sons":[100.0,1],"Tyranids":[22.2,9],"World Eaters":[46.2,13],"Adepta Sororitas":[0.0,2],"Adeptus Mechanicus":[0.0,2],"Deathwatch":[0.0,2],"Imperial Knights":[0.0,4]},"Emperor's Children":{"Adepta Sororitas":[75.0,4],"Adeptus Custodes":[45.5,11],"Adeptus Mechanicus":[42.9,14],"Aeldari":[66.7,6],"Astra Militarum":[60.0,15],"Black Templars":[66.7,12],"Blood Angels":[66.7,9],"Chaos Daemons":[85.7,7],"Chaos Knights":[46.2,13],"Chaos Space Marines":[66.7,9],"Dark Angels":[50.0,10],"Death Guard":[40.0,5],"Drukhari":[60.0,5],"Genestealer Cult":[33.3,6],"Grey Knights":[40.0,10],"Imperial Agents":[50.0,2],"Imperial Knights":[42.9,7],"Leagues of Votann":[57.1,7],"Necrons":[56.2,16],"Orks":[37.5,16],"Space Marines (Astartes)":[50.0,26],"Space Wolves":[40.0,10],"T'au Empire":[54.5,11],"Thousand Sons":[100.0,4],"Tyranids":[30.0,20],"World Eaters":[56.0,25],"Deathwatch":[0.0,2]},"Genestealer Cult":{"Adeptus Mechanicus":[100.0,1],"Aeldari":[33.3,3],"Astra Militarum":[100.0,4],"Black Templars":[100.0,2],"Blood Angels":[50.0,4],"Chaos Daemons":[40.0,5],"Chaos Knights":[100.0,1],"Chaos Space Marines":[75.0,4],"Dark Angels":[100.0,2],"Death Guard":[33.3,6],"Emperor's Children":[66.7,6],"Grey Knights":[75.0,4],"Imperial Knights":[100.0,1],"Leagues of Votann":[33.3,3],"Necrons":[100.0,4],"Orks":[33.3,6],"Space Marines (Astartes)":[28.6,14],"Space Wolves":[20.0,5],"T'au Empire":[62.5,8],"Tyranids":[40.0,5],"World Eaters":[58.3,12],"Adeptus Custodes":[0.0,3],"Drukhari":[0.0,1],"Thousand Sons":[0.0,2]},"Grey Knights":{"Adepta Sororitas":[42.9,7],"Adeptus Custodes":[50.0,8],"Adeptus Mechanicus":[42.9,7],"Aeldari":[60.0,5],"Astra Militarum":[75.0,4],"Black Templars":[57.1,7],"Blood Angels":[70.0,10],"Chaos Daemons":[33.3,3],"Chaos Space Marines":[33.3,6],"Dark Angels":[57.1,7],"Death Guard":[62.5,8],"Drukhari":[66.7,3],"Emperor's Children":[60.0,10],"Genestealer Cult":[25.0,4],"Imperial Agents":[100.0,1],"Imperial Knights":[50.0,6],"Leagues of Votann":[75.0,4],"Necrons":[25.0,8],"Orks":[66.7,9],"Space Marines (Astartes)":[35.7,14],"Space Wolves":[40.0,5],"T'au Empire":[40.0,5],"Thousand Sons":[20.0,5],"Tyranids":[40.0,10],"World Eaters":[60.0,10],"Chaos Knights":[0.0,2],"Deathwatch":[0.0,1]},"Imperial Agents":{"Death Guard":[100.0,2],"Emperor's Children":[50.0,2],"Necrons":[50.0,2],"Orks":[50.0,6],"Space Marines (Astartes)":[50.0,2],"Space Wolves":[100.0,1],"Thousand Sons":[100.0,1],"Black Templars":[0.0,1],"Chaos Space Marines":[0.0,1],"Grey Knights":[0.0,1],"Imperial Knights":[0.0,1],"Leagues of Votann":[0.0,1],"Tyranids":[0.0,1],"World Eaters":[0.0,2]},"Imperial Knights":{"Adepta Sororitas":[33.3,3],"Adeptus Custodes":[42.9,7],"Adeptus Mechanicus":[50.0,2],"Aeldari":[62.5,8],"Astra Militarum":[42.9,7],"Black Templars":[85.7,7],"Blood Angels":[85.7,7],"Chaos Daemons":[20.0,5],"Chaos Knights":[33.3,6],"Chaos Space Marines":[50.0,6],"Dark Angels":[33.3,15],"Death Guard":[33.3,9],"Drukhari":[100.0,4],"Emperor's Children":[57.1,7],"Grey Knights":[50.0,6],"Imperial Agents":[100.0,1],"Leagues of Votann":[28.6,7],"Necrons":[100.0,6],"Orks":[39.1,23],"Space Marines (Astartes)":[63.6,22],"Space Wolves":[45.5,11],"T'au Empire":[44.4,18],"Thousand Sons":[25.0,4],"Tyranids":[41.7,12],"World Eaters":[50.0,22],"Deathwatch":[0.0,1],"Genestealer Cult":[0.0,1]},"Leagues of Votann":{"Adepta Sororitas":[50.0,8],"Adeptus Custodes":[66.7,12],"Adeptus Mechanicus":[81.8,11],"Astra Militarum":[14.3,7],"Black Templars":[62.5,8],"Blood Angels":[16.7,6],"Chaos Daemons":[40.0,5],"Chaos Knights":[71.4,7],"Chaos Space Marines":[41.7,12],"Dark Angels":[46.2,13],"Death Guard":[69.2,13],"Deathwatch":[100.0,1],"Drukhari":[50.0,4],"Emperor's Children":[42.9,7],"Genestealer Cult":[66.7,3],"Grey Knights":[25.0,4],"Imperial Agents":[100.0,1],"Imperial Knights":[71.4,7],"Necrons":[44.4,9],"Orks":[60.9,23],"Space Marines (Astartes)":[45.5,22],"Space Wolves":[63.6,11],"T'au Empire":[25.0,8],"Thousand Sons":[80.0,5],"Tyranids":[63.6,11],"World Eaters":[64.7,17],"Aeldari":[0.0,4]},"Necrons":{"Adepta Sororitas":[58.3,12],"Adeptus Custodes":[75.0,16],"Adeptus Mechanicus":[59.1,22],"Aeldari":[55.6,18],"Astra Militarum":[38.5,13],"Black Templars":[66.7,6],"Blood Angels":[53.8,13],"Chaos Daemons":[85.7,7],"Chaos Knights":[80.0,10],"Chaos Space Marines":[69.2,13],"Dark Angels":[37.5,24],"Death Guard":[50.0,24],"Drukhari":[30.0,10],"Emperor's Children":[43.8,16],"Grey Knights":[75.0,8],"Imperial Agents":[50.0,2],"Leagues of Votann":[55.6,9],"Orks":[59.5,37],"Space Marines (Astartes)":[46.8,47],"Space Wolves":[55.6,9],"T'au Empire":[47.8,23],"Thousand Sons":[83.3,6],"Tyranids":[45.0,20],"World Eaters":[44.7,38],"Genestealer Cult":[0.0,4],"Imperial Knights":[0.0,6]},"Orks":{"Adepta Sororitas":[73.3,15],"Adeptus Custodes":[60.0,25],"Adeptus Mechanicus":[42.9,21],"Aeldari":[52.4,21],"Astra Militarum":[57.1,21],"Black Templars":[33.3,12],"Blood Angels":[56.2,16],"Chaos Daemons":[55.2,29],"Chaos Knights":[75.0,8],"Chaos Space Marines":[65.6,32],"Dark Angels":[58.8,34],"Death Guard":[45.8,24],"Deathwatch":[33.3,6],"Drukhari":[41.7,12],"Emperor's Children":[62.5,16],"Genestealer Cult":[66.7,6],"Grey Knights":[33.3,9],"Imperial Agents":[50.0,6],"Imperial Knights":[60.9,23],"Leagues of Votann":[39.1,23],"Necrons":[40.5,37],"Space Marines (Astartes)":[48.4,62],"Space Wolves":[38.9,18],"T'au Empire":[52.0,25],"Thousand Sons":[80.0,10],"Tyranids":[76.7,30],"World Eaters":[51.1,45]},"Space Marines":{"Adepta Sororitas":[43.3,30],"Adeptus Custodes":[67.9,28],"Adeptus Mechanicus":[34.5,29],"Aeldari":[48.0,25],"Astra Militarum":[65.2,23],"Black Templars":[59.3,27],"Blood Angels":[32.0,25],"Chaos Daemons":[58.3,12],"Chaos Knights":[44.4,18],"Chaos Space Marines":[85.2,27],"Dark Angels":[50.0,50],"Death Guard":[40.5,37],"Deathwatch":[100.0,1],"Drukhari":[60.9,23],"Emperor's Children":[50.0,26],"Genestealer Cult":[71.4,14],"Grey Knights":[64.3,14],"Imperial Agents":[50.0,2],"Imperial Knights":[36.4,22],"Leagues of Votann":[54.5,22],"Necrons":[53.2,47],"Orks":[51.6,62],"Space Wolves":[40.0,30],"T'au Empire":[55.3,38],"Thousand Sons":[46.7,15],"Tyranids":[36.1,36],"World Eaters":[49.2,59]},"Space Wolves":{"Adepta Sororitas":[75.0,12],"Adeptus Custodes":[25.0,12],"Adeptus Mechanicus":[71.4,7],"Aeldari":[80.0,5],"Astra Militarum":[100.0,3],"Black Templars":[33.3,6],"Blood Angels":[60.0,10],"Chaos Daemons":[50.0,4],"Chaos Knights":[62.5,8],"Chaos Space Marines":[40.0,5],"Dark Angels":[45.5,11],"Death Guard":[33.3,6],"Drukhari":[66.7,6],"Emperor's Children":[60.0,10],"Genestealer Cult":[80.0,5],"Grey Knights":[60.0,5],"Imperial Knights":[54.5,11],"Leagues of Votann":[36.4,11],"Necrons":[44.4,9],"Orks":[61.1,18],"Space Marines (Astartes)":[60.0,30],"T'au Empire":[66.7,9],"Thousand Sons":[33.3,3],"Tyranids":[64.3,14],"World Eaters":[20.0,20],"Deathwatch":[0.0,2],"Imperial Agents":[0.0,1]},"T'au Empire":{"Adepta Sororitas":[50.0,6],"Adeptus Custodes":[45.5,11],"Adeptus Mechanicus":[71.4,7],"Aeldari":[50.0,10],"Astra Militarum":[57.1,14],"Black Templars":[25.0,4],"Blood Angels":[58.3,12],"Chaos Daemons":[46.2,13],"Chaos Knights":[33.3,6],"Chaos Space Marines":[53.8,13],"Dark Angels":[37.5,16],"Death Guard":[52.4,21],"Drukhari":[25.0,4],"Emperor's Children":[45.5,11],"Genestealer Cult":[37.5,8],"Grey Knights":[60.0,5],"Imperial Knights":[55.6,18],"Leagues of Votann":[75.0,8],"Necrons":[52.2,23],"Orks":[48.0,25],"Space Marines (Astartes)":[44.7,38],"Space Wolves":[33.3,9],"Thousand Sons":[75.0,8],"Tyranids":[29.6,27],"World Eaters":[37.1,35],"Deathwatch":[0.0,1]},"Thousand Sons":{"Adeptus Custodes":[37.5,8],"Adeptus Mechanicus":[100.0,1],"Astra Militarum":[50.0,6],"Blood Angels":[50.0,2],"Chaos Daemons":[40.0,5],"Chaos Knights":[25.0,4],"Chaos Space Marines":[50.0,2],"Dark Angels":[20.0,5],"Death Guard":[62.5,8],"Genestealer Cult":[100.0,2],"Grey Knights":[80.0,5],"Imperial Knights":[75.0,4],"Leagues of Votann":[20.0,5],"Necrons":[16.7,6],"Orks":[20.0,10],"Space Marines (Astartes)":[53.3,15],"Space Wolves":[66.7,3],"T'au Empire":[25.0,8],"Tyranids":[50.0,4],"World Eaters":[28.6,7],"Adepta Sororitas":[0.0,1],"Aeldari":[0.0,1],"Black Templars":[0.0,1],"Drukhari":[0.0,1],"Emperor's Children":[0.0,4],"Imperial Agents":[0.0,1]},"Tyranids":{"Adepta Sororitas":[23.1,13],"Adeptus Custodes":[37.5,16],"Adeptus Mechanicus":[42.9,7],"Aeldari":[70.0,10],"Astra Militarum":[53.8,13],"Black Templars":[55.6,9],"Blood Angels":[64.3,14],"Chaos Daemons":[41.7,12],"Chaos Knights":[41.7,12],"Chaos Space Marines":[60.0,15],"Dark Angels":[56.2,16],"Death Guard":[54.5,22],"Drukhari":[77.8,9],"Emperor's Children":[70.0,20],"Genestealer Cult":[60.0,5],"Grey Knights":[60.0,10],"Imperial Agents":[100.0,1],"Imperial Knights":[58.3,12],"Leagues of Votann":[36.4,11],"Necrons":[55.0,20],"Orks":[23.3,30],"Space Marines (Astartes)":[63.9,36],"Space Wolves":[35.7,14],"T'au Empire":[70.4,27],"Thousand Sons":[50.0,4],"World Eaters":[48.0,25],"Deathwatch":[0.0,1]},"World Eaters":{"Adepta Sororitas":[52.9,17],"Adeptus Custodes":[75.0,24],"Adeptus Mechanicus":[45.0,20],"Aeldari":[72.2,18],"Astra Militarum":[76.9,13],"Black Templars":[57.1,7],"Blood Angels":[48.0,25],"Chaos Daemons":[61.5,13],"Chaos Knights":[81.8,11],"Chaos Space Marines":[52.9,17],"Dark Angels":[54.5,33],"Death Guard":[41.4,29],"Drukhari":[53.8,13],"Emperor's Children":[44.0,25],"Genestealer Cult":[41.7,12],"Grey Knights":[40.0,10],"Imperial Agents":[100.0,2],"Imperial Knights":[50.0,22],"Leagues of Votann":[35.3,17],"Necrons":[55.3,38],"Orks":[48.9,45],"Space Marines (Astartes)":[50.8,59],"Space Wolves":[80.0,20],"T'au Empire":[62.9,35],"Thousand Sons":[71.4,7],"Tyranids":[52.0,25],"Deathwatch":[0.0,1]}},"disp":{"Reconnaissance":49.61,"Purge the Foe":51.27,"Take and Hold":48.4,"Priority Assets":51.07,"Disruption":49.05}}/*FIN-LH*/;
+const CODE = {"Adepta Sororitas":"SoB","Adeptus Custodes":"Cust","Adeptus Mechanicus":"AdMech","Aeldari":"Eldar","Astra Militarum":"AM","Black Templars":"BT","Blood Angels":"BA","Chaos Daemons":"Daem","Chaos Knights":"CK","Chaos Space Marines":"CSM","Dark Angels":"DA","Death Guard":"DG","Deathwatch":"DW","Drukhari":"Dru","Emperor's Children":"EC","Genestealer Cult":"GSC","Grey Knights":"GK","Imperial Agents":"Agents","Imperial Knights":"IK","Leagues of Votann":"LoV","Necrons":"Necs","Orks":"Orks","Space Marines":"SM","Space Wolves":"SW","T'au Empire":"T'au","Thousand Sons":"TS","Tyranids":"Nids","World Eaters":"WE"};
+const DISPO = {"Purge the Foe":"PtF","Take and Hold":"T&H","Priority Assets":"PA","Disruption":"Disr.","Reconnaissance":"Reco"};
+// Armées de l'AJA (config/team.json), couleur claire / sombre
+const EQUIPE = [["T'au Empire","#d9640f","#f58a3d"],["Space Marines","#1e40af","#6d8ff0"],["Emperor's Children","#c2337a","#ec6aa8"],["Necrons","#16956a","#3fcf98"],["Adeptus Mechanicus","#9c3510","#e2683c"],["Orks","#4f7a12","#93c94a"],["Imperial Knights","#5b6b80","#a3b3c8"]];
+const FACTIONS = Object.keys(LH.factions || {}).sort((a, b) => a.localeCompare(b, "fr"));
+const DET_MIN = 20;                        // parties minimum pour retenir le WR d'une combinaison de détachements
+const APP0 = {rA:null,rB:null}; for (const r of [1, 2, 3]) for (const k of ["dA", "dB", "pA", "pB", "cA", "cB"]) APP0[k + r] = null;
+// Format du match : 6 ou 8 joueurs qui jouent, une liste de réserve possible de chaque côté
+const taille = id => matchs.get(id)?.format === 8 ? 8 : 6;
+const slotsDe = id => [...Array(taille(id) + 1).keys()];
+const nbTours = n => (n - 4) / 2 + 1;
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmt = (v, d = 1) => (Math.round(v * 10 ** d) / 10 ** d).toLocaleString("fr-FR", {minimumFractionDigits: d, maximumFractionDigits: d});
+const store = {get(k){try{return localStorage.getItem(k)}catch(e){return null}}, set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+
+let db = null, canWrite = null, ready = false, offline = false;
+let matchs = new Map(), cur = store.get("match"), tab = store.get("onglet") || "equipes";
+let confirmKey = null, draft = {};
+// Simulations : propres à chaque personne, jamais enregistrées dans la base
+const sims = {};
+const simDe = id => sims[id] ??= (() => { try { return JSON.parse(store.get("sim-" + id)) || {app: {}, sel: null}; } catch (e) { return {app: {}, sel: null}; } })();
+const simSave = id => store.set("sim-" + id, JSON.stringify(sims[id]));
+
+/* ---------- Repères Listhammer ---------- */
+const dateFr = d => d ? new Date(d + "T12:00:00").toLocaleDateString("fr-FR", {day: "numeric", month: "long"}) : "?";
+const pl = (n, mot) => `${n} ${mot}${n > 1 ? "s" : ""}`;
+const periode = () => `Listhammer depuis le dataslate du ${dateFr(LH.dataslate)} : WR faction sur ${pl(LH.weekends_faction || 0, "week-end")}, détachements et face-à-face sur ${pl(LH.weekends_detail || 0, "week-end")} relevé${(LH.weekends_detail || 0) > 1 ? "s" : ""} (le relevé du lundi en ajoute un chaque semaine)`;
+const detNoms = f => [...new Set(Object.keys(LH.det?.[f] || {}).flatMap(k => k.split(" | ")))].sort((a, b) => a.localeCompare(b));
+// WR de la liste : combinaison de détachements si assez de parties, sinon faction
+function wrListe(f, dets){
+  const fa = LH.factions?.[f];
+  if (!fa) return null;
+  const key = [...(dets || [])].sort().join(" | ");
+  const d = key && LH.det?.[f]?.[key];
+  if (d && d[1] >= DET_MIN) return {lab: "Faction / Détachement", wr: d[0], n: d[1]};
+  return {lab: "Faction", wr: fa[0], n: fa[1], note: key ? (d ? `détachement : ${d[1]} parties, trop peu` : "détachement absent du relevé") : ""};
+}
+// Fiabilité d'un WR : demi-largeur de l'intervalle de Wilson à 95 % (en points)
+function marge(wr, n){
+  if (!n) return Infinity;
+  const p = wr / 100, z = 1.96, z2 = z * z;
+  return 100 * z * Math.sqrt(p * (1 - p) / n + z2 / (4 * n * n)) / (1 + z2 / n);
+}
+const conf = (wr, n) => { const m = marge(wr, n); return m <= 10 ? "conf-ok" : m <= 20 ? "conf-mod" : "conf-bas"; };
+const confTitre = (wr, n) => n ? `${n} parties, marge ± ${fmt(marge(wr, n), 0)} points` : "aucune partie";
+// Face-à-face : WR de notre faction contre la leur
+const wrFace = (fA, fB) => { const m = LH.mu?.[fA]?.[fB]; return m ? {wr: m[0], n: m[1]} : null; };
+
+/* ---------- Données partagées ---------- */
+const getPath = (o, p) => p.split(".").reduce((x, k) => x == null ? undefined : x[k], o);
+const nest = (p, v) => p.split(".").reduceRight((acc, k) => ({[k]: acc}), v);
+function merge(t, s){for(const k in s){const a=t[k],b=s[k];if(a&&b&&typeof a==="object"&&typeof b==="object"&&!Array.isArray(a)&&!Array.isArray(b))merge(a,b);else t[k]=b}return t}
+
+const local = {};          // saisies pas encore confirmées : "id|chemin" -> valeur
+const queues = {};
+function write(id, path, v, delay = 450){
+  if (!db || canWrite === false) return;
+  local[id + "|" + path] = v;
+  const q = queues[id] ??= {patch: {}, paths: [], timer: null, busy: false};
+  merge(q.patch, nest(path, v)); q.paths.push([path, v]);
+  clearTimeout(q.timer); q.timer = setTimeout(() => flush(id), delay);
+}
+async function flush(id){
+  const q = queues[id]; if (!q || q.busy || !Object.keys(q.patch).length) return;
+  q.busy = true;
+  const patch = q.patch, paths = q.paths; q.patch = {}; q.paths = [];
+  try { await db.doc("matchs/" + id).update(patch); }
+  catch (e) { writeError(e); }
+  finally {
+    q.busy = false;
+    for (const [p, v] of paths) if (local[id + "|" + p] === v) delete local[id + "|" + p];
+    if (Object.keys(q.patch).length) flush(id); else render();
+  }
+}
+const val = (id, path) => { const k = id + "|" + path; return k in local ? local[k] : getPath(matchs.get(id), path); };
+function writeError(e){
+  const code = e && e.code;
+  if (code === "invalid_argument"){ canWrite = false; status("Ton accès est en lecture seule : tes modifications ne sont pas enregistrées. Demande au propriétaire de la page un accès Contributeur.", true); }
+  else if (code === "quota_exceeded") status("La base de la page est pleine : supprime d'anciens matchs pour en créer de nouveaux.", true);
+  else status("Enregistrement impossible pour l'instant. Réessaie dans quelques secondes.", true);
+}
+function status(msg, bad){const s = $("#status"); s.hidden = !msg; s.textContent = msg || ""; s.classList.toggle("bad", !!bad)}
+
+/* ---------- Effectifs ---------- */
+const slot = (id, cote, i) => ({
+  faction: val(id, `${cote}.${i}.faction`) || "",
+  joueur: val(id, `${cote}.${i}.joueur`) || "",
+  dets: val(id, `${cote}.${i}.detachements`) || [],
+  dispo: val(id, `${cote}.${i}.disposition`) || "",
+  joue: val(id, `${cote}.${i}.joue`) !== false,
+});
+const actifs = (id, cote) => slotsDe(id).filter(i => slot(id, cote, i).faction);
+const roster = (id, cote) => actifs(id, cote).filter(i => slot(id, cote, i).joue);
+const nomA = (id, i) => { const s = slot(id, "aja", i); return s.joueur ? `${s.joueur} (${CODE[s.faction] || s.faction})` : (s.faction || `Joueur ${i + 1}`); };
+const nomB = (id, j) => { const s = slot(id, "adv", j); return s.faction ? (s.joueur ? `${s.joueur} (${CODE[s.faction] || s.faction})` : s.faction) : `Adversaire ${j + 1}`; };
+
+/* ---------- Matrice ---------- */
+function matrice(id, A, B){
+  const S = {}, vides = [];
+  for (const i of A){ S[i] = {}; for (const j of B){
+    const v = val(id, `scores.${i}-${j}`);
+    if (typeof v === "number") S[i][j] = v; else { S[i][j] = 10; vides.push([i, j]); }
+  }}
+  return {S, vides};
+}
+function couleur(v){
+  if (v == null || v === "") return "var(--soft)";
+  const t = Math.max(-1, Math.min(1, (v - 10) / 10));
+  if (t === 0) return "var(--mid)";
+  return `color-mix(in srgb, var(${t > 0 ? "--good" : "--bad"}) ${Math.round(Math.abs(t) * 58)}%, var(--surface))`;
+}
+
+/* ---------- Solveur d'appariement (WTC à 6 ou 8) ----------
+   Chaque tour : défenseurs (secret), 2 attaquants chacun (secret), chaque défenseur garde un attaquant, l'autre retourne au pool.
+   2 tours à 6 joueurs, 3 à 8. Au dernier tour (4 restants), les deux attaquants refusés jouent ensemble et les deux derniers aussi.
+   Nos choix maximisent. Leurs choix secrets : "plancher" = ils devinent toujours (min), "moyenne" = au hasard.
+   Leur défenseur choisit toujours l'attaquant le pire pour nous. S[i][j] = score AJA, i et j = numéros de liste. */
+function solveur(S){
+  const memo = new Map();
+  const bit = i => 1 << i, seul = m => 31 - Math.clz32(m);
+  const masque = arr => arr.reduce((m, i) => m | bit(i), 0);
+  const liste = m => { const r = []; for (let i = 0; m; i++, m >>>= 1) if (m & 1) r.push(i); return r; };
+  const paires = arr => { const r = []; for (let a = 0; a < arr.length; a++) for (let b = a + 1; b < arr.length; b++) r.push([arr[a], arr[b]]); return r; };
+  const agg = (vals, mode) => { if (mode === "min"){ let m = Infinity; for (const v of vals) if (v < m) m = v; return m; } let s = 0; for (const v of vals) s += v; return s / vals.length; };
+  function suite(mA, mB, n, dA, dB, PA, PB, a, b, mode){
+    let g = S[dA][b] + S[a][dB];
+    const A2 = mA & ~bit(dA) & ~bit(a), B2 = mB & ~bit(dB) & ~bit(b);
+    if (n === 4){
+      const aR = PA[0] === a ? PA[1] : PA[0], bR = PB[0] === b ? PB[1] : PB[0];
+      g += S[aR][bR] + S[seul(A2 & ~bit(aR))][seul(B2 & ~bit(bR))];
+    } else g += V(A2, B2, mode);
+    return g;
+  }
+  function choixM(mA, mB, n, dA, dB, PA, PB, mode){
+    const opts = PB.map(b => { let best = null; for (const a of PA){ const v = suite(mA, mB, n, dA, dB, PA, PB, a, b, mode); if (!best || v < best.v) best = {a, v}; } return {b, a: best.a, v: best.v}; });
+    let v = -Infinity; for (const o of opts) if (o.v > v) v = o.v;
+    return {opts, v};
+  }
+  function attaqueM(mA, mB, n, dA, dB, mode, detail){
+    const PBs = paires(liste(mB & ~bit(dB))), PAs = paires(liste(mA & ~bit(dA)));
+    let v = -Infinity; const opts = [];
+    for (const PA of PAs){
+      const rep = PBs.map(PB => ({PB, v: choixM(mA, mB, n, dA, dB, PA, PB, mode).v}));
+      const x = agg(rep.map(r => r.v), mode); if (x > v) v = x;
+      if (detail) opts.push({PA, rep, v: x});
+    }
+    return {opts, PBs, v};
+  }
+  function defenseM(mA, mB, mode, detail){
+    const A = liste(mA), B = liste(mB), n = A.length;
+    let v = -Infinity; const opts = [];
+    for (const dA of A){
+      const rep = B.map(dB => ({dB, v: attaqueM(mA, mB, n, dA, dB, mode, false).v}));
+      const x = agg(rep.map(r => r.v), mode); if (x > v) v = x;
+      if (detail) opts.push({dA, rep, v: x});
+    }
+    return {opts, v};
+  }
+  function V(mA, mB, mode){
+    const k = (mode === "min" ? 0 : 1) * 1048576 * 1024 + mA * 1024 + mB;
+    let v = memo.get(k);
+    if (v === undefined){ v = defenseM(mA, mB, mode, false).v; memo.set(k, v); }
+    return v;
+  }
+  return {
+    choix: (A, B, dA, dB, PA, PB, mode) => choixM(masque(A), masque(B), A.length, dA, dB, PA, PB, mode),
+    suite: (A, B, dA, dB, PA, PB, a, b, mode) => suite(masque(A), masque(B), A.length, dA, dB, PA, PB, a, b, mode),
+    attaque: (A, B, dA, dB, mode) => attaqueM(masque(A), masque(B), A.length, dA, dB, mode, true),
+    defense: (A, B, mode) => defenseM(masque(A), masque(B), mode, true),
+  };
+}
+let cacheSol = {k: null, sol: null};
+function solveurCache(S, A, B){
+  const k = JSON.stringify([A, B, A.map(i => B.map(j => S[i][j]))]);
+  if (cacheSol.k !== k) cacheSol = {k, sol: solveur(S)};
+  return cacheSol.sol;
+}
+
+function etat(app, A0, B0){
+  const st = {A: [...A0], B: [...B0], parties: [], tour: 1, etape: "def"};
+  const R = nbTours(A0.length);
+  for (let r = 1; r <= R; r++){
+    const g = k => app?.[k + r];
+    st.tour = r;
+    if (g("dA") == null || g("dB") == null){ st.etape = "def"; return st; }
+    if (!Array.isArray(g("pA")) || !Array.isArray(g("pB"))){ st.etape = "att"; return st; }
+    if (g("cA") == null || g("cB") == null){ st.etape = "choix"; return st; }
+    st.parties.push({i: g("dA"), j: g("cA"), k: `Tour ${r} · notre défenseur`}, {i: g("cB"), j: g("dB"), k: `Tour ${r} · leur défenseur`});
+    st.A = st.A.filter(x => x !== g("dA") && x !== g("cB"));
+    st.B = st.B.filter(x => x !== g("dB") && x !== g("cA"));
+    if (r === R){
+      const aR = g("pA").find(x => x !== g("cB")), bR = g("pB").find(x => x !== g("cA"));
+      st.parties.push({i: aR, j: bR, k: "Attaquants refusés"});
+      st.A = st.A.filter(x => x !== aR); st.B = st.B.filter(x => x !== bR);
+      st.parties.push({i: st.A[0], j: st.B[0], k: "Derniers joueurs"});
+      st.A = []; st.B = []; st.etape = "fin";
+    }
+  }
+  return st;
+}
+function effectifApp(id){
+  const app = matchs.get(id).app || {};
+  const lance = Array.isArray(app.rA) && Array.isArray(app.rB);
+  return {app, lance, A: lance ? app.rA : roster(id, "aja"), B: lance ? app.rB : roster(id, "adv")};
+}
+
+/* ---------- Rendu ---------- */
+const sombre = () => document.documentElement.dataset.theme === "dark" || (document.documentElement.dataset.theme !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+const coulA = f => { const e = EQUIPE.find(x => x[0] === f); return e ? e[sombre() ? 2 : 1] : "var(--line)"; };
+const ro = () => canWrite === false || offline ? "disabled" : "";
+
+function render(){
+  const app = $("#app");
+  const a = document.activeElement;
+  const focus = a && a.id ? {id: a.id, s: a.selectionStart, e: a.selectionEnd} : null;
+  if (!ready){ app.innerHTML = `<div class="empty">Chargement des matchs préparés…</div>`; return; }
+  if (cur && !matchs.has(cur)) cur = null;
+  app.innerHTML = cur ? vueMatch(cur) : vueListe();
+  if (focus){ const el = document.getElementById(focus.id); if (el){ el.focus({preventScroll: true}); try { el.setSelectionRange(focus.s, focus.e); } catch (e) {} } }
+}
+
+function vueListe(){
+  const ms = [...matchs.entries()].sort((a, b) => (b[1].cree || 0) - (a[1].cree || 0));
+  const liste = ms.length ? `<div class="list">${ms.map(([id, m]) => {
+    const A = actifs(id, "aja"), B = actifs(id, "adv");
+    const n = A.flatMap(i => B.map(j => m.scores?.[`${i}-${j}`])).filter(v => typeof v === "number").length;
+    const {app, A: rA, B: rB} = effectifApp(id);
+    const st = etat(app, rA, rB);
+    const ap = st.etape === "fin" ? "appariement terminé" : (app.dA1 != null ? `appariement : tour ${st.tour}` : "appariement à faire");
+    return `<button class="match" data-act="ouvrir" data-id="${esc(id)}"><span class="t">${esc(m.adversaire || "Sans nom")}</span><span class="p">${n}/${A.length * B.length} cases<br>${ap}</span><span class="s">${esc(m.evenement || "Événement non précisé")} · ${taille(id)} joueurs · ${B.length} listes adverses</span></button>`;
+  }).join("")}</div>` : `<div class="empty"><b>Aucun match préparé pour l'instant.</b><span>Crée le premier ci-dessous avec le nom de l'équipe adverse, puis renseigne les listes dans l'onglet Équipes.</span></div>`;
+  return `<section class="view"><h2>Matchs préparés</h2>${offline ? `<div class="banner">Cette copie de la page n'est pas reliée à la base partagée : ouvre-la depuis son lien claude.ai pour retrouver les matchs de l'équipe.</div>` : ""}${liste}
+    <form class="panel" id="f-creer"><h3>Nouveau match</h3>
+      <div class="row"><label class="f">Équipe adverse<input id="c-adv" required maxlength="60" placeholder="ex. Les Ultra-Lyonnais" value="${esc(draft.adv)}"></label>
+      <label class="f">Événement<input id="c-evt" maxlength="60" placeholder="ex. ETC France, ronde 2" value="${esc(draft.evt)}"></label>
+      <label class="f">Format<select id="c-fmt"><option value="6"${draft.fmt === "8" ? "" : " selected"}>6 joueurs</option><option value="8"${draft.fmt === "8" ? " selected" : ""}>8 joueurs</option></select></label>
+      <button class="primary" type="submit" ${ro()}>Créer le match</button></div></form></section>`;
+}
+
+function vueMatch(id){
+  const m = matchs.get(id);
+  const tabs = [["equipes", "Équipes"], ["matrice", "Matrice"], ["simulateur", "Simulateur"], ["appariement", "Appariement réel"]];
+  const corps = tab === "matrice" ? vueMatrice(id) : tab === "appariement" ? vueApp(id) : tab === "simulateur" ? vueSim(id) : vueEquipes(id);
+  const sup = confirmKey === "sup" ? `<button class="danger" data-act="supprimer" data-id="${esc(id)}">Confirmer la suppression</button> <button data-act="annuler">Garder</button>` : `<button class="danger" data-act="ask-sup" ${ro()}>Supprimer ce match</button>`;
+  return `<div class="mhead"><button class="back" data-act="liste">← Tous les matchs</button>
+    <span class="eyebrow">${esc(m.evenement || "Match par équipe")} · ${taille(id)} joueurs</span><h2>AJA contre ${esc(m.adversaire || "?")}</h2></div>
+    <div class="tabs" role="tablist">${tabs.map(([k, l]) => `<button role="tab" aria-selected="${tab === k}" data-act="onglet" data-k="${k}">${l}</button>`).join("")}</div>
+    <div class="view">${corps}</div><div class="row">${sup}</div>`;
+}
+
+function indic(w){
+  if (!w) return `<span class="ind">Pas de chiffres Listhammer pour cette faction.</span>`;
+  return `<span class="ind">WR ${w.lab} : <b class="${conf(w.wr, w.n)}" title="${confTitre(w.wr, w.n)}">${fmt(w.wr)} %</b> (${w.n} parties, ± ${fmt(marge(w.wr, w.n), 0)} pts)${w.note ? ` · ${w.note}` : ""}</span>`;
+}
+function vueEquipes(id){
+  const {lance} = effectifApp(id);
+  const bloc = (cote, titre, first) => {
+    const cartes = slotsDe(id).map(i => {
+      const s = slot(id, cote, i), p = `${cote}.${i}`;
+      const opts = (first ? first.map(f => `<option${f === s.faction ? " selected" : ""}>${esc(f)}</option>`).join("") + `<option disabled>──────</option>` : "") +
+        FACTIONS.filter(f => !first || !first.includes(f)).map(f => `<option${f === s.faction ? " selected" : ""}>${esc(f)}</option>`).join("");
+      const dets = s.faction ? `<div class="dets full"><span class="k">Détachements</span>${detNoms(s.faction).map(d => `<label><input type="checkbox" data-det="${p}" value="${esc(d)}"${s.dets.includes(d) ? " checked" : ""} ${ro()}>${esc(d)}</label>`).join("") || `<span class="ind">Aucun détachement dans le relevé.</span>`}</div>` : "";
+      return `<div class="slot${s.faction && !s.joue ? " off" : ""}" style="--fc:${cote === "aja" ? coulA(s.faction) : "var(--line)"}">
+        <div class="hd"><b>Liste ${i + 1}</b>${s.faction ? `<label><input type="checkbox" data-joue="${p}"${s.joue ? " checked" : ""} ${lance ? "disabled" : ro()}>Joue ce match</label>` : ""}</div>
+        <select id="e-${cote}-${i}-f" data-path="${p}.faction" aria-label="Faction de la liste ${i + 1}" ${ro()}><option value="">Faction…</option>${opts}</select>
+        <input id="e-${cote}-${i}-j" data-path="${p}.joueur" maxlength="40" placeholder="Joueur" aria-label="Joueur de la liste ${i + 1}" value="${esc(s.joueur)}" ${ro()}>
+        ${s.faction ? `<select id="e-${cote}-${i}-d" class="full" data-path="${p}.disposition" aria-label="Force de disposition" ${ro()}><option value="">Force de disposition…</option>${Object.keys(DISPO).map(d => `<option${d === s.dispo ? " selected" : ""}>${d}</option>`).join("")}</select>${dets}<div class="full">${indic(wrListe(s.faction, s.dets))}</div>` : ""}
+      </div>`;
+    }).join("");
+    const nb = roster(id, cote).length;
+    return `<div class="panel"><h3>${titre}</h3><span class="ind">${nb} liste${nb > 1 ? "s" : ""} cochée${nb > 1 ? "s" : ""} « joue ce match » sur ${taille(id)} attendues</span><div class="slots">${cartes}</div></div>`;
+  };
+  return `<div class="row"><label class="f">Équipe adverse<input id="e-nom" data-path="adversaire" maxlength="60" value="${esc(val(id, "adversaire"))}" ${ro()}></label>
+    <label class="f">Événement<input id="e-evt" data-path="evenement" maxlength="60" value="${esc(val(id, "evenement"))}" ${ro()}></label></div>
+    ${lance ? `<div class="banner">L'appariement est commencé : les listes qui jouent sont figées. Recommence l'appariement pour les changer.</div>` : ""}
+    <div class="teams">${bloc("adv", "Adversaires", null)}${bloc("aja", "AJA", EQUIPE.map(e => e[0]))}</div>
+    <p class="help">${esc(periode())}. Le WR « Faction / Détachement » est utilisé quand la combinaison exacte de détachements compte au moins ${DET_MIN} parties, sinon on affiche le WR « Faction ».</p>`;
+}
+
+function enTete(id, cote, i){
+  const s = slot(id, cote, i), w = wrListe(s.faction, s.dets);
+  return `<span class="nm">${esc(s.joueur || `Liste ${i + 1}`)}</span><span class="fa">${esc(CODE[s.faction] || s.faction)}${s.dispo ? ` · ${esc(DISPO[s.dispo] || s.dispo)}` : ""}</span>${s.dets.length ? `<span class="dt">${s.dets.map(esc).join(" + ")}</span>` : ""}${w ? `<span class="wh">WR ${w.lab === "Faction" ? "faction" : "faction / détachement"} <b class="${conf(w.wr, w.n)}" title="${confTitre(w.wr, w.n)}">${fmt(w.wr)} %</b> · ${w.n} p.</span>` : ""}`;
+}
+function vueMatrice(id){
+  const A = actifs(id, "aja"), B = actifs(id, "adv");
+  if (!A.length || !B.length) return `<div class="empty">Renseigne d'abord les factions des deux équipes dans l'onglet Équipes.</div>`;
+  const cell = (i, j) => { const v = val(id, `scores.${i}-${j}`); return typeof v === "number" ? v : null; };
+  const moy = arr => { const x = arr.filter(v => v != null); return x.length ? fmt(x.reduce((s, v) => s + v, 0) / x.length) : "–"; };
+  const head = A.map(i => `<th scope="col" style="--fc:${coulA(slot(id, "aja", i).faction)}">${enTete(id, "aja", i)}</th>`).join("");
+  const rows = B.map(j => {
+    const sb = slot(id, "adv", j);
+    return `<tr><th scope="row">${enTete(id, "adv", j)}</th>${A.map(i => {
+      const v = cell(i, j), f = wrFace(slot(id, "aja", i).faction, sb.faction);
+      const ref = f ? `<span class="ref ${conf(f.wr, f.n)}" title="WR Listhammer de notre faction contre la leur : ${confTitre(f.wr, f.n)}">WR faction<br><b>${fmt(f.wr, 0)} %</b> · ${f.n} p.</span>` : `<span class="ref conf-bas">WR faction<br>– · 0 p.</span>`;
+      return `<td><div class="cell" style="--cell:${couleur(v)}"><input id="m-${i}-${j}" data-path="scores.${i}-${j}" data-score inputmode="numeric" maxlength="2" placeholder="–" aria-label="${esc(nomA(id, i))} contre ${esc(nomB(id, j))}, score estimé sur 20" value="${v ?? ""}" ${ro()}>${ref}</div></td>`;
+    }).join("")}<td class="avg">${moy(A.map(i => cell(i, j)))}</td></tr>`;
+  }).join("");
+  const foot = `<tr><th scope="row"><span class="fa">Moyenne AJA</span></th>${A.map(i => `<td class="avg">${moy(B.map(j => cell(i, j)))}</td>`).join("")}<td></td></tr>`;
+  const n = A.flatMap(i => B.map(j => cell(i, j))).filter(v => v != null).length;
+  return `<p class="help">${esc(periode())}.</p>
+    <div class="total"><span class="eyebrow">${n}/${A.length * B.length} cases remplies</span><span class="muted">Une colonne par joueur AJA. Note de 0 à 20 : le score que tu penses faire contre cette liste.</span></div>
+    <div class="tscroll"><table class="mx"><thead><tr><th class="corner">Adversaires ↓<br>AJA →</th>${head}<th class="avg">Moy.</th></tr></thead><tbody>${rows}${foot}</tbody></table></div>
+    <div class="legend"><span><i style="background:${couleur(3)}"></i>0-5 très défavorable</span><span><i style="background:${couleur(8)}"></i>6-9 défavorable</span><span><i style="background:${couleur(10)}"></i>10 neutre</span><span><i style="background:${couleur(12)}"></i>11-14 favorable</span><span><i style="background:${couleur(17)}"></i>15-20 très favorable</span></div>
+    <div class="legend"><span>Fiabilité des WR :</span><span><span class="k conf-ok">bleu</span> sûr (marge ≤ ± 10 pts)</span><span><span class="k conf-mod">orange</span> modéré (± 10 à 20 pts)</span><span><span class="k conf-bas">rouge</span> pas sûr (plus de ± 20 pts)</span></div>
+    <p class="help">Sous chaque case : « WR faction » = WR Listhammer de la faction du joueur AJA contre la faction adverse, et le nombre de parties. La couleur vient de l'intervalle de confiance à 95 % (Wilson) : plus il y a de parties, plus la marge est étroite. Listhammer ne publie pas de face-à-face par détachement : les WR « Faction / Détachement » de chaque liste sont dans les en-têtes (« WR faction / détachement »).</p>`;
+}
+
+function vueApp(id){
+  const {app, lance, A: A0, B: B0} = effectifApp(id);
+  const N = lance ? A0.length : taille(id);
+  if (A0.length !== N || B0.length !== N) return `<div class="empty"><b>Il faut exactement ${N} listes de chaque côté.</b><span>Dans l'onglet Équipes, coche « Joue ce match » sur ${N} listes AJA (actuellement ${A0.length}) et ${N} listes adverses (actuellement ${B0.length}).</span></div>`;
+  const {S, vides} = matrice(id, A0, B0);
+  const st = etat(app, A0, B0);
+  const sol = solveurCache(S, A0, B0), R = nbTours(N);
+  const acquis = st.parties.reduce((s, p) => s + S[p.i][p.j], 0);
+  const proj = v => `<span class="num">${fmt(acquis + v)}</span>`;
+  const etapes = [["def", "Défenseurs"], ["att", "Attaquants"], ["choix", "Choix"]];
+  const stepper = st.etape === "fin" ? "" : `<div class="stepper">${[...Array(R).keys()].map(x => x + 1).flatMap(r => etapes.map(([k, l]) => {
+    const ordre = (r - 1) * 3 + etapes.findIndex(e => e[0] === k), now = (st.tour - 1) * 3 + etapes.findIndex(e => e[0] === st.etape);
+    return `<span class="${ordre === now ? "on" : ordre < now ? "ok" : ""}">T${r} · ${l}</span>`;
+  })).join("")}</div>`;
+  const avert = vides.length ? `<div class="banner">${vides.length} case${vides.length > 1 ? "s" : ""} vide${vides.length > 1 ? "s" : ""} dans la matrice, comptée${vides.length > 1 ? "s" : ""} à 10 dans les calculs.</div>` : "";
+  const g = k => app[k + st.tour];
+  const opt = (arr, lab, sel) => arr.map(x => `<option value="${x}"${sel === x ? " selected" : ""}>${esc(lab(x))}</option>`).join("");
+  let corps = "";
+
+  if (st.etape === "def"){
+    const mn = sol.defense(st.A, st.B, "min"), av = sol.defense(st.A, st.B, "avg");
+    const recs = mn.opts.map((o, k) => ({dA: o.dA, min: o.v, avg: av.opts[k].v})).sort((a, b) => b.min - a.min || b.avg - a.avg);
+    const menace = st.B.map(dB => ({dB, v: Math.max(...mn.opts.map(o => o.rep.find(r => r.dB === dB).v))})).sort((a, b) => a.v - b.v).slice(0, 2);
+    corps = `<h3>Tour ${st.tour} · qui on met en défense ?</h3>
+      ${tableRecs(recs.map(r => [esc(nomA(id, r.dA)), r.min, r.avg]), "Notre défenseur", acquis)}
+      <p class="threat">Leurs défenseurs les plus gênants pour nous : ${menace.map(x => `<b>${esc(nomB(id, x.dB))}</b> (${proj(x.v)} au mieux)`).join(", ")}.</p>
+      <div class="row"><label class="f">Notre défenseur<select id="a-dA"><option value="">…</option>${opt(st.A, i => nomA(id, i), draft.dA)}</select></label>
+      <label class="f">Leur défenseur (révélé)<select id="a-dB"><option value="">…</option>${opt(st.B, j => nomB(id, j), draft.dB)}</select></label>
+      <button class="primary" data-act="valider" data-e="def" ${ro()}>Valider les défenseurs</button></div>`;
+  } else if (st.etape === "att"){
+    const dA = g("dA"), dB = g("dB");
+    const mn = sol.attaque(st.A, st.B, dA, dB, "min"), av = sol.attaque(st.A, st.B, dA, dB, "avg");
+    const recs = mn.opts.map((o, k) => ({PA: o.PA, min: o.v, avg: av.opts[k].v})).sort((a, b) => b.min - a.min || b.avg - a.avg);
+    const leur = mn.PBs.map(PB => ({PB, v: Math.max(...mn.opts.map(o => o.rep.find(r => r.PB === PB).v))})).sort((a, b) => a.v - b.v)[0];
+    const chips = (arr, lab, name) => `<div class="chips">${arr.map(x => `<label><input type="checkbox" name="${name}" value="${x}"${(draft[name] || []).includes(x) ? " checked" : ""}>${esc(lab(x))}</label>`).join("")}</div>`;
+    corps = `<h3>Tour ${st.tour} · qui on envoie sur ${esc(nomB(id, dB))} ?</h3>
+      <p class="muted">Notre défenseur : <b>${esc(nomA(id, dA))}</b>. Leur défenseur : <b>${esc(nomB(id, dB))}</b>.</p>
+      ${tableRecs(recs.map(r => [r.PA.map(i => esc(nomA(id, i))).join(" + "), r.min, r.avg]), "Nos deux attaquants", acquis)}
+      <p class="threat">Leur paire la plus gênante contre ${esc(nomA(id, dA))} : <b>${leur.PB.map(j => esc(nomB(id, j))).join(" + ")}</b>.</p>
+      <label class="f">Nos deux attaquants${chips(st.A.filter(x => x !== dA), i => nomA(id, i), "pA")}</label>
+      <label class="f">Leurs deux attaquants (révélés)${chips(st.B.filter(x => x !== dB), j => nomB(id, j), "pB")}</label>
+      <div class="row"><button class="primary" data-act="valider" data-e="att" ${ro()}>Valider les attaquants</button></div>`;
+  } else if (st.etape === "choix"){
+    const dA = g("dA"), dB = g("dB"), PA = g("pA"), PB = g("pB");
+    const c = sol.choix(st.A, st.B, dA, dB, PA, PB, "min"), ca = sol.choix(st.A, st.B, dA, dB, PA, PB, "avg");
+    const recs = c.opts.map((o, k) => ({b: o.b, a: o.a, min: o.v, avg: ca.opts[k].v})).sort((x, y) => y.min - x.min || y.avg - x.avg);
+    corps = `<h3>Tour ${st.tour} · quel attaquant garde ${esc(nomA(id, dA))} ?</h3>
+      ${tableRecs(recs.map(r => [`${esc(nomB(id, r.b))}<br><span class="muted">${S[dA][r.b]}/20 sur cette table · leur défenseur prendra sans doute ${esc(nomA(id, r.a))}</span>`, r.min, r.avg]), "On garde", acquis)}
+      <div class="row"><label class="f">${esc(nomA(id, dA))} garde<select id="a-cA"><option value="">…</option>${opt(PB, j => nomB(id, j), draft.cA)}</select></label>
+      <label class="f">${esc(nomB(id, dB))} garde<select id="a-cB"><option value="">…</option>${opt(PA, i => nomA(id, i), draft.cB)}</select></label>
+      <button class="primary" data-act="valider" data-e="choix" ${ro()}>Valider les choix</button></div>`;
+  } else {
+    corps = `<div class="total"><span class="big">${fmt(acquis)}</span><span class="muted">/ ${20 * N} attendus pour l'AJA (${fmt(acquis / N)} de moyenne par table)</span></div>`;
+  }
+  const parties = st.parties.length ? `<div class="panel"><h3>Tables fixées</h3><div class="games">${st.parties.map(p => `<div class="game" style="--cell:${couleur(S[p.i][p.j])}"><span><b>${esc(nomA(id, p.i))}</b> contre <b>${esc(nomB(id, p.j))}</b></span><span class="v">${fmt(S[p.i][p.j], 0)}</span><span class="k">${p.k}</span></div>`).join("")}</div></div>` : "";
+  const reset = confirmKey === "reset" ? `<button class="danger" data-act="reset">Confirmer : tout recommencer</button> <button data-act="annuler">Annuler</button>` : `<button data-act="ask-reset" ${ro()}>Recommencer l'appariement</button>`;
+  return `${avert}${stepper}<div class="panel step">${corps}</div>${parties}
+    <div class="row"><button data-act="sim-reel">Explorer la suite dans le simulateur</button>${lance ? `<button data-act="retour" ${ro()}>Revenir une étape en arrière</button>${reset}` : ""}</div>
+    <details class="help"><summary>Comment lire les recommandations</summary><ul>
+      <li><b>Plancher</b> : total d'équipe attendu si l'adversaire devine tous nos choix secrets. C'est le critère de tri.</li>
+      <li><b>Moyenne</b> : total attendu si leurs choix secrets sont faits au hasard.</li>
+      <li>On suppose que l'adversaire voit la matrice comme nous (son score = 20 − le nôtre) et que son défenseur prend toujours l'attaquant le pire pour nous.</li>
+      <li>Le choix des tables n'est pas encore pris en compte.</li></ul></details>`;
+}
+
+
+/* ---------- Simulateur : explorer l'arbre « si on joue A, ils peuvent répondre… » ---------- */
+const CLES_ETAPE = {def: ["dA", "dB"], att: ["pA", "pB"], choix: ["cA", "cB"]};
+function filSim(app, R){
+  const f = [];
+  for (let r = 1; r <= R; r++) for (const e of ["def", "att", "choix"]){
+    const [a, b] = CLES_ETAPE[e];
+    if (app[a + r] == null || app[b + r] == null) return f;
+    f.push({r, e, a: app[a + r], b: app[b + r]});
+  }
+  return f;
+}
+function videApres(app, r0, e0, R){
+  const out = {...app}; let on = false;
+  for (let r = 1; r <= R; r++) for (const e of ["def", "att", "choix"]){
+    if (r === r0 && e === e0) on = true;
+    if (on) for (const k of CLES_ETAPE[e]) out[k + r] = null;
+  }
+  return out;
+}
+// Suite la plus probable : on joue notre meilleur plancher, ils jouent leur meilleure réponse
+function suitePrevue(app0, A0, B0, sol){
+  const app = {...app0};
+  for (let k = 0; k < 12; k++){
+    const st = etat(app, A0, B0), r = st.tour;
+    if (st.etape === "fin") return st;
+    if (st.etape === "def"){
+      const o = sol.defense(st.A, st.B, "min").opts.reduce((m, x) => x.v > m.v ? x : m);
+      app["dA" + r] = o.dA; app["dB" + r] = o.rep.reduce((m, x) => x.v < m.v ? x : m).dB;
+    } else if (st.etape === "att"){
+      const o = sol.attaque(st.A, st.B, app["dA" + r], app["dB" + r], "min").opts.reduce((m, x) => x.v > m.v ? x : m);
+      app["pA" + r] = o.PA; app["pB" + r] = o.rep.reduce((m, x) => x.v < m.v ? x : m).PB;
+    } else {
+      const o = sol.choix(st.A, st.B, app["dA" + r], app["dB" + r], app["pA" + r], app["pB" + r], "min").opts.reduce((m, x) => x.v > m.v ? x : m);
+      app["cA" + r] = o.b; app["cB" + r] = o.a;
+    }
+  }
+  return etat(app, A0, B0);
+}
+function vueSim(id){
+  const {A: A0, B: B0, lance} = effectifApp(id);
+  const N = lance ? A0.length : taille(id);
+  if (A0.length !== N || B0.length !== N) return `<div class="empty"><b>Il faut exactement ${N} listes de chaque côté.</b><span>Dans l'onglet Équipes, coche « Joue ce match » sur ${N} listes AJA (actuellement ${A0.length}) et ${N} listes adverses (actuellement ${B0.length}).</span></div>`;
+  const sim = simDe(id), R = nbTours(N);
+  const {S, vides} = matrice(id, A0, B0);
+  const sol = solveurCache(S, A0, B0);
+  const st = etat(sim.app, A0, B0), r = st.tour;
+  const acquis = st.parties.reduce((s, p) => s + S[p.i][p.j], 0);
+  const tot = v => fmt(acquis + v);
+  const g = k => sim.app[k + r];
+  const paire = (P, nom) => P.map(x => esc(nom(id, x))).join(" + ");
+  const libEtape = {def: "Défenseurs", att: "Attaquants", choix: "Choix"};
+  const fil = filSim(sim.app, R).map((f, k) => {
+    const txt = f.e === "def" ? `${esc(nomA(id, f.a))} / ${esc(nomB(id, f.b))}` : f.e === "att" ? `${paire(f.a, nomA)} / ${paire(f.b, nomB)}` : `garde ${esc(nomB(id, f.a))} / ${esc(nomA(id, f.b))}`;
+    return `<button data-act="sim-back" data-r="${f.r}" data-e="${f.e}" title="Revenir à cette étape"><b>T${f.r} ${libEtape[f.e]}</b>${txt}</button>`;
+  }).join("");
+
+  // options de notre côté, chacune avec toutes leurs réponses
+  let titre = "", opts = [];
+  if (st.etape === "def"){
+    titre = `Tour ${r} · si on défend avec…`;
+    const mn = sol.defense(st.A, st.B, "min"), av = sol.defense(st.A, st.B, "avg");
+    opts = mn.opts.map((o, k) => ({key: String(o.dA), lab: esc(nomA(id, o.dA)), v: o.v, avg: av.opts[k].v,
+      reps: o.rep.map(x => ({lab: esc(nomB(id, x.dB)), v: x.v, go: {["dA" + r]: o.dA, ["dB" + r]: x.dB}})), q: "…ils peuvent défendre avec"}));
+  } else if (st.etape === "att"){
+    const dA = g("dA"), dB = g("dB");
+    titre = `Tour ${r} · ${esc(nomA(id, dA))} défend contre ${esc(nomB(id, dB))}. Si on envoie sur ${esc(nomB(id, dB))}…`;
+    const mn = sol.attaque(st.A, st.B, dA, dB, "min"), av = sol.attaque(st.A, st.B, dA, dB, "avg");
+    opts = mn.opts.map((o, k) => ({key: o.PA.join(","), lab: paire(o.PA, nomA), v: o.v, avg: av.opts[k].v,
+      reps: o.rep.map(x => ({lab: paire(x.PB, nomB), v: x.v, go: {["pA" + r]: o.PA, ["pB" + r]: x.PB}})), q: `…ils peuvent envoyer sur ${esc(nomA(id, dA))}`}));
+  } else if (st.etape === "choix"){
+    const dA = g("dA"), dB = g("dB"), PA = g("pA"), PB = g("pB");
+    titre = `Tour ${r} · si ${esc(nomA(id, dA))} garde…`;
+    const mn = sol.choix(st.A, st.B, dA, dB, PA, PB, "min"), av = sol.choix(st.A, st.B, dA, dB, PA, PB, "avg");
+    opts = mn.opts.map((o, k) => ({key: String(o.b), lab: `${esc(nomB(id, o.b))} <span class="muted">(${S[dA][o.b]}/20)</span>`, v: o.v, avg: av.opts[k].v,
+      reps: PA.map(a => ({lab: `${esc(nomA(id, a))} <span class="muted">(${S[a][dB]}/20)</span>`, v: sol.suite(st.A, st.B, dA, dB, PA, PB, a, o.b, "min"), go: {["cA" + r]: o.b, ["cB" + r]: a}})), q: `…et ${esc(nomB(id, dB))} garde`}));
+  }
+  opts.sort((a, b) => b.v - a.v || b.avg - a.avg);
+  opts.forEach(o => { o.reps.sort((a, b) => a.v - b.v); });
+  const ecart = Math.max(1, ...opts.flatMap(o => o.reps.map(x => Math.abs(x.v - o.v))));
+  const liste = opts.map((o, k) => {
+    const on = sim.sel === o.key, pire = o.reps[0];
+    const reps = on ? `<div class="reps"><span class="k">${o.q}</span>${o.reps.map(x => {
+      const t = Math.min(1, (x.v - o.v) / ecart);
+      const fond = t > 0 ? `color-mix(in srgb, var(--good) ${Math.round(t * 35)}%, var(--bg))` : "var(--bg)";
+      return `<button data-act="sim-go" data-v="${esc(JSON.stringify(x.go))}" style="--cell:${fond}"><span>${x.lab}</span><span class="num">${tot(x.v)}</span><span class="go">jouer →</span></button>`;
+    }).join("")}</div>` : "";
+    return `<div class="opt${on ? " on" : ""}${k === 0 ? " best" : ""}"><button data-act="sim-sel" data-k="${esc(o.key)}" aria-expanded="${on}">
+      <span class="who">${o.lab}</span><span class="v">${tot(o.v)}<small>plancher</small></span><span class="v">${tot(o.avg)}<small>moyenne</small></span>
+      <span class="rp">Leur meilleure réponse : ${pire.lab} · ${on ? "toutes leurs réponses ci-dessous" : "voir toutes leurs réponses ▾"}</span></button>${reps}</div>`;
+  }).join("");
+
+  const pv = suitePrevue(sim.app, A0, B0, sol);
+  const totPv = pv.parties.reduce((s, p) => s + S[p.i][p.j], 0);
+  const tables = (parties, deja) => parties.map((p, k) => `<div class="game" style="--cell:${couleur(S[p.i][p.j])}"><span><b>${esc(nomA(id, p.i))}</b> contre <b>${esc(nomB(id, p.j))}</b></span><span class="v">${S[p.i][p.j]}</span><span class="k">${p.k}${k < deja ? " · joué dans la simulation" : " · prévu"}</span></div>`).join("");
+  const etape = st.etape === "fin"
+    ? `<div class="total"><span class="big">${fmt(acquis)}</span><span class="muted">/ ${20 * N} pour l'AJA dans cette branche (${fmt(acquis / N)} par table)</span></div>`
+    : `<h3>${titre}</h3><p class="help">Classé par plancher : notre total si l'adversaire répond au mieux. Ouvre une option pour voir toutes leurs réponses, de la pire à la meilleure pour nous, puis joue celle que tu veux explorer.</p><div class="opts">${liste}</div>`;
+  return `${vides.length ? `<div class="banner">${vides.length} case${vides.length > 1 ? "s" : ""} vide${vides.length > 1 ? "s" : ""} dans la matrice, comptée${vides.length > 1 ? "s" : ""} à 10.</div>` : ""}
+    <div class="row"><span class="eyebrow">Simulation : rien n'est enregistré ni visible des autres</span></div>
+    <div class="fil"><button data-act="sim-reset">Départ</button>${fil}</div>
+    <div class="split"><div class="panel step">${etape}</div>
+    <div class="panel"><h3>${st.etape === "fin" ? "Tables de cette branche" : "Suite la plus probable"}</h3>
+      ${st.etape === "fin" ? "" : `<p class="help">Si on joue toujours notre meilleur plancher et qu'ils répondent au mieux à partir d'ici.</p><div class="total"><span class="big">${fmt(totPv)}</span><span class="muted">/ ${20 * N}</span></div>`}
+      <div class="pv games">${tables(pv.parties, st.parties.length)}</div></div></div>
+    <div class="row"><button data-act="sim-reset">Repartir de zéro</button><button data-act="sim-reel">Repartir de l'appariement réel</button></div>`;
+}
+
+function tableRecs(rows, label, acquis){
+  return `<div class="tscroll"><table class="rk"><thead><tr><th>${label}</th><th class="r">Plancher</th><th class="r">Moyenne</th></tr></thead><tbody>${rows.slice(0, 6).map((r, k) =>
+    `<tr class="${k === 0 ? "best" : ""}"><td>${r[0]}</td><td class="r num">${fmt(acquis + r[1])}</td><td class="r num">${fmt(acquis + r[2])}</td></tr>`).join("")}</tbody></table></div>
+    ${rows.length > 6 ? `<p class="help">${rows.length - 6} autres options moins bonnes masquées.</p>` : ""}`;
+}
+
+/* ---------- Actions ---------- */
+function appWrite(id, patch){ for (const k in patch) write(id, "app." + k, patch[k], 0); draft = {}; }
+
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-act]"); if (!b) return;
+  const act = b.dataset.act;
+  if (act === "ouvrir"){ cur = b.dataset.id; store.set("match", cur); confirmKey = null; draft = {}; render(); scrollTo(0, 0); }
+  else if (act === "liste"){ cur = null; store.set("match", ""); confirmKey = null; render(); }
+  else if (act === "onglet"){ tab = b.dataset.k; store.set("onglet", tab); confirmKey = null; render(); }
+  else if (act === "ask-sup" || act === "ask-reset"){ confirmKey = act.slice(4); render(); }
+  else if (act === "annuler"){ confirmKey = null; render(); }
+  else if (act === "supprimer"){ const id = b.dataset.id; confirmKey = null; cur = null; db.doc("matchs/" + id).delete().catch(writeError); }
+  else if (act === "reset"){ confirmKey = null; appWrite(cur, {...APP0}); }
+  else if (act === "retour"){
+    const {app, A, B} = effectifApp(cur), st = etat(app, A, B), r = st.tour;
+    const vide = keys => Object.fromEntries(keys.map(k => [k, null]));
+    if (st.etape === "fin") appWrite(cur, vide(["cA" + r, "cB" + r]));
+    else if (st.etape === "choix") appWrite(cur, vide(["pA" + r, "pB" + r]));
+    else if (st.etape === "att") appWrite(cur, vide(r === 1 ? ["dA1", "dB1", "rA", "rB"] : ["dA" + r, "dB" + r]));
+    else if (r > 1) appWrite(cur, vide(["cA" + (r - 1), "cB" + (r - 1)]));
+  }
+  else if (act === "sim-sel"){ const sim = simDe(cur); sim.sel = sim.sel === b.dataset.k ? null : b.dataset.k; simSave(cur); render(); }
+  else if (act === "sim-go"){ const sim = simDe(cur); Object.assign(sim.app, JSON.parse(b.dataset.v)); sim.sel = null; simSave(cur); render(); }
+  else if (act === "sim-back"){ const sim = simDe(cur), {A} = effectifApp(cur); sim.app = videApres(sim.app, +b.dataset.r, b.dataset.e, nbTours(A.length)); sim.sel = null; simSave(cur); render(); }
+  else if (act === "sim-reset"){ sims[cur] = {app: {}, sel: null}; simSave(cur); render(); }
+  else if (act === "sim-reel"){ const {app} = effectifApp(cur); const copie = {}; for (const k in app) if (k !== "rA" && k !== "rB" && app[k] != null) copie[k] = app[k]; sims[cur] = {app: copie, sel: null}; simSave(cur); tab = "simulateur"; store.set("onglet", tab); render(); scrollTo(0, 0); }
+  else if (act === "valider"){
+    const {app, lance, A, B} = effectifApp(cur), r = etat(app, A, B).tour, et = b.dataset.e;
+    if (et === "def"){
+      const a = $("#a-dA").value, d = $("#a-dB").value;
+      if (a === "" || d === "") return status("Choisis notre défenseur et le leur avant de valider.");
+      status(""); appWrite(cur, {["dA" + r]: +a, ["dB" + r]: +d, ...(lance ? {} : {rA: A, rB: B})});
+    }
+    if (et === "att"){
+      const pa = [...document.querySelectorAll('input[name="pA"]:checked')].map(x => +x.value), pb = [...document.querySelectorAll('input[name="pB"]:checked')].map(x => +x.value);
+      if (pa.length !== 2 || pb.length !== 2) return status("Coche exactement deux attaquants de chaque côté.");
+      status(""); appWrite(cur, {["pA" + r]: pa, ["pB" + r]: pb});
+    }
+    if (et === "choix"){
+      const a = $("#a-cA").value, c = $("#a-cB").value;
+      if (a === "" || c === "") return status("Indique l'attaquant gardé par chaque défenseur.");
+      status(""); appWrite(cur, {["cA" + r]: +a, ["cB" + r]: +c});
+    }
+  }
+});
+
+document.addEventListener("change", e => {
+  const t = e.target;
+  if (t.id === "a-dA") draft.dA = +t.value; if (t.id === "a-dB") draft.dB = +t.value;
+  if (t.id === "a-cA") draft.cA = +t.value; if (t.id === "a-cB") draft.cB = +t.value;
+  if (t.name === "pA" || t.name === "pB") draft[t.name] = [...document.querySelectorAll(`input[name="${t.name}"]:checked`)].map(x => +x.value);
+  if (!cur) return;
+  if (t.dataset.det){
+    const dets = [...document.querySelectorAll(`input[data-det="${t.dataset.det}"]:checked`)].map(x => x.value).sort();
+    write(cur, t.dataset.det + ".detachements", dets, 0); render();
+  } else if (t.dataset.joue){
+    write(cur, t.dataset.joue + ".joue", t.checked, 0); render();
+  } else if (t.tagName === "SELECT" && t.dataset.path){
+    write(cur, t.dataset.path, t.value, 0);
+    if (t.dataset.path.endsWith(".faction")) write(cur, t.dataset.path.replace(/faction$/, "detachements"), [], 0);
+    render();
+  }
+});
+
+document.addEventListener("input", e => {
+  const t = e.target;
+  if (t.id === "c-adv") draft.adv = t.value;
+  if (t.id === "c-evt") draft.evt = t.value;
+  if (t.id === "c-fmt") draft.fmt = t.value;
+  if (!t.dataset.path || !cur || t.tagName === "SELECT") return;
+  if (t.hasAttribute("data-score")){
+    const raw = t.value.replace(/\D/g, ""); const v = raw === "" ? null : Math.min(20, parseInt(raw, 10));
+    if (String(v ?? "") !== t.value) t.value = v ?? "";
+    t.parentElement.style.setProperty("--cell", couleur(v));
+    write(cur, t.dataset.path, v);
+  } else write(cur, t.dataset.path, t.value);
+});
+document.addEventListener("focusout", e => { if (e.target.hasAttribute && e.target.hasAttribute("data-score")) setTimeout(render, 0); });
+
+document.addEventListener("submit", async e => {
+  if (e.target.id !== "f-creer") return; e.preventDefault();
+  if (!db) return;
+  const adversaire = $("#c-adv").value.trim(), evenement = $("#c-evt").value.trim();
+  if (!adversaire) return status("Donne un nom à l'équipe adverse.");
+  const format = $("#c-fmt").value === "8" ? 8 : 6;
+  const aja = {}, adv = {};
+  [...Array(format + 1).keys()].forEach(i => {
+    aja[i] = {joueur: "", faction: EQUIPE[i] ? EQUIPE[i][0] : "", detachements: [], disposition: "", joue: i < format};
+    adv[i] = {joueur: "", faction: "", detachements: [], disposition: "", joue: true};
+  });
+  try {
+    const ref = await db.collection("matchs").add({adversaire, evenement, format, cree: Date.now(), aja, adv, scores: {}, app: {...APP0}});
+    draft = {}; cur = ref.id; tab = "equipes"; store.set("match", cur); store.set("onglet", tab); status(""); render();
+  } catch (err) { writeError(err); }
+});
+
+matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", () => render());
+
+/* ---------- Démarrage ---------- */
+render();
+(async () => {
+  const c = window.claude;
+  db = c && c.use ? await c.use("db").catch(() => null) : null;
+  if (!db){ offline = true; ready = true; render(); return; }
+  const user = await c.use("user").catch(() => null);
+  if (user){ try { if (await user.can("data.write") === false) canWrite = false; } catch (e) {} }
+  if (canWrite === false) status("Tu peux consulter les matchs mais pas les modifier. Demande au propriétaire de la page un accès Contributeur.");
+  let dernier = "";
+  db.collection("matchs").onSnapshot(snap => {
+    const sig = JSON.stringify(snap.docs.map(d => [d.id, d.data()]));
+    matchs = new Map(snap.docs.map(d => [d.id, d.data()]));
+    ready = true;
+    if (sig === dernier) return; dernier = sig;
+    const a = document.activeElement;
+    if (a && a.matches && a.matches("[data-score], input[data-path]:not([type=checkbox])")) return; // on ne casse pas une saisie en cours
+    render();
+  }, err => { status(err && err.code === "revoked" ? "L'accès à cette page a changé. Recharge-la." : "La liste des matchs ne se met plus à jour. Recharge la page.", true); });
+})();
+</script>

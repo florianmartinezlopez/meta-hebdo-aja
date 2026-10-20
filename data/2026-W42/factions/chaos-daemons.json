@@ -943,5 +943,133 @@
    "startDate": "2026-09-25"
   }
  ],
- "listes_total_site": 112
+ "listes_total_site": 112,
+ "tendance": [
+  {
+   "week": "2026-06-21",
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00"
+  },
+  {
+   "week": "2026-06-28",
+   "wins": 50,
+   "losses": 37,
+   "total": 87,
+   "winRate": "57.47"
+  },
+  {
+   "week": "2026-07-05",
+   "wins": 70,
+   "losses": 51,
+   "total": 121,
+   "winRate": "57.85"
+  },
+  {
+   "week": "2026-07-12",
+   "wins": 108,
+   "losses": 106,
+   "total": 214,
+   "winRate": "50.47"
+  },
+  {
+   "week": "2026-07-19",
+   "wins": 130,
+   "losses": 121,
+   "total": 251,
+   "winRate": "51.79"
+  },
+  {
+   "week": "2026-07-26",
+   "wins": 89,
+   "losses": 87,
+   "total": 176,
+   "winRate": "50.57"
+  },
+  {
+   "week": "2026-08-02",
+   "wins": 128,
+   "losses": 98,
+   "total": 226,
+   "winRate": "56.64"
+  },
+  {
+   "week": "2026-08-09",
+   "wins": 63,
+   "losses": 66,
+   "total": 129,
+   "winRate": "48.84"
+  },
+  {
+   "week": "2026-08-16",
+   "wins": 275,
+   "losses": 195,
+   "total": 470,
+   "winRate": "58.51"
+  },
+  {
+   "week": "2026-08-23",
+   "wins": 116,
+   "losses": 70,
+   "total": 186,
+   "winRate": "62.37"
+  },
+  {
+   "week": "2026-08-30",
+   "wins": 129,
+   "losses": 107,
+   "total": 236,
+   "winRate": "54.66"
+  },
+  {
+   "week": "2026-09-06",
+   "wins": 127,
+   "losses": 121,
+   "total": 248,
+   "winRate": "51.21"
+  },
+  {
+   "week": "2026-09-13",
+   "wins": 119,
+   "losses": 129,
+   "total": 248,
+   "winRate": "47.98"
+  },
+  {
+   "week": "2026-09-20",
+   "wins": 74,
+   "losses": 62,
+   "total": 136,
+   "winRate": "54.41"
+  },
+  {
+   "week": "2026-09-27",
+   "wins": 134,
+   "losses": 121,
+   "total": 255,
+   "winRate": "52.55"
+  },
+  {
+   "week": "2026-10-04",
+   "wins": 110,
+   "losses": 109,
+   "total": 219,
+   "winRate": "50.23"
+  },
+  {
+   "week": "2026-10-11",
+   "wins": 95,
+   "losses": 90,
+   "total": 185,
+   "winRate": "51.35"
+  },
+  {
+   "week": "2026-10-18",
+   "wins": 88,
+   "losses": 121,
+   "total": 209,
+   "winRate": "42.11"
+  }
+ ]
 }

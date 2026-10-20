@@ -127,6 +127,7 @@ def main():
             "dispositions": fa.get("dispositions") or {},
             "combinaisons": fa.get("detachmentCombinations") or [],
             "adversaires": fa.get("matchups") or [],
+            "tendance": fa.get("weekly") or [],
             "listes_recentes": lst, "listes_total_site": rl.get("totalCount"),
         }
         for l in lst:

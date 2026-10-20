@@ -404,5 +404,126 @@
    "startDate": "2026-07-04"
   }
  ],
- "listes_total_site": 9
+ "listes_total_site": 9,
+ "tendance": [
+  {
+   "week": "2026-06-28",
+   "wins": 3,
+   "losses": 7,
+   "total": 10,
+   "winRate": "30.00"
+  },
+  {
+   "week": "2026-07-05",
+   "wins": 4,
+   "losses": 1,
+   "total": 5,
+   "winRate": "80.00"
+  },
+  {
+   "week": "2026-07-12",
+   "wins": 4,
+   "losses": 6,
+   "total": 10,
+   "winRate": "40.00"
+  },
+  {
+   "week": "2026-07-19",
+   "wins": 15,
+   "losses": 18,
+   "total": 33,
+   "winRate": "45.45"
+  },
+  {
+   "week": "2026-07-26",
+   "wins": 6,
+   "losses": 5,
+   "total": 11,
+   "winRate": "54.55"
+  },
+  {
+   "week": "2026-08-02",
+   "wins": 10,
+   "losses": 17,
+   "total": 27,
+   "winRate": "37.04"
+  },
+  {
+   "week": "2026-08-09",
+   "wins": 7,
+   "losses": 8,
+   "total": 15,
+   "winRate": "46.67"
+  },
+  {
+   "week": "2026-08-16",
+   "wins": 8,
+   "losses": 15,
+   "total": 23,
+   "winRate": "34.78"
+  },
+  {
+   "week": "2026-08-23",
+   "wins": 12,
+   "losses": 13,
+   "total": 25,
+   "winRate": "48.00"
+  },
+  {
+   "week": "2026-08-30",
+   "wins": 7,
+   "losses": 16,
+   "total": 23,
+   "winRate": "30.43"
+  },
+  {
+   "week": "2026-09-06",
+   "wins": 14,
+   "losses": 10,
+   "total": 24,
+   "winRate": "58.33"
+  },
+  {
+   "week": "2026-09-13",
+   "wins": 19,
+   "losses": 21,
+   "total": 40,
+   "winRate": "47.50"
+  },
+  {
+   "week": "2026-09-20",
+   "wins": 8,
+   "losses": 6,
+   "total": 14,
+   "winRate": "57.14"
+  },
+  {
+   "week": "2026-09-27",
+   "wins": 22,
+   "losses": 26,
+   "total": 48,
+   "winRate": "45.83"
+  },
+  {
+   "week": "2026-10-04",
+   "wins": 11,
+   "losses": 14,
+   "total": 25,
+   "winRate": "44.00"
+  },
+  {
+   "week": "2026-10-11",
+   "wins": 8,
+   "losses": 7,
+   "total": 15,
+   "winRate": "53.33"
+  },
+  {
+   "week": "2026-10-18",
+   "wins": 10,
+   "losses": 14,
+   "total": 24,
+   "winRate": "41.67"
+  }
+ ]
 }
