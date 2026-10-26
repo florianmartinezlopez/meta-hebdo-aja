@@ -1,0 +1,1082 @@
+{
+ "nom": "Death Guard",
+ "slug": "death-guard",
+ "periode": {
+  "wins": 142,
+  "losses": 120,
+  "total": 262,
+  "winRate": "54.20"
+ },
+ "joueurs": 56,
+ "invaincus": 2,
+ "x1": 8,
+ "victoires_tournoi": 2,
+ "sur_representation": "1.57",
+ "dispositions": {
+  "Disruption": 6,
+  "Priority Assets": 21,
+  "Purge the Foe": 11,
+  "Reconnaissance": 5,
+  "Take and Hold": 16
+ },
+ "combinaisons": [
+  {
+   "detachment": "Paragons of Putrescence | Shamblerot Vectorium",
+   "players": 19,
+   "fieldPercent": 33.92857142857143,
+   "wins": 65,
+   "losses": 28,
+   "total": 93,
+   "winRate": "69.89"
+  },
+  {
+   "detachment": "Virulent Vectorium",
+   "players": 18,
+   "fieldPercent": 32.142857142857146,
+   "wins": 41,
+   "losses": 46,
+   "total": 87,
+   "winRate": "47.13"
+  },
+  {
+   "detachment": "Contagion Engines | Mortarion's Hammer",
+   "players": 4,
+   "fieldPercent": 7.142857142857142,
+   "wins": 8,
+   "losses": 10,
+   "total": 18,
+   "winRate": "44.44"
+  },
+  {
+   "detachment": "Mortarion's Hammer | Paragons of Putrescence",
+   "players": 3,
+   "fieldPercent": 5.357142857142857,
+   "wins": 7,
+   "losses": 5,
+   "total": 12,
+   "winRate": "58.33"
+  },
+  {
+   "detachment": "Champions of Contagion | Paragons of Putrescence",
+   "players": 2,
+   "fieldPercent": 3.571428571428571,
+   "wins": 4,
+   "losses": 5,
+   "total": 9,
+   "winRate": "44.44"
+  },
+  {
+   "detachment": "Contagion Engines | Tallyband Summoners",
+   "players": 2,
+   "fieldPercent": 3.571428571428571,
+   "wins": 5,
+   "losses": 4,
+   "total": 9,
+   "winRate": "55.56"
+  },
+  {
+   "detachment": "Champions of Contagion | Contagion Engines",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 0,
+   "losses": 2,
+   "total": 2,
+   "winRate": "0.00"
+  },
+  {
+   "detachment": "Champions of Contagion | Flyblown Host",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 1,
+   "losses": 3,
+   "total": 4,
+   "winRate": "25.00"
+  },
+  {
+   "detachment": "Contagion Engines | Death Lord's Chosen",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00"
+  },
+  {
+   "detachment": "Contagion Engines | Shamblerot Vectorium",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 3,
+   "losses": 1,
+   "total": 4,
+   "winRate": "75.00"
+  },
+  {
+   "detachment": "Death Lord's Chosen | Flyblown Host",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 1,
+   "losses": 4,
+   "total": 5,
+   "winRate": "20.00"
+  },
+  {
+   "detachment": "Death Lord's Chosen | Paragons of Putrescence",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 1,
+   "losses": 4,
+   "total": 5,
+   "winRate": "20.00"
+  },
+  {
+   "detachment": "Paragons of Putrescence",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 1,
+   "losses": 4,
+   "total": 5,
+   "winRate": "20.00"
+  },
+  {
+   "detachment": "Unknown",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 3,
+   "losses": 1,
+   "total": 4,
+   "winRate": "75.00"
+  }
+ ],
+ "adversaires": [
+  {
+   "opponentFaction": "Adepta Sororitas",
+   "wins": 4,
+   "losses": 1,
+   "total": 5,
+   "winRate": "80.00",
+   "avgDifferential": 25.4,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": "100.00",
+    "avgDifferential": 39,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Adeptus Custodes",
+   "wins": 19,
+   "losses": 11,
+   "total": 30,
+   "winRate": "63.33",
+   "avgDifferential": 6.9,
+   "differentialGames": 30,
+   "goingFirst": {
+    "wins": 10,
+    "losses": 5,
+    "total": 15,
+    "winRate": "66.67",
+    "avgDifferential": 11,
+    "differentialGames": 15
+   }
+  },
+  {
+   "opponentFaction": "Adeptus Mechanicus",
+   "wins": 3,
+   "losses": 6,
+   "total": 9,
+   "winRate": "33.33",
+   "avgDifferential": -4.666666666666667,
+   "differentialGames": 9,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 4,
+    "total": 5,
+    "winRate": "20.00",
+    "avgDifferential": -12.2,
+    "differentialGames": 5
+   }
+  },
+  {
+   "opponentFaction": "Aeldari",
+   "wins": 5,
+   "losses": 3,
+   "total": 8,
+   "winRate": "62.50",
+   "avgDifferential": 6.5,
+   "differentialGames": 8,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 39,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Astra Militarum",
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00",
+   "avgDifferential": 30.2,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": "100.00",
+    "avgDifferential": 67,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Black Templars",
+   "wins": 4,
+   "losses": 1,
+   "total": 5,
+   "winRate": "80.00",
+   "avgDifferential": 6,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": "100.00",
+    "avgDifferential": 9.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Blood Angels",
+   "wins": 5,
+   "losses": 3,
+   "total": 8,
+   "winRate": "62.50",
+   "avgDifferential": 4,
+   "differentialGames": 8,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 0,
+    "total": 3,
+    "winRate": "100.00",
+    "avgDifferential": 39,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Chaos Daemons",
+   "wins": 5,
+   "losses": 4,
+   "total": 9,
+   "winRate": "55.56",
+   "avgDifferential": -4.333333333333333,
+   "differentialGames": 9,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": -9,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Chaos Knights",
+   "wins": 5,
+   "losses": 0,
+   "total": 5,
+   "winRate": "100.00",
+   "avgDifferential": 28.4,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Chaos Space Marines",
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00",
+   "avgDifferential": -17.8,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 2,
+    "total": 3,
+    "winRate": "33.33",
+    "avgDifferential": -18.333333333333332,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Dark Angels",
+   "wins": 7,
+   "losses": 7,
+   "total": 14,
+   "winRate": "50.00",
+   "avgDifferential": -6.571428571428571,
+   "differentialGames": 14,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 4,
+    "total": 4,
+    "winRate": "0.00",
+    "avgDifferential": -36.75,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "Deathwatch",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 56,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Drukhari",
+   "wins": 8,
+   "losses": 1,
+   "total": 9,
+   "winRate": "88.89",
+   "avgDifferential": 37.666666666666664,
+   "differentialGames": 9,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 0,
+    "total": 3,
+    "winRate": "100.00",
+    "avgDifferential": 64.33333333333333,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Emperor's Children",
+   "wins": 5,
+   "losses": 4,
+   "total": 9,
+   "winRate": "55.56",
+   "avgDifferential": 4.555555555555555,
+   "differentialGames": 9,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 1,
+    "total": 3,
+    "winRate": "66.67",
+    "avgDifferential": 12.666666666666666,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Genestealer Cult",
+   "wins": 4,
+   "losses": 2,
+   "total": 6,
+   "winRate": "66.67",
+   "avgDifferential": 22.833333333333332,
+   "differentialGames": 6,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 0,
+    "total": 3,
+    "winRate": "100.00",
+    "avgDifferential": 46,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Grey Knights",
+   "wins": 4,
+   "losses": 3,
+   "total": 7,
+   "winRate": "57.14",
+   "avgDifferential": 6.571428571428571,
+   "differentialGames": 7,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 1,
+    "total": 3,
+    "winRate": "66.67",
+    "avgDifferential": 26.666666666666668,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Imperial Knights",
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00",
+   "avgDifferential": -6,
+   "differentialGames": 4,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 45,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Leagues of Votann",
+   "wins": 3,
+   "losses": 5,
+   "total": 8,
+   "winRate": "37.50",
+   "avgDifferential": 3.5,
+   "differentialGames": 8,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 1,
+    "total": 3,
+    "winRate": "66.67",
+    "avgDifferential": 32.333333333333336,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Necrons",
+   "wins": 6,
+   "losses": 9,
+   "total": 15,
+   "winRate": "40.00",
+   "avgDifferential": -8.4,
+   "differentialGames": 15,
+   "goingFirst": {
+    "wins": 4,
+    "losses": 4,
+    "total": 8,
+    "winRate": "50.00",
+    "avgDifferential": 4.875,
+    "differentialGames": 8
+   }
+  },
+  {
+   "opponentFaction": "Orks",
+   "wins": 7,
+   "losses": 18,
+   "total": 25,
+   "winRate": "28.00",
+   "avgDifferential": -9.16,
+   "differentialGames": 25,
+   "goingFirst": {
+    "wins": 4,
+    "losses": 6,
+    "total": 10,
+    "winRate": "40.00",
+    "avgDifferential": -4.7,
+    "differentialGames": 10
+   }
+  },
+  {
+   "opponentFaction": "Space Marines (Astartes)",
+   "wins": 15,
+   "losses": 16,
+   "total": 31,
+   "winRate": "48.39",
+   "avgDifferential": -10.161290322580646,
+   "differentialGames": 31,
+   "goingFirst": {
+    "wins": 6,
+    "losses": 9,
+    "total": 15,
+    "winRate": "40.00",
+    "avgDifferential": -11.2,
+    "differentialGames": 15
+   }
+  },
+  {
+   "opponentFaction": "Space Wolves",
+   "wins": 5,
+   "losses": 3,
+   "total": 8,
+   "winRate": "62.50",
+   "avgDifferential": 12.625,
+   "differentialGames": 8,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 1,
+    "total": 3,
+    "winRate": "66.67",
+    "avgDifferential": 17.666666666666668,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "T'au Empire",
+   "wins": 6,
+   "losses": 6,
+   "total": 12,
+   "winRate": "50.00",
+   "avgDifferential": 3.9166666666666665,
+   "differentialGames": 12,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 2,
+    "total": 5,
+    "winRate": "60.00",
+    "avgDifferential": 12,
+    "differentialGames": 5
+   }
+  },
+  {
+   "opponentFaction": "Thousand Sons",
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00",
+   "avgDifferential": 13.4,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 1,
+    "total": 3,
+    "winRate": "66.67",
+    "avgDifferential": 12.333333333333334,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Tyranids",
+   "wins": 4,
+   "losses": 3,
+   "total": 7,
+   "winRate": "57.14",
+   "avgDifferential": 0,
+   "differentialGames": 7,
+   "goingFirst": {
+    "wins": 4,
+    "losses": 1,
+    "total": 5,
+    "winRate": "80.00",
+    "avgDifferential": 20.4,
+    "differentialGames": 5
+   }
+  },
+  {
+   "opponentFaction": "World Eaters",
+   "wins": 7,
+   "losses": 5,
+   "total": 12,
+   "winRate": "58.33",
+   "avgDifferential": 9.75,
+   "differentialGames": 12,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 2,
+    "total": 5,
+    "winRate": "60.00",
+    "avgDifferential": 6.4,
+    "differentialGames": 5
+   }
+  }
+ ],
+ "tendance": [
+  {
+   "week": "2026-06-21",
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00"
+  },
+  {
+   "week": "2026-06-28",
+   "wins": 40,
+   "losses": 55,
+   "total": 95,
+   "winRate": "42.11"
+  },
+  {
+   "week": "2026-07-05",
+   "wins": 62,
+   "losses": 57,
+   "total": 119,
+   "winRate": "52.10"
+  },
+  {
+   "week": "2026-07-12",
+   "wins": 58,
+   "losses": 80,
+   "total": 138,
+   "winRate": "42.03"
+  },
+  {
+   "week": "2026-07-19",
+   "wins": 128,
+   "losses": 172,
+   "total": 300,
+   "winRate": "42.67"
+  },
+  {
+   "week": "2026-07-26",
+   "wins": 72,
+   "losses": 101,
+   "total": 173,
+   "winRate": "41.62"
+  },
+  {
+   "week": "2026-08-02",
+   "wins": 103,
+   "losses": 155,
+   "total": 258,
+   "winRate": "39.92"
+  },
+  {
+   "week": "2026-08-09",
+   "wins": 40,
+   "losses": 38,
+   "total": 78,
+   "winRate": "51.28"
+  },
+  {
+   "week": "2026-08-16",
+   "wins": 139,
+   "losses": 191,
+   "total": 330,
+   "winRate": "42.12"
+  },
+  {
+   "week": "2026-08-23",
+   "wins": 69,
+   "losses": 82,
+   "total": 151,
+   "winRate": "45.70"
+  },
+  {
+   "week": "2026-08-30",
+   "wins": 76,
+   "losses": 75,
+   "total": 151,
+   "winRate": "50.33"
+  },
+  {
+   "week": "2026-09-06",
+   "wins": 99,
+   "losses": 128,
+   "total": 227,
+   "winRate": "43.61"
+  },
+  {
+   "week": "2026-09-13",
+   "wins": 118,
+   "losses": 120,
+   "total": 238,
+   "winRate": "49.58"
+  },
+  {
+   "week": "2026-09-20",
+   "wins": 52,
+   "losses": 54,
+   "total": 106,
+   "winRate": "49.06"
+  },
+  {
+   "week": "2026-09-27",
+   "wins": 169,
+   "losses": 162,
+   "total": 331,
+   "winRate": "51.06"
+  },
+  {
+   "week": "2026-10-04",
+   "wins": 109,
+   "losses": 110,
+   "total": 219,
+   "winRate": "49.77"
+  },
+  {
+   "week": "2026-10-11",
+   "wins": 119,
+   "losses": 131,
+   "total": 250,
+   "winRate": "47.60"
+  },
+  {
+   "week": "2026-10-18",
+   "wins": 180,
+   "losses": 175,
+   "total": 355,
+   "winRate": "50.70"
+  },
+  {
+   "week": "2026-10-25",
+   "wins": 142,
+   "losses": 120,
+   "total": 262,
+   "winRate": "54.20"
+  }
+ ],
+ "listes_recentes": [
+  {
+   "playerName": "Mani Cheema",
+   "playerUid": "cc0f93bb3512cc8e5e",
+   "eventName": "THE COVENTRY 40K : 3-Day",
+   "eventUid": "25b07168ad3821edef",
+   "numberOfPlayers": 142,
+   "numberOfRounds": 8,
+   "wins": 7,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Paragons of Putrescence | Shamblerot Vectorium",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-23"
+  },
+  {
+   "playerName": "Craig Bedford",
+   "playerUid": "ec8d25cfbd9c824bf6",
+   "eventName": "THE COVENTRY 40K : 3-Day",
+   "eventUid": "25b07168ad3821edef",
+   "numberOfPlayers": 142,
+   "numberOfRounds": 8,
+   "wins": 7,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Paragons of Putrescence | Shamblerot Vectorium",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-23"
+  },
+  {
+   "playerName": "Tayson Prete",
+   "playerUid": "134d6f6121ab15c1ea",
+   "eventName": "Hell's Basement GT 2026",
+   "eventUid": "199fab052552d2056f",
+   "numberOfPlayers": 40,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Paragons of Putrescence | Shamblerot Vectorium",
+   "disposition": "Disruption",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Peter Steiner",
+   "playerUid": "8e1145249236b0ab03",
+   "eventName": "Kärntner Meisterschaften 2026",
+   "eventUid": "8d24057c930132c07a",
+   "numberOfPlayers": 25,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Paragons of Putrescence | Shamblerot Vectorium",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Gary Lynch",
+   "playerUid": "88d90fe37fc7c6098e",
+   "eventName": "Gaelcon 2026",
+   "eventUid": "bae35c07d163b4f605",
+   "numberOfPlayers": 47,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Tallyband Summoners | Contagion Engines",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "ezerkil",
+   "playerUid": "d454b455a807d96e79",
+   "eventName": "Limoges Wargames solo 2000pts",
+   "eventUid": "e4567f631dfd15df69",
+   "numberOfPlayers": 45,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Paragons of Putrescence | Shamblerot Vectorium",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "dodo_l_asticot",
+   "playerUid": "91bfbebefd0d492a3a",
+   "eventName": "Limoges Wargames solo 2000pts",
+   "eventUid": "e4567f631dfd15df69",
+   "numberOfPlayers": 45,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Paragons of Putrescence | Shamblerot Vectorium",
+   "disposition": "Disruption",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Matt Neeley",
+   "playerUid": "9657d16b4d37fc0080",
+   "eventName": "24 & 25 October 2026 - OWN's Breaking Point GT at Game HQ",
+   "eventUid": "f1ebd4d25dafa550e1",
+   "numberOfPlayers": 29,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Paragons of Putrescence | Shamblerot Vectorium",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Joshua Campbell",
+   "playerUid": "754914bef752a44717",
+   "eventName": "Bolters And Boogeymen Bazooka GT",
+   "eventUid": "f37326f3876d927a9a",
+   "numberOfPlayers": 28,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Paragons of Putrescence | Shamblerot Vectorium",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Brandon Johnson",
+   "playerUid": "44448ea392d51cefa0",
+   "eventName": "ValleyCon GT",
+   "eventUid": "867a329a8817acb286",
+   "numberOfPlayers": 26,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Virulent Vectorium",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Alban de Polignac",
+   "playerUid": "8b383dc088695e1ce0",
+   "eventName": "Paris Wargame Expo 2 - Solo 40K",
+   "eventUid": "c0dcf8fb846148ad91",
+   "numberOfPlayers": 221,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Paragons of Putrescence | Shamblerot Vectorium",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Samuel Viragui",
+   "playerUid": "727c77c97156886fd2",
+   "eventName": "TOP DECK HERO JOLIETTE GT 1V1",
+   "eventUid": "850a3c919ec8d88ecb",
+   "numberOfPlayers": 31,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Paragons of Putrescence | Shamblerot Vectorium",
+   "disposition": "Disruption",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Folger Pyles",
+   "playerUid": "b185254779a5a9e709",
+   "eventName": "Rumble on the Rivers 40k GT 2026",
+   "eventUid": "3c3cb27168cf6ee568",
+   "numberOfPlayers": 93,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 1,
+   "losses": 0,
+   "detachment": "Paragons of Putrescence | Shamblerot Vectorium",
+   "disposition": "Disruption",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Chris Oneill",
+   "playerUid": "6be6e4d45587c171f0",
+   "eventName": "Auspicious End Game",
+   "eventUid": "c78f6f0985b99a063e",
+   "numberOfPlayers": 24,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 1,
+   "losses": 0,
+   "detachment": "Virulent Vectorium",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-16"
+  },
+  {
+   "playerName": "Sylvain (BoB L'éponge) Cathala",
+   "playerUid": "177e544943e53730ab",
+   "eventName": "Paris Wargame Expo 2 - Solo 40K",
+   "eventUid": "c0dcf8fb846148ad91",
+   "numberOfPlayers": 221,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Virulent Vectorium",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "matthias",
+   "playerUid": "d8431f89133bc91dfa",
+   "eventName": "Malmö Wargaming Weekend X",
+   "eventUid": "4a41b46ebf7978f2ac",
+   "numberOfPlayers": 176,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Paragons of Putrescence | Champions of Contagion",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Ivan Inozemtsev Cabral Lopes",
+   "playerUid": "fcb56dc634be26348a",
+   "eventName": "Malmö Wargaming Weekend X",
+   "eventUid": "4a41b46ebf7978f2ac",
+   "numberOfPlayers": 176,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Virulent Vectorium",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Daniel Ström",
+   "playerUid": "7bd3e1f2fe06803c0f",
+   "eventName": "Malmö Wargaming Weekend X",
+   "eventUid": "4a41b46ebf7978f2ac",
+   "numberOfPlayers": 176,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Paragons of Putrescence | Shamblerot Vectorium",
+   "disposition": "Disruption",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Mariano Salvatore",
+   "playerUid": "ee566d4f2eae4268cf",
+   "eventName": "Rumble on the Rivers 40k GT 2026",
+   "eventUid": "3c3cb27168cf6ee568",
+   "numberOfPlayers": 93,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Paragons of Putrescence | Shamblerot Vectorium",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Riley Gray-Porte",
+   "playerUid": "753aa7cd6f4d3d3c91",
+   "eventName": "MobTown Mayhem",
+   "eventUid": "89b46c94d9aa9b28ca",
+   "numberOfPlayers": 41,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Paragons of Putrescence | Shamblerot Vectorium",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Xandr Reetz",
+   "playerUid": "281fd111dffc1b7534",
+   "eventName": "Gamehole Con 40K Event Hosted by Away Games - 2 Golden Tickets",
+   "eventUid": "50f20b25cd68ccd882",
+   "numberOfPlayers": 34,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Virulent Vectorium",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Benaris",
+   "playerUid": "4cced04abf94ee0cbc",
+   "eventName": "LTC #12 - Tournoi Caritatif - Warhammer 40K 2000pts (Alsace)",
+   "eventUid": "a3c02b80ff56b0c357",
+   "numberOfPlayers": 34,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Virulent Vectorium",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Mark Yam",
+   "playerUid": "e3101bb3925632a351",
+   "eventName": "Geek Pop Warhammer 40000 GT",
+   "eventUid": "5be910910115f54e17",
+   "numberOfPlayers": 26,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Virulent Vectorium",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Grant Kauffman",
+   "playerUid": "2e7abc7a98b3b8861f",
+   "eventName": "GITHAMMER WAAAGH WEEKEND!!",
+   "eventUid": "49c29dd398adeecb28",
+   "numberOfPlayers": 25,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Virulent Vectorium",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Ron Bryla",
+   "playerUid": "0982dccdf211494a43",
+   "eventName": "Biggest Little Grand Tournament I",
+   "eventUid": "31a989a871e1cdbc86",
+   "numberOfPlayers": 24,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Paragons of Putrescence | Shamblerot Vectorium",
+   "disposition": "Disruption",
+   "startDate": "2026-10-17"
+  }
+ ],
+ "listes_total_site": 82
+}

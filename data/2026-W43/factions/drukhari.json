@@ -1,0 +1,1021 @@
+{
+ "nom": "Drukhari",
+ "slug": "drukhari",
+ "periode": {
+  "wins": 59,
+  "losses": 64,
+  "total": 123,
+  "winRate": "47.97"
+ },
+ "joueurs": 25,
+ "invaincus": 1,
+ "x1": 3,
+ "victoires_tournoi": 1,
+ "sur_representation": "1.18",
+ "dispositions": {
+  "Disruption": 3,
+  "Priority Assets": 4,
+  "Purge the Foe": 1,
+  "Reconnaissance": 16,
+  "Take and Hold": 3
+ },
+ "combinaisons": [
+  {
+   "detachment": "Exhibition of Slaughter | Kabalite Cartel",
+   "players": 5,
+   "fieldPercent": 20,
+   "wins": 11,
+   "losses": 17,
+   "total": 28,
+   "winRate": "39.29"
+  },
+  {
+   "detachment": "Exhibition of Slaughter | Skysplinter Assault",
+   "players": 5,
+   "fieldPercent": 20,
+   "wins": 8,
+   "losses": 14,
+   "total": 22,
+   "winRate": "36.36"
+  },
+  {
+   "detachment": "Kabalite Agonysts | Skysplinter Assault",
+   "players": 4,
+   "fieldPercent": 16,
+   "wins": 9,
+   "losses": 12,
+   "total": 21,
+   "winRate": "42.86"
+  },
+  {
+   "detachment": "Exhibition of Slaughter | Spectacle of Spite",
+   "players": 2,
+   "fieldPercent": 8,
+   "wins": 7,
+   "losses": 3,
+   "total": 10,
+   "winRate": "70.00"
+  },
+  {
+   "detachment": "Realspace Raiders | Tools of Torment",
+   "players": 2,
+   "fieldPercent": 8,
+   "wins": 6,
+   "losses": 4,
+   "total": 10,
+   "winRate": "60.00"
+  },
+  {
+   "detachment": "Skysplinter Assault | Tools of Torment",
+   "players": 2,
+   "fieldPercent": 8,
+   "wins": 7,
+   "losses": 3,
+   "total": 10,
+   "winRate": "70.00"
+  },
+  {
+   "detachment": "Exhibition of Slaughter",
+   "players": 1,
+   "fieldPercent": 4,
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00"
+  },
+  {
+   "detachment": "Kabalite Cartel | Tools of Torment",
+   "players": 1,
+   "fieldPercent": 4,
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00"
+  },
+  {
+   "detachment": "Reaper's Wager",
+   "players": 1,
+   "fieldPercent": 4,
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00"
+  },
+  {
+   "detachment": "Spectacle of Spite | Tools of Torment",
+   "players": 1,
+   "fieldPercent": 4,
+   "wins": 1,
+   "losses": 4,
+   "total": 5,
+   "winRate": "20.00"
+  },
+  {
+   "detachment": "Unknown",
+   "players": 1,
+   "fieldPercent": 4,
+   "wins": 3,
+   "losses": 1,
+   "total": 4,
+   "winRate": "75.00"
+  }
+ ],
+ "adversaires": [
+  {
+   "opponentFaction": "Adeptus Custodes",
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00",
+   "avgDifferential": 6.2,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": -2.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Adeptus Mechanicus",
+   "wins": 3,
+   "losses": 3,
+   "total": 6,
+   "winRate": "50.00",
+   "avgDifferential": -5.333333333333333,
+   "differentialGames": 6,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": 1.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Aeldari",
+   "wins": 2,
+   "losses": 0,
+   "total": 2,
+   "winRate": "100.00",
+   "avgDifferential": 20,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 37,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Astra Militarum",
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00",
+   "avgDifferential": -10,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 3,
+    "total": 5,
+    "winRate": "40.00",
+    "avgDifferential": -10,
+    "differentialGames": 5
+   }
+  },
+  {
+   "opponentFaction": "Black Templars",
+   "wins": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": 20,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": 20,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Blood Angels",
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00",
+   "avgDifferential": -1,
+   "differentialGames": 4,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -1,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Chaos Knights",
+   "wins": 2,
+   "losses": 0,
+   "total": 2,
+   "winRate": "100.00",
+   "avgDifferential": 33,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": "100.00",
+    "avgDifferential": 33,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Chaos Space Marines",
+   "wins": 5,
+   "losses": 2,
+   "total": 7,
+   "winRate": "71.43",
+   "avgDifferential": 4.714285714285714,
+   "differentialGames": 7,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": -22.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Dark Angels",
+   "wins": 2,
+   "losses": 5,
+   "total": 7,
+   "winRate": "28.57",
+   "avgDifferential": -17.571428571428573,
+   "differentialGames": 7,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 2,
+    "total": 3,
+    "winRate": "33.33",
+    "avgDifferential": -11.666666666666666,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Death Guard",
+   "wins": 1,
+   "losses": 8,
+   "total": 9,
+   "winRate": "11.11",
+   "avgDifferential": -37.666666666666664,
+   "differentialGames": 9,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 2,
+    "total": 2,
+    "winRate": "0.00",
+    "avgDifferential": -34,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Emperor's Children",
+   "wins": 6,
+   "losses": 5,
+   "total": 11,
+   "winRate": "54.55",
+   "avgDifferential": 7.2727272727272725,
+   "differentialGames": 11,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 2,
+    "total": 4,
+    "winRate": "50.00",
+    "avgDifferential": 0,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "Imperial Knights",
+   "wins": 1,
+   "losses": 2,
+   "total": 3,
+   "winRate": "33.33",
+   "avgDifferential": -3.3333333333333335,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": 13.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Leagues of Votann",
+   "wins": 4,
+   "losses": 0,
+   "total": 4,
+   "winRate": "100.00",
+   "avgDifferential": 32,
+   "differentialGames": 4,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 0,
+    "total": 3,
+    "winRate": "100.00",
+    "avgDifferential": 40,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Necrons",
+   "wins": 4,
+   "losses": 4,
+   "total": 8,
+   "winRate": "50.00",
+   "avgDifferential": 1.25,
+   "differentialGames": 8,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 3,
+    "total": 5,
+    "winRate": "40.00",
+    "avgDifferential": -12.8,
+    "differentialGames": 5
+   }
+  },
+  {
+   "opponentFaction": "Orks",
+   "wins": 5,
+   "losses": 3,
+   "total": 8,
+   "winRate": "62.50",
+   "avgDifferential": -0.125,
+   "differentialGames": 8,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 1,
+    "total": 4,
+    "winRate": "75.00",
+    "avgDifferential": 22.75,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "Space Marines (Astartes)",
+   "wins": 3,
+   "losses": 6,
+   "total": 9,
+   "winRate": "33.33",
+   "avgDifferential": -10.444444444444445,
+   "differentialGames": 9,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 4,
+    "total": 5,
+    "winRate": "20.00",
+    "avgDifferential": -11,
+    "differentialGames": 5
+   }
+  },
+  {
+   "opponentFaction": "Space Wolves",
+   "wins": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": -1,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 13,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "T'au Empire",
+   "wins": 1,
+   "losses": 4,
+   "total": 5,
+   "winRate": "20.00",
+   "avgDifferential": -9.2,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 3,
+    "total": 3,
+    "winRate": "0.00",
+    "avgDifferential": -34,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Thousand Sons",
+   "wins": 2,
+   "losses": 0,
+   "total": 2,
+   "winRate": "100.00",
+   "avgDifferential": 19.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": "100.00",
+    "avgDifferential": 19.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Tyranids",
+   "wins": 5,
+   "losses": 3,
+   "total": 8,
+   "winRate": "62.50",
+   "avgDifferential": 13.125,
+   "differentialGames": 8,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 2,
+    "total": 4,
+    "winRate": "50.00",
+    "avgDifferential": 12,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "World Eaters",
+   "wins": 4,
+   "losses": 6,
+   "total": 10,
+   "winRate": "40.00",
+   "avgDifferential": -10.5,
+   "differentialGames": 10,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 3,
+    "total": 4,
+    "winRate": "25.00",
+    "avgDifferential": -32.75,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "Adepta Sororitas",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -5,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -5,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Chaos Daemons",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -67,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -67,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Deathwatch",
+   "wins": 0,
+   "losses": 2,
+   "total": 2,
+   "winRate": "0.00",
+   "avgDifferential": -32.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -49,
+    "differentialGames": 1
+   }
+  }
+ ],
+ "tendance": [
+  {
+   "week": "2026-06-21",
+   "wins": 9,
+   "losses": 6,
+   "total": 15,
+   "winRate": "60.00"
+  },
+  {
+   "week": "2026-06-28",
+   "wins": 17,
+   "losses": 16,
+   "total": 33,
+   "winRate": "51.52"
+  },
+  {
+   "week": "2026-07-05",
+   "wins": 45,
+   "losses": 59,
+   "total": 104,
+   "winRate": "43.27"
+  },
+  {
+   "week": "2026-07-12",
+   "wins": 66,
+   "losses": 65,
+   "total": 131,
+   "winRate": "50.38"
+  },
+  {
+   "week": "2026-07-19",
+   "wins": 87,
+   "losses": 116,
+   "total": 203,
+   "winRate": "42.86"
+  },
+  {
+   "week": "2026-07-26",
+   "wins": 55,
+   "losses": 50,
+   "total": 105,
+   "winRate": "52.38"
+  },
+  {
+   "week": "2026-08-02",
+   "wins": 87,
+   "losses": 103,
+   "total": 190,
+   "winRate": "45.79"
+  },
+  {
+   "week": "2026-08-09",
+   "wins": 21,
+   "losses": 38,
+   "total": 59,
+   "winRate": "35.59"
+  },
+  {
+   "week": "2026-08-16",
+   "wins": 79,
+   "losses": 90,
+   "total": 169,
+   "winRate": "46.75"
+  },
+  {
+   "week": "2026-08-23",
+   "wins": 56,
+   "losses": 67,
+   "total": 123,
+   "winRate": "45.53"
+  },
+  {
+   "week": "2026-08-30",
+   "wins": 76,
+   "losses": 93,
+   "total": 169,
+   "winRate": "44.97"
+  },
+  {
+   "week": "2026-09-06",
+   "wins": 53,
+   "losses": 50,
+   "total": 103,
+   "winRate": "51.46"
+  },
+  {
+   "week": "2026-09-13",
+   "wins": 68,
+   "losses": 73,
+   "total": 141,
+   "winRate": "48.23"
+  },
+  {
+   "week": "2026-09-20",
+   "wins": 16,
+   "losses": 18,
+   "total": 34,
+   "winRate": "47.06"
+  },
+  {
+   "week": "2026-09-27",
+   "wins": 86,
+   "losses": 124,
+   "total": 210,
+   "winRate": "40.95"
+  },
+  {
+   "week": "2026-10-04",
+   "wins": 47,
+   "losses": 59,
+   "total": 106,
+   "winRate": "44.34"
+  },
+  {
+   "week": "2026-10-11",
+   "wins": 37,
+   "losses": 39,
+   "total": 76,
+   "winRate": "48.68"
+  },
+  {
+   "week": "2026-10-18",
+   "wins": 65,
+   "losses": 82,
+   "total": 147,
+   "winRate": "44.22"
+  },
+  {
+   "week": "2026-10-25",
+   "wins": 59,
+   "losses": 64,
+   "total": 123,
+   "winRate": "47.97"
+  }
+ ],
+ "listes_recentes": [
+  {
+   "playerName": "Aaron Weisbrod",
+   "playerUid": "374082df76449b03a0",
+   "eventName": "The Hogtowner 2026",
+   "eventUid": "c4f90078b78f068771",
+   "numberOfPlayers": 24,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Kabalite Agonysts | Skysplinter Assault",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Paul Miglino",
+   "playerUid": "b8612b0d8c2f13f335",
+   "eventName": "OrktoberFest III: This time ,It's a Gt at Blue Hen",
+   "eventUid": "39639345c8421d6a95",
+   "numberOfPlayers": 41,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Skysplinter Assault | Tools of Torment",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Steven Hall",
+   "playerUid": "6ccd2915b3c1da5986",
+   "eventName": "Warhound GT in October",
+   "eventUid": "47548b0981b13ba59e",
+   "numberOfPlayers": 40,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Realspace Raiders | Tools of Torment",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "David Johnson",
+   "playerUid": "93ee04f068842ff705",
+   "eventName": "24 & 25 October 2026 - OWN's Breaking Point GT at Game HQ",
+   "eventUid": "f1ebd4d25dafa550e1",
+   "numberOfPlayers": 29,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Spectacle of Spite | Exhibition of Slaughter",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "AxelRyden",
+   "playerUid": "a5fa2f391c63e41bec",
+   "eventName": "Malmö Wargaming Weekend X",
+   "eventUid": "4a41b46ebf7978f2ac",
+   "numberOfPlayers": 176,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 1,
+   "losses": 0,
+   "detachment": "Skysplinter Assault | Exhibition of Slaughter",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Łukasz (Fluke) Błaszczak",
+   "playerUid": "8803acce0942aafdbc",
+   "eventName": "Alba GT 2026",
+   "eventUid": "cf04740b3b9b3d8e89",
+   "numberOfPlayers": 100,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Kabalite Cartel | Exhibition of Slaughter",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Han Gallegos",
+   "playerUid": "44cadea3e1b9de1fcd",
+   "eventName": "Geek Pop Warhammer 40000 GT",
+   "eventUid": "5be910910115f54e17",
+   "numberOfPlayers": 26,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Kabalite Cartel | Tools of Torment",
+   "disposition": "Disruption",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Levi Chester",
+   "playerUid": "05ff24a4e90fd1ea63",
+   "eventName": "BZU 40K 2026",
+   "eventUid": "b5306acfabc2222445",
+   "numberOfPlayers": 48,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Kabalite Cartel | Exhibition of Slaughter",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Camerom Hayes",
+   "playerUid": "51131a925a7c4a81c2",
+   "eventName": "Autumn Slaughter GT at Red October Games",
+   "eventUid": "a86eb2068d81bda79e",
+   "numberOfPlayers": 26,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Spectacle of Spite | Exhibition of Slaughter",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Ari C",
+   "playerUid": "eab71fb4b71d8eead9",
+   "eventName": "Midgard Battle Against Breast Cancer October 40k ITC Tournament",
+   "eventUid": "37f2d34937a8d62cb8",
+   "numberOfPlayers": 29,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Reaper's Wager",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-03"
+  },
+  {
+   "playerName": "Bartosz Chmielewski",
+   "playerUid": "c2cbcc9db4d54f985f",
+   "eventName": "Dearg Doom XIII, don't play in Cian's sandbox",
+   "eventUid": "de77d4aa6ceb4bc45c",
+   "numberOfPlayers": 67,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Skysplinter Assault | Exhibition of Slaughter",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-26"
+  },
+  {
+   "playerName": "Anton Poplavnoi",
+   "playerUid": "ae0d22b302f57a6be8",
+   "eventName": "Saimaa GT 2026",
+   "eventUid": "9883b3232e390fd8f2",
+   "numberOfPlayers": 72,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 1,
+   "losses": 0,
+   "detachment": "Skysplinter Assault | Exhibition of Slaughter",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-26"
+  },
+  {
+   "playerName": "Patrick Harrison",
+   "playerUid": "1eaffa9fb326924003",
+   "eventName": "The London Grand Tournament - 40k Main Event (LGT 40k GT)",
+   "eventUid": "4848688a4a9990005c",
+   "numberOfPlayers": 1049,
+   "numberOfRounds": 10,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Skysplinter Assault | Exhibition of Slaughter",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-25"
+  },
+  {
+   "playerName": "Tim Waters",
+   "playerUid": "3cd467f532e5c37060",
+   "eventName": "The London Grand Tournament - 40k Main Event (LGT 40k GT)",
+   "eventUid": "4848688a4a9990005c",
+   "numberOfPlayers": 1049,
+   "numberOfRounds": 10,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Skysplinter Assault | Exhibition of Slaughter",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-25"
+  },
+  {
+   "playerName": "Pititaj Jewsawusde",
+   "playerUid": "dc1cc181b8159b5256",
+   "eventName": "Battle Under the Zia Sun II",
+   "eventUid": "285c6bc7bcdde1de81",
+   "numberOfPlayers": 55,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Kabalite Cartel | Tools of Torment",
+   "disposition": "Disruption",
+   "startDate": "2026-09-26"
+  },
+  {
+   "playerName": "Connor Schofield",
+   "playerUid": "0a598d95f83e2d4255",
+   "eventName": "For The Greater Good GT",
+   "eventUid": "39c4a0a563cd61efd7",
+   "numberOfPlayers": 38,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Kabalite Agonysts | Realspace Raiders",
+   "disposition": "Disruption",
+   "startDate": "2026-09-19"
+  },
+  {
+   "playerName": "Xabier Eceiza",
+   "playerUid": "c768002b5909b9d984",
+   "eventName": "Leithal Hits Autumn GT",
+   "eventUid": "665a09eb0e8827a9f1",
+   "numberOfPlayers": 28,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Skysplinter Assault | Exhibition of Slaughter",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-19"
+  },
+  {
+   "playerName": "Neil Goldsmith",
+   "playerUid": "f6de4fc416808ac5a1",
+   "eventName": "The Port City GT ",
+   "eventUid": "d8baa3da2926eb0cd6",
+   "numberOfPlayers": 38,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Skysplinter Assault | Exhibition of Slaughter",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-12"
+  },
+  {
+   "playerName": "Declan Noble",
+   "playerUid": "bf518fbfbe3a0738d4",
+   "eventName": "Doonhamer Open 2026",
+   "eventUid": "5574f042700b973dda",
+   "numberOfPlayers": 124,
+   "numberOfRounds": 7,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Kabalite Cartel | Exhibition of Slaughter",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-12"
+  },
+  {
+   "playerName": "Zack Dragas",
+   "playerUid": "df2d4df588828965eb",
+   "eventName": "North Coast Grand Tournament",
+   "eventUid": "3a3e95aaa55394aa37",
+   "numberOfPlayers": 31,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Skysplinter Assault | Exhibition of Slaughter",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-12"
+  },
+  {
+   "playerName": "Lawrence Baker",
+   "playerUid": "43e0e95f4b4eca77c9",
+   "eventName": "Warhammer 40,000 Grand Tournament - Epsom Downs",
+   "eventUid": "2fb1672871e58a3459",
+   "numberOfPlayers": 65,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Skysplinter Assault | Exhibition of Slaughter",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-05"
+  },
+  {
+   "playerName": "Pau Poensgen",
+   "playerUid": "6ac0be64d3875a9e01",
+   "eventName": "Capital Clash IX - GT",
+   "eventUid": "1b785776c1b06bfe62",
+   "numberOfPlayers": 35,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Kabalite Cartel",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-05"
+  },
+  {
+   "playerName": "Jason Gallant",
+   "playerUid": "6fc4d8f42f53a6ed1e",
+   "eventName": "Capital City Showdown",
+   "eventUid": "2d9fa1914719429dec",
+   "numberOfPlayers": 32,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Kabalite Agonysts | Skysplinter Assault",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-05"
+  },
+  {
+   "playerName": "Patrick Harrison",
+   "playerUid": "1eaffa9fb326924003",
+   "eventName": "The MANCHESTER 40k SUPER-MAJOR  - SUMMER",
+   "eventUid": "e14e48034cdb21fe3c",
+   "numberOfPlayers": 226,
+   "numberOfRounds": 8,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Skysplinter Assault | Exhibition of Slaughter",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-08-29"
+  },
+  {
+   "playerName": "Jarno Wehrli",
+   "playerUid": "028f429340ed945eae",
+   "eventName": "Mournival Mayhem",
+   "eventUid": "04517af6c876f06e73",
+   "numberOfPlayers": 38,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Kabalite Cartel | Exhibition of Slaughter",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-08-29"
+  }
+ ],
+ "listes_total_site": 52
+}

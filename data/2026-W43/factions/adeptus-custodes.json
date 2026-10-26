@@ -1,0 +1,1170 @@
+{
+ "nom": "Adeptus Custodes",
+ "slug": "adeptus-custodes",
+ "periode": {
+  "wins": 208,
+  "losses": 208,
+  "total": 416,
+  "winRate": "50.00"
+ },
+ "joueurs": 86,
+ "invaincus": 1,
+ "x1": 6,
+ "victoires_tournoi": 1,
+ "sur_representation": "0.46",
+ "dispositions": {
+  "Disruption": 3,
+  "Priority Assets": 9,
+  "Purge the Foe": 12,
+  "Take and Hold": 64
+ },
+ "combinaisons": [
+  {
+   "detachment": "Lions of the Emperor | Might of the Moritoi | Solar Watch",
+   "players": 21,
+   "fieldPercent": 24.418604651162788,
+   "wins": 59,
+   "losses": 50,
+   "total": 109,
+   "winRate": "54.13"
+  },
+  {
+   "detachment": "Emperor's Chosen | Lions of the Emperor | Might of the Moritoi",
+   "players": 17,
+   "fieldPercent": 19.767441860465116,
+   "wins": 41,
+   "losses": 33,
+   "total": 74,
+   "winRate": "55.41"
+  },
+  {
+   "detachment": "Dread Host | Lions of the Emperor | Might of the Moritoi",
+   "players": 9,
+   "fieldPercent": 10.465116279069768,
+   "wins": 21,
+   "losses": 26,
+   "total": 47,
+   "winRate": "44.68"
+  },
+  {
+   "detachment": "Honoured Companions | Might of the Moritoi | Solar Watch",
+   "players": 6,
+   "fieldPercent": 6.976744186046512,
+   "wins": 14,
+   "losses": 13,
+   "total": 27,
+   "winRate": "51.85"
+  },
+  {
+   "detachment": "Auric Champions | Might of the Moritoi | Solar Watch",
+   "players": 5,
+   "fieldPercent": 5.813953488372093,
+   "wins": 15,
+   "losses": 8,
+   "total": 23,
+   "winRate": "65.22"
+  },
+  {
+   "detachment": "Auric Champions | Emperor's Chosen | Lions of the Emperor",
+   "players": 4,
+   "fieldPercent": 4.651162790697675,
+   "wins": 11,
+   "losses": 6,
+   "total": 17,
+   "winRate": "64.71"
+  },
+  {
+   "detachment": "Emperor's Chosen | Honoured Companions | Might of the Moritoi",
+   "players": 4,
+   "fieldPercent": 4.651162790697675,
+   "wins": 5,
+   "losses": 12,
+   "total": 17,
+   "winRate": "29.41"
+  },
+  {
+   "detachment": "Auric Champions | Dread Host | Might of the Moritoi",
+   "players": 2,
+   "fieldPercent": 2.3255813953488373,
+   "wins": 2,
+   "losses": 6,
+   "total": 8,
+   "winRate": "25.00"
+  },
+  {
+   "detachment": "Dread Host | Honoured Companions | Lions of the Emperor",
+   "players": 2,
+   "fieldPercent": 2.3255813953488373,
+   "wins": 5,
+   "losses": 5,
+   "total": 10,
+   "winRate": "50.00"
+  },
+  {
+   "detachment": "Emperor's Chosen | Grav‑Assault Force | Lions of the Emperor",
+   "players": 2,
+   "fieldPercent": 2.3255813953488373,
+   "wins": 2,
+   "losses": 8,
+   "total": 10,
+   "winRate": "20.00"
+  },
+  {
+   "detachment": "Honoured Companions | Might of the Moritoi | Shadowkeepers",
+   "players": 2,
+   "fieldPercent": 2.3255813953488373,
+   "wins": 7,
+   "losses": 6,
+   "total": 13,
+   "winRate": "53.85"
+  },
+  {
+   "detachment": "Lions of the Emperor",
+   "players": 2,
+   "fieldPercent": 2.3255813953488373,
+   "wins": 4,
+   "losses": 6,
+   "total": 10,
+   "winRate": "40.00"
+  },
+  {
+   "detachment": "Auric Champions | Emperor's Chosen | Honoured Companions",
+   "players": 1,
+   "fieldPercent": 1.1627906976744187,
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00"
+  },
+  {
+   "detachment": "Auric Champions | Lions of the Emperor | Solar Watch",
+   "players": 1,
+   "fieldPercent": 1.1627906976744187,
+   "wins": 1,
+   "losses": 3,
+   "total": 4,
+   "winRate": "25.00"
+  },
+  {
+   "detachment": "Auric Champions | Null Maiden Vigil | Solar Watch",
+   "players": 1,
+   "fieldPercent": 1.1627906976744187,
+   "wins": 1,
+   "losses": 4,
+   "total": 5,
+   "winRate": "20.00"
+  },
+  {
+   "detachment": "Auric Champions | Solar Watch",
+   "players": 1,
+   "fieldPercent": 1.1627906976744187,
+   "wins": 1,
+   "losses": 4,
+   "total": 5,
+   "winRate": "20.00"
+  },
+  {
+   "detachment": "Grav‑Assault Force | Honoured Companions | Solar Watch",
+   "players": 1,
+   "fieldPercent": 1.1627906976744187,
+   "wins": 4,
+   "losses": 4,
+   "total": 8,
+   "winRate": "50.00"
+  },
+  {
+   "detachment": "Grav‑Assault Force | Lions of the Emperor | Shadowkeepers",
+   "players": 1,
+   "fieldPercent": 1.1627906976744187,
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00"
+  },
+  {
+   "detachment": "Grav‑Assault Force | Might of the Moritoi | Solar Watch",
+   "players": 1,
+   "fieldPercent": 1.1627906976744187,
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00"
+  },
+  {
+   "detachment": "Guardians of the Throne",
+   "players": 1,
+   "fieldPercent": 1.1627906976744187,
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00"
+  },
+  {
+   "detachment": "Lions of the Emperor | Might of the Moritoi | Null Maiden Vigil",
+   "players": 1,
+   "fieldPercent": 1.1627906976744187,
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00"
+  },
+  {
+   "detachment": "Lions of the Emperor | Null Maiden Vigil | Solar Watch",
+   "players": 1,
+   "fieldPercent": 1.1627906976744187,
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00"
+  }
+ ],
+ "adversaires": [
+  {
+   "opponentFaction": "Adepta Sororitas",
+   "wins": 3,
+   "losses": 10,
+   "total": 13,
+   "winRate": "23.08",
+   "avgDifferential": -20.076923076923077,
+   "differentialGames": 13,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 4,
+    "total": 7,
+    "winRate": "42.86",
+    "avgDifferential": -4.142857142857143,
+    "differentialGames": 7
+   }
+  },
+  {
+   "opponentFaction": "Adeptus Mechanicus",
+   "wins": 9,
+   "losses": 7,
+   "total": 16,
+   "winRate": "56.25",
+   "avgDifferential": -3,
+   "differentialGames": 16,
+   "goingFirst": {
+    "wins": 4,
+    "losses": 1,
+    "total": 5,
+    "winRate": "80.00",
+    "avgDifferential": 21.4,
+    "differentialGames": 5
+   }
+  },
+  {
+   "opponentFaction": "Aeldari",
+   "wins": 5,
+   "losses": 6,
+   "total": 11,
+   "winRate": "45.45",
+   "avgDifferential": -7.363636363636363,
+   "differentialGames": 11,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 2,
+    "total": 5,
+    "winRate": "60.00",
+    "avgDifferential": 13.2,
+    "differentialGames": 5
+   }
+  },
+  {
+   "opponentFaction": "Astra Militarum",
+   "wins": 7,
+   "losses": 2,
+   "total": 9,
+   "winRate": "77.78",
+   "avgDifferential": 3.3333333333333335,
+   "differentialGames": 9,
+   "goingFirst": {
+    "wins": 4,
+    "losses": 1,
+    "total": 5,
+    "winRate": "80.00",
+    "avgDifferential": 9.6,
+    "differentialGames": 5
+   }
+  },
+  {
+   "opponentFaction": "Black Templars",
+   "wins": 5,
+   "losses": 2,
+   "total": 7,
+   "winRate": "71.43",
+   "avgDifferential": 11.857142857142858,
+   "differentialGames": 7,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 1,
+    "total": 3,
+    "winRate": "66.67",
+    "avgDifferential": 9.333333333333334,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Blood Angels",
+   "wins": 5,
+   "losses": 6,
+   "total": 11,
+   "winRate": "45.45",
+   "avgDifferential": -8.818181818181818,
+   "differentialGames": 11,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 3,
+    "total": 6,
+    "winRate": "50.00",
+    "avgDifferential": -7.833333333333333,
+    "differentialGames": 6
+   }
+  },
+  {
+   "opponentFaction": "Chaos Daemons",
+   "wins": 8,
+   "losses": 10,
+   "total": 18,
+   "winRate": "44.44",
+   "avgDifferential": -9.88888888888889,
+   "differentialGames": 18,
+   "goingFirst": {
+    "wins": 4,
+    "losses": 6,
+    "total": 10,
+    "winRate": "40.00",
+    "avgDifferential": -17.2,
+    "differentialGames": 10
+   }
+  },
+  {
+   "opponentFaction": "Chaos Knights",
+   "wins": 5,
+   "losses": 4,
+   "total": 9,
+   "winRate": "55.56",
+   "avgDifferential": 10.555555555555555,
+   "differentialGames": 9,
+   "goingFirst": {
+    "wins": 4,
+    "losses": 3,
+    "total": 7,
+    "winRate": "57.14",
+    "avgDifferential": 11.428571428571429,
+    "differentialGames": 7
+   }
+  },
+  {
+   "opponentFaction": "Chaos Space Marines",
+   "wins": 5,
+   "losses": 11,
+   "total": 16,
+   "winRate": "31.25",
+   "avgDifferential": 1.1875,
+   "differentialGames": 16,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 4,
+    "total": 6,
+    "winRate": "33.33",
+    "avgDifferential": 7.5,
+    "differentialGames": 6
+   }
+  },
+  {
+   "opponentFaction": "Dark Angels",
+   "wins": 17,
+   "losses": 16,
+   "total": 33,
+   "winRate": "51.52",
+   "avgDifferential": -4.333333333333333,
+   "differentialGames": 33,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 13,
+    "total": 16,
+    "winRate": "18.75",
+    "avgDifferential": -30.875,
+    "differentialGames": 16
+   }
+  },
+  {
+   "opponentFaction": "Death Guard",
+   "wins": 11,
+   "losses": 19,
+   "total": 30,
+   "winRate": "36.67",
+   "avgDifferential": -6.9,
+   "differentialGames": 30,
+   "goingFirst": {
+    "wins": 6,
+    "losses": 9,
+    "total": 15,
+    "winRate": "40.00",
+    "avgDifferential": -2.8,
+    "differentialGames": 15
+   }
+  },
+  {
+   "opponentFaction": "Drukhari",
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00",
+   "avgDifferential": -6.2,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 2,
+    "total": 3,
+    "winRate": "33.33",
+    "avgDifferential": -12,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Emperor's Children",
+   "wins": 5,
+   "losses": 4,
+   "total": 9,
+   "winRate": "55.56",
+   "avgDifferential": 5.777777777777778,
+   "differentialGames": 9,
+   "goingFirst": {
+    "wins": 4,
+    "losses": 0,
+    "total": 4,
+    "winRate": "100.00",
+    "avgDifferential": 37.5,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "Genestealer Cult",
+   "wins": 2,
+   "losses": 0,
+   "total": 2,
+   "winRate": "100.00",
+   "avgDifferential": 43.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Grey Knights",
+   "wins": 6,
+   "losses": 3,
+   "total": 9,
+   "winRate": "66.67",
+   "avgDifferential": 11.11111111111111,
+   "differentialGames": 9,
+   "goingFirst": {
+    "wins": 4,
+    "losses": 3,
+    "total": 7,
+    "winRate": "57.14",
+    "avgDifferential": -3.7142857142857144,
+    "differentialGames": 7
+   }
+  },
+  {
+   "opponentFaction": "Imperial Agents",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 1,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 1,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Imperial Knights",
+   "wins": 9,
+   "losses": 9,
+   "total": 18,
+   "winRate": "50.00",
+   "avgDifferential": -11.777777777777779,
+   "differentialGames": 18,
+   "goingFirst": {
+    "wins": 6,
+    "losses": 3,
+    "total": 9,
+    "winRate": "66.67",
+    "avgDifferential": -5.444444444444445,
+    "differentialGames": 9
+   }
+  },
+  {
+   "opponentFaction": "Leagues of Votann",
+   "wins": 8,
+   "losses": 5,
+   "total": 13,
+   "winRate": "61.54",
+   "avgDifferential": 11.23076923076923,
+   "differentialGames": 13,
+   "goingFirst": {
+    "wins": 4,
+    "losses": 3,
+    "total": 7,
+    "winRate": "57.14",
+    "avgDifferential": 13.571428571428571,
+    "differentialGames": 7
+   }
+  },
+  {
+   "opponentFaction": "Necrons",
+   "wins": 18,
+   "losses": 11,
+   "total": 29,
+   "winRate": "62.07",
+   "avgDifferential": 6.344827586206897,
+   "differentialGames": 29,
+   "goingFirst": {
+    "wins": 9,
+    "losses": 7,
+    "total": 16,
+    "winRate": "56.25",
+    "avgDifferential": 14.5625,
+    "differentialGames": 16
+   }
+  },
+  {
+   "opponentFaction": "Orks",
+   "wins": 16,
+   "losses": 20,
+   "total": 36,
+   "winRate": "44.44",
+   "avgDifferential": -3.8333333333333335,
+   "differentialGames": 36,
+   "goingFirst": {
+    "wins": 9,
+    "losses": 9,
+    "total": 18,
+    "winRate": "50.00",
+    "avgDifferential": 2,
+    "differentialGames": 18
+   }
+  },
+  {
+   "opponentFaction": "Space Marines (Astartes)",
+   "wins": 13,
+   "losses": 17,
+   "total": 30,
+   "winRate": "43.33",
+   "avgDifferential": -1.9,
+   "differentialGames": 30,
+   "goingFirst": {
+    "wins": 6,
+    "losses": 11,
+    "total": 17,
+    "winRate": "35.29",
+    "avgDifferential": -1.0588235294117647,
+    "differentialGames": 17
+   }
+  },
+  {
+   "opponentFaction": "Space Wolves",
+   "wins": 6,
+   "losses": 12,
+   "total": 18,
+   "winRate": "33.33",
+   "avgDifferential": -5.388888888888889,
+   "differentialGames": 18,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 7,
+    "total": 10,
+    "winRate": "30.00",
+    "avgDifferential": -8.8,
+    "differentialGames": 10
+   }
+  },
+  {
+   "opponentFaction": "T'au Empire",
+   "wins": 12,
+   "losses": 4,
+   "total": 16,
+   "winRate": "75.00",
+   "avgDifferential": 21.1875,
+   "differentialGames": 16,
+   "goingFirst": {
+    "wins": 8,
+    "losses": 0,
+    "total": 8,
+    "winRate": "100.00",
+    "avgDifferential": 37.75,
+    "differentialGames": 8
+   }
+  },
+  {
+   "opponentFaction": "Thousand Sons",
+   "wins": 4,
+   "losses": 2,
+   "total": 6,
+   "winRate": "66.67",
+   "avgDifferential": 8.833333333333334,
+   "differentialGames": 6,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 1,
+    "total": 3,
+    "winRate": "66.67",
+    "avgDifferential": 12.333333333333334,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Tyranids",
+   "wins": 8,
+   "losses": 5,
+   "total": 13,
+   "winRate": "61.54",
+   "avgDifferential": 8.384615384615385,
+   "differentialGames": 13,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 1,
+    "total": 4,
+    "winRate": "75.00",
+    "avgDifferential": 21.5,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "World Eaters",
+   "wins": 18,
+   "losses": 19,
+   "total": 37,
+   "winRate": "48.65",
+   "avgDifferential": -8.405405405405405,
+   "differentialGames": 37,
+   "goingFirst": {
+    "wins": 9,
+    "losses": 7,
+    "total": 16,
+    "winRate": "56.25",
+    "avgDifferential": 0.6875,
+    "differentialGames": 16
+   }
+  },
+  {
+   "opponentFaction": "Deathwatch",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -17,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  }
+ ],
+ "tendance": [
+  {
+   "week": "2026-06-21",
+   "wins": 13,
+   "losses": 11,
+   "total": 24,
+   "winRate": "54.17"
+  },
+  {
+   "week": "2026-06-28",
+   "wins": 56,
+   "losses": 57,
+   "total": 113,
+   "winRate": "49.56"
+  },
+  {
+   "week": "2026-07-05",
+   "wins": 80,
+   "losses": 88,
+   "total": 168,
+   "winRate": "47.62"
+  },
+  {
+   "week": "2026-07-12",
+   "wins": 125,
+   "losses": 126,
+   "total": 251,
+   "winRate": "49.80"
+  },
+  {
+   "week": "2026-07-19",
+   "wins": 209,
+   "losses": 203,
+   "total": 412,
+   "winRate": "50.73"
+  },
+  {
+   "week": "2026-07-26",
+   "wins": 168,
+   "losses": 154,
+   "total": 322,
+   "winRate": "52.17"
+  },
+  {
+   "week": "2026-08-02",
+   "wins": 188,
+   "losses": 152,
+   "total": 340,
+   "winRate": "55.29"
+  },
+  {
+   "week": "2026-08-09",
+   "wins": 83,
+   "losses": 72,
+   "total": 155,
+   "winRate": "53.55"
+  },
+  {
+   "week": "2026-08-16",
+   "wins": 245,
+   "losses": 225,
+   "total": 470,
+   "winRate": "52.13"
+  },
+  {
+   "week": "2026-08-23",
+   "wins": 150,
+   "losses": 113,
+   "total": 263,
+   "winRate": "57.03"
+  },
+  {
+   "week": "2026-08-30",
+   "wins": 206,
+   "losses": 182,
+   "total": 388,
+   "winRate": "53.09"
+  },
+  {
+   "week": "2026-09-06",
+   "wins": 195,
+   "losses": 176,
+   "total": 371,
+   "winRate": "52.56"
+  },
+  {
+   "week": "2026-09-13",
+   "wins": 214,
+   "losses": 162,
+   "total": 376,
+   "winRate": "56.91"
+  },
+  {
+   "week": "2026-09-20",
+   "wins": 120,
+   "losses": 91,
+   "total": 211,
+   "winRate": "56.87"
+  },
+  {
+   "week": "2026-09-27",
+   "wins": 348,
+   "losses": 291,
+   "total": 639,
+   "winRate": "54.46"
+  },
+  {
+   "week": "2026-10-04",
+   "wins": 220,
+   "losses": 209,
+   "total": 429,
+   "winRate": "51.28"
+  },
+  {
+   "week": "2026-10-11",
+   "wins": 123,
+   "losses": 115,
+   "total": 238,
+   "winRate": "51.68"
+  },
+  {
+   "week": "2026-10-18",
+   "wins": 137,
+   "losses": 148,
+   "total": 285,
+   "winRate": "48.07"
+  },
+  {
+   "week": "2026-10-25",
+   "wins": 208,
+   "losses": 208,
+   "total": 416,
+   "winRate": "50.00"
+  }
+ ],
+ "listes_recentes": [
+  {
+   "playerName": "Liam Callebout",
+   "playerUid": "a55090409c0932b356",
+   "eventName": "THE COVENTRY 40K : 3-Day",
+   "eventUid": "25b07168ad3821edef",
+   "numberOfPlayers": 142,
+   "numberOfRounds": 8,
+   "wins": 7,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Might of the Moritoi | Lions of the Emperor | Solar Watch",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-23"
+  },
+  {
+   "playerName": "Taylor Bivona",
+   "playerUid": "80f8c6639f265dc0d4",
+   "eventName": "Battle for the Big Country",
+   "eventUid": "42ca421c191002e74c",
+   "numberOfPlayers": 20,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Emperor's Chosen | Might of the Moritoi | Lions of the Emperor",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Simon Edwards",
+   "playerUid": "e782be45c5f09f9274",
+   "eventName": "THE COVENTRY 40K : 2-Day",
+   "eventUid": "a5048c9937fc23b9ad",
+   "numberOfPlayers": 110,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Might of the Moritoi | Lions of the Emperor | Solar Watch",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Hunter Boyd",
+   "playerUid": "26c0f952b0c0f296ca",
+   "eventName": "RCM: Night of the Wolf 2026",
+   "eventUid": "181348e066d94710f2",
+   "numberOfPlayers": 29,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Emperor's Chosen | Might of the Moritoi | Lions of the Emperor",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Dominik Tavernaro",
+   "playerUid": "f0416cafc89dba6076",
+   "eventName": "Kärntner Meisterschaften 2026",
+   "eventUid": "8d24057c930132c07a",
+   "numberOfPlayers": 25,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Honoured Companions | Might of the Moritoi | Solar Watch",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Ross Daveni",
+   "playerUid": "6726cf437b542885d3",
+   "eventName": "Dicehead 40k GT: Return of the Maul",
+   "eventUid": "546b598d76dcf51581",
+   "numberOfPlayers": 18,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Emperor's Chosen | Lions of the Emperor | Auric Champions",
+   "disposition": "Disruption",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Aaron Moat",
+   "playerUid": "f9352ea7a38fda5e8c",
+   "eventName": "Turbulent Games Warhammer 40K GT @Kee Con",
+   "eventUid": "f6a31d7451d4902b91",
+   "numberOfPlayers": 16,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Emperor's Chosen | Might of the Moritoi | Lions of the Emperor",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Jorgan Goulet",
+   "playerUid": "8bb7d24af38835b912",
+   "eventName": "Hallowtide Redux",
+   "eventUid": "c3409a97a29aa0627b",
+   "numberOfPlayers": 35,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Lions of the Emperor",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "David Paton",
+   "playerUid": "d3798c15c2aa320b26",
+   "eventName": "Bloodshed Bay Two",
+   "eventUid": "ffd0f958003627ee1e",
+   "numberOfPlayers": 82,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Honoured Companions | Might of the Moritoi | Solar Watch",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Mack Thompson",
+   "playerUid": "e76fb4cfd332a636b3",
+   "eventName": "Bloodshed Bay Two",
+   "eventUid": "ffd0f958003627ee1e",
+   "numberOfPlayers": 82,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Emperor's Chosen | Might of the Moritoi | Lions of the Emperor",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Pierre Dahlgren",
+   "playerUid": "0a69321c3074a770b8",
+   "eventName": "Malmö Wargaming Weekend X",
+   "eventUid": "4a41b46ebf7978f2ac",
+   "numberOfPlayers": 176,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 1,
+   "losses": 0,
+   "detachment": "Lions of the Emperor",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Bailey MacAusland",
+   "playerUid": "9199becfc4d0f0abda",
+   "eventName": "Beast Coast Gaming Fall Brawl 2026",
+   "eventUid": "ccbcca2ad561c03e63",
+   "numberOfPlayers": 40,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Lions of the Emperor",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Matthew Fleming",
+   "playerUid": "e413e26c29777f3f8c",
+   "eventName": "Hallowtide Redux",
+   "eventUid": "c3409a97a29aa0627b",
+   "numberOfPlayers": 35,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Lions of the Emperor",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Alvi",
+   "playerUid": "13146f06e35f7bd1b0",
+   "eventName": "LTC #12 - Tournoi Caritatif - Warhammer 40K 2000pts (Alsace)",
+   "eventUid": "a3c02b80ff56b0c357",
+   "numberOfPlayers": 34,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Lions of the Emperor",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Zach Peterson",
+   "playerUid": "bead6a11c955ecfcd5",
+   "eventName": "Rook's 40k Open 2026",
+   "eventUid": "942b4ab6fe4ba44a70",
+   "numberOfPlayers": 78,
+   "numberOfRounds": 6,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Lions of the Emperor",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Perry Besore",
+   "playerUid": "4f6d2c2c0dca1051d2",
+   "eventName": "Gongaii GT - The Great Game - Fall 2026",
+   "eventUid": "69960fafa887079a5f",
+   "numberOfPlayers": 48,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Might of the Moritoi | Shield Host",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Martin Vedia",
+   "playerUid": "73c8f5eb2cbc802f05",
+   "eventName": "GT WASHIN REVENGE 2026",
+   "eventUid": "10711fecb9f5a65e8c",
+   "numberOfPlayers": 34,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Lions of the Emperor",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Josh Brayford",
+   "playerUid": "9a383bcf4309b53e9b",
+   "eventName": "Imps Gaming + Hive City Gaming GT October 2026",
+   "eventUid": "87b876331c8a5311a8",
+   "numberOfPlayers": 29,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Lions of the Emperor",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Hendy D",
+   "playerUid": "fcd1b2c7f8f4a68a80",
+   "eventName": "The Hunt for the Red Ork-tober",
+   "eventUid": "f3a8150e12fa7fc939",
+   "numberOfPlayers": 28,
+   "numberOfRounds": 6,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Lions of the Emperor",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Craig Pendlington",
+   "playerUid": "57c50fc3323cbefb4b",
+   "eventName": "Autumn Slaughter GT at Red October Games",
+   "eventUid": "a86eb2068d81bda79e",
+   "numberOfPlayers": 26,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Lions of the Emperor",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Mike Gruenberg",
+   "playerUid": "ff75a47fd978a463d3",
+   "eventName": "LVO 2026 - Warhammer 40k Championships - Las Vegas Open",
+   "eventUid": "1f5cf8ab5f28571388",
+   "numberOfPlayers": 652,
+   "numberOfRounds": 10,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Lions of the Emperor",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-02"
+  },
+  {
+   "playerName": "Tyler Stice",
+   "playerUid": "12a080244fa3c329b9",
+   "eventName": "LVO 2026 - Warhammer 40k Championships - Las Vegas Open",
+   "eventUid": "1f5cf8ab5f28571388",
+   "numberOfPlayers": 652,
+   "numberOfRounds": 10,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Lions of the Emperor",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-02"
+  },
+  {
+   "playerName": "Cam Howard",
+   "playerUid": "ad6ef9806ad557296f",
+   "eventName": "LVO 2026 - Warhammer 40k Championships - Las Vegas Open",
+   "eventUid": "1f5cf8ab5f28571388",
+   "numberOfPlayers": 652,
+   "numberOfRounds": 10,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Lions of the Emperor",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-02"
+  },
+  {
+   "playerName": "Marc Pesant",
+   "playerUid": "53803a69a0eb5e9da9",
+   "eventName": "LVO 2026 - Warhammer 40k Championships - Las Vegas Open",
+   "eventUid": "1f5cf8ab5f28571388",
+   "numberOfPlayers": 652,
+   "numberOfRounds": 10,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Might of the Moritoi | Shield Host",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-02"
+  },
+  {
+   "playerName": "Igor Bourjac",
+   "playerUid": "2914d18ae25cb3821d",
+   "eventName": "Open Les Dés Salés 1",
+   "eventUid": "f940961ad071f8f1f4",
+   "numberOfPlayers": 82,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Lions of the Emperor",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-03"
+  }
+ ],
+ "listes_total_site": 189
+}

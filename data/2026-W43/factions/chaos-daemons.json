@@ -1,0 +1,1081 @@
+{
+ "nom": "Chaos Daemons",
+ "slug": "chaos-daemons",
+ "periode": {
+  "wins": 82,
+  "losses": 79,
+  "total": 161,
+  "winRate": "50.93"
+ },
+ "joueurs": 30,
+ "invaincus": 0,
+ "x1": 4,
+ "victoires_tournoi": 0,
+ "sur_representation": "0.33",
+ "dispositions": {
+  "Disruption": 2,
+  "Priority Assets": 2,
+  "Purge the Foe": 11,
+  "Reconnaissance": 2,
+  "Take and Hold": 13
+ },
+ "combinaisons": [
+  {
+   "detachment": "Daemonic Incursion",
+   "players": 7,
+   "fieldPercent": 23.333333333333332,
+   "wins": 19,
+   "losses": 18,
+   "total": 37,
+   "winRate": "51.35"
+  },
+  {
+   "detachment": "Blood Legion | Cavalcade of Chaos",
+   "players": 6,
+   "fieldPercent": 20,
+   "wins": 18,
+   "losses": 17,
+   "total": 35,
+   "winRate": "51.43"
+  },
+  {
+   "detachment": "Blood Legion | Warptide",
+   "players": 3,
+   "fieldPercent": 10,
+   "wins": 9,
+   "losses": 8,
+   "total": 17,
+   "winRate": "52.94"
+  },
+  {
+   "detachment": "Plague Legion | Warptide",
+   "players": 3,
+   "fieldPercent": 10,
+   "wins": 10,
+   "losses": 4,
+   "total": 14,
+   "winRate": "71.43"
+  },
+  {
+   "detachment": "Cavalcade of Chaos | Shadow Legion",
+   "players": 2,
+   "fieldPercent": 6.666666666666667,
+   "wins": 6,
+   "losses": 10,
+   "total": 16,
+   "winRate": "37.50"
+  },
+  {
+   "detachment": "Lords of the Warp | Plague Legion",
+   "players": 2,
+   "fieldPercent": 6.666666666666667,
+   "wins": 4,
+   "losses": 9,
+   "total": 13,
+   "winRate": "30.77"
+  },
+  {
+   "detachment": "Scintillating Legion | Warptide",
+   "players": 2,
+   "fieldPercent": 6.666666666666667,
+   "wins": 7,
+   "losses": 3,
+   "total": 10,
+   "winRate": "70.00"
+  },
+  {
+   "detachment": "Cavalcade of Chaos | Plague Legion",
+   "players": 1,
+   "fieldPercent": 3.3333333333333335,
+   "wins": 2,
+   "losses": 1,
+   "total": 3,
+   "winRate": "66.67"
+  },
+  {
+   "detachment": "Cavalcade of Chaos | Scintillating Legion",
+   "players": 1,
+   "fieldPercent": 3.3333333333333335,
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00"
+  },
+  {
+   "detachment": "Legion of Excess | Warptide",
+   "players": 1,
+   "fieldPercent": 3.3333333333333335,
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00"
+  },
+  {
+   "detachment": "Lords of the Warp | Scintillating Legion",
+   "players": 1,
+   "fieldPercent": 3.3333333333333335,
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00"
+  },
+  {
+   "detachment": "Shadow Legion",
+   "players": 1,
+   "fieldPercent": 3.3333333333333335,
+   "wins": 1,
+   "losses": 2,
+   "total": 3,
+   "winRate": "33.33"
+  }
+ ],
+ "adversaires": [
+  {
+   "opponentFaction": "Adepta Sororitas",
+   "wins": 3,
+   "losses": 5,
+   "total": 8,
+   "winRate": "37.50",
+   "avgDifferential": -7.625,
+   "differentialGames": 8,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 2,
+    "total": 4,
+    "winRate": "50.00",
+    "avgDifferential": 10.5,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "Adeptus Custodes",
+   "wins": 10,
+   "losses": 8,
+   "total": 18,
+   "winRate": "55.56",
+   "avgDifferential": 9.88888888888889,
+   "differentialGames": 18,
+   "goingFirst": {
+    "wins": 4,
+    "losses": 4,
+    "total": 8,
+    "winRate": "50.00",
+    "avgDifferential": 0.75,
+    "differentialGames": 8
+   }
+  },
+  {
+   "opponentFaction": "Adeptus Mechanicus",
+   "wins": 3,
+   "losses": 4,
+   "total": 7,
+   "winRate": "42.86",
+   "avgDifferential": 2.142857142857143,
+   "differentialGames": 7,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 1,
+    "total": 3,
+    "winRate": "66.67",
+    "avgDifferential": 21.666666666666668,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Aeldari",
+   "wins": 1,
+   "losses": 5,
+   "total": 6,
+   "winRate": "16.67",
+   "avgDifferential": -42.333333333333336,
+   "differentialGames": 6,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 2,
+    "total": 3,
+    "winRate": "33.33",
+    "avgDifferential": -20.333333333333332,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Black Templars",
+   "wins": 2,
+   "losses": 1,
+   "total": 3,
+   "winRate": "66.67",
+   "avgDifferential": 7,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -23,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Blood Angels",
+   "wins": 3,
+   "losses": 4,
+   "total": 7,
+   "winRate": "42.86",
+   "avgDifferential": -16.285714285714285,
+   "differentialGames": 7,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 2,
+    "total": 2,
+    "winRate": "0.00",
+    "avgDifferential": -43,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Chaos Knights",
+   "wins": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": -5.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 8,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Dark Angels",
+   "wins": 6,
+   "losses": 4,
+   "total": 10,
+   "winRate": "60.00",
+   "avgDifferential": 12.3,
+   "differentialGames": 10,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 3,
+    "total": 5,
+    "winRate": "40.00",
+    "avgDifferential": -6.6,
+    "differentialGames": 5
+   }
+  },
+  {
+   "opponentFaction": "Death Guard",
+   "wins": 4,
+   "losses": 5,
+   "total": 9,
+   "winRate": "44.44",
+   "avgDifferential": 4.333333333333333,
+   "differentialGames": 9,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 2,
+    "total": 5,
+    "winRate": "60.00",
+    "avgDifferential": 17.8,
+    "differentialGames": 5
+   }
+  },
+  {
+   "opponentFaction": "Deathwatch",
+   "wins": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": -0.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -22,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Drukhari",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 67,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Emperor's Children",
+   "wins": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": 5.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Genestealer Cult",
+   "wins": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": -20.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 27,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Grey Knights",
+   "wins": 1,
+   "losses": 2,
+   "total": 3,
+   "winRate": "33.33",
+   "avgDifferential": -7.666666666666667,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 38,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Imperial Knights",
+   "wins": 2,
+   "losses": 4,
+   "total": 6,
+   "winRate": "33.33",
+   "avgDifferential": -12.333333333333334,
+   "differentialGames": 6,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 2,
+    "total": 3,
+    "winRate": "33.33",
+    "avgDifferential": 0.3333333333333333,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Leagues of Votann",
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00",
+   "avgDifferential": 1.8,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": -8,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Necrons",
+   "wins": 7,
+   "losses": 7,
+   "total": 14,
+   "winRate": "50.00",
+   "avgDifferential": 1.3571428571428572,
+   "differentialGames": 14,
+   "goingFirst": {
+    "wins": 7,
+    "losses": 2,
+    "total": 9,
+    "winRate": "77.78",
+    "avgDifferential": 17.333333333333332,
+    "differentialGames": 9
+   }
+  },
+  {
+   "opponentFaction": "Orks",
+   "wins": 6,
+   "losses": 3,
+   "total": 9,
+   "winRate": "66.67",
+   "avgDifferential": 17.666666666666668,
+   "differentialGames": 9,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 1,
+    "total": 3,
+    "winRate": "66.67",
+    "avgDifferential": 29.333333333333332,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Space Marines (Astartes)",
+   "wins": 6,
+   "losses": 6,
+   "total": 12,
+   "winRate": "50.00",
+   "avgDifferential": -6.545454545454546,
+   "differentialGames": 11,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 2,
+    "total": 4,
+    "winRate": "50.00",
+    "avgDifferential": -13.75,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "Space Wolves",
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00",
+   "avgDifferential": 13.25,
+   "differentialGames": 4,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 2,
+    "total": 2,
+    "winRate": "0.00",
+    "avgDifferential": -21.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "T'au Empire",
+   "wins": 6,
+   "losses": 2,
+   "total": 8,
+   "winRate": "75.00",
+   "avgDifferential": 11.75,
+   "differentialGames": 8,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": -9,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Thousand Sons",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 51,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 51,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Tyranids",
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00",
+   "avgDifferential": 6.8,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 1,
+    "total": 4,
+    "winRate": "75.00",
+    "avgDifferential": 16.75,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "World Eaters",
+   "wins": 8,
+   "losses": 5,
+   "total": 13,
+   "winRate": "61.54",
+   "avgDifferential": 10.846153846153847,
+   "differentialGames": 13,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 2,
+    "total": 5,
+    "winRate": "60.00",
+    "avgDifferential": 6.4,
+    "differentialGames": 5
+   }
+  },
+  {
+   "opponentFaction": "Astra Militarum",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -71,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Chaos Space Marines",
+   "wins": 0,
+   "losses": 2,
+   "total": 2,
+   "winRate": "0.00",
+   "avgDifferential": -59,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -90,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Imperial Agents",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -7,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -7,
+    "differentialGames": 1
+   }
+  }
+ ],
+ "tendance": [
+  {
+   "week": "2026-06-21",
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00"
+  },
+  {
+   "week": "2026-06-28",
+   "wins": 50,
+   "losses": 37,
+   "total": 87,
+   "winRate": "57.47"
+  },
+  {
+   "week": "2026-07-05",
+   "wins": 70,
+   "losses": 51,
+   "total": 121,
+   "winRate": "57.85"
+  },
+  {
+   "week": "2026-07-12",
+   "wins": 108,
+   "losses": 106,
+   "total": 214,
+   "winRate": "50.47"
+  },
+  {
+   "week": "2026-07-19",
+   "wins": 130,
+   "losses": 121,
+   "total": 251,
+   "winRate": "51.79"
+  },
+  {
+   "week": "2026-07-26",
+   "wins": 89,
+   "losses": 87,
+   "total": 176,
+   "winRate": "50.57"
+  },
+  {
+   "week": "2026-08-02",
+   "wins": 128,
+   "losses": 98,
+   "total": 226,
+   "winRate": "56.64"
+  },
+  {
+   "week": "2026-08-09",
+   "wins": 63,
+   "losses": 66,
+   "total": 129,
+   "winRate": "48.84"
+  },
+  {
+   "week": "2026-08-16",
+   "wins": 275,
+   "losses": 195,
+   "total": 470,
+   "winRate": "58.51"
+  },
+  {
+   "week": "2026-08-23",
+   "wins": 116,
+   "losses": 70,
+   "total": 186,
+   "winRate": "62.37"
+  },
+  {
+   "week": "2026-08-30",
+   "wins": 129,
+   "losses": 107,
+   "total": 236,
+   "winRate": "54.66"
+  },
+  {
+   "week": "2026-09-06",
+   "wins": 127,
+   "losses": 121,
+   "total": 248,
+   "winRate": "51.21"
+  },
+  {
+   "week": "2026-09-13",
+   "wins": 119,
+   "losses": 129,
+   "total": 248,
+   "winRate": "47.98"
+  },
+  {
+   "week": "2026-09-20",
+   "wins": 74,
+   "losses": 62,
+   "total": 136,
+   "winRate": "54.41"
+  },
+  {
+   "week": "2026-09-27",
+   "wins": 134,
+   "losses": 121,
+   "total": 255,
+   "winRate": "52.55"
+  },
+  {
+   "week": "2026-10-04",
+   "wins": 110,
+   "losses": 109,
+   "total": 219,
+   "winRate": "50.23"
+  },
+  {
+   "week": "2026-10-11",
+   "wins": 95,
+   "losses": 90,
+   "total": 185,
+   "winRate": "51.35"
+  },
+  {
+   "week": "2026-10-18",
+   "wins": 88,
+   "losses": 121,
+   "total": 209,
+   "winRate": "42.11"
+  },
+  {
+   "week": "2026-10-25",
+   "wins": 82,
+   "losses": 79,
+   "total": 161,
+   "winRate": "50.93"
+  }
+ ],
+ "listes_recentes": [
+  {
+   "playerName": "Byron 🔥🎲 Sidhu",
+   "playerUid": "f975683f225800eac2",
+   "eventName": "THE COVENTRY 40K : 2-Day",
+   "eventUid": "a5048c9937fc23b9ad",
+   "numberOfPlayers": 110,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Daemonic Incursion",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Calum Collie",
+   "playerUid": "e988b9798ea9439145",
+   "eventName": "Grampian Gaming Guild Oct. GT",
+   "eventUid": "b44763b389e4f00a6b",
+   "numberOfPlayers": 42,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Plague Legion | Warptide",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Simon Brown",
+   "playerUid": "17d5f6c3de89b96460",
+   "eventName": "Hell's Basement GT 2026",
+   "eventUid": "199fab052552d2056f",
+   "numberOfPlayers": 40,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Plague Legion | Warptide",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Kyriakos Kamarakis",
+   "playerUid": "c9e1c680dcada7db54",
+   "eventName": "GANGSTA BEAR CHAMPIONSHIP",
+   "eventUid": "ed2b93d117361e1f4e",
+   "numberOfPlayers": 29,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Blood Legion | Cavalcade of Chaos",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "David T.",
+   "playerUid": "391a36cc739f60f6b6",
+   "eventName": "Cata Cup 2026 Warhammer 40K Grand Tournament",
+   "eventUid": "4dcdf7bcbb268ab973",
+   "numberOfPlayers": 29,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 1,
+   "losses": 0,
+   "detachment": "Shadow Legion | Cavalcade of Chaos",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Stefan Love",
+   "playerUid": "db0479cd38690cb173",
+   "eventName": "Malmö Wargaming Weekend X",
+   "eventUid": "4a41b46ebf7978f2ac",
+   "numberOfPlayers": 176,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Plague Legion | Warptide",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Baxter Seguin",
+   "playerUid": "1734aa91f0a110e200",
+   "eventName": "Garden City Open GT",
+   "eventUid": "17b244d867da7cc30f",
+   "numberOfPlayers": 43,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Shadow Legion | Cavalcade of Chaos",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Stephen Olszewski",
+   "playerUid": "0d733b32424df6c73b",
+   "eventName": "Garden City Open GT",
+   "eventUid": "17b244d867da7cc30f",
+   "numberOfPlayers": 43,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Blood Legion | Warptide",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Blair Macdonald",
+   "playerUid": "2c2e3358fc8b68765d",
+   "eventName": "Beast Coast Gaming Fall Brawl 2026",
+   "eventUid": "ccbcca2ad561c03e63",
+   "numberOfPlayers": 40,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Blood Legion | Cavalcade of Chaos",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Joseph Petramalo",
+   "playerUid": "97a207eab0712a5bae",
+   "eventName": "VFW October GT",
+   "eventUid": "08d40f0961a3391cb9",
+   "numberOfPlayers": 30,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Blood Legion | Cavalcade of Chaos",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Sam Anderson",
+   "playerUid": "b03fd9eccaf8cf2526",
+   "eventName": "2026 Miniature Market WH 40k Warehouse Grand Tournament",
+   "eventUid": "0e122b3eed45c5b2c9",
+   "numberOfPlayers": 43,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Blood Legion | Warptide",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Nicholas Rupel",
+   "playerUid": "e60e0d62552608a489",
+   "eventName": "2026 Miniature Market WH 40k Warehouse Grand Tournament",
+   "eventUid": "0e122b3eed45c5b2c9",
+   "numberOfPlayers": 43,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Blood Legion | Warptide",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Mike Pestilens",
+   "playerUid": "7fc5898577e3198947",
+   "eventName": "Denver 40K Fight Club Oct. Open ‘26",
+   "eventUid": "b68c369f61c3e3f379",
+   "numberOfPlayers": 105,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Daemonic Incursion",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Adam Willmarth",
+   "playerUid": "b16c2750f5c87bb47f",
+   "eventName": "Rook's 40k Open 2026",
+   "eventUid": "942b4ab6fe4ba44a70",
+   "numberOfPlayers": 78,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Blood Legion | Cavalcade of Chaos",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Stephen Olszewski",
+   "playerUid": "0d733b32424df6c73b",
+   "eventName": "Games4Life's 2-Day 40k GT!",
+   "eventUid": "55904da220805b3da0",
+   "numberOfPlayers": 28,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Blood Legion | Warptide",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Nicolas Francone",
+   "playerUid": "819a9862846c29a5a8",
+   "eventName": "Golden Dawn IV",
+   "eventUid": "7036473027cae92bd6",
+   "numberOfPlayers": 26,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Plague Legion | Warptide",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "john swallow",
+   "playerUid": "8f3842758761bd7e6e",
+   "eventName": "LVO 2026 - Warhammer 40k Championships - Las Vegas Open",
+   "eventUid": "1f5cf8ab5f28571388",
+   "numberOfPlayers": 652,
+   "numberOfRounds": 10,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Blood Legion | Cavalcade of Chaos",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-02"
+  },
+  {
+   "playerName": "Bastien \"Vlad\" Deterre",
+   "playerUid": "13773f52a5b24b1438",
+   "eventName": "Open Les Dés Salés 1",
+   "eventUid": "f940961ad071f8f1f4",
+   "numberOfPlayers": 82,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Blood Legion | Cavalcade of Chaos",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-03"
+  },
+  {
+   "playerName": "David T.",
+   "playerUid": "391a36cc739f60f6b6",
+   "eventName": "Dragon Fall 2026 40K Champs",
+   "eventUid": "8e92c2309a61cd7b30",
+   "numberOfPlayers": 55,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Shadow Legion | Cavalcade of Chaos",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-03"
+  },
+  {
+   "playerName": "Sebastian Kipling",
+   "playerUid": "084c3a01b1f6cb8df7",
+   "eventName": "3. Traunstein Cup",
+   "eventUid": "13e48d394a10821d5d",
+   "numberOfPlayers": 34,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Cavalcade of Chaos | Scintillating Legion",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-03"
+  },
+  {
+   "playerName": "Matthieu Dinet",
+   "playerUid": "50b068522b46ed0dc5",
+   "eventName": "Grand Pitounerie 2 Open 40k de Loire Atlantique",
+   "eventUid": "1bc469b11620503166",
+   "numberOfPlayers": 86,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Blood Legion | Cavalcade of Chaos",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-09-26"
+  },
+  {
+   "playerName": "Byron 🔥🎲 Sidhu",
+   "playerUid": "f975683f225800eac2",
+   "eventName": "The London Grand Tournament - 40k Main Event (LGT 40k GT)",
+   "eventUid": "4848688a4a9990005c",
+   "numberOfPlayers": 1049,
+   "numberOfRounds": 10,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Warptide | Legion of Excess",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-25"
+  },
+  {
+   "playerName": "Andrew Hope",
+   "playerUid": "27c0823ed80eb6e0e0",
+   "eventName": "The London Grand Tournament - 40k Main Event (LGT 40k GT)",
+   "eventUid": "4848688a4a9990005c",
+   "numberOfPlayers": 1049,
+   "numberOfRounds": 10,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Warptide | Legion of Excess",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-09-25"
+  },
+  {
+   "playerName": "Mark Cable",
+   "playerUid": "a1f3fe152f801e514d",
+   "eventName": "The London Grand Tournament - 40k Main Event (LGT 40k GT)",
+   "eventUid": "4848688a4a9990005c",
+   "numberOfPlayers": 1049,
+   "numberOfRounds": 10,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Daemonic Incursion",
+   "disposition": "Take and Hold",
+   "startDate": "2026-09-25"
+  },
+  {
+   "playerName": "Steve Boothroyd",
+   "playerUid": "9fdb77351580e876fb",
+   "eventName": "The London Grand Tournament - 40k Main Event (LGT 40k GT)",
+   "eventUid": "4848688a4a9990005c",
+   "numberOfPlayers": 1049,
+   "numberOfRounds": 10,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Blood Legion | Cavalcade of Chaos",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-09-25"
+  }
+ ],
+ "listes_total_site": 116
+}

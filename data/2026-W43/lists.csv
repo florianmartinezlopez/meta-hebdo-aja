@@ -1,0 +1,176 @@
+faction,playerName,playerUid,eventName,eventUid,numberOfPlayers,numberOfRounds,wins,draws,losses,detachment,disposition,startDate
+Adepta Sororitas,Jordan McGregor,de8a20ba34934429c5,Sydney GT October,13971701792399ddc4,62,5,5,0,0,Unknown,Purge the Foe,2026-10-23
+Adepta Sororitas,Aaron Knight,d518bfd02aee303ca5,Grampian Gaming Guild Oct. GT,b44763b389e4f00a6b,42,5,5,0,0,Chorus of Condemnation | Bringers of Flame,Priority Assets,2026-10-24
+Adepta Sororitas,Janne Laurila,675f783338a856273f,40k Canteen Brawl 2026,692949abdbff688d75,34,5,5,0,0,Sanctified Orators | Champions of Faith,Disruption,2026-10-24
+Adepta Sororitas,"Roland ""Byakuren""",3b45324db6c2d878fd,40k Ogr Cubb Singles,86e5e0399580a8e8f6,50,5,4,0,1,Chorus of Condemnation | Bringers of Flame,Priority Assets,2026-10-24
+Adepta Sororitas,Druchii,42dfc252a7174e89fd,Limoges Wargames solo 2000pts,e4567f631dfd15df69,45,5,4,0,1,Hallowed Martyrs,Priority Assets,2026-10-24
+Adepta Sororitas,Mike Lew,4c9687e4825d54e2d4,Clever Kobold's Halloween Hellscape GT,3e86649850cb0270f2,32,5,4,0,1,Chorus of Condemnation | Bringers of Flame,Priority Assets,2026-10-24
+Adepta Sororitas,Trenton Jannaman,612927800667aa7173,24 & 25 October 2026 - OWN's Breaking Point GT at Game HQ,f1ebd4d25dafa550e1,29,5,4,0,1,Hallowed Martyrs,Priority Assets,2026-10-24
+Adeptus Custodes,Liam Callebout,a55090409c0932b356,THE COVENTRY 40K : 3-Day,25b07168ad3821edef,142,8,7,0,1,Might of the Moritoi | Lions of the Emperor | Solar Watch,Take and Hold,2026-10-23
+Adeptus Custodes,Taylor Bivona,80f8c6639f265dc0d4,Battle for the Big Country,42ca421c191002e74c,20,5,5,0,0,Emperor's Chosen | Might of the Moritoi | Lions of the Emperor,Take and Hold,2026-10-24
+Adeptus Custodes,Simon Edwards,e782be45c5f09f9274,THE COVENTRY 40K : 2-Day,a5048c9937fc23b9ad,110,5,4,0,1,Might of the Moritoi | Lions of the Emperor | Solar Watch,Take and Hold,2026-10-24
+Adeptus Custodes,Hunter Boyd,26c0f952b0c0f296ca,RCM: Night of the Wolf 2026,181348e066d94710f2,29,5,4,0,1,Emperor's Chosen | Might of the Moritoi | Lions of the Emperor,Take and Hold,2026-10-24
+Adeptus Custodes,Dominik Tavernaro,f0416cafc89dba6076,Kärntner Meisterschaften 2026,8d24057c930132c07a,25,5,4,0,1,Honoured Companions | Might of the Moritoi | Solar Watch,Take and Hold,2026-10-24
+Adeptus Custodes,Ross Daveni,6726cf437b542885d3,Dicehead 40k GT: Return of the Maul,546b598d76dcf51581,18,5,4,0,1,Emperor's Chosen | Lions of the Emperor | Auric Champions,Disruption,2026-10-24
+Adeptus Custodes,Aaron Moat,f9352ea7a38fda5e8c,Turbulent Games Warhammer 40K GT @Kee Con,f6a31d7451d4902b91,16,5,4,0,1,Emperor's Chosen | Might of the Moritoi | Lions of the Emperor,Priority Assets,2026-10-24
+Adeptus Mechanicus,Sam Nash,fed669e1fa4018c88a,THE COVENTRY 40K : 3-Day,25b07168ad3821edef,142,8,8,0,0,Cohort Cybernetica | Eradication Cohort,Take and Hold,2026-10-23
+Adeptus Mechanicus,Danny Evison,622ab86196c5d108f0,THE COVENTRY 40K : 2-Day,a5048c9937fc23b9ad,110,5,4,0,1,Cohort Cybernetica | Eradication Cohort,Take and Hold,2026-10-24
+Adeptus Mechanicus,Patrick Harrison,1eaffa9fb326924003,THE COVENTRY 40K : 2-Day,a5048c9937fc23b9ad,110,5,4,0,1,Cohort Cybernetica | Eradication Cohort,Take and Hold,2026-10-24
+Adeptus Mechanicus,Vlasta Král,e2ebdab414e7924e75,40k Ogr Cubb Singles,86e5e0399580a8e8f6,50,5,4,0,1,Lords of the Forge | Cohort Cybernetica,Priority Assets,2026-10-24
+Adeptus Mechanicus,Jonáš Čábelka,6c7c79e91b81da5a77,40k Ogr Cubb Singles,86e5e0399580a8e8f6,50,5,4,0,1,Cohort Cybernetica | Eradication Cohort,Take and Hold,2026-10-24
+Adeptus Mechanicus,Preston Southan,0ba7b4e9d6780a56ff,Adeptus 5-0 Jailbreak Event Hosted by Away Games,1b49ae4ddbcf5b86b9,36,5,4,0,1,Cohort Cybernetica | Eradication Cohort,Purge the Foe,2026-10-24
+Adeptus Mechanicus,Vasileios Georgopoulos,99b6985f1b9c2951e0,GANGSTA BEAR CHAMPIONSHIP,ed2b93d117361e1f4e,29,5,4,0,1,Cohort Cybernetica | Eradication Cohort,Purge the Foe,2026-10-24
+Adeptus Mechanicus,Noah Keeth,11dc53f3aea32b297f,Bolters And Boogeymen Bazooka GT,f37326f3876d927a9a,28,5,4,0,1,Lords of the Forge | Cohort Cybernetica,Take and Hold,2026-10-24
+Adeptus Mechanicus,Mathew Sneed,c4cc2a9217a6487804,ValleyCon GT,867a329a8817acb286,26,5,4,0,1,Cohort Cybernetica | Eradication Cohort,Purge the Foe,2026-10-24
+Adeptus Mechanicus,José Carlos García Reyes,7b25ca781805b52849,The Guild 5th GT,606d3c34f30c25b6f8,23,5,4,0,1,Cohort Cybernetica | Eradication Cohort,Purge the Foe,2026-10-24
+Aeldari,Colin Power,3a74defb2153919da9,Gaelcon 2026,bae35c07d163b4f605,47,5,5,0,0,Aspect Host,Reconnaissance,2026-10-24
+Aeldari,Nathan Evans,aeb4e5c1d67651e8ed,THE COVENTRY 40K : 2-Day,a5048c9937fc23b9ad,110,5,4,0,1,Armoured Warhost | Seer Council,Priority Assets,2026-10-24
+Aeldari,Kaleb Wagar,0c3c35632b161a6759,Fun-N-Games October GT 2026,8808e388f16b2ab450,26,5,4,0,1,Fateful Performance | Seer Council,Disruption,2026-10-24
+Aeldari,Jared Kinsella,70c574af556802d427,The Hogtowner 2026,c4f90078b78f068771,24,5,4,0,1,Corsair Coterie | Path of the Outcast,Priority Assets,2026-10-24
+Astra Militarum,Ben Keogh,8a5efb778b005e89df,Gaelcon 2026,bae35c07d163b4f605,47,5,4,0,1,Grizzled Company,Priority Assets,2026-10-24
+Black Templars,Steven Schwartz,8d462d1506795b504d,Dicehead 40k GT: Return of the Maul,546b598d76dcf51581,18,5,5,0,0,Assault Brethren | Tacticus Attack Force | Marshal's Household,Priority Assets,2026-10-24
+Black Templars,Finlay Stewart,1f9c0dcc9ad60e7936,THE COVENTRY 40K : 2-Day,a5048c9937fc23b9ad,110,5,4,0,1,Assault Brethren | Vow-sworn Crusaders,Purge the Foe,2026-10-24
+Blood Angels,Joe Loke,0f2ddf25b6fe3dbb03,Sydney GT October,13971701792399ddc4,62,5,5,0,0,Ironclad Champions | Assault Brethren | Tacticus Attack Force,Take and Hold,2026-10-23
+Blood Angels,Erik Rostamo,262bf2a156bb3a9263,24 & 25 October 2026 - OWN's Breaking Point GT at Game HQ,f1ebd4d25dafa550e1,29,5,5,0,0,Tactical Brethren | Ironstorm Spearhead | Encarmine Speartip,Purge the Foe,2026-10-24
+Blood Angels,Tim Verbeek,b562d3ea0c281410a7,Gaelcon 2026,bae35c07d163b4f605,47,5,4,0,1,Assault Brethren | Ironstorm Spearhead | Tacticus Attack Force,Purge the Foe,2026-10-24
+Blood Angels,Nick Gaddis,37c4b46ec7dacb5841,Warhound GT in October,47548b0981b13ba59e,40,5,4,0,1,Stormlance Task Force | Assault Brethren | Ironstorm Spearhead,Purge the Foe,2026-10-24
+Blood Angels,Arturo Gonzalez,ea26c6cd35295b9606,Treasure Trove Games - Warhammer 40k Grim Harvest GT 2026,7cedbcd10a07438819,30,5,4,0,1,Angelic Inheritors,Priority Assets,2026-10-24
+Chaos Daemons,Byron 🔥🎲 Sidhu,f975683f225800eac2,THE COVENTRY 40K : 2-Day,a5048c9937fc23b9ad,110,5,4,0,1,Daemonic Incursion,Take and Hold,2026-10-24
+Chaos Daemons,Calum Collie,e988b9798ea9439145,Grampian Gaming Guild Oct. GT,b44763b389e4f00a6b,42,5,4,0,1,Plague Legion | Warptide,Take and Hold,2026-10-24
+Chaos Daemons,Simon Brown,17d5f6c3de89b96460,Hell's Basement GT 2026,199fab052552d2056f,40,5,4,0,1,Plague Legion | Warptide,Take and Hold,2026-10-24
+Chaos Daemons,Kyriakos Kamarakis,c9e1c680dcada7db54,GANGSTA BEAR CHAMPIONSHIP,ed2b93d117361e1f4e,29,5,4,0,1,Blood Legion | Cavalcade of Chaos,Purge the Foe,2026-10-24
+Chaos Space Marines,Jameson Haytas,fb69c2827dc5c10ed0,Treasure Trove Games - Warhammer 40k Grim Harvest GT 2026,7cedbcd10a07438819,30,5,5,0,0,Veterans of the Long War | Cabal of Chaos,Take and Hold,2026-10-24
+Chaos Space Marines,TJ Lanigan,c1e7e5d748e3b1008b,Bolters And Boogeymen Bazooka GT,f37326f3876d927a9a,28,5,5,0,0,Chaos Cult | Cabal of Chaos,Priority Assets,2026-10-24
+Chaos Space Marines,Samuel 🌌🛠 Smith,7e59e7e05edbd46fbe,THE COVENTRY 40K : 2-Day,a5048c9937fc23b9ad,110,5,4,0,1,Pactbound Zealots,Priority Assets,2026-10-24
+Chaos Space Marines,Emory Garrett,43d2bcd73b59e99c87,Adeptus 5-0 Jailbreak Event Hosted by Away Games,1b49ae4ddbcf5b86b9,36,5,4,0,1,Veterans of the Long War | Cabal of Chaos,Take and Hold,2026-10-24
+Chaos Space Marines,David Bierek,d9a656465cb3eccea7,Treasure Trove Games - Warhammer 40k Grim Harvest GT 2026,7cedbcd10a07438819,30,5,4,0,1,Renegade Warband | Cabal of Chaos,Priority Assets,2026-10-24
+Dark Angels,Benjamin Rubenstein,1f97b9b57bfb1d5f08,Clever Kobold's Halloween Hellscape GT,3e86649850cb0270f2,32,5,5,0,0,Deathwatch Support | Ironstorm Spearhead | Darkflight Pursuit,Reconnaissance,2026-10-24
+Dark Angels,Jay Seebarun,a6bb228e97c0314d49,THE COVENTRY 40K : 3-Day,25b07168ad3821edef,142,8,5,0,1,Terminator Storm Force | Deathwatch Support | Assault Brethren,Take and Hold,2026-10-23
+Dark Angels,Jan Reisenauer,bc6395d8a17ae9b4c9,9th Corsair Open Grand Tournament,32fa6b613a957918cf,43,6,5,0,1,Stormlance Task Force | Assault Brethren | Darkflight Pursuit,Reconnaissance,2026-10-23
+Dark Angels,Ben Hackländer,a85da646c74dcb6c0f,9th Corsair Open Grand Tournament,32fa6b613a957918cf,43,6,5,0,1,Stormlance Task Force | Ironstorm Spearhead | Darkflight Pursuit,Purge the Foe,2026-10-23
+Dark Angels,Harry Aitchison,a170d887a5fd7f61e9,THE COVENTRY 40K : 2-Day,a5048c9937fc23b9ad,110,5,4,0,1,Stormlance Task Force | Phobos Shadow Force | Darkflight Pursuit,Reconnaissance,2026-10-24
+Dark Angels,Štěpán Halla,1444c13ed21a8b8aba,40k Ogr Cubb Singles,86e5e0399580a8e8f6,50,5,4,0,1,Stormlance Task Force | Ironstorm Spearhead | Darkflight Pursuit,Reconnaissance,2026-10-24
+Dark Angels,Marek Bernard,4a117bad35e58fefe1,40k Ogr Cubb Singles,86e5e0399580a8e8f6,50,5,4,0,1,Terminator Storm Force | Assault Brethren | Ironstorm Spearhead,Take and Hold,2026-10-24
+Dark Angels,Ben Stafford,601de87e731db740e9,"OrktoberFest III: This time ,It's a Gt at Blue Hen",39639345c8421d6a95,41,5,4,0,1,Assault Brethren | Wrath of the Rock,Take and Hold,2026-10-24
+Dark Angels,Jordan Gledhill,b21858eb0a7cf8b7aa,Warhound GT in October,47548b0981b13ba59e,40,5,4,0,1,Stormlance Task Force | Assault Brethren | Darkflight Pursuit,Take and Hold,2026-10-24
+Dark Angels,Juha Ottelin,c6ae12d63c66ce2b8f,40k Canteen Brawl 2026,692949abdbff688d75,34,5,4,0,1,Stormlance Task Force | Ironstorm Spearhead | Darkflight Pursuit,Reconnaissance,2026-10-24
+Dark Angels,Roope Oksanen,f9d7c68a29be07b2d3,40k Canteen Brawl 2026,692949abdbff688d75,34,5,4,0,1,Deathwatch Support | Ironstorm Spearhead | Darkflight Pursuit,Purge the Foe,2026-10-24
+Dark Angels,Andreas Geretschläger,b04afb456c520e8b6d,Kärntner Meisterschaften 2026,8d24057c930132c07a,25,5,4,0,1,Assault Brethren | Wrath of the Rock,Take and Hold,2026-10-24
+Death Guard,Mani Cheema,cc0f93bb3512cc8e5e,THE COVENTRY 40K : 3-Day,25b07168ad3821edef,142,8,7,0,1,Paragons of Putrescence | Shamblerot Vectorium,Priority Assets,2026-10-23
+Death Guard,Craig Bedford,ec8d25cfbd9c824bf6,THE COVENTRY 40K : 3-Day,25b07168ad3821edef,142,8,7,0,1,Paragons of Putrescence | Shamblerot Vectorium,Priority Assets,2026-10-23
+Death Guard,Tayson Prete,134d6f6121ab15c1ea,Hell's Basement GT 2026,199fab052552d2056f,40,5,5,0,0,Paragons of Putrescence | Shamblerot Vectorium,Disruption,2026-10-24
+Death Guard,Peter Steiner,8e1145249236b0ab03,Kärntner Meisterschaften 2026,8d24057c930132c07a,25,5,5,0,0,Paragons of Putrescence | Shamblerot Vectorium,Priority Assets,2026-10-24
+Death Guard,Gary Lynch,88d90fe37fc7c6098e,Gaelcon 2026,bae35c07d163b4f605,47,5,4,0,1,Tallyband Summoners | Contagion Engines,Reconnaissance,2026-10-24
+Death Guard,ezerkil,d454b455a807d96e79,Limoges Wargames solo 2000pts,e4567f631dfd15df69,45,5,4,0,1,Paragons of Putrescence | Shamblerot Vectorium,Priority Assets,2026-10-24
+Death Guard,dodo_l_asticot,91bfbebefd0d492a3a,Limoges Wargames solo 2000pts,e4567f631dfd15df69,45,5,4,0,1,Paragons of Putrescence | Shamblerot Vectorium,Disruption,2026-10-24
+Death Guard,Matt Neeley,9657d16b4d37fc0080,24 & 25 October 2026 - OWN's Breaking Point GT at Game HQ,f1ebd4d25dafa550e1,29,5,4,0,1,Paragons of Putrescence | Shamblerot Vectorium,Priority Assets,2026-10-24
+Death Guard,Joshua Campbell,754914bef752a44717,Bolters And Boogeymen Bazooka GT,f37326f3876d927a9a,28,5,4,0,1,Paragons of Putrescence | Shamblerot Vectorium,Priority Assets,2026-10-24
+Death Guard,Brandon Johnson,44448ea392d51cefa0,ValleyCon GT,867a329a8817acb286,26,5,4,0,1,Virulent Vectorium,Purge the Foe,2026-10-24
+Drukhari,Aaron Weisbrod,374082df76449b03a0,The Hogtowner 2026,c4f90078b78f068771,24,5,5,0,0,Kabalite Agonysts | Skysplinter Assault,Reconnaissance,2026-10-24
+Drukhari,Paul Miglino,b8612b0d8c2f13f335,"OrktoberFest III: This time ,It's a Gt at Blue Hen",39639345c8421d6a95,41,5,4,0,1,Skysplinter Assault | Tools of Torment,Reconnaissance,2026-10-24
+Drukhari,Steven Hall,6ccd2915b3c1da5986,Warhound GT in October,47548b0981b13ba59e,40,5,4,0,1,Realspace Raiders | Tools of Torment,Priority Assets,2026-10-24
+Drukhari,David Johnson,93ee04f068842ff705,24 & 25 October 2026 - OWN's Breaking Point GT at Game HQ,f1ebd4d25dafa550e1,29,5,4,0,1,Spectacle of Spite | Exhibition of Slaughter,Purge the Foe,2026-10-24
+Emperor's Children,Simon Quinn,d621e223ec3b055170,Gaelcon 2026,bae35c07d163b4f605,47,5,4,0,1,Coterie of the Conceited,Purge the Foe,2026-10-24
+Emperor's Children,"Vasileios ""Griffith"" Tzachis",9938f69878cbdba890,GANGSTA BEAR CHAMPIONSHIP,ed2b93d117361e1f4e,29,5,4,0,1,Frenzied Host | Court of the Phoenician,Reconnaissance,2026-10-24
+Genestealer Cult,Sean McQuaid,043cc3ecf7edc85067,THE COVENTRY 40K : 2-Day,a5048c9937fc23b9ad,110,5,4,0,1,Host of Ascension,Reconnaissance,2026-10-24
+Genestealer Cult,Richard Simms,eff7a31bc773a6182f,Grampian Gaming Guild Oct. GT,b44763b389e4f00a6b,42,5,4,0,1,Purestrain Broodswarm | Biosanctic Broodsurge,Priority Assets,2026-10-24
+Grey Knights,Mark Tootill,5ca759bc18b201f829,Grampian Gaming Guild Oct. GT,b44763b389e4f00a6b,42,5,4,0,1,Brotherhood Strike | Argent Assault,Purge the Foe,2026-10-24
+Grey Knights,Noah Farris,1e72fbfa50a78edd66,"OrktoberFest III: This time ,It's a Gt at Blue Hen",39639345c8421d6a95,41,5,4,0,1,Hallowed Conclave | Argent Assault,Take and Hold,2026-10-24
+Grey Knights,Bill Adriaensen,02e548986c43b6a81c,Hell's Basement GT 2026,199fab052552d2056f,40,5,4,0,1,Unknown,Purge the Foe,2026-10-24
+Imperial Knights,Nicolas Weiss,f08e028c488f5e7811,ValleyCon GT,867a329a8817acb286,26,5,5,0,0,Valourstrike Lance | Dominus Foebreakers,Purge the Foe,2026-10-24
+Imperial Knights,Pinpin,941d26a5541e806f76,Limoges Wargames solo 2000pts,e4567f631dfd15df69,45,5,4,1,0,Valourstrike Lance | Dominus Foebreakers,Priority Assets,2026-10-24
+Imperial Knights,Qifan Zhu,0e3b394cbb54cb8063,Sydney GT October,13971701792399ddc4,62,5,4,0,1,Freeblade Company,Priority Assets,2026-10-23
+Imperial Knights,Levi Pawliw,3f7adaa16f5985e0be,Siege of Mordrax GT,56f6e4f1e7dc53348a,44,5,4,0,1,Valourstrike Lance | Questor Forgepact,Purge the Foe,2026-10-24
+Imperial Knights,Caleb Whittington,00ceb708db6bbc977a,Fun-N-Games October GT 2026,8808e388f16b2ab450,26,5,4,0,1,Freeblade Company,Purge the Foe,2026-10-24
+Leagues of Votann,Ondřej Med,dd9f9631d18a17cc98,40k Ogr Cubb Singles,86e5e0399580a8e8f6,50,5,4,0,1,Needgaârd Oathband | Hearthguard Covenant,Priority Assets,2026-10-24
+Leagues of Votann,Alex Najdek,0fb1aded565132da14,Treasure Trove Games - Warhammer 40k Grim Harvest GT 2026,7cedbcd10a07438819,30,5,4,0,1,Needgaârd Oathband | Hearthguard Covenant,Priority Assets,2026-10-24
+Leagues of Votann,Hyun-Young Kim,06157cfcd8f21367b7,CritCon26 40K GT,f0a1f6824aab56634c,19,5,4,0,1,Needgaârd Oathband | Hearthguard Covenant,Priority Assets,2026-10-24
+Necrons,Andy Quas-Cohen,30de3a91079c4ae44e,THE COVENTRY 40K : 2-Day,a5048c9937fc23b9ad,110,5,5,0,0,Awakened Dynasty,Take and Hold,2026-10-24
+Necrons,Brett Perkins,a65ee9e83ef8013c6d,Adeptus 5-0 Jailbreak Event Hosted by Away Games,1b49ae4ddbcf5b86b9,36,5,5,0,0,Cursed Legion | Skyshroud Spearhead,Purge the Foe,2026-10-24
+Necrons,Joe Cottrell,043231011acea4d57f,Fun-N-Games October GT 2026,8808e388f16b2ab450,26,5,5,0,0,Starshatter Arsenal,Purge the Foe,2026-10-24
+Necrons,Joseph Walsh,db8be25b427b1957c7,The Guild 5th GT,606d3c34f30c25b6f8,23,5,5,0,0,Hypercrypt Legion,Reconnaissance,2026-10-24
+Necrons,Aidan Bell,3922a3c6883682c12c,THE COVENTRY 40K : 2-Day,a5048c9937fc23b9ad,110,5,4,0,1,Awakened Dynasty,Take and Hold,2026-10-24
+Necrons,James Carmichael,85644e891c517a6104,Gaelcon 2026,bae35c07d163b4f605,47,5,4,0,1,Cursed Legion | Skyshroud Spearhead,Purge the Foe,2026-10-24
+Necrons,Peter Piccioni,b550f2fc18ad8b2237,Siege of Mordrax GT,56f6e4f1e7dc53348a,44,5,4,0,1,Cryptek Conclave | Skyshroud Spearhead,Reconnaissance,2026-10-24
+Necrons,James Campanella,46af53325b9fdcbd63,"OrktoberFest III: This time ,It's a Gt at Blue Hen",39639345c8421d6a95,41,5,4,0,1,Cryptek Conclave | Hand of the Dynasty,Priority Assets,2026-10-24
+Necrons,Rich Dudley,83375506d61ddaee55,Treasure Trove Games - Warhammer 40k Grim Harvest GT 2026,7cedbcd10a07438819,30,5,4,0,1,Cursed Legion | Skyshroud Spearhead,Purge the Foe,2026-10-24
+Necrons,George Topaltzikis,80fcde72e70215a955,GANGSTA BEAR CHAMPIONSHIP,ed2b93d117361e1f4e,29,5,4,0,1,Cursed Legion | Skyshroud Spearhead,Purge the Foe,2026-10-24
+Necrons,Joseph Smith-Tyler,48f03fec7565348216,RCM: Night of the Wolf 2026,181348e066d94710f2,29,5,4,0,1,The Phaeron's Armoury | Obeisance Phalanx,Priority Assets,2026-10-24
+Orks,Fred Otto,6d526a0f1073af3212,9th Corsair Open Grand Tournament,32fa6b613a957918cf,43,6,6,0,0,War Horde,Take and Hold,2026-10-23
+Orks,lebull,fcb4801d4712cc9e9f,Limoges Wargames solo 2000pts,e4567f631dfd15df69,45,5,5,0,0,Blitz Brigade | Bully Boyz | Wreckas,Take and Hold,2026-10-24
+Orks,Stephen Dorfner,df87fd9f22cd92624d,"OrktoberFest III: This time ,It's a Gt at Blue Hen",39639345c8421d6a95,41,5,5,0,0,Taktikal Brigade | Runt Swarm | Green Tide,Take and Hold,2026-10-24
+Orks,Roman Kleiber,27b80d4ffecbb0abbb,9th Corsair Open Grand Tournament,32fa6b613a957918cf,43,6,5,0,1,Bully Boyz | Wreckas | Runt Swarm,Purge the Foe,2026-10-23
+Orks,Ross James,a7f70866befe0d4fd1,THE COVENTRY 40K : 2-Day,a5048c9937fc23b9ad,110,5,4,0,1,Brute Bosses | Bully Boyz | Green Tide,Take and Hold,2026-10-24
+Orks,Anthony Keen,603af38059164d299c,THE COVENTRY 40K : 2-Day,a5048c9937fc23b9ad,110,5,4,0,1,Blitz Brigade | Bully Boyz | Wreckas,Purge the Foe,2026-10-24
+Orks,Daniel Xerri,27b14e506ebb5f612f,Sydney GT October,13971701792399ddc4,62,5,4,0,1,Blitz Brigade | Wreckas | Shoota Boyz,Purge the Foe,2026-10-23
+Orks,Jason Wozniak,1926da1c284b0a119f,Sydney GT October,13971701792399ddc4,62,5,4,0,1,Brute Bosses | Runt Swarm | Green Tide,Take and Hold,2026-10-23
+Orks,Jan Ullmann,0fa3b2e793e2d9db39,40k Ogr Cubb Singles,86e5e0399580a8e8f6,50,5,4,0,1,Wreckas | Runt Swarm | Shoota Boyz,Priority Assets,2026-10-24
+Orks,Cody Spahr,69db3a76bac7c513f3,Siege of Mordrax GT,56f6e4f1e7dc53348a,44,5,4,0,1,Taktikal Brigade | Runt Swarm | Green Tide,Take and Hold,2026-10-24
+Orks,Grant Roberts,b350e946f5a4b06c50,Grampian Gaming Guild Oct. GT,b44763b389e4f00a6b,42,5,4,0,1,Kult of Speed | Flyboyz | Dread Mob,Reconnaissance,2026-10-24
+Orks,Alex Robbins,02badfe99f25a4fc2e,Hell's Basement GT 2026,199fab052552d2056f,40,5,4,0,1,Brute Bosses | Runt Swarm | Green Tide,Take and Hold,2026-10-24
+Orks,Neil Maxemuik,3ae4f4e3dd7e6eee65,Hell's Basement GT 2026,199fab052552d2056f,40,5,4,0,1,Bully Boyz | Dread Mob | Green Tide,Take and Hold,2026-10-24
+Orks,Jouni Haavisto,537e2543f0ae82838f,40k Canteen Brawl 2026,692949abdbff688d75,34,5,4,0,1,Kult of Speed | Flyboyz,Reconnaissance,2026-10-24
+Orks,Cole McAneeny,3f5c06015dcf71f61d,Clever Kobold's Halloween Hellscape GT,3e86649850cb0270f2,32,5,4,0,1,Blitz Brigade | Brute Bosses | Bully Boyz,Purge the Foe,2026-10-24
+Orks,Brian Moody,0b78c21f42b91b490a,24 & 25 October 2026 - OWN's Breaking Point GT at Game HQ,f1ebd4d25dafa550e1,29,5,4,0,1,Taktikal Brigade | Runt Swarm | Green Tide,Take and Hold,2026-10-24
+Orks,Jeremy Skager,2c7d7f79748aeb738e,ValleyCon GT,867a329a8817acb286,26,5,4,0,1,Brute Bosses | Runt Swarm | Green Tide,Take and Hold,2026-10-24
+Space Marines,Jakub Jansa,abfe2315b635347160,40k Ogr Cubb Singles,86e5e0399580a8e8f6,50,5,5,0,0,Terminator Storm Force | Deathwatch Support | Assault Brethren,Take and Hold,2026-10-24
+Space Marines,Rii Anderson,ecbe37b954f44a19c7,Siege of Mordrax GT,56f6e4f1e7dc53348a,44,5,5,0,0,Ironclad Champions | Devastator Brethren | Phobos Shadow Force,Priority Assets,2026-10-24
+Space Marines,Chase Chappell,85bad0f6da4b9f8f81,Warhound GT in October,47548b0981b13ba59e,40,5,5,0,0,Ironstorm Spearhead | Forgefather's Seekers,Priority Assets,2026-10-24
+Space Marines,Samppa Orhanen,a96ec0cdec514ff1c7,40k Canteen Brawl 2026,692949abdbff688d75,34,5,5,0,0,Terminator Storm Force | Deathwatch Support | Assault Brethren,Take and Hold,2026-10-24
+Space Marines,Christos mpoutakidis,daedc721e8d17882a7,GANGSTA BEAR CHAMPIONSHIP,ed2b93d117361e1f4e,29,5,5,0,0,Terminator Storm Force | Deathwatch Support | Assault Brethren,Take and Hold,2026-10-24
+Space Marines,Matthew Griffen,e82bba044cc785ad16,CritCon26 40K GT,f0a1f6824aab56634c,19,5,5,0,0,Stormlance Task Force | Terminator Storm Force | Assault Brethren,Priority Assets,2026-10-24
+Space Marines,Elliot Gibson,3d3462ae4f144acb94,9th Corsair Open Grand Tournament,32fa6b613a957918cf,43,6,5,0,1,Terminator Storm Force | Deathwatch Support | Assault Brethren,Take and Hold,2026-10-23
+Space Marines,Jordan Penning,83bbe699a19a570503,THE COVENTRY 40K : 2-Day,a5048c9937fc23b9ad,110,5,4,0,1,Ceramite Sentinels | Assault Brethren,Take and Hold,2026-10-24
+Space Marines,Paul Gurney,abd0bbb26c47241329,Sydney GT October,13971701792399ddc4,62,5,4,0,1,Devastator Brethren | Medusa's Wrath,Purge the Foe,2026-10-23
+Space Marines,Brodie Middleton,4d29e2d59c1da4a7e8,Sydney GT October,13971701792399ddc4,62,5,4,0,1,Stormlance Task Force | Deathwatch Support | Assault Brethren,Reconnaissance,2026-10-23
+Space Marines,Luke Brown,b7151fc0d3bdaf77b0,Sydney GT October,13971701792399ddc4,62,5,4,0,1,Terminator Storm Force | Deathwatch Support | Assault Brethren,Take and Hold,2026-10-23
+Space Marines,Martin Bejšovec,711c42a7ade2d5e0e9,40k Ogr Cubb Singles,86e5e0399580a8e8f6,50,5,4,0,1,Terminator Storm Force | Deathwatch Support | Assault Brethren,Take and Hold,2026-10-24
+Space Marines,Pavel Šohaj,0c69112714091df45c,40k Ogr Cubb Singles,86e5e0399580a8e8f6,50,5,4,0,1,Devastator Brethren | Medusa's Wrath,Purge the Foe,2026-10-24
+Space Marines,Evan Stump,d2c45159f4ec41766a,Warhound GT in October,47548b0981b13ba59e,40,5,4,0,1,Devastator Brethren | Terminator Storm Force | Deathwatch Support,Priority Assets,2026-10-24
+Space Marines,John Casey,18f2d72a7ef99cd997,Adeptus 5-0 Jailbreak Event Hosted by Away Games,1b49ae4ddbcf5b86b9,36,5,4,0,1,Terminator Storm Force | Deathwatch Support | Assault Brethren,Take and Hold,2026-10-24
+Space Marines,Jussi Koskimäki,9ca1e99e4c0c2549c1,40k Canteen Brawl 2026,692949abdbff688d75,34,5,4,0,1,Devastator Brethren | Medusa's Wrath,Purge the Foe,2026-10-24
+Space Marines,Nick Carpenter,a6b4ea2da49ed7bc2f,RCM: Night of the Wolf 2026,181348e066d94710f2,29,5,4,0,1,Deathwatch Support | Medusa's Wrath,Purge the Foe,2026-10-24
+Space Marines,Kyle Kachelmeyer,6098ee763fc96c5b38,24 & 25 October 2026 - OWN's Breaking Point GT at Game HQ,f1ebd4d25dafa550e1,29,5,4,0,1,Stormlance Task Force | Spearpoint Task Force,Reconnaissance,2026-10-24
+Space Marines,Dan Meloro,88f19b2037f5a6ed43,Bolters And Boogeymen Bazooka GT,f37326f3876d927a9a,28,5,4,0,1,Terminator Storm Force | Deathwatch Support | Assault Brethren,Take and Hold,2026-10-24
+Space Marines,Blake Sawyer,e3c256870e1cf55d18,Fun-N-Games October GT 2026,8808e388f16b2ab450,26,5,4,0,1,Terminator Storm Force | Deathwatch Support | Assault Brethren,Take and Hold,2026-10-24
+Space Marines,Cyle Thompson,722bf2ec1c5cf44021,ValleyCon GT,867a329a8817acb286,26,5,4,0,1,Terminator Storm Force | Deathwatch Support | Ironstorm Spearhead,Priority Assets,2026-10-24
+Space Marines,Fernando Canut,f49f3b3c6f644f964c,The Guild 5th GT,606d3c34f30c25b6f8,23,5,4,0,1,Terminator Storm Force | Deathwatch Support | Assault Brethren,Take and Hold,2026-10-24
+Space Wolves,Matthew McCurdy,7bbbf5cd8294d3c762,THE COVENTRY 40K : 2-Day,a5048c9937fc23b9ad,110,5,5,0,0,Assault Brethren | Saga of the Great Wolf,Take and Hold,2026-10-24
+Space Wolves,josh burns,9c5a028d5f01d2f0d0,THE COVENTRY 40K : 2-Day,a5048c9937fc23b9ad,110,5,4,0,1,Stormlance Task Force | Assault Brethren | Saga of the Beastslayer,Purge the Foe,2026-10-24
+Space Wolves,Sean Baumann,738d011767a319659f,Sydney GT October,13971701792399ddc4,62,5,4,0,1,Terminator Storm Force | Saga of the Great Wolf,Take and Hold,2026-10-23
+Space Wolves,Ptite-Barique,59da82a86dcd707a33,Limoges Wargames solo 2000pts,e4567f631dfd15df69,45,5,4,0,1,Stormlance Task Force | Saga of the Beastslayer,Take and Hold,2026-10-24
+Space Wolves,Nate Wise,2f4f8a82a5aacb8f8b,Siege of Mordrax GT,56f6e4f1e7dc53348a,44,5,4,0,1,Terminator Storm Force | Saga of the Great Wolf,Take and Hold,2026-10-24
+Space Wolves,Brian Lane,998c570d332fd53e0f,"OrktoberFest III: This time ,It's a Gt at Blue Hen",39639345c8421d6a95,41,5,4,0,1,Deathwatch Support | Saga of the Great Wolf,Take and Hold,2026-10-24
+Space Wolves,Drake Valle,7e1128e6251ea0277e,Warhound GT in October,47548b0981b13ba59e,40,5,4,0,1,Assault Brethren | Saga of the Great Wolf,Take and Hold,2026-10-24
+Space Wolves,Frank Xu,7575ce80a3cc63c5bc,Treasure Trove Games - Warhammer 40k Grim Harvest GT 2026,7cedbcd10a07438819,30,5,4,0,1,Assault Brethren | Saga of the Great Wolf,Take and Hold,2026-10-24
+T'au Empire,Kyle Grundy,d8b624cfe816a8e5e9,THE COVENTRY 40K : 3-Day,25b07168ad3821edef,142,8,7,0,1,Experimental Prototype Cadre | Kauyon,Priority Assets,2026-10-23
+T'au Empire,Fernando Soriano,e28fe7335359cb8ed8,THE COVENTRY 40K : 2-Day,a5048c9937fc23b9ad,110,5,5,0,0,Mont'ka,Take and Hold,2026-10-24
+T'au Empire,tony barrett,2c84ee94a5889c397b,THE COVENTRY 40K : 2-Day,a5048c9937fc23b9ad,110,5,4,0,1,Mont'ka,Priority Assets,2026-10-24
+T'au Empire,Benjamin [Stratèges d'Ambre],dbe92081afe2757d60,Limoges Wargames solo 2000pts,e4567f631dfd15df69,45,5,4,0,1,Retaliation Cadre,Purge the Foe,2026-10-24
+T'au Empire,Ross Freeman-Marsh,33ef4848b03679fa07,Siege of Mordrax GT,56f6e4f1e7dc53348a,44,5,4,0,1,Auxiliary Cadre | Kauyon,Reconnaissance,2026-10-24
+T'au Empire,Walter Sellars,ff976aec84b53f2a73,Adeptus 5-0 Jailbreak Event Hosted by Away Games,1b49ae4ddbcf5b86b9,36,5,4,0,1,Retaliation Cadre,Purge the Foe,2026-10-24
+T'au Empire,Christopher Tran,18c2975e86e55b3c8b,RCM: Night of the Wolf 2026,181348e066d94710f2,29,5,4,0,1,Retaliation Cadre,Purge the Foe,2026-10-24
+T'au Empire,Jonathan Booker,f26c9fd73047ccad18,Fun-N-Games October GT 2026,8808e388f16b2ab450,26,5,4,0,1,Retaliation Cadre,Reconnaissance,2026-10-24
+Thousand Sons,Parker Hall,ede038b222d3aa2cf8,RCM: Night of the Wolf 2026,181348e066d94710f2,29,5,4,0,1,Sekhetar Cohort | Warpforged Cabal,Priority Assets,2026-10-24
+Tyranids,Alex Macdougall,88618be0903e3c975f,Siege of Mordrax GT,56f6e4f1e7dc53348a,44,5,5,0,0,Subterranean Assault,Reconnaissance,2026-10-24
+Tyranids,Rowan Kennett,c58d0df009871515d1,Sydney GT October,13971701792399ddc4,62,5,4,0,1,Synaptic Nexus | Ambush Predators,Disruption,2026-10-23
+Tyranids,Dan Bishop,18a5033ac1f5fa64b6,Hell's Basement GT 2026,199fab052552d2056f,40,5,4,0,1,Talons of the Norn Queen | Assimilation Swarm,Priority Assets,2026-10-24
+Tyranids,Lukas Wobak,488de683c87b9499b3,Kärntner Meisterschaften 2026,8d24057c930132c07a,25,5,4,0,1,Ambush Predators | Vanguard Onslaught,Reconnaissance,2026-10-24
+Tyranids,Mark D,e87edbf6abec61c92f,The Hogtowner 2026,c4f90078b78f068771,24,5,4,0,1,Ambush Predators | Vanguard Onslaught,Reconnaissance,2026-10-24
+Tyranids,Zachary Harden,7f0650d2df42aa2f06,Dicehead 40k GT: Return of the Maul,546b598d76dcf51581,18,5,4,0,1,Crusher Stampede | Talons of the Norn Queen,Purge the Foe,2026-10-24
+World Eaters,Peyton Beard,b9f236a4876ddb71f0,RCM: Night of the Wolf 2026,181348e066d94710f2,29,5,5,0,0,Berzerker Warband | Vessels of Wrath,Purge the Foe,2026-10-24
+World Eaters,Jimmy Fields,2725b514ac9991da1d,Turbulent Games Warhammer 40K GT @Kee Con,f6a31d7451d4902b91,16,5,5,0,0,Berzerker Warband | Vessels of Wrath,Purge the Foe,2026-10-24
+World Eaters,Zan 🔥🎲 Rashid,c2a8f421294f359260,THE COVENTRY 40K : 2-Day,a5048c9937fc23b9ad,110,5,4,0,1,Berzerker Warband | Butchers of Khorne,Take and Hold,2026-10-24
+World Eaters,Theo Werner,1c4623b28b5de3f73b,Sydney GT October,13971701792399ddc4,62,5,4,0,1,Berzerker Warband | Butchers of Khorne,Take and Hold,2026-10-23
+World Eaters,Tom Maher,462d199d4d1153c076,Gaelcon 2026,bae35c07d163b4f605,47,5,4,0,1,Berzerker Warband | Vessels of Wrath,Purge the Foe,2026-10-24
+World Eaters,Duncan Brown,abf05d2edb22426799,Grampian Gaming Guild Oct. GT,b44763b389e4f00a6b,42,5,4,0,1,Berzerker Warband | Vessels of Wrath,Purge the Foe,2026-10-24
+World Eaters,Jack Burn,544f7bf2e5aa89b248,Grampian Gaming Guild Oct. GT,b44763b389e4f00a6b,42,5,4,0,1,Berzerker Warband | Vessels of Wrath,Purge the Foe,2026-10-24
+World Eaters,Judo Shan,5229bdb9d3b7591c6a,"OrktoberFest III: This time ,It's a Gt at Blue Hen",39639345c8421d6a95,41,5,4,0,1,Berzerker Warband | Vessels of Wrath,Purge the Foe,2026-10-24
+World Eaters,Tyler Lamanilao,461750ddf521b1605e,Hell's Basement GT 2026,199fab052552d2056f,40,5,4,0,1,Unknown,Purge the Foe,2026-10-24
+World Eaters,Steven Saroka,a2b63c9a985b6ceb6b,Adeptus 5-0 Jailbreak Event Hosted by Away Games,1b49ae4ddbcf5b86b9,36,5,4,0,1,Berzerker Warband | Vessels of Wrath,Purge the Foe,2026-10-24
+World Eaters,Kevin Lieb,55e2207729c363fbe3,Clever Kobold's Halloween Hellscape GT,3e86649850cb0270f2,32,5,4,0,1,Berzerker Warband | Vessels of Wrath,Purge the Foe,2026-10-24
+World Eaters,Thomas Trudell,e1beaa36391ab9d2cd,Clever Kobold's Halloween Hellscape GT,3e86649850cb0270f2,32,5,4,0,1,Berzerker Warband | Brazen Engines,Purge the Foe,2026-10-24
+World Eaters,Mehyo El Jawhary,e3cf77f7a5a777701f,The Hogtowner 2026,c4f90078b78f068771,24,5,4,0,1,Berzerker Warband | Vessels of Wrath,Purge the Foe,2026-10-24
+World Eaters,Sergio Antonio Gonzalez Bayod,312603f287960a1be4,The Guild 5th GT,606d3c34f30c25b6f8,23,5,4,0,1,Berzerker Warband | Butchers of Khorne,Purge the Foe,2026-10-24
+World Eaters,Axel Tayson,71cc5096ad1ac87d0b,Battle for the Big Country,42ca421c191002e74c,20,5,4,0,1,Possessed Slaughterband | Brazen Engines,Purge the Foe,2026-10-24
+World Eaters,Shane Quist,4a93c30251293be540,Turbulent Games Warhammer 40K GT @Kee Con,f6a31d7451d4902b91,16,5,4,0,1,Berzerker Warband | Vessels of Wrath,Purge the Foe,2026-10-24

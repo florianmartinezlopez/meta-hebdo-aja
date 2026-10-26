@@ -1,0 +1,1125 @@
+{
+ "nom": "Blood Angels",
+ "slug": "blood-angels",
+ "periode": {
+  "wins": 96,
+  "losses": 88,
+  "total": 184,
+  "winRate": "52.17"
+ },
+ "joueurs": 38,
+ "invaincus": 2,
+ "x1": 3,
+ "victoires_tournoi": 2,
+ "sur_representation": "1.03",
+ "dispositions": {
+  "Priority Assets": 3,
+  "Purge the Foe": 19,
+  "Reconnaissance": 1,
+  "Take and Hold": 17
+ },
+ "combinaisons": [
+  {
+   "detachment": "Assault Brethren | Ironclad Champions | Tacticus Attack Force",
+   "players": 6,
+   "fieldPercent": 15.789473684210526,
+   "wins": 18,
+   "losses": 14,
+   "total": 32,
+   "winRate": "56.25"
+  },
+  {
+   "detachment": "Assault Brethren | Ironstorm Spearhead | Tacticus Attack Force",
+   "players": 6,
+   "fieldPercent": 15.789473684210526,
+   "wins": 21,
+   "losses": 9,
+   "total": 30,
+   "winRate": "70.00"
+  },
+  {
+   "detachment": "Angelic Inheritors",
+   "players": 5,
+   "fieldPercent": 13.157894736842104,
+   "wins": 11,
+   "losses": 12,
+   "total": 23,
+   "winRate": "47.83"
+  },
+  {
+   "detachment": "Assault Brethren | Encarmine Speartip | Ironclad Champions",
+   "players": 4,
+   "fieldPercent": 10.526315789473683,
+   "wins": 6,
+   "losses": 12,
+   "total": 18,
+   "winRate": "33.33"
+  },
+  {
+   "detachment": "Assault Brethren | Encarmine Speartip | Tacticus Attack Force",
+   "players": 2,
+   "fieldPercent": 5.263157894736842,
+   "wins": 5,
+   "losses": 8,
+   "total": 13,
+   "winRate": "38.46"
+  },
+  {
+   "detachment": "Assault Brethren | Encarmine Speartip | Terminator Storm Force",
+   "players": 2,
+   "fieldPercent": 5.263157894736842,
+   "wins": 5,
+   "losses": 4,
+   "total": 9,
+   "winRate": "55.56"
+  },
+  {
+   "detachment": "Assault Brethren | Ironclad Champions | Wrath of the Doomed",
+   "players": 2,
+   "fieldPercent": 5.263157894736842,
+   "wins": 2,
+   "losses": 5,
+   "total": 7,
+   "winRate": "28.57"
+  },
+  {
+   "detachment": "Assault Brethren | Tacticus Attack Force | Wrath of the Doomed",
+   "players": 2,
+   "fieldPercent": 5.263157894736842,
+   "wins": 4,
+   "losses": 6,
+   "total": 10,
+   "winRate": "40.00"
+  },
+  {
+   "detachment": "Assault Brethren | Deathwatch Support | Tacticus Attack Force",
+   "players": 1,
+   "fieldPercent": 2.631578947368421,
+   "wins": 1,
+   "losses": 2,
+   "total": 3,
+   "winRate": "33.33"
+  },
+  {
+   "detachment": "Assault Brethren | Gravis Siege Force | Ironstorm Spearhead",
+   "players": 1,
+   "fieldPercent": 2.631578947368421,
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00"
+  },
+  {
+   "detachment": "Assault Brethren | Ironclad Champions | Stormlance Task Force",
+   "players": 1,
+   "fieldPercent": 2.631578947368421,
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00"
+  },
+  {
+   "detachment": "Assault Brethren | Ironstorm Spearhead | Stormlance Task Force",
+   "players": 1,
+   "fieldPercent": 2.631578947368421,
+   "wins": 4,
+   "losses": 1,
+   "total": 5,
+   "winRate": "80.00"
+  },
+  {
+   "detachment": "Assault Brethren | Ironstorm Spearhead | Terminator Storm Force",
+   "players": 1,
+   "fieldPercent": 2.631578947368421,
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00"
+  },
+  {
+   "detachment": "Assault Brethren | Terminator Storm Force | Wrath of the Doomed",
+   "players": 1,
+   "fieldPercent": 2.631578947368421,
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00"
+  },
+  {
+   "detachment": "Encarmine Speartip | Ironstorm Spearhead | Tactical Brethren",
+   "players": 1,
+   "fieldPercent": 2.631578947368421,
+   "wins": 5,
+   "losses": 0,
+   "total": 5,
+   "winRate": "100.00"
+  },
+  {
+   "detachment": "Ironclad Champions | Tacticus Attack Force | Wrath of the Doomed",
+   "players": 1,
+   "fieldPercent": 2.631578947368421,
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00"
+  },
+  {
+   "detachment": "Phobos Shadow Force | Tacticus Attack Force | Wrath of the Doomed",
+   "players": 1,
+   "fieldPercent": 2.631578947368421,
+   "wins": 1,
+   "losses": 3,
+   "total": 4,
+   "winRate": "25.00"
+  }
+ ],
+ "adversaires": [
+  {
+   "opponentFaction": "Adepta Sororitas",
+   "wins": 3,
+   "losses": 3,
+   "total": 6,
+   "winRate": "50.00",
+   "avgDifferential": 3.5,
+   "differentialGames": 6,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": "100.00",
+    "avgDifferential": 39.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Adeptus Custodes",
+   "wins": 6,
+   "losses": 5,
+   "total": 11,
+   "winRate": "54.55",
+   "avgDifferential": 8.818181818181818,
+   "differentialGames": 11,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 2,
+    "total": 5,
+    "winRate": "60.00",
+    "avgDifferential": 10,
+    "differentialGames": 5
+   }
+  },
+  {
+   "opponentFaction": "Adeptus Mechanicus",
+   "wins": 1,
+   "losses": 6,
+   "total": 7,
+   "winRate": "14.29",
+   "avgDifferential": -35,
+   "differentialGames": 7,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -71,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Aeldari",
+   "wins": 1,
+   "losses": 2,
+   "total": 3,
+   "winRate": "33.33",
+   "avgDifferential": -9,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": 17,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Astra Militarum",
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00",
+   "avgDifferential": 7.4,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 36,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Chaos Daemons",
+   "wins": 4,
+   "losses": 3,
+   "total": 7,
+   "winRate": "57.14",
+   "avgDifferential": 16.285714285714285,
+   "differentialGames": 7,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 2,
+    "total": 4,
+    "winRate": "50.00",
+    "avgDifferential": 15,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "Chaos Knights",
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00",
+   "avgDifferential": 16.2,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 2,
+    "total": 3,
+    "winRate": "33.33",
+    "avgDifferential": 8.666666666666666,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Chaos Space Marines",
+   "wins": 3,
+   "losses": 1,
+   "total": 4,
+   "winRate": "75.00",
+   "avgDifferential": 3.5,
+   "differentialGames": 4,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 37,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Dark Angels",
+   "wins": 7,
+   "losses": 1,
+   "total": 8,
+   "winRate": "87.50",
+   "avgDifferential": 30.25,
+   "differentialGames": 8,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 1,
+    "total": 4,
+    "winRate": "75.00",
+    "avgDifferential": 26.25,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "Death Guard",
+   "wins": 3,
+   "losses": 5,
+   "total": 8,
+   "winRate": "37.50",
+   "avgDifferential": -4,
+   "differentialGames": 8,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 2,
+    "total": 5,
+    "winRate": "60.00",
+    "avgDifferential": 17,
+    "differentialGames": 5
+   }
+  },
+  {
+   "opponentFaction": "Drukhari",
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00",
+   "avgDifferential": 1,
+   "differentialGames": 4,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": 9.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Emperor's Children",
+   "wins": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": 5.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -31,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Genestealer Cult",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 15,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 15,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Grey Knights",
+   "wins": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": 14,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -5,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Imperial Agents",
+   "wins": 2,
+   "losses": 0,
+   "total": 2,
+   "winRate": "100.00",
+   "avgDifferential": 62,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Imperial Knights",
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00",
+   "avgDifferential": -7.6,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 47,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Leagues of Votann",
+   "wins": 1,
+   "losses": 4,
+   "total": 5,
+   "winRate": "20.00",
+   "avgDifferential": -13.4,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 2,
+    "total": 2,
+    "winRate": "0.00",
+    "avgDifferential": -41.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Necrons",
+   "wins": 7,
+   "losses": 8,
+   "total": 15,
+   "winRate": "46.67",
+   "avgDifferential": -2.6666666666666665,
+   "differentialGames": 15,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 6,
+    "total": 8,
+    "winRate": "25.00",
+    "avgDifferential": -6.75,
+    "differentialGames": 8
+   }
+  },
+  {
+   "opponentFaction": "Orks",
+   "wins": 12,
+   "losses": 7,
+   "total": 19,
+   "winRate": "63.16",
+   "avgDifferential": 3.263157894736842,
+   "differentialGames": 19,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 3,
+    "total": 6,
+    "winRate": "50.00",
+    "avgDifferential": -9.5,
+    "differentialGames": 6
+   }
+  },
+  {
+   "opponentFaction": "Space Marines (Astartes)",
+   "wins": 11,
+   "losses": 11,
+   "total": 22,
+   "winRate": "50.00",
+   "avgDifferential": 3.3181818181818183,
+   "differentialGames": 22,
+   "goingFirst": {
+    "wins": 6,
+    "losses": 1,
+    "total": 7,
+    "winRate": "85.71",
+    "avgDifferential": 30.285714285714285,
+    "differentialGames": 7
+   }
+  },
+  {
+   "opponentFaction": "Space Wolves",
+   "wins": 6,
+   "losses": 4,
+   "total": 10,
+   "winRate": "60.00",
+   "avgDifferential": -1.5,
+   "differentialGames": 10,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 2,
+    "total": 4,
+    "winRate": "50.00",
+    "avgDifferential": -18.5,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "T'au Empire",
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00",
+   "avgDifferential": -11.2,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 1,
+    "total": 3,
+    "winRate": "66.67",
+    "avgDifferential": 12,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Thousand Sons",
+   "wins": 1,
+   "losses": 3,
+   "total": 4,
+   "winRate": "25.00",
+   "avgDifferential": -6,
+   "differentialGames": 4,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -15,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Tyranids",
+   "wins": 3,
+   "losses": 4,
+   "total": 7,
+   "winRate": "42.86",
+   "avgDifferential": 0,
+   "differentialGames": 7,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 3,
+    "total": 5,
+    "winRate": "40.00",
+    "avgDifferential": 6.8,
+    "differentialGames": 5
+   }
+  },
+  {
+   "opponentFaction": "World Eaters",
+   "wins": 10,
+   "losses": 5,
+   "total": 15,
+   "winRate": "66.67",
+   "avgDifferential": 8.2,
+   "differentialGames": 15,
+   "goingFirst": {
+    "wins": 6,
+    "losses": 2,
+    "total": 8,
+    "winRate": "75.00",
+    "avgDifferential": 16.75,
+    "differentialGames": 8
+   }
+  },
+  {
+   "opponentFaction": "Black Templars",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -32,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Deathwatch",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -62,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  }
+ ],
+ "tendance": [
+  {
+   "week": "2026-06-21",
+   "wins": 10,
+   "losses": 8,
+   "total": 18,
+   "winRate": "55.56"
+  },
+  {
+   "week": "2026-06-28",
+   "wins": 46,
+   "losses": 43,
+   "total": 89,
+   "winRate": "51.69"
+  },
+  {
+   "week": "2026-07-05",
+   "wins": 23,
+   "losses": 29,
+   "total": 52,
+   "winRate": "44.23"
+  },
+  {
+   "week": "2026-07-12",
+   "wins": 85,
+   "losses": 110,
+   "total": 195,
+   "winRate": "43.59"
+  },
+  {
+   "week": "2026-07-19",
+   "wins": 133,
+   "losses": 157,
+   "total": 290,
+   "winRate": "45.86"
+  },
+  {
+   "week": "2026-07-26",
+   "wins": 83,
+   "losses": 82,
+   "total": 165,
+   "winRate": "50.30"
+  },
+  {
+   "week": "2026-08-02",
+   "wins": 70,
+   "losses": 71,
+   "total": 141,
+   "winRate": "49.65"
+  },
+  {
+   "week": "2026-08-09",
+   "wins": 38,
+   "losses": 54,
+   "total": 92,
+   "winRate": "41.30"
+  },
+  {
+   "week": "2026-08-16",
+   "wins": 107,
+   "losses": 119,
+   "total": 226,
+   "winRate": "47.35"
+  },
+  {
+   "week": "2026-08-23",
+   "wins": 76,
+   "losses": 95,
+   "total": 171,
+   "winRate": "44.44"
+  },
+  {
+   "week": "2026-08-30",
+   "wins": 76,
+   "losses": 99,
+   "total": 175,
+   "winRate": "43.43"
+  },
+  {
+   "week": "2026-09-06",
+   "wins": 79,
+   "losses": 117,
+   "total": 196,
+   "winRate": "40.31"
+  },
+  {
+   "week": "2026-09-13",
+   "wins": 107,
+   "losses": 146,
+   "total": 253,
+   "winRate": "42.29"
+  },
+  {
+   "week": "2026-09-20",
+   "wins": 33,
+   "losses": 42,
+   "total": 75,
+   "winRate": "44.00"
+  },
+  {
+   "week": "2026-09-27",
+   "wins": 100,
+   "losses": 138,
+   "total": 238,
+   "winRate": "42.02"
+  },
+  {
+   "week": "2026-10-04",
+   "wins": 78,
+   "losses": 121,
+   "total": 199,
+   "winRate": "39.20"
+  },
+  {
+   "week": "2026-10-11",
+   "wins": 63,
+   "losses": 53,
+   "total": 116,
+   "winRate": "54.31"
+  },
+  {
+   "week": "2026-10-18",
+   "wins": 115,
+   "losses": 133,
+   "total": 248,
+   "winRate": "46.37"
+  },
+  {
+   "week": "2026-10-25",
+   "wins": 96,
+   "losses": 88,
+   "total": 184,
+   "winRate": "52.17"
+  }
+ ],
+ "listes_recentes": [
+  {
+   "playerName": "Joe Loke",
+   "playerUid": "0f2ddf25b6fe3dbb03",
+   "eventName": "Sydney GT October",
+   "eventUid": "13971701792399ddc4",
+   "numberOfPlayers": 62,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Ironclad Champions | Assault Brethren | Tacticus Attack Force",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-23"
+  },
+  {
+   "playerName": "Erik Rostamo",
+   "playerUid": "262bf2a156bb3a9263",
+   "eventName": "24 & 25 October 2026 - OWN's Breaking Point GT at Game HQ",
+   "eventUid": "f1ebd4d25dafa550e1",
+   "numberOfPlayers": 29,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Tactical Brethren | Ironstorm Spearhead | Encarmine Speartip",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Tim Verbeek",
+   "playerUid": "b562d3ea0c281410a7",
+   "eventName": "Gaelcon 2026",
+   "eventUid": "bae35c07d163b4f605",
+   "numberOfPlayers": 47,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Assault Brethren | Ironstorm Spearhead | Tacticus Attack Force",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Nick Gaddis",
+   "playerUid": "37c4b46ec7dacb5841",
+   "eventName": "Warhound GT in October",
+   "eventUid": "47548b0981b13ba59e",
+   "numberOfPlayers": 40,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Stormlance Task Force | Assault Brethren | Ironstorm Spearhead",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Arturo Gonzalez",
+   "playerUid": "ea26c6cd35295b9606",
+   "eventName": "Treasure Trove Games - Warhammer 40k Grim Harvest GT 2026",
+   "eventUid": "7cedbcd10a07438819",
+   "numberOfPlayers": 30,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Angelic Inheritors",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Jordan Checkley",
+   "playerUid": "ad5b85bacfa2ed7317",
+   "eventName": "That 6++ Grand Tournament: South 2026",
+   "eventUid": "1fb1755a2d381892eb",
+   "numberOfPlayers": 74,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Ironclad Champions | Assault Brethren | Tacticus Attack Force",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Kyle Jackling",
+   "playerUid": "9ec846fd2076958ff3",
+   "eventName": "Mektoberfest  2026 40k Gt",
+   "eventUid": "bf35e64a5daf0ed2b2",
+   "numberOfPlayers": 49,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Ironclad Champions | Assault Brethren | Encarmine Speartip",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Mathis CUVILLIER-VASSEUR",
+   "playerUid": "d6bb09802a5dc5968e",
+   "eventName": "Paris Wargame Expo 2 - Solo 40K",
+   "eventUid": "c0dcf8fb846148ad91",
+   "numberOfPlayers": 221,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Assault Brethren | Tacticus Attack Force | Wrath of the Doomed",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Ben Isenhoff",
+   "playerUid": "271657be24d61d4e4b",
+   "eventName": "Rumble on the Rivers 40k GT 2026",
+   "eventUid": "3c3cb27168cf6ee568",
+   "numberOfPlayers": 93,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Stormlance Task Force | Ironclad Champions | Assault Brethren",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Austin Howald",
+   "playerUid": "a1f8eed3e27e5ee6b9",
+   "eventName": "Rumble on the Rivers 40k GT 2026",
+   "eventUid": "3c3cb27168cf6ee568",
+   "numberOfPlayers": 93,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Terminator Storm Force | Deathwatch Support | Assault Brethren",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Jamie Chapman",
+   "playerUid": "852a574d44ba42f8fb",
+   "eventName": "That 6++ Grand Tournament: South 2026",
+   "eventUid": "1fb1755a2d381892eb",
+   "numberOfPlayers": 74,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Assault Brethren | Tacticus Attack Force | Encarmine Speartip",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Mathew Tweedel",
+   "playerUid": "afb63633adeac70383",
+   "eventName": "Odin's Place Open 2026",
+   "eventUid": "e96d7b1b71a02c269b",
+   "numberOfPlayers": 59,
+   "numberOfRounds": 6,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Stormlance Task Force | Assault Brethren | Tacticus Attack Force",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Felix Patch",
+   "playerUid": "897b79a20f81fc5cae",
+   "eventName": "MobTown Mayhem",
+   "eventUid": "89b46c94d9aa9b28ca",
+   "numberOfPlayers": 41,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Stormlance Task Force | Assault Brethren | Tacticus Attack Force",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Nick Gaddis",
+   "playerUid": "37c4b46ec7dacb5841",
+   "eventName": "Paragon City Games 40K Store Championship",
+   "eventUid": "a59894570eaae4f770",
+   "numberOfPlayers": 25,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Stormlance Task Force | Assault Brethren | Ironstorm Spearhead",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Phillip Schwan",
+   "playerUid": "9107f34d4a7ac5737a",
+   "eventName": "Denver 40K Fight Club Oct. Open ‘26",
+   "eventUid": "b68c369f61c3e3f379",
+   "numberOfPlayers": 105,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Ironclad Champions | Assault Brethren | Tacticus Attack Force",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Matthew Vick",
+   "playerUid": "5c00474d837de97255",
+   "eventName": "The Cornish Big Bash 2026",
+   "eventUid": "3cbdaf3782546ee1da",
+   "numberOfPlayers": 37,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Ironclad Champions | Assault Brethren | Tacticus Attack Force",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Wyatt Brandt",
+   "playerUid": "170d995a29390048af",
+   "eventName": "LVNO we aint going 40k GT",
+   "eventUid": "815b7e4b60d2dc88dd",
+   "numberOfPlayers": 38,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Terminator Storm Force | Assault Brethren | Wrath of the Doomed",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Spike Haider",
+   "playerUid": "539c944aeb159263d3",
+   "eventName": "LVNO we aint going 40k GT",
+   "eventUid": "815b7e4b60d2dc88dd",
+   "numberOfPlayers": 38,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Stormlance Task Force | Terminator Storm Force | Assault Brethren",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Clinton Williams",
+   "playerUid": "3bdc32535d6b5806ff",
+   "eventName": "Games4Life's 2-Day 40k GT!",
+   "eventUid": "55904da220805b3da0",
+   "numberOfPlayers": 28,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Ironclad Champions | Assault Brethren | Tacticus Attack Force",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Carpi La_Orden",
+   "playerUid": "a315755bf81d87f35e",
+   "eventName": "Torneo Tabletop Octubre",
+   "eventUid": "72ea98e082d4099ad5",
+   "numberOfPlayers": 22,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Ironclad Champions | Assault Brethren | Tacticus Attack Force",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-03"
+  },
+  {
+   "playerName": "Ryan Kelly",
+   "playerUid": "8707c079fc9422605d",
+   "eventName": "LVO 2026 - Warhammer 40k Championships - Las Vegas Open",
+   "eventUid": "1f5cf8ab5f28571388",
+   "numberOfPlayers": 652,
+   "numberOfRounds": 10,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Rage-cursed Onslaught",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-02"
+  },
+  {
+   "playerName": "Carl Novak",
+   "playerUid": "eb5ce894b6b81ee019",
+   "eventName": "Bendigo open 2026",
+   "eventUid": "75b3bf40f2dc2cae0c",
+   "numberOfPlayers": 51,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Stormlance Task Force | Legacy of Grace",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-02"
+  },
+  {
+   "playerName": "Juuso Sipiläinen",
+   "playerUid": "8e67290bb8ea75a74d",
+   "eventName": "Saimaa GT 2026",
+   "eventUid": "9883b3232e390fd8f2",
+   "numberOfPlayers": 72,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Headhunter Task Force | Wrath of the Doomed",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-09-26"
+  },
+  {
+   "playerName": "Jack Watkins",
+   "playerUid": "d3ac19c48afdf44e70",
+   "eventName": "The London Grand Tournament - 40k Main Event (LGT 40k GT)",
+   "eventUid": "4848688a4a9990005c",
+   "numberOfPlayers": 1049,
+   "numberOfRounds": 10,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Liberator Assault Group",
+   "disposition": "Take and Hold",
+   "startDate": "2026-09-25"
+  },
+  {
+   "playerName": "Michael Mc Carthy",
+   "playerUid": "e9b7f34a9395b885ee",
+   "eventName": "Dearg Doom XIII, don't play in Cian's sandbox",
+   "eventUid": "de77d4aa6ceb4bc45c",
+   "numberOfPlayers": 67,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Rage-cursed Onslaught",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-09-26"
+  }
+ ],
+ "listes_total_site": 62
+}

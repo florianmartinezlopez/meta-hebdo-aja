@@ -1,0 +1,401 @@
+{
+ "semaine": "2026-W43",
+ "aja": {
+  "T'au Empire": 47.29,
+  "Space Marines": 53.03,
+  "Emperor's Children": 50.75,
+  "Necrons": 48.82,
+  "Adeptus Mechanicus": 57.3,
+  "Orks": 52.14,
+  "Imperial Knights": 43.6
+ },
+ "dispositions": {
+  "Reconnaissance": 51.56,
+  "Purge the Foe": 50.25,
+  "Take and Hold": 50.3,
+  "Priority Assets": 49.81,
+  "Disruption": 44.66
+ },
+ "classement": [
+  [
+   "Adeptus Mechanicus",
+   57.3,
+   185
+  ],
+  [
+   "Adepta Sororitas",
+   54.92,
+   193
+  ],
+  [
+   "Death Guard",
+   54.2,
+   262
+  ],
+  [
+   "Space Wolves",
+   53.93,
+   191
+  ],
+  [
+   "Space Marines",
+   53.03,
+   545
+  ],
+  [
+   "Blood Angels",
+   52.17,
+   184
+  ],
+  [
+   "Orks",
+   52.14,
+   397
+  ],
+  [
+   "Chaos Daemons",
+   50.93,
+   161
+  ],
+  [
+   "World Eaters",
+   50.82,
+   364
+  ],
+  [
+   "Aeldari",
+   50.79,
+   126
+  ],
+  [
+   "Emperor's Children",
+   50.75,
+   134
+  ],
+  [
+   "Adeptus Custodes",
+   50.0,
+   416
+  ],
+  [
+   "Dark Angels",
+   49.55,
+   335
+  ],
+  [
+   "Necrons",
+   48.82,
+   338
+  ],
+  [
+   "Drukhari",
+   47.97,
+   123
+  ],
+  [
+   "T'au Empire",
+   47.29,
+   203
+  ],
+  [
+   "Leagues of Votann",
+   47.24,
+   163
+  ],
+  [
+   "Tyranids",
+   46.91,
+   243
+  ],
+  [
+   "Astra Militarum",
+   45.19,
+   104
+  ],
+  [
+   "Chaos Space Marines",
+   43.98,
+   166
+  ],
+  [
+   "Imperial Knights",
+   43.6,
+   172
+  ],
+  [
+   "Chaos Knights",
+   41.75,
+   103
+  ]
+ ],
+ "factions": {
+  "Adepta Sororitas": 54.92,
+  "Adeptus Custodes": 50.0,
+  "Adeptus Mechanicus": 57.3,
+  "Aeldari": 50.79,
+  "Astra Militarum": 45.19,
+  "Black Templars": 43.48,
+  "Blood Angels": 52.17,
+  "Chaos Daemons": 50.93,
+  "Chaos Knights": 41.75,
+  "Chaos Space Marines": 43.98,
+  "Dark Angels": 49.55,
+  "Death Guard": 54.2,
+  "Deathwatch": 56.76,
+  "Drukhari": 47.97,
+  "Emperor's Children": 50.75,
+  "Genestealer Cult": 45.95,
+  "Grey Knights": 48.48,
+  "Imperial Agents": 37.5,
+  "Imperial Knights": 43.6,
+  "Leagues of Votann": 47.24,
+  "Necrons": 48.82,
+  "Orks": 52.14,
+  "Space Marines": 53.03,
+  "Space Wolves": 53.93,
+  "T'au Empire": 47.29,
+  "Thousand Sons": 37.31,
+  "Tyranids": 46.91,
+  "World Eaters": 50.82
+ },
+ "combos": {
+  "Adepta Sororitas | Bringers of Flame + Chorus of Condemnation": 56.0,
+  "Adepta Sororitas | Hallowed Martyrs": 48.15,
+  "Adepta Sororitas | Bringers of Flame + Sacred Champions": 50.0,
+  "Adepta Sororitas | Penitent Host + Sacred Champions": 63.64,
+  "Adepta Sororitas | Unknown": 80.0,
+  "Adeptus Custodes | Lions of the Emperor + Might of the Moritoi + Solar Watch": 54.13,
+  "Adeptus Custodes | Emperor's Chosen + Lions of the Emperor + Might of the Moritoi": 55.41,
+  "Adeptus Custodes | Dread Host + Lions of the Emperor + Might of the Moritoi": 44.68,
+  "Adeptus Custodes | Honoured Companions + Might of the Moritoi + Solar Watch": 51.85,
+  "Adeptus Custodes | Auric Champions + Might of the Moritoi + Solar Watch": 65.22,
+  "Adeptus Custodes | Auric Champions + Emperor's Chosen + Lions of the Emperor": 64.71,
+  "Adeptus Custodes | Emperor's Chosen + Honoured Companions + Might of the Moritoi": 29.41,
+  "Adeptus Custodes | Dread Host + Honoured Companions + Lions of the Emperor": 50.0,
+  "Adeptus Custodes | Emperor's Chosen + Grav‑Assault Force + Lions of the Emperor": 20.0,
+  "Adeptus Custodes | Honoured Companions + Might of the Moritoi + Shadowkeepers": 53.85,
+  "Adeptus Custodes | Lions of the Emperor": 40.0,
+  "Adeptus Mechanicus | Cohort Cybernetica + Eradication Cohort": 64.49,
+  "Adeptus Mechanicus | Cohort Cybernetica + Lords of the Forge": 50.0,
+  "Aeldari | Aspect Host": 45.1,
+  "Aeldari | Armoured Warhost + Eldritch Raiders": 52.94,
+  "Aeldari | Armoured Warhost + Seer Council": 60.0,
+  "Astra Militarum | Grizzled Company": 52.17,
+  "Astra Militarum | Abhuman Auxiliaries + Combined Arms": 60.0,
+  "Astra Militarum | Steel Hammer": 40.0,
+  "Black Templars | Assault Brethren + Vow-sworn Crusaders": 50.0,
+  "Black Templars | Assault Brethren + Ironstorm Spearhead + Terminator Storm Force": 33.33,
+  "Black Templars | Assault Brethren + Marshal's Household + Tacticus Attack Force": 60.0,
+  "Blood Angels | Assault Brethren + Ironclad Champions + Tacticus Attack Force": 56.25,
+  "Blood Angels | Assault Brethren + Ironstorm Spearhead + Tacticus Attack Force": 70.0,
+  "Blood Angels | Angelic Inheritors": 47.83,
+  "Blood Angels | Assault Brethren + Encarmine Speartip + Ironclad Champions": 33.33,
+  "Blood Angels | Assault Brethren + Encarmine Speartip + Tacticus Attack Force": 38.46,
+  "Blood Angels | Assault Brethren + Tacticus Attack Force + Wrath of the Doomed": 40.0,
+  "Chaos Daemons | Daemonic Incursion": 51.35,
+  "Chaos Daemons | Blood Legion + Cavalcade of Chaos": 51.43,
+  "Chaos Daemons | Blood Legion + Warptide": 52.94,
+  "Chaos Daemons | Plague Legion + Warptide": 71.43,
+  "Chaos Daemons | Cavalcade of Chaos + Shadow Legion": 37.5,
+  "Chaos Daemons | Lords of the Warp + Plague Legion": 30.77,
+  "Chaos Daemons | Scintillating Legion + Warptide": 70.0,
+  "Chaos Knights | Houndpack Lance + Hunting Warpack": 42.5,
+  "Chaos Knights | Infernal Lance": 36.36,
+  "Chaos Space Marines | Creations of Bile": 41.38,
+  "Chaos Space Marines | Renegade Raiders": 53.85,
+  "Chaos Space Marines | Huron's Marauders": 35.29,
+  "Chaos Space Marines | Pactbound Zealots": 42.86,
+  "Chaos Space Marines | Cabal of Chaos + Veterans of the Long War": 90.0,
+  "Chaos Space Marines | Cabal of Chaos + Warpstrike Champions": 50.0,
+  "Dark Angels | Assault Brethren + Wrath of the Rock": 52.78,
+  "Dark Angels | Assault Brethren + Darkflight Pursuit + Stormlance Task Force": 68.97,
+  "Dark Angels | Assault Brethren + Deathwatch Support + Terminator Storm Force": 55.88,
+  "Dark Angels | Assault Brethren + Inner Circle Task Force + Terminator Storm Force": 26.32,
+  "Dark Angels | Darkflight Pursuit + Ironstorm Spearhead + Stormlance Task Force": 73.68,
+  "Dark Angels | Inner Circle Task Force + Wrath of the Rock": 40.91,
+  "Dark Angels | Tacticus Firestorm Force + Wrath of the Rock": 14.29,
+  "Dark Angels | Ironstorm Spearhead + Wrath of the Rock": 41.18,
+  "Dark Angels | Darkflight Pursuit + Devastator Brethren + Ironstorm Spearhead": 27.27,
+  "Dark Angels | Darkflight Pursuit + Wrath of the Rock": 61.54,
+  "Death Guard | Paragons of Putrescence + Shamblerot Vectorium": 69.89,
+  "Death Guard | Virulent Vectorium": 47.13,
+  "Death Guard | Contagion Engines + Mortarion's Hammer": 44.44,
+  "Death Guard | Mortarion's Hammer + Paragons of Putrescence": 58.33,
+  "Deathwatch | Black Spear Task Force": 60.87,
+  "Drukhari | Exhibition of Slaughter + Kabalite Cartel": 39.29,
+  "Drukhari | Exhibition of Slaughter + Skysplinter Assault": 36.36,
+  "Drukhari | Kabalite Agonysts + Skysplinter Assault": 42.86,
+  "Drukhari | Exhibition of Slaughter + Spectacle of Spite": 70.0,
+  "Drukhari | Realspace Raiders + Tools of Torment": 60.0,
+  "Drukhari | Skysplinter Assault + Tools of Torment": 70.0,
+  "Emperor's Children | Coterie of the Conceited": 49.3,
+  "Emperor's Children | Peerless Bladesmen + Spectacle of Slaughter": 50.0,
+  "Emperor's Children | Court of the Phoenician + Frenzied Host": 60.0,
+  "Genestealer Cult | Biosanctic Broodsurge + Purestrain Broodswarm": 57.14,
+  "Grey Knights | Warpbane Task Force": 42.62,
+  "Grey Knights | Argent Assault + Hallowed Conclave": 60.0,
+  "Imperial Knights | Freeblade Company": 40.0,
+  "Imperial Knights | Dominus Foebreakers + Valourstrike Lance": 54.39,
+  "Imperial Knights | Dominus Foebreakers + Gate Warden Lance": 36.36,
+  "Leagues of Votann | Hearthguard Covenant + Needgaârd Oathband": 43.37,
+  "Leagues of Votann | Armoured Trailblazers + Needgaârd Oathband": 58.33,
+  "Leagues of Votann | Dêlve Assault Shift + Hearthguard Covenant": 50.0,
+  "Necrons | Cursed Legion + Skyshroud Spearhead": 49.52,
+  "Necrons | Awakened Dynasty": 53.97,
+  "Necrons | Cursed Legion + Hand of the Dynasty": 30.0,
+  "Necrons | Canoptek Court + Hand of the Dynasty": 48.28,
+  "Necrons | Starshatter Arsenal": 59.09,
+  "Necrons | Unknown": 8.33,
+  "Necrons | Cryptek Conclave + Skyshroud Spearhead": 63.64,
+  "Necrons | Hand of the Dynasty + Hypercrypt Legion": 40.0,
+  "Orks | Brute Bosses + Bully Boyz + Green Tide": 56.0,
+  "Orks | Bully Boyz + Dread Mob + Wreckas": 60.0,
+  "Orks | Blitz Brigade + Bully Boyz + Wreckas": 70.59,
+  "Orks | Brute Bosses + Green Tide + Runt Swarm": 76.47,
+  "Orks | Bully Boyz + Dread Mob + Green Tide": 27.78,
+  "Orks | Bully Boyz + Shoota Boyz + Wreckas": 30.0,
+  "Orks | Dread Mob + Shoota Boyz + Wreckas": 45.45,
+  "Orks | Dread Mob + Flyboyz + Kult of Speed": 66.67,
+  "Orks | Green Tide + Runt Swarm + Taktikal Brigade": 84.62,
+  "Orks | Blitz Brigade + Brute Bosses + Bully Boyz": 70.0,
+  "Orks | Blitz Brigade + Flyboyz + Kult of Speed": 50.0,
+  "Orks | Bully Boyz + Kult of Speed + Wreckas": 60.0,
+  "Orks | Bully Boyz + Runt Swarm + Wreckas": 80.0,
+  "Orks | War Horde": 70.0,
+  "Space Marines | Assault Brethren + Deathwatch Support + Terminator Storm Force": 69.78,
+  "Space Marines | Assault Brethren + Ironclad Champions + Terminator Storm Force": 44.83,
+  "Space Marines | Forgefather's Seekers + Ironstorm Spearhead": 66.67,
+  "Space Marines | Assault Brethren + Ironstorm Spearhead + Terminator Storm Force": 46.67,
+  "Space Marines | Assault Brethren + Stormlance Task Force + Terminator Storm Force": 64.29,
+  "Space Marines | Deathwatch Support + Devastator Brethren + Terminator Storm Force": 50.0,
+  "Space Marines | Assault Brethren + Spearpoint Task Force": 53.85,
+  "Space Marines | Devastator Brethren + Medusa's Wrath": 85.71,
+  "Space Marines | Ironclad Champions + Medusa's Wrath": 35.29,
+  "Space Marines | Spearpoint Task Force + Stormlance Task Force": 50.0,
+  "Space Marines | Assault Brethren + Tacticus Attack Force + Terminator Storm Force": 45.45,
+  "Space Marines | Ceramite Sentinels + Gravis Siege Force": 30.0,
+  "Space Marines | Ceramite Sentinels + Terminator Storm Force": 40.0,
+  "Space Marines | Devastator Brethren + Ironstorm Spearhead + Terminator Storm Force": 38.46,
+  "Space Wolves | Assault Brethren + Saga of the Great Wolf": 54.39,
+  "Space Wolves | Assault Brethren + Saga of the Beastslayer + Stormlance Task Force": 55.32,
+  "Space Wolves | Saga of the Great Wolf + Terminator Storm Force": 63.33,
+  "Space Wolves | Saga of the Beastslayer + Saga of the Great Wolf": 36.84,
+  "Space Wolves | Assault Brethren + Saga of the Beastslayer + Terminator Storm Force": 33.33,
+  "T'au Empire | Retaliation Cadre": 52.54,
+  "T'au Empire | Mont'ka": 45.28,
+  "T'au Empire | Experimental Prototype Cadre + Kauyon": 45.83,
+  "T'au Empire | Experimental Prototype Cadre + Kroot Hunting Pack": 47.37,
+  "T'au Empire | Advanced Acquisition Cadre + Kauyon": 30.0,
+  "Thousand Sons | Grand Coven": 36.84,
+  "Thousand Sons | Changehost of Deceit + Ritual of Regeneration": 31.25,
+  "Thousand Sons | Sekhetar Cohort + Warpforged Cabal": 44.44,
+  "Tyranids | Subterranean Assault": 44.59,
+  "Tyranids | Invasion Fleet": 27.91,
+  "Tyranids | Assimilation Swarm + Talons of the Norn Queen": 57.78,
+  "Tyranids | Ambush Predators + Vanguard Onslaught": 51.72,
+  "Tyranids | Crusher Stampede + Talons of the Norn Queen": 59.09,
+  "Tyranids | Ambush Predators + Crusher Stampede": 40.0,
+  "World Eaters | Berzerker Warband + Vessels of Wrath": 60.66,
+  "World Eaters | Berzerker Warband + Butchers of Khorne": 50.0,
+  "World Eaters | Berzerker Warband + Brazen Engines": 45.65,
+  "World Eaters | Goretrack Onslaught + Vessels of Wrath": 34.78,
+  "World Eaters | Brazen Engines + Possessed Slaughterband": 35.71,
+  "World Eaters | Possessed Slaughterband + Vessels of Wrath": 25.0
+ },
+ "prep": [
+  [
+   "Space Marines",
+   10.56,
+   53.03
+  ],
+  [
+   "Adeptus Mechanicus",
+   3.35,
+   57.3
+  ],
+  [
+   "Death Guard",
+   4.93,
+   54.2
+  ],
+  [
+   "Adepta Sororitas",
+   3.43,
+   54.92
+  ],
+  [
+   "Orks",
+   7.75,
+   52.14
+  ],
+  [
+   "Space Wolves",
+   3.52,
+   53.93
+  ]
+ ],
+ "archetypes": [
+  {
+   "sig": "strong",
+   "faction": "Space Marines",
+   "arch": "Devastator Brethren + Medusa's Wrath, Purge the Foe",
+   "n": 3
+  },
+  {
+   "sig": "strong",
+   "faction": "Orks",
+   "arch": "Green Tide + Runt Swarm + Taktikal Brigade, Take and Hold",
+   "n": 2
+  },
+  {
+   "sig": "strong",
+   "faction": "Orks",
+   "arch": "Brute Bosses + Green Tide + Runt Swarm, Take and Hold",
+   "n": 2
+  },
+  {
+   "sig": "strong",
+   "faction": "Space Wolves",
+   "arch": "Assault Brethren + Saga of the Great Wolf, Take and Hold",
+   "n": 3
+  },
+  {
+   "sig": "watch",
+   "faction": "T'au Empire",
+   "arch": "Experimental Prototype Cadre + Kauyon, Priority Assets",
+   "n": 1
+  },
+  {
+   "sig": "down",
+   "faction": "Emperor's Children",
+   "arch": "Coterie of the Conceited, Priority Assets",
+   "n": 7
+  }
+ ],
+ "brief": {
+  "AJA": [
+   "Space Marines, AdMech et Orks au-dessus de 52 %",
+   "Emperor's Children à l'équilibre",
+   "T'au, Necrons et Imperial Knights sous 50 %",
+   "Plus forte évolution : Imperial Knights (−5,7 pts depuis la semaine 42)"
+  ],
+  "À préparer": [
+   "Space Marines : 53,0 %, 11 % du field",
+   "Adeptus Mechanicus : 57,3 %, 3 % du field",
+   "Death Guard : 54,2 %, 5 % du field"
+  ],
+  "Disposition": [
+   "Reconnaissance mène à 51,6 % sur 576 parties",
+   "Disruption ferme la marche à 44,7 %"
+  ],
+  "Meta": [
+   "Adeptus Mechanicus (57,3 %) et Adepta Sororitas (54,9 %) en tête du classement",
+   "Space Marines compte 6 listes invaincues"
+  ],
+  "Émergent": [
+   "Space Marines en Devastator Brethren + Medusa's Wrath (Purge the Foe)",
+   "Orks en Green Tide + Runt Swarm + Taktikal Brigade (Take and Hold)",
+   "Orks en Brute Bosses + Green Tide + Runt Swarm (Take and Hold)"
+  ]
+ }
+}
