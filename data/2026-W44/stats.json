@@ -1,0 +1,724 @@
+{
+ "semaine": "2026-W44",
+ "releve_le": "2026-11-02T17:36+00:00",
+ "fenetre": {
+  "debut": "2026-10-29",
+  "fin": "2026-11-03",
+  "lue_sur_le_site": true
+ },
+ "tournois": [
+  {
+   "id": "x37gRdAVMXu1",
+   "eventUid": "ec72160fd4efaf7d15",
+   "name": "Calling the Banners 2026",
+   "country": "Australia",
+   "state": "VIC",
+   "players": 67,
+   "started": 1,
+   "ended": 1
+  },
+  {
+   "id": "Jewk7Hpwk8ax",
+   "eventUid": "a90de724a1c0041d26",
+   "name": "Halloween Havoc",
+   "country": "Canada",
+   "state": "SK",
+   "players": 18,
+   "started": 1,
+   "ended": 1
+  }
+ ],
+ "tournois_en_cours": 0,
+ "factions": [
+  {
+   "faction": "Adepta Sororitas",
+   "wins": 8,
+   "losses": 8,
+   "total": 16,
+   "winRate": "50.00",
+   "players": 4,
+   "undefeated": 0,
+   "xMinus1": 1,
+   "top4": 0,
+   "eventWins": 0,
+   "overrep": "0.00"
+  },
+  {
+   "faction": "Adeptus Custodes",
+   "wins": 27,
+   "losses": 17,
+   "total": 44,
+   "winRate": "61.36",
+   "players": 10,
+   "undefeated": 0,
+   "xMinus1": 3,
+   "top4": 0,
+   "eventWins": 0,
+   "overrep": "0.00"
+  },
+  {
+   "faction": "Adeptus Mechanicus",
+   "wins": 11,
+   "losses": 9,
+   "total": 20,
+   "winRate": "55.00",
+   "players": 4,
+   "undefeated": 0,
+   "xMinus1": 1,
+   "top4": 0,
+   "eventWins": 0,
+   "overrep": "0.00"
+  },
+  {
+   "faction": "Aeldari",
+   "wins": 9,
+   "losses": 11,
+   "total": 20,
+   "winRate": "45.00",
+   "players": 4,
+   "undefeated": 1,
+   "xMinus1": 0,
+   "top4": 1,
+   "eventWins": 0,
+   "overrep": "2.66"
+  },
+  {
+   "faction": "Chaos Daemons",
+   "wins": 4,
+   "losses": 12,
+   "total": 16,
+   "winRate": "25.00",
+   "players": 4,
+   "undefeated": 0,
+   "xMinus1": 0,
+   "top4": 0,
+   "eventWins": 0,
+   "overrep": "0.00"
+  },
+  {
+   "faction": "Chaos Knights",
+   "wins": 14,
+   "losses": 11,
+   "total": 25,
+   "winRate": "56.00",
+   "players": 5,
+   "undefeated": 0,
+   "xMinus1": 2,
+   "top4": 2,
+   "eventWins": 0,
+   "overrep": "4.25"
+  },
+  {
+   "faction": "Chaos Space Marines",
+   "wins": 14,
+   "losses": 11,
+   "total": 25,
+   "winRate": "56.00",
+   "players": 5,
+   "undefeated": 0,
+   "xMinus1": 1,
+   "top4": 1,
+   "eventWins": 0,
+   "overrep": "2.13"
+  },
+  {
+   "faction": "Dark Angels",
+   "wins": 8,
+   "losses": 2,
+   "total": 10,
+   "winRate": "80.00",
+   "players": 2,
+   "undefeated": 1,
+   "xMinus1": 0,
+   "top4": 1,
+   "eventWins": 1,
+   "overrep": "5.31"
+  },
+  {
+   "faction": "Death Guard",
+   "wins": 3,
+   "losses": 3,
+   "total": 6,
+   "winRate": "50.00",
+   "players": 2,
+   "undefeated": 0,
+   "xMinus1": 0,
+   "top4": 0,
+   "eventWins": 0,
+   "overrep": "0.00"
+  },
+  {
+   "faction": "Drukhari",
+   "wins": 1,
+   "losses": 2,
+   "total": 3,
+   "winRate": "33.33",
+   "players": 1,
+   "undefeated": 0,
+   "xMinus1": 0,
+   "top4": 0,
+   "eventWins": 0,
+   "overrep": "0.00"
+  },
+  {
+   "faction": "Emperor's Children",
+   "wins": 7,
+   "losses": 7,
+   "total": 14,
+   "winRate": "50.00",
+   "players": 3,
+   "undefeated": 0,
+   "xMinus1": 0,
+   "top4": 0,
+   "eventWins": 0,
+   "overrep": "0.00"
+  },
+  {
+   "faction": "Imperial Agents",
+   "wins": 2,
+   "losses": 6,
+   "total": 8,
+   "winRate": "25.00",
+   "players": 2,
+   "undefeated": 0,
+   "xMinus1": 0,
+   "top4": 0,
+   "eventWins": 0,
+   "overrep": "0.00"
+  },
+  {
+   "faction": "Imperial Knights",
+   "wins": 5,
+   "losses": 5,
+   "total": 10,
+   "winRate": "50.00",
+   "players": 2,
+   "undefeated": 0,
+   "xMinus1": 0,
+   "top4": 0,
+   "eventWins": 0,
+   "overrep": "0.00"
+  },
+  {
+   "faction": "Leagues of Votann",
+   "wins": 3,
+   "losses": 5,
+   "total": 8,
+   "winRate": "37.50",
+   "players": 2,
+   "undefeated": 0,
+   "xMinus1": 0,
+   "top4": 0,
+   "eventWins": 0,
+   "overrep": "0.00"
+  },
+  {
+   "faction": "Necrons",
+   "wins": 5,
+   "losses": 14,
+   "total": 19,
+   "winRate": "26.32",
+   "players": 4,
+   "undefeated": 0,
+   "xMinus1": 0,
+   "top4": 0,
+   "eventWins": 0,
+   "overrep": "0.00"
+  },
+  {
+   "faction": "Orks",
+   "wins": 15,
+   "losses": 14,
+   "total": 29,
+   "winRate": "51.72",
+   "players": 7,
+   "undefeated": 0,
+   "xMinus1": 1,
+   "top4": 0,
+   "eventWins": 0,
+   "overrep": "0.00"
+  },
+  {
+   "faction": "Space Marines",
+   "wins": 15,
+   "losses": 13,
+   "total": 28,
+   "winRate": "53.57",
+   "players": 6,
+   "undefeated": 1,
+   "xMinus1": 0,
+   "top4": 1,
+   "eventWins": 1,
+   "overrep": "1.77"
+  },
+  {
+   "faction": "Space Wolves",
+   "wins": 7,
+   "losses": 8,
+   "total": 15,
+   "winRate": "46.67",
+   "players": 3,
+   "undefeated": 0,
+   "xMinus1": 0,
+   "top4": 0,
+   "eventWins": 0,
+   "overrep": "0.00"
+  },
+  {
+   "faction": "T'au Empire",
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00",
+   "players": 1,
+   "undefeated": 0,
+   "xMinus1": 0,
+   "top4": 0,
+   "eventWins": 0,
+   "overrep": "0.00"
+  },
+  {
+   "faction": "Thousand Sons",
+   "wins": 2,
+   "losses": 8,
+   "total": 10,
+   "winRate": "20.00",
+   "players": 2,
+   "undefeated": 0,
+   "xMinus1": 0,
+   "top4": 0,
+   "eventWins": 0,
+   "overrep": "0.00"
+  },
+  {
+   "faction": "Tyranids",
+   "wins": 4,
+   "losses": 6,
+   "total": 10,
+   "winRate": "40.00",
+   "players": 2,
+   "undefeated": 0,
+   "xMinus1": 0,
+   "top4": 0,
+   "eventWins": 0,
+   "overrep": "0.00"
+  },
+  {
+   "faction": "World Eaters",
+   "wins": 27,
+   "losses": 18,
+   "total": 45,
+   "winRate": "60.00",
+   "players": 10,
+   "undefeated": 0,
+   "xMinus1": 3,
+   "top4": 2,
+   "eventWins": 0,
+   "overrep": "2.13"
+  }
+ ],
+ "dispositions": [
+  {
+   "disposition": "Disruption",
+   "wins": 10,
+   "losses": 8,
+   "total": 18,
+   "winRate": "55.56",
+   "players": 4
+  },
+  {
+   "disposition": "Priority Assets",
+   "wins": 33,
+   "losses": 37,
+   "total": 70,
+   "winRate": "47.14",
+   "players": 22
+  },
+  {
+   "disposition": "Purge the Foe",
+   "wins": 30,
+   "losses": 37,
+   "total": 67,
+   "winRate": "44.78",
+   "players": 21
+  },
+  {
+   "disposition": "Reconnaissance",
+   "wins": 23,
+   "losses": 24,
+   "total": 47,
+   "winRate": "48.94",
+   "players": 11
+  },
+  {
+   "disposition": "Take and Hold",
+   "wins": 43,
+   "losses": 33,
+   "total": 76,
+   "winRate": "56.58",
+   "players": 28
+  }
+ ],
+ "matrice": [
+  {
+   "disposition": "Disruption",
+   "opponentDisposition": "Priority Assets",
+   "wins": 2,
+   "losses": 1,
+   "total": 3,
+   "winRate": "66.67",
+   "avgDifferential": 14.333333333333334,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": "100.00",
+    "avgDifferential": 46,
+    "differentialGames": 2
+   }
+  },
+  {
+   "disposition": "Disruption",
+   "opponentDisposition": "Purge the Foe",
+   "wins": 4,
+   "losses": 4,
+   "total": 8,
+   "winRate": "50.00",
+   "avgDifferential": 22.571428571428573,
+   "differentialGames": 7,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 1,
+    "total": 3,
+    "winRate": "66.67",
+    "avgDifferential": 31,
+    "differentialGames": 3
+   }
+  },
+  {
+   "disposition": "Disruption",
+   "opponentDisposition": "Reconnaissance",
+   "wins": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": 22,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 78,
+    "differentialGames": 1
+   }
+  },
+  {
+   "disposition": "Disruption",
+   "opponentDisposition": "Take and Hold",
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00",
+   "avgDifferential": -7.6,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -55,
+    "differentialGames": 1
+   }
+  },
+  {
+   "disposition": "Priority Assets",
+   "opponentDisposition": "Disruption",
+   "wins": 1,
+   "losses": 2,
+   "total": 3,
+   "winRate": "33.33",
+   "avgDifferential": -14.333333333333334,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 49,
+    "differentialGames": 1
+   }
+  },
+  {
+   "disposition": "Priority Assets",
+   "opponentDisposition": "Purge the Foe",
+   "wins": 12,
+   "losses": 9,
+   "total": 21,
+   "winRate": "57.14",
+   "avgDifferential": 4.714285714285714,
+   "differentialGames": 21,
+   "goingFirst": {
+    "wins": 6,
+    "losses": 4,
+    "total": 10,
+    "winRate": "60.00",
+    "avgDifferential": 13.4,
+    "differentialGames": 10
+   }
+  },
+  {
+   "disposition": "Priority Assets",
+   "opponentDisposition": "Reconnaissance",
+   "wins": 7,
+   "losses": 8,
+   "total": 15,
+   "winRate": "46.67",
+   "avgDifferential": -4.133333333333334,
+   "differentialGames": 15,
+   "goingFirst": {
+    "wins": 4,
+    "losses": 5,
+    "total": 9,
+    "winRate": "44.44",
+    "avgDifferential": -2.888888888888889,
+    "differentialGames": 9
+   }
+  },
+  {
+   "disposition": "Priority Assets",
+   "opponentDisposition": "Take and Hold",
+   "wins": 13,
+   "losses": 18,
+   "total": 31,
+   "winRate": "41.94",
+   "avgDifferential": -3.4516129032258065,
+   "differentialGames": 31,
+   "goingFirst": {
+    "wins": 8,
+    "losses": 9,
+    "total": 17,
+    "winRate": "47.06",
+    "avgDifferential": 1.8235294117647058,
+    "differentialGames": 17
+   }
+  },
+  {
+   "disposition": "Purge the Foe",
+   "opponentDisposition": "Disruption",
+   "wins": 4,
+   "losses": 4,
+   "total": 8,
+   "winRate": "50.00",
+   "avgDifferential": -22.571428571428573,
+   "differentialGames": 7,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 2,
+    "total": 4,
+    "winRate": "50.00",
+    "avgDifferential": -16.25,
+    "differentialGames": 4
+   }
+  },
+  {
+   "disposition": "Purge the Foe",
+   "opponentDisposition": "Priority Assets",
+   "wins": 9,
+   "losses": 12,
+   "total": 21,
+   "winRate": "42.86",
+   "avgDifferential": -4.714285714285714,
+   "differentialGames": 21,
+   "goingFirst": {
+    "wins": 5,
+    "losses": 6,
+    "total": 11,
+    "winRate": "45.45",
+    "avgDifferential": 3.1818181818181817,
+    "differentialGames": 11
+   }
+  },
+  {
+   "disposition": "Purge the Foe",
+   "opponentDisposition": "Reconnaissance",
+   "wins": 7,
+   "losses": 7,
+   "total": 14,
+   "winRate": "50.00",
+   "avgDifferential": -11.214285714285714,
+   "differentialGames": 14,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 2,
+    "total": 4,
+    "winRate": "50.00",
+    "avgDifferential": -3,
+    "differentialGames": 4
+   }
+  },
+  {
+   "disposition": "Purge the Foe",
+   "opponentDisposition": "Take and Hold",
+   "wins": 10,
+   "losses": 14,
+   "total": 24,
+   "winRate": "41.67",
+   "avgDifferential": -6,
+   "differentialGames": 24,
+   "goingFirst": {
+    "wins": 5,
+    "losses": 7,
+    "total": 12,
+    "winRate": "41.67",
+    "avgDifferential": -5.583333333333333,
+    "differentialGames": 12
+   }
+  },
+  {
+   "disposition": "Reconnaissance",
+   "opponentDisposition": "Disruption",
+   "wins": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": -22,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 34,
+    "differentialGames": 1
+   }
+  },
+  {
+   "disposition": "Reconnaissance",
+   "opponentDisposition": "Priority Assets",
+   "wins": 8,
+   "losses": 7,
+   "total": 15,
+   "winRate": "53.33",
+   "avgDifferential": 4.133333333333334,
+   "differentialGames": 15,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 2,
+    "total": 5,
+    "winRate": "60.00",
+    "avgDifferential": 22,
+    "differentialGames": 5
+   }
+  },
+  {
+   "disposition": "Reconnaissance",
+   "opponentDisposition": "Purge the Foe",
+   "wins": 7,
+   "losses": 7,
+   "total": 14,
+   "winRate": "50.00",
+   "avgDifferential": 11.214285714285714,
+   "differentialGames": 14,
+   "goingFirst": {
+    "wins": 5,
+    "losses": 5,
+    "total": 10,
+    "winRate": "50.00",
+    "avgDifferential": 14.5,
+    "differentialGames": 10
+   }
+  },
+  {
+   "disposition": "Reconnaissance",
+   "opponentDisposition": "Take and Hold",
+   "wins": 7,
+   "losses": 9,
+   "total": 16,
+   "winRate": "43.75",
+   "avgDifferential": -7.1875,
+   "differentialGames": 16,
+   "goingFirst": {
+    "wins": 4,
+    "losses": 4,
+    "total": 8,
+    "winRate": "50.00",
+    "avgDifferential": -11.125,
+    "differentialGames": 8
+   }
+  },
+  {
+   "disposition": "Take and Hold",
+   "opponentDisposition": "Disruption",
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00",
+   "avgDifferential": 7.6,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 3,
+    "total": 4,
+    "winRate": "25.00",
+    "avgDifferential": -4.25,
+    "differentialGames": 4
+   }
+  },
+  {
+   "disposition": "Take and Hold",
+   "opponentDisposition": "Priority Assets",
+   "wins": 18,
+   "losses": 13,
+   "total": 31,
+   "winRate": "58.06",
+   "avgDifferential": 3.4516129032258065,
+   "differentialGames": 31,
+   "goingFirst": {
+    "wins": 9,
+    "losses": 5,
+    "total": 14,
+    "winRate": "64.29",
+    "avgDifferential": 9.857142857142858,
+    "differentialGames": 14
+   }
+  },
+  {
+   "disposition": "Take and Hold",
+   "opponentDisposition": "Purge the Foe",
+   "wins": 14,
+   "losses": 10,
+   "total": 24,
+   "winRate": "58.33",
+   "avgDifferential": 6,
+   "differentialGames": 24,
+   "goingFirst": {
+    "wins": 7,
+    "losses": 5,
+    "total": 12,
+    "winRate": "58.33",
+    "avgDifferential": 6.416666666666667,
+    "differentialGames": 12
+   }
+  },
+  {
+   "disposition": "Take and Hold",
+   "opponentDisposition": "Reconnaissance",
+   "wins": 9,
+   "losses": 7,
+   "total": 16,
+   "winRate": "56.25",
+   "avgDifferential": 7.1875,
+   "differentialGames": 16,
+   "goingFirst": {
+    "wins": 5,
+    "losses": 3,
+    "total": 8,
+    "winRate": "62.50",
+    "avgDifferential": 3.25,
+    "differentialGames": 8
+   }
+  }
+ ]
+}

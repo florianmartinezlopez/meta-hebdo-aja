@@ -1,0 +1,637 @@
+{
+ "nom": "Dark Angels",
+ "slug": "dark-angels",
+ "periode": {
+  "wins": 8,
+  "losses": 2,
+  "total": 10,
+  "winRate": "80.00"
+ },
+ "joueurs": 2,
+ "invaincus": 1,
+ "x1": 0,
+ "victoires_tournoi": 1,
+ "sur_representation": "5.31",
+ "dispositions": {
+  "Take and Hold": 2
+ },
+ "combinaisons": [
+  {
+   "detachment": "Assault Brethren | Darkflight Pursuit | Stormlance Task Force",
+   "players": 1,
+   "fieldPercent": 50,
+   "wins": 5,
+   "losses": 0,
+   "total": 5,
+   "winRate": "100.00"
+  },
+  {
+   "detachment": "Assault Brethren | Deathwatch Support | Stormlance Task Force",
+   "players": 1,
+   "fieldPercent": 50,
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00"
+  }
+ ],
+ "adversaires": [
+  {
+   "opponentFaction": "Adeptus Custodes",
+   "wins": 3,
+   "losses": 0,
+   "total": 3,
+   "winRate": "100.00",
+   "avgDifferential": 36.333333333333336,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": "100.00",
+    "avgDifferential": 30.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Adeptus Mechanicus",
+   "wins": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": 20,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -9,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Orks",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 36,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 36,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Thousand Sons",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 75,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 75,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Tyranids",
+   "wins": 2,
+   "losses": 0,
+   "total": 2,
+   "winRate": "100.00",
+   "avgDifferential": 48.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": "100.00",
+    "avgDifferential": 48.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "World Eaters",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -72,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -72,
+    "differentialGames": 1
+   }
+  }
+ ],
+ "tendance": [
+  {
+   "week": "2026-06-21",
+   "wins": 7,
+   "losses": 3,
+   "total": 10,
+   "winRate": "70.00"
+  },
+  {
+   "week": "2026-06-28",
+   "wins": 25,
+   "losses": 39,
+   "total": 64,
+   "winRate": "39.06"
+  },
+  {
+   "week": "2026-07-05",
+   "wins": 56,
+   "losses": 42,
+   "total": 98,
+   "winRate": "57.14"
+  },
+  {
+   "week": "2026-07-12",
+   "wins": 81,
+   "losses": 79,
+   "total": 160,
+   "winRate": "50.63"
+  },
+  {
+   "week": "2026-07-19",
+   "wins": 160,
+   "losses": 149,
+   "total": 309,
+   "winRate": "51.78"
+  },
+  {
+   "week": "2026-07-26",
+   "wins": 96,
+   "losses": 81,
+   "total": 177,
+   "winRate": "54.24"
+  },
+  {
+   "week": "2026-08-02",
+   "wins": 172,
+   "losses": 149,
+   "total": 321,
+   "winRate": "53.58"
+  },
+  {
+   "week": "2026-08-09",
+   "wins": 93,
+   "losses": 81,
+   "total": 174,
+   "winRate": "53.45"
+  },
+  {
+   "week": "2026-08-16",
+   "wins": 250,
+   "losses": 165,
+   "total": 415,
+   "winRate": "60.24"
+  },
+  {
+   "week": "2026-08-23",
+   "wins": 115,
+   "losses": 109,
+   "total": 224,
+   "winRate": "51.34"
+  },
+  {
+   "week": "2026-08-30",
+   "wins": 141,
+   "losses": 114,
+   "total": 255,
+   "winRate": "55.29"
+  },
+  {
+   "week": "2026-09-06",
+   "wins": 211,
+   "losses": 159,
+   "total": 370,
+   "winRate": "57.03"
+  },
+  {
+   "week": "2026-09-13",
+   "wins": 130,
+   "losses": 146,
+   "total": 276,
+   "winRate": "47.10"
+  },
+  {
+   "week": "2026-09-20",
+   "wins": 74,
+   "losses": 61,
+   "total": 135,
+   "winRate": "54.81"
+  },
+  {
+   "week": "2026-09-27",
+   "wins": 253,
+   "losses": 187,
+   "total": 440,
+   "winRate": "57.50"
+  },
+  {
+   "week": "2026-10-04",
+   "wins": 167,
+   "losses": 135,
+   "total": 302,
+   "winRate": "55.30"
+  },
+  {
+   "week": "2026-10-11",
+   "wins": 121,
+   "losses": 143,
+   "total": 264,
+   "winRate": "45.83"
+  },
+  {
+   "week": "2026-10-18",
+   "wins": 200,
+   "losses": 193,
+   "total": 393,
+   "winRate": "50.89"
+  },
+  {
+   "week": "2026-10-25",
+   "wins": 166,
+   "losses": 169,
+   "total": 335,
+   "winRate": "49.55"
+  },
+  {
+   "week": "2026-11-01",
+   "wins": 8,
+   "losses": 2,
+   "total": 10,
+   "winRate": "80.00"
+  }
+ ],
+ "listes_recentes": [
+  {
+   "playerName": "Dylan Cowan",
+   "playerUid": "1529a5ca3f33f7f74b",
+   "eventName": "Calling the Banners 2026",
+   "eventUid": "ec72160fd4efaf7d15",
+   "numberOfPlayers": 67,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Stormlance Task Force | Assault Brethren | Darkflight Pursuit",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-30"
+  },
+  {
+   "playerName": "Benjamin Rubenstein",
+   "playerUid": "1f97b9b57bfb1d5f08",
+   "eventName": "Clever Kobold's Halloween Hellscape GT",
+   "eventUid": "3e86649850cb0270f2",
+   "numberOfPlayers": 32,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Deathwatch Support | Ironstorm Spearhead | Darkflight Pursuit",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Jay Seebarun",
+   "playerUid": "a6bb228e97c0314d49",
+   "eventName": "THE COVENTRY 40K : 3-Day",
+   "eventUid": "25b07168ad3821edef",
+   "numberOfPlayers": 142,
+   "numberOfRounds": 8,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Terminator Storm Force | Deathwatch Support | Assault Brethren",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-23"
+  },
+  {
+   "playerName": "Jan Reisenauer",
+   "playerUid": "bc6395d8a17ae9b4c9",
+   "eventName": "9th Corsair Open Grand Tournament",
+   "eventUid": "32fa6b613a957918cf",
+   "numberOfPlayers": 43,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Stormlance Task Force | Assault Brethren | Darkflight Pursuit",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-23"
+  },
+  {
+   "playerName": "Ben Hackländer",
+   "playerUid": "a85da646c74dcb6c0f",
+   "eventName": "9th Corsair Open Grand Tournament",
+   "eventUid": "32fa6b613a957918cf",
+   "numberOfPlayers": 43,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Stormlance Task Force | Ironstorm Spearhead | Darkflight Pursuit",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-23"
+  },
+  {
+   "playerName": "Harry Aitchison",
+   "playerUid": "a170d887a5fd7f61e9",
+   "eventName": "THE COVENTRY 40K : 2-Day",
+   "eventUid": "a5048c9937fc23b9ad",
+   "numberOfPlayers": 110,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Stormlance Task Force | Phobos Shadow Force | Darkflight Pursuit",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Štěpán Halla",
+   "playerUid": "1444c13ed21a8b8aba",
+   "eventName": "40k Ogr Cubb Singles",
+   "eventUid": "86e5e0399580a8e8f6",
+   "numberOfPlayers": 50,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Stormlance Task Force | Ironstorm Spearhead | Darkflight Pursuit",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Marek Bernard",
+   "playerUid": "4a117bad35e58fefe1",
+   "eventName": "40k Ogr Cubb Singles",
+   "eventUid": "86e5e0399580a8e8f6",
+   "numberOfPlayers": 50,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Terminator Storm Force | Assault Brethren | Ironstorm Spearhead",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Ben Stafford",
+   "playerUid": "601de87e731db740e9",
+   "eventName": "OrktoberFest III: This time ,It's a Gt at Blue Hen",
+   "eventUid": "39639345c8421d6a95",
+   "numberOfPlayers": 41,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Assault Brethren | Wrath of the Rock",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Jordan Gledhill",
+   "playerUid": "b21858eb0a7cf8b7aa",
+   "eventName": "Warhound GT in October",
+   "eventUid": "47548b0981b13ba59e",
+   "numberOfPlayers": 40,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Stormlance Task Force | Assault Brethren | Darkflight Pursuit",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Juha Ottelin",
+   "playerUid": "c6ae12d63c66ce2b8f",
+   "eventName": "40k Canteen Brawl 2026",
+   "eventUid": "692949abdbff688d75",
+   "numberOfPlayers": 34,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Stormlance Task Force | Ironstorm Spearhead | Darkflight Pursuit",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Roope Oksanen",
+   "playerUid": "f9d7c68a29be07b2d3",
+   "eventName": "40k Canteen Brawl 2026",
+   "eventUid": "692949abdbff688d75",
+   "numberOfPlayers": 34,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Deathwatch Support | Ironstorm Spearhead | Darkflight Pursuit",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Andreas Geretschläger",
+   "playerUid": "b04afb456c520e8b6d",
+   "eventName": "Kärntner Meisterschaften 2026",
+   "eventUid": "8d24057c930132c07a",
+   "numberOfPlayers": 25,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Assault Brethren | Wrath of the Rock",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Jose Belda",
+   "playerUid": "03cd538358c86271a8",
+   "eventName": "Paris Wargame Expo 2 - Solo 40K",
+   "eventUid": "c0dcf8fb846148ad91",
+   "numberOfPlayers": 221,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Stormlance Task Force | Assault Brethren | Darkflight Pursuit",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Toby Bennett",
+   "playerUid": "2c509411ff859c1049",
+   "eventName": "Inspired Gaming Golden Ticket Grand Tournament!",
+   "eventUid": "3e3edd107dd8f600e9",
+   "numberOfPlayers": 37,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Ironclad Champions | Deathwatch Support | Assault Brethren",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Jerry Reynolds",
+   "playerUid": "1d9b36b5782028fe99",
+   "eventName": "Biggest Little Grand Tournament I",
+   "eventUid": "31a989a871e1cdbc86",
+   "numberOfPlayers": 24,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Deathwatch Support | Wrath of the Rock",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Keegan  Watters",
+   "playerUid": "4b607a4d6ced5860af",
+   "eventName": "Beast Coast Gaming Fall Brawl 2026",
+   "eventUid": "ccbcca2ad561c03e63",
+   "numberOfPlayers": 40,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 1,
+   "losses": 0,
+   "detachment": "Assault Brethren | Wrath of the Rock",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Baptiste Verwee",
+   "playerUid": "8c6e5bc9d5bd5d9ddd",
+   "eventName": "Paris Wargame Expo 2 - Solo 40K",
+   "eventUid": "c0dcf8fb846148ad91",
+   "numberOfPlayers": 221,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Stormlance Task Force | Ironstorm Spearhead | Darkflight Pursuit",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Konrad Kaminski",
+   "playerUid": "51c0a7589eaba5b661",
+   "eventName": "Malmö Wargaming Weekend X",
+   "eventUid": "4a41b46ebf7978f2ac",
+   "numberOfPlayers": 176,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Inner Circle Task Force | Wrath of the Rock",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Alex Leskó",
+   "playerUid": "68db2005c17328133c",
+   "eventName": "Alba GT 2026",
+   "eventUid": "cf04740b3b9b3d8e89",
+   "numberOfPlayers": 100,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Terminator Storm Force | Assault Brethren | Inner Circle Task Force",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Dylan Cowan",
+   "playerUid": "1529a5ca3f33f7f74b",
+   "eventName": "Ratcon 2026",
+   "eventUid": "5b23ea4c6c026545ad",
+   "numberOfPlayers": 94,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Stormlance Task Force | Assault Brethren | Darkflight Pursuit",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-16"
+  },
+  {
+   "playerName": "Mitchell McBirney",
+   "playerUid": "6cae51c61ff266e4ae",
+   "eventName": "Rumble on the Rivers 40k GT 2026",
+   "eventUid": "3c3cb27168cf6ee568",
+   "numberOfPlayers": 93,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Stormlance Task Force | Terminator Storm Force | Assault Brethren",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Nick Ludwig",
+   "playerUid": "99105581d0d3f96a5f",
+   "eventName": "Rumble on the Rivers 40k GT 2026",
+   "eventUid": "3c3cb27168cf6ee568",
+   "numberOfPlayers": 93,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Assault Brethren | Wrath of the Rock",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Rafael Harbinson",
+   "playerUid": "f670c4b0af9a588296",
+   "eventName": "That 6++ Grand Tournament: South 2026",
+   "eventUid": "1fb1755a2d381892eb",
+   "numberOfPlayers": 74,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Assault Brethren | Wrath of the Rock",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Aidan Barkley",
+   "playerUid": "a4bcb66d8077f6d2f8",
+   "eventName": "Your Hobby Place Fall Brawl Hosted by Away Games",
+   "eventUid": "0770ed4d4b04bc53f2",
+   "numberOfPlayers": 42,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Deathwatch Support | Ironstorm Spearhead | Darkflight Pursuit",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-17"
+  }
+ ],
+ "listes_total_site": 181
+}

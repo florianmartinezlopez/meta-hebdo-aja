@@ -1,0 +1,16 @@
+faction,playerName,playerUid,eventName,eventUid,numberOfPlayers,numberOfRounds,wins,draws,losses,detachment,disposition,startDate
+Adepta Sororitas,Tyson Hobbs,db06a48ee5125bbe99,Calling the Banners 2026,ec72160fd4efaf7d15,67,5,4,0,1,Chorus of Condemnation | Bringers of Flame,Priority Assets,2026-10-30
+Adeptus Custodes,Wade Antone,a22a2894fda8c1bd3a,Calling the Banners 2026,ec72160fd4efaf7d15,67,5,4,0,1,Emperor's Chosen | Might of the Moritoi | Lions of the Emperor,Take and Hold,2026-10-30
+Adeptus Custodes,Zach Campain,2ab703a0bc215309a5,Calling the Banners 2026,ec72160fd4efaf7d15,67,5,4,0,1,Emperor's Chosen | Might of the Moritoi | Lions of the Emperor,Take and Hold,2026-10-30
+Adeptus Custodes,Jeremy Parker,4ce69cc4e8bec1a591,Calling the Banners 2026,ec72160fd4efaf7d15,67,5,4,0,1,Might of the Moritoi | Lions of the Emperor | Solar Watch,Take and Hold,2026-10-30
+Adeptus Mechanicus,Luke Beveridge,3b75075e244b8d9fdb,Calling the Banners 2026,ec72160fd4efaf7d15,67,5,4,0,1,Cohort Cybernetica | Eradication Cohort,Take and Hold,2026-10-30
+Aeldari,Rhys Cunningham,964f4024cc091fc3c5,Calling the Banners 2026,ec72160fd4efaf7d15,67,5,5,0,0,Eldritch Raiders | Path of the Outcast,Reconnaissance,2026-10-30
+Chaos Knights,Merric Butler,ea61ecd517afe9f046,Calling the Banners 2026,ec72160fd4efaf7d15,67,5,4,0,1,Houndpack Lance | Hunting Warpack,Reconnaissance,2026-10-30
+Chaos Knights,Sean Reynolds,05d8e790e2cf940a4e,Halloween Havoc,a90de724a1c0041d26,18,5,4,0,1,Infernal Lance,Priority Assets,2026-10-31
+Chaos Space Marines,Nathan Sgrazzutti,8a8e1bf6d97de01099,Halloween Havoc,a90de724a1c0041d26,18,5,4,0,1,Warpstrike Champions | Cabal of Chaos,Disruption,2026-10-31
+Dark Angels,Dylan Cowan,1529a5ca3f33f7f74b,Calling the Banners 2026,ec72160fd4efaf7d15,67,5,5,0,0,Stormlance Task Force | Assault Brethren | Darkflight Pursuit,Take and Hold,2026-10-30
+Orks,Edward Askey,816e486cc64d420fda,Calling the Banners 2026,ec72160fd4efaf7d15,67,5,4,0,1,Brute Bosses | Bully Boyz | Da Big Hunt,Purge the Foe,2026-10-30
+Space Marines,Alexander Berkan,19073542394bff2f81,Halloween Havoc,a90de724a1c0041d26,18,5,5,0,0,Terminator Storm Force | Assault Brethren | Ironstorm Spearhead,Purge the Foe,2026-10-31
+World Eaters,Leo Monty,e91c3ce425b6d680ae,Calling the Banners 2026,ec72160fd4efaf7d15,67,5,4,0,1,Berzerker Warband | Vessels of Wrath,Priority Assets,2026-10-30
+World Eaters,Dean Sinnbeck,c22e060590743aa995,Calling the Banners 2026,ec72160fd4efaf7d15,67,5,4,0,1,Berzerker Warband | Butchers of Khorne,Take and Hold,2026-10-30
+World Eaters,Jack Summersby,7c7118cac0aca2ca2f,Calling the Banners 2026,ec72160fd4efaf7d15,67,5,4,0,1,Khorne Daemonkin | Vessels of Wrath,Priority Assets,2026-10-30

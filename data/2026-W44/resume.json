@@ -1,0 +1,102 @@
+{
+ "semaine": "2026-W44",
+ "aja": {
+  "T'au Empire": 40.0,
+  "Space Marines": 53.57,
+  "Emperor's Children": 50.0,
+  "Necrons": 26.32,
+  "Adeptus Mechanicus": 55.0,
+  "Orks": 51.72,
+  "Imperial Knights": 50.0
+ },
+ "dispositions": {
+  "Reconnaissance": 48.94,
+  "Purge the Foe": 44.78,
+  "Take and Hold": 56.58,
+  "Priority Assets": 47.14,
+  "Disruption": 55.56
+ },
+ "classement": [],
+ "factions": {
+  "Adepta Sororitas": 50.0,
+  "Adeptus Custodes": 61.36,
+  "Adeptus Mechanicus": 55.0,
+  "Aeldari": 45.0,
+  "Chaos Daemons": 25.0,
+  "Chaos Knights": 56.0,
+  "Chaos Space Marines": 56.0,
+  "Dark Angels": 80.0,
+  "Death Guard": 50.0,
+  "Drukhari": 33.33,
+  "Emperor's Children": 50.0,
+  "Imperial Agents": 25.0,
+  "Imperial Knights": 50.0,
+  "Leagues of Votann": 37.5,
+  "Necrons": 26.32,
+  "Orks": 51.72,
+  "Space Marines": 53.57,
+  "Space Wolves": 46.67,
+  "T'au Empire": 40.0,
+  "Thousand Sons": 20.0,
+  "Tyranids": 40.0,
+  "World Eaters": 60.0
+ },
+ "combos": {
+  "Adepta Sororitas | Bringers of Flame + Chorus of Condemnation": 57.14,
+  "Adeptus Custodes | Emperor's Chosen + Lions of the Emperor + Might of the Moritoi": 65.38,
+  "Adeptus Mechanicus | Cohort Cybernetica + Eradication Cohort": 60.0,
+  "Aeldari | Aspect Host": 30.0,
+  "Chaos Knights | Houndpack Lance + Hunting Warpack": 60.0,
+  "Space Wolves | Assault Brethren + Saga of the Beastslayer + Stormlance Task Force": 40.0,
+  "Thousand Sons | Grand Coven": 20.0,
+  "World Eaters | Berzerker Warband + Vessels of Wrath": 57.89
+ },
+ "prep": [],
+ "archetypes": [
+  {
+   "sig": "strong",
+   "faction": "Adeptus Custodes",
+   "arch": "Emperor's Chosen + Lions of the Emperor + Might of the Moritoi, Take and Hold",
+   "n": 2
+  },
+  {
+   "sig": "watch",
+   "faction": "Orks",
+   "arch": "Brute Bosses + Bully Boyz + Da Big Hunt, Purge the Foe",
+   "n": 1
+  },
+  {
+   "sig": "watch",
+   "faction": "Aeldari",
+   "arch": "Eldritch Raiders + Path of the Outcast, Reconnaissance",
+   "n": 1
+  },
+  {
+   "sig": "down",
+   "faction": "Space Marines",
+   "arch": "Assault Brethren + Deathwatch Support + Terminator Storm Force, Take and Hold",
+   "n": 18
+  }
+ ],
+ "brief": {
+  "AJA": [
+   "Space Marines et AdMech au-dessus de 52 %",
+   "Emperor's Children, Orks et Imperial Knights à l'équilibre",
+   "T'au et Necrons sous 50 %",
+   "Plus forte évolution : Necrons (−22,5 pts depuis la semaine 43)"
+  ],
+  "À préparer": [
+   "Aucune faction au-dessus de 50 % ce week-end"
+  ],
+  "Disposition": [
+   "Take and Hold mène à 56,6 % sur 76 parties",
+   "Purge the Foe ferme la marche à 44,8 %"
+  ],
+  "Meta": [],
+  "Émergent": [
+   "Adeptus Custodes en Emperor's Chosen + Lions of the Emperor + Might of the Moritoi (Take and Hold)",
+   "Orks en Brute Bosses + Bully Boyz + Da Big Hunt (Purge the Foe)",
+   "Aeldari en Eldritch Raiders + Path of the Outcast (Reconnaissance)"
+  ]
+ }
+}

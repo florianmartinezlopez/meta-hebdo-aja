@@ -1,0 +1,887 @@
+{
+ "nom": "World Eaters",
+ "slug": "world-eaters",
+ "periode": {
+  "wins": 27,
+  "losses": 18,
+  "total": 45,
+  "winRate": "60.00"
+ },
+ "joueurs": 10,
+ "invaincus": 0,
+ "x1": 3,
+ "victoires_tournoi": 0,
+ "sur_representation": "2.13",
+ "dispositions": {
+  "Priority Assets": 2,
+  "Purge the Foe": 6,
+  "Take and Hold": 2
+ },
+ "combinaisons": [
+  {
+   "detachment": "Berzerker Warband | Vessels of Wrath",
+   "players": 4,
+   "fieldPercent": 40,
+   "wins": 11,
+   "losses": 8,
+   "total": 19,
+   "winRate": "57.89"
+  },
+  {
+   "detachment": "Berzerker Warband | Brazen Engines",
+   "players": 2,
+   "fieldPercent": 20,
+   "wins": 5,
+   "losses": 4,
+   "total": 9,
+   "winRate": "55.56"
+  },
+  {
+   "detachment": "Berzerker Warband | Butchers of Khorne",
+   "players": 2,
+   "fieldPercent": 20,
+   "wins": 6,
+   "losses": 2,
+   "total": 8,
+   "winRate": "75.00"
+  },
+  {
+   "detachment": "Goretrack Onslaught | Vessels of Wrath",
+   "players": 1,
+   "fieldPercent": 10,
+   "wins": 1,
+   "losses": 3,
+   "total": 4,
+   "winRate": "25.00"
+  },
+  {
+   "detachment": "Khorne Daemonkin | Vessels of Wrath",
+   "players": 1,
+   "fieldPercent": 10,
+   "wins": 4,
+   "losses": 1,
+   "total": 5,
+   "winRate": "80.00"
+  }
+ ],
+ "adversaires": [
+  {
+   "opponentFaction": "Adeptus Custodes",
+   "wins": 2,
+   "losses": 5,
+   "total": 7,
+   "winRate": "28.57",
+   "avgDifferential": -9.857142857142858,
+   "differentialGames": 7,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 2,
+    "total": 3,
+    "winRate": "33.33",
+    "avgDifferential": 5,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Aeldari",
+   "wins": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": -20,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Chaos Daemons",
+   "wins": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": -8.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -18,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Chaos Knights",
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00",
+   "avgDifferential": -13.5,
+   "differentialGames": 4,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": 5.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Chaos Space Marines",
+   "wins": 2,
+   "losses": 1,
+   "total": 3,
+   "winRate": "66.67",
+   "avgDifferential": 8.333333333333334,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Dark Angels",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 72,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Death Guard",
+   "wins": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": 9.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Emperor's Children",
+   "wins": 2,
+   "losses": 0,
+   "total": 2,
+   "winRate": "100.00",
+   "avgDifferential": 27.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Imperial Agents",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 76,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 76,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Imperial Knights",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 5,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Leagues of Votann",
+   "wins": 2,
+   "losses": 1,
+   "total": 3,
+   "winRate": "66.67",
+   "avgDifferential": 27.333333333333332,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": 10,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Necrons",
+   "wins": 3,
+   "losses": 0,
+   "total": 3,
+   "winRate": "100.00",
+   "avgDifferential": 38.666666666666664,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 47,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Orks",
+   "wins": 1,
+   "losses": 2,
+   "total": 3,
+   "winRate": "33.33",
+   "avgDifferential": -3.6666666666666665,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -2,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Space Marines (Astartes)",
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00",
+   "avgDifferential": -6.5,
+   "differentialGames": 4,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 5,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Space Wolves",
+   "wins": 3,
+   "losses": 0,
+   "total": 3,
+   "winRate": "100.00",
+   "avgDifferential": 58,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 52,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Thousand Sons",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 50,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 50,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Tyranids",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 3,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Adepta Sororitas",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -6,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Adeptus Mechanicus",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -29,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  }
+ ],
+ "tendance": [
+  {
+   "week": "2026-06-21",
+   "wins": 4,
+   "losses": 9,
+   "total": 13,
+   "winRate": "30.77"
+  },
+  {
+   "week": "2026-06-28",
+   "wins": 34,
+   "losses": 50,
+   "total": 84,
+   "winRate": "40.48"
+  },
+  {
+   "week": "2026-07-05",
+   "wins": 52,
+   "losses": 60,
+   "total": 112,
+   "winRate": "46.43"
+  },
+  {
+   "week": "2026-07-12",
+   "wins": 39,
+   "losses": 59,
+   "total": 98,
+   "winRate": "39.80"
+  },
+  {
+   "week": "2026-07-19",
+   "wins": 125,
+   "losses": 166,
+   "total": 291,
+   "winRate": "42.96"
+  },
+  {
+   "week": "2026-07-26",
+   "wins": 69,
+   "losses": 90,
+   "total": 159,
+   "winRate": "43.40"
+  },
+  {
+   "week": "2026-08-02",
+   "wins": 108,
+   "losses": 123,
+   "total": 231,
+   "winRate": "46.75"
+  },
+  {
+   "week": "2026-08-09",
+   "wins": 55,
+   "losses": 51,
+   "total": 106,
+   "winRate": "51.89"
+  },
+  {
+   "week": "2026-08-16",
+   "wins": 101,
+   "losses": 102,
+   "total": 203,
+   "winRate": "49.75"
+  },
+  {
+   "week": "2026-08-23",
+   "wins": 102,
+   "losses": 109,
+   "total": 211,
+   "winRate": "48.34"
+  },
+  {
+   "week": "2026-08-30",
+   "wins": 94,
+   "losses": 94,
+   "total": 188,
+   "winRate": "50.00"
+  },
+  {
+   "week": "2026-09-06",
+   "wins": 112,
+   "losses": 93,
+   "total": 205,
+   "winRate": "54.63"
+  },
+  {
+   "week": "2026-09-13",
+   "wins": 157,
+   "losses": 165,
+   "total": 322,
+   "winRate": "48.76"
+  },
+  {
+   "week": "2026-09-20",
+   "wins": 66,
+   "losses": 78,
+   "total": 144,
+   "winRate": "45.83"
+  },
+  {
+   "week": "2026-09-27",
+   "wins": 125,
+   "losses": 150,
+   "total": 275,
+   "winRate": "45.45"
+  },
+  {
+   "week": "2026-10-04",
+   "wins": 124,
+   "losses": 137,
+   "total": 261,
+   "winRate": "47.51"
+  },
+  {
+   "week": "2026-10-11",
+   "wins": 163,
+   "losses": 139,
+   "total": 302,
+   "winRate": "53.97"
+  },
+  {
+   "week": "2026-10-18",
+   "wins": 309,
+   "losses": 255,
+   "total": 564,
+   "winRate": "54.79"
+  },
+  {
+   "week": "2026-10-25",
+   "wins": 185,
+   "losses": 179,
+   "total": 364,
+   "winRate": "50.82"
+  },
+  {
+   "week": "2026-11-01",
+   "wins": 27,
+   "losses": 18,
+   "total": 45,
+   "winRate": "60.00"
+  }
+ ],
+ "listes_recentes": [
+  {
+   "playerName": "Leo Monty",
+   "playerUid": "e91c3ce425b6d680ae",
+   "eventName": "Calling the Banners 2026",
+   "eventUid": "ec72160fd4efaf7d15",
+   "numberOfPlayers": 67,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Berzerker Warband | Vessels of Wrath",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-30"
+  },
+  {
+   "playerName": "Dean Sinnbeck",
+   "playerUid": "c22e060590743aa995",
+   "eventName": "Calling the Banners 2026",
+   "eventUid": "ec72160fd4efaf7d15",
+   "numberOfPlayers": 67,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Berzerker Warband | Butchers of Khorne",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-30"
+  },
+  {
+   "playerName": "Jack Summersby",
+   "playerUid": "7c7118cac0aca2ca2f",
+   "eventName": "Calling the Banners 2026",
+   "eventUid": "ec72160fd4efaf7d15",
+   "numberOfPlayers": 67,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Khorne Daemonkin | Vessels of Wrath",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-30"
+  },
+  {
+   "playerName": "Peyton Beard",
+   "playerUid": "b9f236a4876ddb71f0",
+   "eventName": "RCM: Night of the Wolf 2026",
+   "eventUid": "181348e066d94710f2",
+   "numberOfPlayers": 29,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Berzerker Warband | Vessels of Wrath",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Jimmy Fields",
+   "playerUid": "2725b514ac9991da1d",
+   "eventName": "Turbulent Games Warhammer 40K GT @Kee Con",
+   "eventUid": "f6a31d7451d4902b91",
+   "numberOfPlayers": 16,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Berzerker Warband | Vessels of Wrath",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Zan 🔥🎲 Rashid",
+   "playerUid": "c2a8f421294f359260",
+   "eventName": "THE COVENTRY 40K : 2-Day",
+   "eventUid": "a5048c9937fc23b9ad",
+   "numberOfPlayers": 110,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Berzerker Warband | Butchers of Khorne",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Theo Werner",
+   "playerUid": "1c4623b28b5de3f73b",
+   "eventName": "Sydney GT October",
+   "eventUid": "13971701792399ddc4",
+   "numberOfPlayers": 62,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Berzerker Warband | Butchers of Khorne",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-23"
+  },
+  {
+   "playerName": "Tom Maher",
+   "playerUid": "462d199d4d1153c076",
+   "eventName": "Gaelcon 2026",
+   "eventUid": "bae35c07d163b4f605",
+   "numberOfPlayers": 47,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Berzerker Warband | Vessels of Wrath",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Duncan Brown",
+   "playerUid": "abf05d2edb22426799",
+   "eventName": "Grampian Gaming Guild Oct. GT",
+   "eventUid": "b44763b389e4f00a6b",
+   "numberOfPlayers": 42,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Berzerker Warband | Vessels of Wrath",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Jack Burn",
+   "playerUid": "544f7bf2e5aa89b248",
+   "eventName": "Grampian Gaming Guild Oct. GT",
+   "eventUid": "b44763b389e4f00a6b",
+   "numberOfPlayers": 42,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Berzerker Warband | Vessels of Wrath",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Judo Shan",
+   "playerUid": "5229bdb9d3b7591c6a",
+   "eventName": "OrktoberFest III: This time ,It's a Gt at Blue Hen",
+   "eventUid": "39639345c8421d6a95",
+   "numberOfPlayers": 41,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Berzerker Warband | Vessels of Wrath",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Tyler Lamanilao",
+   "playerUid": "461750ddf521b1605e",
+   "eventName": "Hell's Basement GT 2026",
+   "eventUid": "199fab052552d2056f",
+   "numberOfPlayers": 40,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Unknown",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Steven Saroka",
+   "playerUid": "a2b63c9a985b6ceb6b",
+   "eventName": "Adeptus 5-0 Jailbreak Event Hosted by Away Games",
+   "eventUid": "1b49ae4ddbcf5b86b9",
+   "numberOfPlayers": 36,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Berzerker Warband | Vessels of Wrath",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Kevin Lieb",
+   "playerUid": "55e2207729c363fbe3",
+   "eventName": "Clever Kobold's Halloween Hellscape GT",
+   "eventUid": "3e86649850cb0270f2",
+   "numberOfPlayers": 32,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Berzerker Warband | Vessels of Wrath",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Thomas Trudell",
+   "playerUid": "e1beaa36391ab9d2cd",
+   "eventName": "Clever Kobold's Halloween Hellscape GT",
+   "eventUid": "3e86649850cb0270f2",
+   "numberOfPlayers": 32,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Berzerker Warband | Brazen Engines",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Mehyo El Jawhary",
+   "playerUid": "e3cf77f7a5a777701f",
+   "eventName": "The Hogtowner 2026",
+   "eventUid": "c4f90078b78f068771",
+   "numberOfPlayers": 24,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Berzerker Warband | Vessels of Wrath",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Sergio Antonio Gonzalez Bayod",
+   "playerUid": "312603f287960a1be4",
+   "eventName": "The Guild 5th GT",
+   "eventUid": "606d3c34f30c25b6f8",
+   "numberOfPlayers": 23,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Berzerker Warband | Butchers of Khorne",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Axel Tayson",
+   "playerUid": "71cc5096ad1ac87d0b",
+   "eventName": "Battle for the Big Country",
+   "eventUid": "42ca421c191002e74c",
+   "numberOfPlayers": 20,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Possessed Slaughterband | Brazen Engines",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Shane Quist",
+   "playerUid": "4a93c30251293be540",
+   "eventName": "Turbulent Games Warhammer 40K GT @Kee Con",
+   "eventUid": "f6a31d7451d4902b91",
+   "numberOfPlayers": 16,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Berzerker Warband | Vessels of Wrath",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Joshua Campbell",
+   "playerUid": "754914bef752a44717",
+   "eventName": "Your Hobby Place Fall Brawl Hosted by Away Games",
+   "eventUid": "0770ed4d4b04bc53f2",
+   "numberOfPlayers": 42,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Berzerker Warband | Vessels of Wrath",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Jim Wetmore",
+   "playerUid": "bb2ba59e9e1a29a5ab",
+   "eventName": "VFW October GT",
+   "eventUid": "08d40f0961a3391cb9",
+   "numberOfPlayers": 30,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Khorne Daemonkin | Vessels of Wrath",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Nelson WiRm",
+   "playerUid": "de9b0df40a9432fdb8",
+   "eventName": "Marea de Guerra - GT Kanarian Open",
+   "eventUid": "90d69dba9ff19d7596",
+   "numberOfPlayers": 24,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Berzerker Warband | Butchers of Khorne",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "François Lalonde",
+   "playerUid": "06aab3d9698351c055",
+   "eventName": "Bloodshed Bay Two",
+   "eventUid": "ffd0f958003627ee1e",
+   "numberOfPlayers": 82,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Berzerker Warband | Vessels of Wrath",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Lord Hamburger the 5th",
+   "playerUid": "3613d3f3de38b41396",
+   "eventName": "Bloodshed Bay Two",
+   "eventUid": "ffd0f958003627ee1e",
+   "numberOfPlayers": 82,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Berzerker Warband | Vessels of Wrath",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Enes Humic",
+   "playerUid": "66a4f4484359fcc099",
+   "eventName": "Alba GT 2026",
+   "eventUid": "cf04740b3b9b3d8e89",
+   "numberOfPlayers": 100,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 1,
+   "losses": 0,
+   "detachment": "Berzerker Warband | Brazen Engines",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-17"
+  }
+ ],
+ "listes_total_site": 110
+}

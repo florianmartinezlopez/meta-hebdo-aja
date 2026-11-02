@@ -1,0 +1,785 @@
+{
+ "nom": "Chaos Space Marines",
+ "slug": "chaos-space-marines",
+ "periode": {
+  "wins": 14,
+  "losses": 11,
+  "total": 25,
+  "winRate": "56.00"
+ },
+ "joueurs": 5,
+ "invaincus": 0,
+ "x1": 1,
+ "victoires_tournoi": 0,
+ "sur_representation": "2.13",
+ "dispositions": {
+  "Disruption": 1,
+  "Reconnaissance": 1,
+  "Take and Hold": 3
+ },
+ "combinaisons": [
+  {
+   "detachment": "Cabal of Chaos | Fellhammer Siege-host",
+   "players": 1,
+   "fieldPercent": 20,
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00"
+  },
+  {
+   "detachment": "Cabal of Chaos | Soulforged Warpack",
+   "players": 1,
+   "fieldPercent": 20,
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00"
+  },
+  {
+   "detachment": "Cabal of Chaos | Veterans of the Long War",
+   "players": 1,
+   "fieldPercent": 20,
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00"
+  },
+  {
+   "detachment": "Cabal of Chaos | Warpstrike Champions",
+   "players": 1,
+   "fieldPercent": 20,
+   "wins": 4,
+   "losses": 1,
+   "total": 5,
+   "winRate": "80.00"
+  },
+  {
+   "detachment": "Murdertalon Raiders | Veterans of the Long War",
+   "players": 1,
+   "fieldPercent": 20,
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00"
+  }
+ ],
+ "adversaires": [
+  {
+   "opponentFaction": "Adeptus Custodes",
+   "wins": 4,
+   "losses": 2,
+   "total": 6,
+   "winRate": "66.67",
+   "avgDifferential": 26.833333333333332,
+   "differentialGames": 6,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 2,
+    "total": 4,
+    "winRate": "50.00",
+    "avgDifferential": 18.25,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "Adeptus Mechanicus",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 42,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Imperial Agents",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 17,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 17,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Necrons",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 49,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Orks",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 19,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 19,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Space Marines (Astartes)",
+   "wins": 4,
+   "losses": 1,
+   "total": 5,
+   "winRate": "80.00",
+   "avgDifferential": 25,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": "100.00",
+    "avgDifferential": 36,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Thousand Sons",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 56,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 56,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "World Eaters",
+   "wins": 1,
+   "losses": 2,
+   "total": 3,
+   "winRate": "33.33",
+   "avgDifferential": -8.333333333333334,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 2,
+    "total": 3,
+    "winRate": "33.33",
+    "avgDifferential": -8.333333333333334,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Adepta Sororitas",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -52,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Chaos Daemons",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -28,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Emperor's Children",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -27,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Imperial Knights",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -32,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Space Wolves",
+   "wins": 0,
+   "losses": 2,
+   "total": 2,
+   "winRate": "0.00",
+   "avgDifferential": -24.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -23,
+    "differentialGames": 1
+   }
+  }
+ ],
+ "tendance": [
+  {
+   "week": "2026-06-21",
+   "wins": 1,
+   "losses": 7,
+   "total": 8,
+   "winRate": "12.50"
+  },
+  {
+   "week": "2026-06-28",
+   "wins": 48,
+   "losses": 51,
+   "total": 99,
+   "winRate": "48.48"
+  },
+  {
+   "week": "2026-07-05",
+   "wins": 62,
+   "losses": 75,
+   "total": 137,
+   "winRate": "45.26"
+  },
+  {
+   "week": "2026-07-12",
+   "wins": 90,
+   "losses": 98,
+   "total": 188,
+   "winRate": "47.87"
+  },
+  {
+   "week": "2026-07-19",
+   "wins": 273,
+   "losses": 270,
+   "total": 543,
+   "winRate": "50.28"
+  },
+  {
+   "week": "2026-07-26",
+   "wins": 95,
+   "losses": 102,
+   "total": 197,
+   "winRate": "48.22"
+  },
+  {
+   "week": "2026-08-02",
+   "wins": 105,
+   "losses": 112,
+   "total": 217,
+   "winRate": "48.39"
+  },
+  {
+   "week": "2026-08-09",
+   "wins": 58,
+   "losses": 71,
+   "total": 129,
+   "winRate": "44.96"
+  },
+  {
+   "week": "2026-08-16",
+   "wins": 165,
+   "losses": 198,
+   "total": 363,
+   "winRate": "45.45"
+  },
+  {
+   "week": "2026-08-23",
+   "wins": 114,
+   "losses": 116,
+   "total": 230,
+   "winRate": "49.57"
+  },
+  {
+   "week": "2026-08-30",
+   "wins": 104,
+   "losses": 123,
+   "total": 227,
+   "winRate": "45.81"
+  },
+  {
+   "week": "2026-09-06",
+   "wins": 90,
+   "losses": 93,
+   "total": 183,
+   "winRate": "49.18"
+  },
+  {
+   "week": "2026-09-13",
+   "wins": 114,
+   "losses": 147,
+   "total": 261,
+   "winRate": "43.68"
+  },
+  {
+   "week": "2026-09-20",
+   "wins": 88,
+   "losses": 111,
+   "total": 199,
+   "winRate": "44.22"
+  },
+  {
+   "week": "2026-09-27",
+   "wins": 169,
+   "losses": 187,
+   "total": 356,
+   "winRate": "47.47"
+  },
+  {
+   "week": "2026-10-04",
+   "wins": 138,
+   "losses": 121,
+   "total": 259,
+   "winRate": "53.28"
+  },
+  {
+   "week": "2026-10-11",
+   "wins": 108,
+   "losses": 136,
+   "total": 244,
+   "winRate": "44.26"
+  },
+  {
+   "week": "2026-10-18",
+   "wins": 104,
+   "losses": 154,
+   "total": 258,
+   "winRate": "40.31"
+  },
+  {
+   "week": "2026-10-25",
+   "wins": 73,
+   "losses": 93,
+   "total": 166,
+   "winRate": "43.98"
+  },
+  {
+   "week": "2026-11-01",
+   "wins": 14,
+   "losses": 11,
+   "total": 25,
+   "winRate": "56.00"
+  }
+ ],
+ "listes_recentes": [
+  {
+   "playerName": "Nathan Sgrazzutti",
+   "playerUid": "8a8e1bf6d97de01099",
+   "eventName": "Halloween Havoc",
+   "eventUid": "a90de724a1c0041d26",
+   "numberOfPlayers": 18,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Warpstrike Champions | Cabal of Chaos",
+   "disposition": "Disruption",
+   "startDate": "2026-10-31"
+  },
+  {
+   "playerName": "Jameson Haytas",
+   "playerUid": "fb69c2827dc5c10ed0",
+   "eventName": "Treasure Trove Games - Warhammer 40k Grim Harvest GT 2026",
+   "eventUid": "7cedbcd10a07438819",
+   "numberOfPlayers": 30,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Veterans of the Long War | Cabal of Chaos",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "TJ Lanigan",
+   "playerUid": "c1e7e5d748e3b1008b",
+   "eventName": "Bolters And Boogeymen Bazooka GT",
+   "eventUid": "f37326f3876d927a9a",
+   "numberOfPlayers": 28,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Chaos Cult | Cabal of Chaos",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Samuel 🌌🛠 Smith",
+   "playerUid": "7e59e7e05edbd46fbe",
+   "eventName": "THE COVENTRY 40K : 2-Day",
+   "eventUid": "a5048c9937fc23b9ad",
+   "numberOfPlayers": 110,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Pactbound Zealots",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Emory Garrett",
+   "playerUid": "43d2bcd73b59e99c87",
+   "eventName": "Adeptus 5-0 Jailbreak Event Hosted by Away Games",
+   "eventUid": "1b49ae4ddbcf5b86b9",
+   "numberOfPlayers": 36,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Veterans of the Long War | Cabal of Chaos",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "David Bierek",
+   "playerUid": "d9a656465cb3eccea7",
+   "eventName": "Treasure Trove Games - Warhammer 40k Grim Harvest GT 2026",
+   "eventUid": "7cedbcd10a07438819",
+   "numberOfPlayers": 30,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Renegade Warband | Cabal of Chaos",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Anthony LoGrande",
+   "playerUid": "f2c555e424dd6b4e18",
+   "eventName": "Anvil of Charity 40k Tournament",
+   "eventUid": "4d5b9b95ab19fc72ea",
+   "numberOfPlayers": 28,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 1,
+   "losses": 0,
+   "detachment": "Veterans of the Long War | Cabal of Chaos",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Guillaume \"nainfa\" Brisseau - Bières & Pistaches",
+   "playerUid": "5bbd401f321bd358e3",
+   "eventName": "Paris Wargame Expo 2 - Solo 40K",
+   "eventUid": "c0dcf8fb846148ad91",
+   "numberOfPlayers": 221,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Warpstrike Champions | Cabal of Chaos",
+   "disposition": "Disruption",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Tyler Hayes",
+   "playerUid": "7f3232cb14063d7901",
+   "eventName": "Anvil of Charity 40k Tournament",
+   "eventUid": "4d5b9b95ab19fc72ea",
+   "numberOfPlayers": 28,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Chaos Cult | Cabal of Chaos",
+   "disposition": "Disruption",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Trae Burnett",
+   "playerUid": "229fb21a2905d268a3",
+   "eventName": "Denver 40K Fight Club Oct. Open ‘26",
+   "eventUid": "b68c369f61c3e3f379",
+   "numberOfPlayers": 105,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Veterans of the Long War | Cabal of Chaos",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Jordan Taylor",
+   "playerUid": "abf31075bcfcdbdd47",
+   "eventName": "BZU 40K 2026",
+   "eventUid": "b5306acfabc2222445",
+   "numberOfPlayers": 48,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Veterans of the Long War | Cabal of Chaos",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Tom Martin",
+   "playerUid": "50bf0c52c9cb9acf59",
+   "eventName": "Gongaii GT - The Great Game - Fall 2026",
+   "eventUid": "69960fafa887079a5f",
+   "numberOfPlayers": 48,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Renegade Raiders",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Daniel Jessiman-Perreault",
+   "playerUid": "3463ed1569b2bcd7cb",
+   "eventName": "LVNO we aint going 40k GT",
+   "eventUid": "815b7e4b60d2dc88dd",
+   "numberOfPlayers": 38,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Warpstrike Champions | Cabal of Chaos",
+   "disposition": "Disruption",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Dale Kane",
+   "playerUid": "4dff799b077008c6c7",
+   "eventName": "Imps Gaming + Hive City Gaming GT October 2026",
+   "eventUid": "87b876331c8a5311a8",
+   "numberOfPlayers": 29,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Veterans of the Long War | Cabal of Chaos",
+   "disposition": "Disruption",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Santiago Palacio",
+   "playerUid": "a4df155feef2d5d65c",
+   "eventName": "Golden Dawn IV",
+   "eventUid": "7036473027cae92bd6",
+   "numberOfPlayers": 26,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Creations of Bile",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Rasmus Särkinen",
+   "playerUid": "78ec55fe0af6274c24",
+   "eventName": "Class 40k",
+   "eventUid": "772bc299d16b9f46e9",
+   "numberOfPlayers": 16,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Veterans of the Long War | Cabal of Chaos",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-10"
+  },
+  {
+   "playerName": "Brennan Abbott",
+   "playerUid": "0830d562b1f9a790fd",
+   "eventName": "Gamez Knight - 2 Day 2k",
+   "eventUid": "8595aa68d9f2f4cd59",
+   "numberOfPlayers": 18,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Pactbound Zealots",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-02"
+  },
+  {
+   "playerName": "James Thomas",
+   "playerUid": "bc28828a37b5e31899",
+   "eventName": "LVO 2026 - Warhammer 40k Championships - Las Vegas Open",
+   "eventUid": "1f5cf8ab5f28571388",
+   "numberOfPlayers": 652,
+   "numberOfRounds": 10,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Creations of Bile",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-02"
+  },
+  {
+   "playerName": "Alex Spathopoulos",
+   "playerUid": "37a7339cde278716ce",
+   "eventName": "LVO 2026 - Warhammer 40k Championships - Las Vegas Open",
+   "eventUid": "1f5cf8ab5f28571388",
+   "numberOfPlayers": 652,
+   "numberOfRounds": 10,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Renegade Raiders",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-02"
+  },
+  {
+   "playerName": "Anthony LoGrande",
+   "playerUid": "f2c555e424dd6b4e18",
+   "eventName": "LVO 2026 - Warhammer 40k Championships - Las Vegas Open",
+   "eventUid": "1f5cf8ab5f28571388",
+   "numberOfPlayers": 652,
+   "numberOfRounds": 10,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Veterans of the Long War | Cabal of Chaos",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-02"
+  },
+  {
+   "playerName": "Andrew Yip",
+   "playerUid": "a9c6cc4a3ac74d71ea",
+   "eventName": "LVO 2026 - Warhammer 40k Championships - Las Vegas Open",
+   "eventUid": "1f5cf8ab5f28571388",
+   "numberOfPlayers": 652,
+   "numberOfRounds": 10,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Veterans of the Long War | Cabal of Chaos",
+   "disposition": "Disruption",
+   "startDate": "2026-10-02"
+  },
+  {
+   "playerName": "Daryl Moore",
+   "playerUid": "1f87cf882c55ada8ed",
+   "eventName": "Warpstorm 3",
+   "eventUid": "82edc7e539c9fba4dd",
+   "numberOfPlayers": 48,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Creations of Bile",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-03"
+  },
+  {
+   "playerName": "Matěj Ludvík",
+   "playerUid": "63c86838ec5c0cca54",
+   "eventName": "Pilsen Meta Rift Fall 2026",
+   "eventUid": "4c91f3f991ad5848e5",
+   "numberOfPlayers": 40,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Veterans of the Long War | Cabal of Chaos",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-03"
+  },
+  {
+   "playerName": "Samuel 🌌🛠 Smith",
+   "playerUid": "7e59e7e05edbd46fbe",
+   "eventName": "The London Grand Tournament - 40k Main Event (LGT 40k GT)",
+   "eventUid": "4848688a4a9990005c",
+   "numberOfPlayers": 1049,
+   "numberOfRounds": 10,
+   "wins": 7,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Creations of Bile",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-09-25"
+  },
+  {
+   "playerName": "liam Vsl",
+   "playerUid": "a5d38d9118b8d42e03",
+   "eventName": "The London Grand Tournament - 40k Main Event (LGT 40k GT)",
+   "eventUid": "4848688a4a9990005c",
+   "numberOfPlayers": 1049,
+   "numberOfRounds": 10,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Veterans of the Long War | Cabal of Chaos",
+   "disposition": "Disruption",
+   "startDate": "2026-09-25"
+  }
+ ],
+ "listes_total_site": 110
+}

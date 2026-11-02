@@ -1,0 +1,863 @@
+{
+ "nom": "Orks",
+ "slug": "orks",
+ "periode": {
+  "wins": 15,
+  "losses": 14,
+  "total": 29,
+  "winRate": "51.72"
+ },
+ "joueurs": 7,
+ "invaincus": 0,
+ "x1": 1,
+ "victoires_tournoi": 0,
+ "sur_representation": "0.00",
+ "dispositions": {
+  "Priority Assets": 1,
+  "Purge the Foe": 3,
+  "Reconnaissance": 1,
+  "Take and Hold": 2
+ },
+ "combinaisons": [
+  {
+   "detachment": "Brute Bosses | Bully Boyz | Da Big Hunt",
+   "players": 2,
+   "fieldPercent": 28.57142857142857,
+   "wins": 4,
+   "losses": 3,
+   "total": 7,
+   "winRate": "57.14"
+  },
+  {
+   "detachment": "Brute Bosses | Bully Boyz | Green Tide",
+   "players": 1,
+   "fieldPercent": 14.285714285714285,
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00"
+  },
+  {
+   "detachment": "Brute Bosses | Bully Boyz | Kult of Speed",
+   "players": 1,
+   "fieldPercent": 14.285714285714285,
+   "wins": 3,
+   "losses": 1,
+   "total": 4,
+   "winRate": "75.00"
+  },
+  {
+   "detachment": "Bully Boyz | Flyboyz | Kult of Speed",
+   "players": 1,
+   "fieldPercent": 14.285714285714285,
+   "wins": 1,
+   "losses": 2,
+   "total": 3,
+   "winRate": "33.33"
+  },
+  {
+   "detachment": "Bully Boyz | Shoota Boyz | Taktikal Brigade",
+   "players": 1,
+   "fieldPercent": 14.285714285714285,
+   "wins": 1,
+   "losses": 4,
+   "total": 5,
+   "winRate": "20.00"
+  },
+  {
+   "detachment": "Da Big Hunt | Runt Swarm | Wreckas",
+   "players": 1,
+   "fieldPercent": 14.285714285714285,
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00"
+  }
+ ],
+ "adversaires": [
+  {
+   "opponentFaction": "Adepta Sororitas",
+   "wins": 2,
+   "losses": 1,
+   "total": 3,
+   "winRate": "66.67",
+   "avgDifferential": 11.666666666666666,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": "100.00",
+    "avgDifferential": 18,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Adeptus Mechanicus",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 38,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 38,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Aeldari",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 39,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 39,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Chaos Daemons",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 46,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 46,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Chaos Knights",
+   "wins": 2,
+   "losses": 4,
+   "total": 6,
+   "winRate": "33.33",
+   "avgDifferential": -4,
+   "differentialGames": 6,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 2,
+    "total": 2,
+    "winRate": "0.00",
+    "avgDifferential": -34.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Imperial Agents",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 74,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Imperial Knights",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 62,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 62,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Leagues of Votann",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 87,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 87,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Necrons",
+   "wins": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": -3.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -37,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Thousand Sons",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 33,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Tyranids",
+   "wins": 1,
+   "losses": 0,
+   "total": 1,
+   "winRate": "100.00",
+   "avgDifferential": 55,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "World Eaters",
+   "wins": 2,
+   "losses": 1,
+   "total": 3,
+   "winRate": "66.67",
+   "avgDifferential": 3.6666666666666665,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": 4.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Adeptus Custodes",
+   "wins": 0,
+   "losses": 2,
+   "total": 2,
+   "winRate": "0.00",
+   "avgDifferential": -19.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -7,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Chaos Space Marines",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -19,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Dark Angels",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -36,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Emperor's Children",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -10,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -10,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Space Marines (Astartes)",
+   "wins": 0,
+   "losses": 2,
+   "total": 2,
+   "winRate": "0.00",
+   "avgDifferential": -28,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -1,
+    "differentialGames": 1
+   }
+  }
+ ],
+ "tendance": [
+  {
+   "week": "2026-06-21",
+   "wins": 8,
+   "losses": 8,
+   "total": 16,
+   "winRate": "50.00"
+  },
+  {
+   "week": "2026-06-28",
+   "wins": 55,
+   "losses": 39,
+   "total": 94,
+   "winRate": "58.51"
+  },
+  {
+   "week": "2026-07-05",
+   "wins": 71,
+   "losses": 59,
+   "total": 130,
+   "winRate": "54.62"
+  },
+  {
+   "week": "2026-07-12",
+   "wins": 166,
+   "losses": 100,
+   "total": 266,
+   "winRate": "62.41"
+  },
+  {
+   "week": "2026-07-19",
+   "wins": 309,
+   "losses": 206,
+   "total": 515,
+   "winRate": "60.00"
+  },
+  {
+   "week": "2026-07-26",
+   "wins": 195,
+   "losses": 119,
+   "total": 314,
+   "winRate": "62.10"
+  },
+  {
+   "week": "2026-08-02",
+   "wins": 205,
+   "losses": 171,
+   "total": 376,
+   "winRate": "54.52"
+  },
+  {
+   "week": "2026-08-09",
+   "wins": 93,
+   "losses": 58,
+   "total": 151,
+   "winRate": "61.59"
+  },
+  {
+   "week": "2026-08-16",
+   "wins": 309,
+   "losses": 211,
+   "total": 520,
+   "winRate": "59.42"
+  },
+  {
+   "week": "2026-08-23",
+   "wins": 141,
+   "losses": 122,
+   "total": 263,
+   "winRate": "53.61"
+  },
+  {
+   "week": "2026-08-30",
+   "wins": 191,
+   "losses": 161,
+   "total": 352,
+   "winRate": "54.26"
+  },
+  {
+   "week": "2026-09-06",
+   "wins": 149,
+   "losses": 112,
+   "total": 261,
+   "winRate": "57.09"
+  },
+  {
+   "week": "2026-09-13",
+   "wins": 229,
+   "losses": 218,
+   "total": 447,
+   "winRate": "51.23"
+  },
+  {
+   "week": "2026-09-20",
+   "wins": 145,
+   "losses": 96,
+   "total": 241,
+   "winRate": "60.17"
+  },
+  {
+   "week": "2026-09-27",
+   "wins": 353,
+   "losses": 268,
+   "total": 621,
+   "winRate": "56.84"
+  },
+  {
+   "week": "2026-10-04",
+   "wins": 309,
+   "losses": 223,
+   "total": 532,
+   "winRate": "58.08"
+  },
+  {
+   "week": "2026-10-11",
+   "wins": 195,
+   "losses": 149,
+   "total": 344,
+   "winRate": "56.69"
+  },
+  {
+   "week": "2026-10-18",
+   "wins": 315,
+   "losses": 274,
+   "total": 589,
+   "winRate": "53.48"
+  },
+  {
+   "week": "2026-10-25",
+   "wins": 207,
+   "losses": 190,
+   "total": 397,
+   "winRate": "52.14"
+  },
+  {
+   "week": "2026-11-01",
+   "wins": 15,
+   "losses": 14,
+   "total": 29,
+   "winRate": "51.72"
+  }
+ ],
+ "listes_recentes": [
+  {
+   "playerName": "Edward Askey",
+   "playerUid": "816e486cc64d420fda",
+   "eventName": "Calling the Banners 2026",
+   "eventUid": "ec72160fd4efaf7d15",
+   "numberOfPlayers": 67,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Brute Bosses | Bully Boyz | Da Big Hunt",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-30"
+  },
+  {
+   "playerName": "Fred Otto",
+   "playerUid": "6d526a0f1073af3212",
+   "eventName": "9th Corsair Open Grand Tournament",
+   "eventUid": "32fa6b613a957918cf",
+   "numberOfPlayers": 43,
+   "numberOfRounds": 6,
+   "wins": 6,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "War Horde",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-23"
+  },
+  {
+   "playerName": "lebull",
+   "playerUid": "fcb4801d4712cc9e9f",
+   "eventName": "Limoges Wargames solo 2000pts",
+   "eventUid": "e4567f631dfd15df69",
+   "numberOfPlayers": 45,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Blitz Brigade | Bully Boyz | Wreckas",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Stephen Dorfner",
+   "playerUid": "df87fd9f22cd92624d",
+   "eventName": "OrktoberFest III: This time ,It's a Gt at Blue Hen",
+   "eventUid": "39639345c8421d6a95",
+   "numberOfPlayers": 41,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Taktikal Brigade | Runt Swarm | Green Tide",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Roman Kleiber",
+   "playerUid": "27b80d4ffecbb0abbb",
+   "eventName": "9th Corsair Open Grand Tournament",
+   "eventUid": "32fa6b613a957918cf",
+   "numberOfPlayers": 43,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Bully Boyz | Wreckas | Runt Swarm",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-23"
+  },
+  {
+   "playerName": "Ross James",
+   "playerUid": "a7f70866befe0d4fd1",
+   "eventName": "THE COVENTRY 40K : 2-Day",
+   "eventUid": "a5048c9937fc23b9ad",
+   "numberOfPlayers": 110,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Brute Bosses | Bully Boyz | Green Tide",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Anthony Keen",
+   "playerUid": "603af38059164d299c",
+   "eventName": "THE COVENTRY 40K : 2-Day",
+   "eventUid": "a5048c9937fc23b9ad",
+   "numberOfPlayers": 110,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Blitz Brigade | Bully Boyz | Wreckas",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Daniel Xerri",
+   "playerUid": "27b14e506ebb5f612f",
+   "eventName": "Sydney GT October",
+   "eventUid": "13971701792399ddc4",
+   "numberOfPlayers": 62,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Blitz Brigade | Wreckas | Shoota Boyz",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-23"
+  },
+  {
+   "playerName": "Jason Wozniak",
+   "playerUid": "1926da1c284b0a119f",
+   "eventName": "Sydney GT October",
+   "eventUid": "13971701792399ddc4",
+   "numberOfPlayers": 62,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Brute Bosses | Runt Swarm | Green Tide",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-23"
+  },
+  {
+   "playerName": "Jan Ullmann",
+   "playerUid": "0fa3b2e793e2d9db39",
+   "eventName": "40k Ogr Cubb Singles",
+   "eventUid": "86e5e0399580a8e8f6",
+   "numberOfPlayers": 50,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Wreckas | Runt Swarm | Shoota Boyz",
+   "disposition": "Priority Assets",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Cody Spahr",
+   "playerUid": "69db3a76bac7c513f3",
+   "eventName": "Siege of Mordrax GT",
+   "eventUid": "56f6e4f1e7dc53348a",
+   "numberOfPlayers": 44,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Taktikal Brigade | Runt Swarm | Green Tide",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Grant Roberts",
+   "playerUid": "b350e946f5a4b06c50",
+   "eventName": "Grampian Gaming Guild Oct. GT",
+   "eventUid": "b44763b389e4f00a6b",
+   "numberOfPlayers": 42,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Kult of Speed | Flyboyz | Dread Mob",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Alex Robbins",
+   "playerUid": "02badfe99f25a4fc2e",
+   "eventName": "Hell's Basement GT 2026",
+   "eventUid": "199fab052552d2056f",
+   "numberOfPlayers": 40,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Brute Bosses | Runt Swarm | Green Tide",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Neil Maxemuik",
+   "playerUid": "3ae4f4e3dd7e6eee65",
+   "eventName": "Hell's Basement GT 2026",
+   "eventUid": "199fab052552d2056f",
+   "numberOfPlayers": 40,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Bully Boyz | Dread Mob | Green Tide",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Jouni Haavisto",
+   "playerUid": "537e2543f0ae82838f",
+   "eventName": "40k Canteen Brawl 2026",
+   "eventUid": "692949abdbff688d75",
+   "numberOfPlayers": 34,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Kult of Speed | Flyboyz",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Cole McAneeny",
+   "playerUid": "3f5c06015dcf71f61d",
+   "eventName": "Clever Kobold's Halloween Hellscape GT",
+   "eventUid": "3e86649850cb0270f2",
+   "numberOfPlayers": 32,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Blitz Brigade | Brute Bosses | Bully Boyz",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Brian Moody",
+   "playerUid": "0b78c21f42b91b490a",
+   "eventName": "24 & 25 October 2026 - OWN's Breaking Point GT at Game HQ",
+   "eventUid": "f1ebd4d25dafa550e1",
+   "numberOfPlayers": 29,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Taktikal Brigade | Runt Swarm | Green Tide",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Jeremy Skager",
+   "playerUid": "2c7d7f79748aeb738e",
+   "eventName": "ValleyCon GT",
+   "eventUid": "867a329a8817acb286",
+   "numberOfPlayers": 26,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Brute Bosses | Runt Swarm | Green Tide",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-24"
+  },
+  {
+   "playerName": "Björn",
+   "playerUid": "b9103ac61a0249dfec",
+   "eventName": "Malmö Wargaming Weekend X",
+   "eventUid": "4a41b46ebf7978f2ac",
+   "numberOfPlayers": 176,
+   "numberOfRounds": 5,
+   "wins": 6,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Kult of Speed | Flyboyz | Green Tide",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Mason Mutz",
+   "playerUid": "ee638984b4fb83bd90",
+   "eventName": "Odin's Place Open 2026",
+   "eventUid": "e96d7b1b71a02c269b",
+   "numberOfPlayers": 59,
+   "numberOfRounds": 6,
+   "wins": 6,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Blitz Brigade | Wreckas | Runt Swarm",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Damien Cooper",
+   "playerUid": "b0795e5f4234616eb3",
+   "eventName": "Alba GT 2026",
+   "eventUid": "cf04740b3b9b3d8e89",
+   "numberOfPlayers": 100,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Brute Bosses | Bully Boyz | Da Big Hunt",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Jeff Jew",
+   "playerUid": "bc376f7af7a1c7f827",
+   "eventName": "GITHAMMER WAAAGH WEEKEND!!",
+   "eventUid": "49c29dd398adeecb28",
+   "numberOfPlayers": 25,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Blitz Brigade | Bully Boyz | Dread Mob",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Jeppa",
+   "playerUid": "92ca894b5e03fabf9c",
+   "eventName": "Malmö Wargaming Weekend X",
+   "eventUid": "4a41b46ebf7978f2ac",
+   "numberOfPlayers": 176,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Blitz Brigade | Bully Boyz | Green Tide",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Skulltaker",
+   "playerUid": "48c2da10cc1cd9233a",
+   "eventName": "Malmö Wargaming Weekend X",
+   "eventUid": "4a41b46ebf7978f2ac",
+   "numberOfPlayers": 176,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Blitz Brigade | Wreckas | Da Big Hunt",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  },
+  {
+   "playerName": "Edouard SIMÉON",
+   "playerUid": "7ad7b121e23cf170c9",
+   "eventName": "Paris Wargame Expo 2 - Solo 40K",
+   "eventUid": "c0dcf8fb846148ad91",
+   "numberOfPlayers": 221,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Wreckas | Da Big Hunt",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-17"
+  }
+ ],
+ "listes_total_site": 310
+}
