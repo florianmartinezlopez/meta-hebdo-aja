@@ -1,5 +1,8 @@
 {
  "semaine": "2026-W43",
+ "creuse": false,
+ "tournois": 29,
+ "joueurs": 1190,
  "aja": {
   "T'au Empire": 47.29,
   "Space Marines": 53.03,

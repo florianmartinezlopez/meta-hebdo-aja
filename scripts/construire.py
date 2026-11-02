@@ -35,6 +35,7 @@ MIN_PARTIES_WR = 10          # Listhammer n'affiche pas de win rate en dessous
 MIN_PARTIES_COMBO_TOP = 20   # tableau « meilleures combinaisons »
 MIN_JOUEURS_LISTES = 30     # listes, tops et archétypes : GT de 30 joueurs et plus
 MIN_PARTIES_MATCHUP = 10    # matchups affichés dans les cartes d'armée
+SEUIL_CREUSE = 10           # moins de tournois que ça : semaine creuse, pas de comparaison
 NBSP, NNBSP = " ", " "
 LETTRES = {2: "deux", 3: "trois", 4: "quatre", 5: "cinq", 6: "six", 7: "sept", 8: "huit"}
 
@@ -186,7 +187,8 @@ def charger(semaine):
 def semaine_precedente(semaine):
     """Résumé de la dernière semaine relevée avant celle-ci (pour les évolutions), ou None."""
     avant = sorted(d for d in (RACINE / "data").iterdir()
-                   if d.is_dir() and d.name < semaine and (d / "resume.json").exists())
+                   if d.is_dir() and d.name < semaine and (d / "resume.json").exists()
+                   and not json.loads((d / "resume.json").read_text()).get("creuse"))
     if not avant:
         return None
     r = json.loads((avant[-1] / "resume.json").read_text())
@@ -319,7 +321,8 @@ def analyser(semaine, stats, factions, listes, team):
     archetypes = detecter_archetypes(listes, hist, factions, noms_team)
 
     # Synthèse
-    prec = semaine_precedente(semaine)
+    creuse = len(stats["tournois"]) < SEUIL_CREUSE
+    prec = None if creuse else semaine_precedente(semaine)
     brief = synthese(armees, fd_tri, classement, archetypes, prep, court, prec)
 
     # À noter
@@ -346,7 +349,12 @@ def analyser(semaine, stats, factions, listes, team):
                  f"limitées aux tournois de {MIN_JOUEURS_LISTES} joueurs et plus ({len(listes)} listes ce week-end). "
                  "Les win rates, matchups et colonnes X-0 / X-1 du classement viennent de Listhammer et comptent "
                  "tous les GT (16 joueurs et plus).")
-    if prec:
+    if creuse:
+        notes.append(f"Semaine creuse : Listhammer ne compte que {len(stats['tournois'])} tournoi"
+                     f"{'s' if len(stats['tournois']) > 1 else ''} pour ce week-end (seuil : {SEUIL_CREUSE}). "
+                     "Les évolutions ne sont pas affichées et cette semaine ne servira pas de référence "
+                     "pour la suivante.")
+    elif prec:
         notes.append(f"Les évolutions (▲ ▼) comparent avec la semaine {int(prec['semaine'].split('W')[1])} "
                      f"({prec['semaine']}), dernière semaine relevée.")
     else:
@@ -355,7 +363,7 @@ def analyser(semaine, stats, factions, listes, team):
         notes.append("Les dates de la fenêtre n'ont pas pu être lues sur le site : elles sont estimées.")
 
     return {"armees": armees, "fdstats": fdstats, "fd_tri": fd_tri, "classement": classement,
-            "exclues": exclues, "tops_combos": tops_combos, "prep": prep, "prec": prec, "archetypes": archetypes,
+            "exclues": exclues, "tops_combos": tops_combos, "prep": prep, "prec": prec, "creuse": creuse, "archetypes": archetypes,
             "brief": brief, "notes": notes, "listes": listes, "court": court, "noms_team": noms_team}
 
 
@@ -561,6 +569,11 @@ def rendre(semaine, stats, an, team, url, archives):
 </nav>""")
 
     # 01 Synthèse
+    if an["creuse"]:
+        H.append(f'<div class="alerte" role="note"><strong>Semaine creuse</strong><p>Listhammer ne compte que '
+                 f'{n_t} tournoi{"s" if n_t > 1 else ""} et {nb(n_j)} joueurs pour ce week-end. Avec si peu de parties, '
+                 'les win rates ci-dessous sont peu fiables et ne sont pas comparés à la semaine précédente. '
+                 'Le relevé est relancé mercredi au cas où le site complète ses données.</p></div>')
     H.append('<section id="bref"><div class="sec-head"><span class="eyebrow">01 · Synthèse</span>'
              '<h2>Synthèse de la semaine</h2></div><div class="brief">')
     for k, c, pts in an["brief"]:
@@ -747,8 +760,11 @@ def message_discord(semaine, stats, an, url):
                      for a in sorted(an["armees"], key=lambda a: -(a["st"]["wr"] or 0)))
     b, w = an["fd_tri"][0], an["fd_tri"][-1]
     em = emergents(an["archetypes"], court, 2)
-    lignes = [
-        f"Meta Hebdo 40K, semaine {num} ({len(stats['tournois'])} tournois, {nb(n_j)} joueurs)",
+    lignes = [f"Meta Hebdo 40K, semaine {num} ({len(stats['tournois'])} tournois, {nb(n_j)} joueurs)"]
+    if an["creuse"]:
+        lignes.append("⚠ Semaine creuse sur Listhammer : chiffres peu fiables, pas de comparaison avec la semaine "
+                      "précédente. Nouveau relevé mercredi.")
+    lignes += [
         f"AJA : {aja}",
         f"Disposition du moment : {b['nom']} {pct(b['wr'])}, {w['nom']} {pct(w['wr'])}",
     ]
@@ -790,6 +806,9 @@ def main():
     (d / "discord.txt").write_text(msg + "\n")
     (d / "resume.json").write_text(json.dumps({
         "semaine": args.semaine,
+        "creuse": an["creuse"],
+        "tournois": len(stats["tournois"]),
+        "joueurs": sum(t.get("players") or 0 for t in stats["tournois"]),
         "aja": {a["nom"]: a["st"]["wr"] for a in an["armees"]},
         "dispositions": {x["nom"]: x["wr"] for x in an["fdstats"]},
         "classement": [(r["faction"], r["wr"], r["total"]) for r in an["classement"]],
@@ -800,7 +819,28 @@ def main():
         "archetypes": [{k: x[k] for k in ("sig", "faction", "arch", "n")} for x in an["archetypes"]],
         "brief": {k: pts for k, _, pts in an["brief"]},
     }, ensure_ascii=False, indent=1))
+    (RACINE / "data" / "derniere.json").write_text(json.dumps(
+        {"semaine": args.semaine, "creuse": an["creuse"], "tournois": len(stats["tournois"])}) + "\n")
+    historique_a_preparer()
     print(msg)
+
+
+def historique_a_preparer():
+    """data/historique-a-preparer.csv : les adversaires « à préparer » de chaque semaine, pour le suivi long terme."""
+    lignes = []
+    for d in sorted((RACINE / "data").iterdir()):
+        f = d / "resume.json"
+        if not d.is_dir() or not f.exists():
+            continue
+        r = json.loads(f.read_text())
+        for rang, (faction, part, wr) in enumerate(r.get("prep", []), 1):
+            lignes.append({"semaine": r["semaine"], "rang": rang, "faction": faction,
+                           "win_rate": wr, "part_du_field": part,
+                           "semaine_creuse": "oui" if r.get("creuse") else "non"})
+    with open(RACINE / "data" / "historique-a-preparer.csv", "w", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=["semaine", "rang", "faction", "win_rate", "part_du_field", "semaine_creuse"])
+        w.writeheader()
+        w.writerows(lignes)
 
 
 if __name__ == "__main__":

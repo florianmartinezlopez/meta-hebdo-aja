@@ -29,4 +29,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "--echec":
         poster(ECHEC)
     else:
-        poster((RACINE / "data" / sys.argv[1] / "discord.txt").read_text().strip())
+        texte = (RACINE / "data" / sys.argv[1] / "discord.txt").read_text().strip()
+        if "--maj" in sys.argv:
+            texte = "Mise à jour du récap : Listhammer a complété ses données.\n" + texte
+        poster(texte)

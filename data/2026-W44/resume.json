@@ -1,5 +1,8 @@
 {
  "semaine": "2026-W44",
+ "creuse": true,
+ "tournois": 2,
+ "joueurs": 85,
  "aja": {
   "T'au Empire": 40.0,
   "Space Marines": 53.57,
@@ -82,8 +85,7 @@
   "AJA": [
    "Space Marines et AdMech au-dessus de 52 %",
    "Emperor's Children, Orks et Imperial Knights à l'équilibre",
-   "T'au et Necrons sous 50 %",
-   "Plus forte évolution : Necrons (−22,5 pts depuis la semaine 43)"
+   "T'au et Necrons sous 50 %"
   ],
   "À préparer": [
    "Aucune faction au-dessus de 50 % ce week-end"

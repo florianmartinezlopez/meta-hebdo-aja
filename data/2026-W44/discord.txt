@@ -1,5 +1,6 @@
 Meta Hebdo 40K, semaine 44 (2 tournois, 85 joueurs)
-AJA : AdMech 55,0 % (▼ −2,3) · Space Marines 53,6 % (▲ +0,5) · Orks 51,7 % (▼ −0,4) · Emperor's Children 50,0 % (▼ −0,8) · Imperial Knights 50,0 % (▲ +6,4) · T'au 40,0 % (▼ −7,3) · Necrons 26,3 % (▼ −22,5)
+⚠ Semaine creuse sur Listhammer : chiffres peu fiables, pas de comparaison avec la semaine précédente. Nouveau relevé mercredi.
+AJA : AdMech 55,0 % · Space Marines 53,6 % · Orks 51,7 % · Emperor's Children 50,0 % · Imperial Knights 50,0 % · T'au 40,0 % · Necrons 26,3 %
 Disposition du moment : Take and Hold 56,6 %, Purge the Foe 44,8 %
 Émergent : Adeptus Custodes en Emperor's Chosen + Lions of the Emperor + Might of the Moritoi (Take and Hold), Orks en Brute Bosses + Bully Boyz + Da Big Hunt (Purge the Foe)
 Le détail : https://florianmartinezlopez.github.io/meta-hebdo-aja/

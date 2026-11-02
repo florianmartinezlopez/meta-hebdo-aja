@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: "0 7 * * 1"   # lundi 9h à Paris en heure d'été
     - cron: "0 8 * * 1"   # lundi 9h à Paris en heure d'hiver
+    - cron: "0 7 * * 3"   # mercredi : nouveau relevé, seulement si la semaine était creuse
   workflow_dispatch:
     inputs:
       discord:
@@ -31,6 +32,12 @@ jobs:
           if [ "${{ github.event_name }}" = "schedule" ]; then
             if [ "${{ github.event.schedule }}" = "0 7 * * 1" ] && [ "$offset" != "+0200" ]; then lancer=non; fi
             if [ "${{ github.event.schedule }}" = "0 8 * * 1" ] && [ "$offset" != "+0100" ]; then lancer=non; fi
+            if [ "${{ github.event.schedule }}" = "0 7 * * 3" ]; then
+              creuse=$(curl -s "https://raw.githubusercontent.com/${{ github.repository }}/main/data/derniere.json" \
+                | python3 -c "import json,sys; print('oui' if json.load(sys.stdin).get('creuse') else 'non')" || echo non)
+              echo "Semaine précédente creuse : $creuse"
+              lancer=$creuse
+            fi
           fi
           echo "Décalage Paris : $offset, lancement : $lancer"
           echo "lancer=$lancer" >> "$GITHUB_OUTPUT"
@@ -82,7 +89,16 @@ jobs:
         if: steps.heure.outputs.lancer == 'oui' && (github.event_name == 'schedule' || inputs.discord)
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        run: python scripts/discord.py "${{ steps.releve.outputs.semaine }}"
+        run: |
+          if [ "${{ github.event.schedule }}" = "0 7 * * 3" ]; then
+            if python -c "import json,sys; sys.exit(0 if json.load(open('data/derniere.json'))['creuse'] else 1)"; then
+              echo "Toujours creuse mercredi : pas de nouveau message."
+            else
+              python scripts/discord.py "${{ steps.releve.outputs.semaine }}" --maj
+            fi
+          else
+            python scripts/discord.py "${{ steps.releve.outputs.semaine }}"
+          fi
 
       - name: Captures d'écran du test
         if: always() && steps.heure.outputs.lancer == 'oui'
