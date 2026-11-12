@@ -198,6 +198,26 @@ def semaine_precedente(semaine):
             "classees": {f for f, *_ in r.get("classement", [])}}
 
 
+def cumul_factions(semaine):
+    """Victoires et parties additionnées sur toutes les semaines relevées jusqu'à celle-ci (fenêtres
+    Listhammer sans chevauchement) : un win rate pondéré par le nombre de parties, pas une moyenne de %."""
+    cumul, semaines = {}, []
+    for d in sorted((RACINE / "data").iterdir()):
+        if not d.is_dir() or d.name > semaine or not (d / "stats.json").exists():
+            continue
+        semaines.append(d.name)
+        for r in json.loads((d / "stats.json").read_text())["factions"]:
+            nom = re.sub(r"\s*\(.*?\)", "", r["faction"]).strip()
+            c = cumul.setdefault(nom, {"faction": nom, "wins": 0, "total": 0, "undefeated": 0, "xMinus1": 0,
+                                       "eventWins": 0, "semaines": 0})
+            for k in ("wins", "total", "undefeated", "xMinus1", "eventWins"):
+                c[k] += int(r.get(k) or 0)
+            c["semaines"] += 1
+    for c in cumul.values():
+        c["wr"] = c["wins"] / c["total"] * 100 if c["total"] else None
+    return cumul, semaines
+
+
 def historique(semaine, stats, factions):
     """Listes X-0 / X-1 des 3 semaines précédant la fenêtre : relevés stockés + listes encore visibles sur le site."""
     debut = dt.date.fromisoformat(stats["fenetre"]["debut"])
@@ -293,7 +313,13 @@ def analyser(semaine, stats, factions, listes, team):
     # Classement
     classement = sorted((r for r in stats["factions"] if r["total"] >= MIN_PARTIES_CLASSEMENT),
                         key=lambda r: -r["wr"])
-    exclues = sorted(r["faction"] for r in stats["factions"] if r["total"] < MIN_PARTIES_CLASSEMENT)
+    cumul, semaines_cumul = cumul_factions(semaine)
+    classement_cumul = sorted((c for c in cumul.values() if c["total"] >= MIN_PARTIES_CLASSEMENT),
+                              key=lambda c: -c["wr"])
+    for c in classement_cumul:
+        st = stat_f.get(c["faction"])
+        c["wr_sem"], c["over"] = (st["wr"], st["over"]) if st else (None, None)
+    exclues = sorted(c["faction"] for c in cumul.values() if c["total"] < MIN_PARTIES_CLASSEMENT)
     tops_combos = []
     for f, fa in factions.items():
         for c in fa["combinaisons"]:
@@ -334,7 +360,7 @@ def analyser(semaine, stats, factions, listes, team):
                      f"n'étai{'ent' if stats['tournois_en_cours'] > 1 else 't'} pas terminé"
                      f"{'s' if stats['tournois_en_cours'] > 1 else ''} : les win rates bougeront encore.")
     if exclues:
-        notes.append(f"Classement limité aux factions avec au moins {MIN_PARTIES_CLASSEMENT} parties : "
+        notes.append(f"Classement des factions limité à celles avec au moins {MIN_PARTIES_CLASSEMENT} parties sur la période : "
                      f"{', '.join(exclues)} en {'sont exclues' if len(exclues) > 1 else 'est exclue'}.")
     if len(semaines_stockees) < 3:
         txt = ("Historique du projet encore court" + (f" ({', '.join(semaines_stockees)})" if semaines_stockees
@@ -364,7 +390,8 @@ def analyser(semaine, stats, factions, listes, team):
         notes.append("Les dates de la fenêtre n'ont pas pu être lues sur le site : elles sont estimées.")
 
     return {"armees": armees, "fdstats": fdstats, "fd_tri": fd_tri, "classement": classement,
-            "exclues": exclues, "tops_combos": tops_combos, "prep": prep, "prec": prec, "creuse": creuse, "archetypes": archetypes,
+            "exclues": exclues, "classement_cumul": classement_cumul, "semaines_cumul": semaines_cumul,
+            "tops_combos": tops_combos, "prep": prep, "prec": prec, "creuse": creuse, "archetypes": archetypes,
             "brief": brief, "notes": notes, "listes": listes, "court": court, "noms_team": noms_team}
 
 
@@ -669,25 +696,31 @@ def rendre(semaine, stats, an, team, url, archives):
     H.append("</div></section>")
 
     # 04 Factions
+    sc = an["semaines_cumul"]
+    periode = (f"semaines {int(sc[0].split('W')[1])} à {int(sc[-1].split('W')[1])}" if len(sc) > 1
+               else f"semaine {int(sc[0].split('W')[1])}")
     H.append(f'<section id="perf"><div class="sec-head"><span class="eyebrow">05 · Factions</span>'
-             f'<h2>Classement des factions</h2><p>Les {len(an["classement"])} factions avec au moins '
-             f'{MIN_PARTIES_CLASSEMENT} parties ce week-end, triées par win rate. Le trait central marque 50{NBSP}%. '
-             'La sur-représentation compare la part dans les tops à la part dans le field.</p></div>'
-             '<div class="tscroll"><table><thead><tr><th>Faction</th><th class="r">Win rate</th><th class="r">Parties</th>'
-             '<th class="r hide-m">Joueurs</th><th class="r hide-m">X-0</th><th class="r hide-m">X-1</th>'
-             '<th class="r hide-m">Victoires</th><th class="r">Sur-repr.</th></tr></thead><tbody>')
+             f'<h2>Classement des factions</h2><p>Win rate sur toute la période relevée ({periode}, {len(sc)} '
+             f'week-end{"s" if len(sc) > 1 else ""}) : victoires et parties additionnées, une semaine chargée pèse donc '
+             f'plus qu\'une semaine creuse. Les {len(an["classement_cumul"])} factions avec au moins '
+             f'{MIN_PARTIES_CLASSEMENT} parties sur la période, triées par ce win rate. La colonne « Semaine » donne le '
+             'win rate du dernier week-end et son évolution. Le trait central marque 50 %.</p></div>'
+             '<div class="tscroll"><table><thead><tr><th>Faction</th><th class="r">Période</th><th class="r">Semaine</th>'
+             '<th class="r">Parties</th><th class="r hide-m">X-0</th><th class="r hide-m">X-1</th>'
+             '<th class="r hide-m">Victoires</th><th class="r hide-m">Sur-repr. (sem.)</th></tr></thead><tbody>')
     slugs = {fa_nom: fa["slug"] for fa_nom, fa in an["_factions"].items()}
-    for r in an["classement"]:
+    for r in an["classement_cumul"]:
         t = r["faction"] in team_set
         ov = r["over"]
         H.append(f'<tr class="{"rowteam" if t else ""}"><td><a href="{LH}/factions/{slugs.get(r["faction"], "")}" '
                  f'target="_blank" rel="noopener">{e(r["faction"])}</a>{"<span class=teamtag>AJA</span>" if t else ""}</td>'
-                 f'<td class="r">{wr_bar(r["wr"])}{delta(r["wr"], prec["factions"].get(r["faction"]) if prec else None)}</td>'
+                 f'<td class="r">{wr_bar(r["wr"])}</td>'
+                 f'<td class="r">{wr_num(r["wr_sem"])}{delta(r["wr_sem"], prec["factions"].get(r["faction"]) if prec else None)}</td>'
                  f'<td class="r num">{nb(r["total"])}</td>'
-                 f'<td class="r num hide-m">{r["players"]}</td><td class="r num hide-m">{r["undefeated"]}</td>'
-                 f'<td class="r num hide-m">{r["xMinus1"]}</td><td class="r num hide-m">{r["eventWins"]}</td>'
-                 f'<td class="r num" style="color:{"var(--good)" if ov >= 1.2 else "var(--bad)" if ov < 0.8 else "inherit"}">'
-                 f'{fr(ov, 2)}x</td></tr>')
+                 f'<td class="r num hide-m">{r["undefeated"]}</td><td class="r num hide-m">{r["xMinus1"]}</td>'
+                 f'<td class="r num hide-m">{r["eventWins"]}</td>'
+                 + (f'<td class="r num hide-m" style="color:{"var(--good)" if ov >= 1.2 else "var(--bad)" if ov < 0.8 else "inherit"}">'
+                    f'{fr(ov, 2)}x</td></tr>' if ov is not None else '<td class="r hide-m na">n.d.</td></tr>'))
     H.append(f'</tbody></table></div><h3 style="margin-top:10px">Meilleures combinaisons de détachements</h3>'
              f'<p class="muted" style="font-size:.85rem">Combinaisons jouées sur au moins {MIN_PARTIES_COMBO_TOP} parties ce week-end, triées par win rate.</p>'
              '<div class="tscroll"><table><thead><tr><th>Combinaison</th><th class="r">Part</th><th class="r">Win rate</th></tr></thead><tbody>')
