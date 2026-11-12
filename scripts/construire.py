@@ -194,7 +194,8 @@ def semaine_precedente(semaine):
     r = json.loads((avant[-1] / "resume.json").read_text())
     return {"semaine": r["semaine"], "aja": r.get("aja", {}),
             "factions": {f: wr for f, wr, *_ in r.get("classement", [])} | r.get("factions", {}),
-            "dispositions": r.get("dispositions", {}), "combos": r.get("combos", {})}
+            "dispositions": r.get("dispositions", {}), "combos": r.get("combos", {}),
+            "classees": {f for f, *_ in r.get("classement", [])}}
 
 
 def historique(semaine, stats, factions):
@@ -749,31 +750,44 @@ def message_discord(semaine, stats, an, url):
     n_j = sum(t.get("players") or 0 for t in stats["tournois"])
     court = an["court"]
     prec = an["prec"]
-
-    def evol(a):
-        v, avant = a["st"]["wr"], (prec["aja"].get(a["nom"]) if prec else None)
-        if v is None or avant is None or abs(v - avant) < 0.05:
-            return ""
-        return f" ({'▲ +' if v > avant else '▼ −'}{fr(abs(v - avant))})"
-
-    aja = " · ".join(f"{court[a['nom']]} {pct(a['st']['wr'])}{evol(a)}"
-                     for a in sorted(an["armees"], key=lambda a: -(a["st"]["wr"] or 0)))
-    b, w = an["fd_tri"][0], an["fd_tri"][-1]
-    em = emergents(an["archetypes"], court, 2)
-    lignes = [f"Meta Hebdo 40K, semaine {num} ({len(stats['tournois'])} tournois, {nb(n_j)} joueurs)"]
+    num_prec = int(prec["semaine"].split("W")[1]) if prec else None
+    lignes = ["/// Message auto analyse méta ///",
+              f"Semaine {num} ({len(stats['tournois'])} tournois, {nb(n_j)} joueurs)"]
     if an["creuse"]:
-        lignes.append("⚠ Semaine creuse sur Listhammer : chiffres peu fiables, pas de comparaison avec la semaine "
-                      "précédente. Nouveau relevé mercredi.")
-    lignes += [
-        f"AJA : {aja}",
-        f"Disposition du moment : {b['nom']} {pct(b['wr'])}, {w['nom']} {pct(w['wr'])}",
-    ]
-    if an["prep"]:
-        lignes.append("À préparer : " + ", ".join(f"{x['faction']} {pct(x['wr'])} ({fr(x['part'], 0)} % du field)"
-                                                  for x in an["prep"][:3]))
-    if em:
-        lignes.append("Émergent : " + ", ".join(em))
-    lignes.append(f"Le détail : {url}")
+        lignes.append("⚠ Semaine creuse sur Listhammer : chiffres peu fiables, pas de comparaison. "
+                      "Nouveau relevé mercredi.")
+
+    # Nos armées, de la plus forte hausse à la plus forte baisse
+    def ecart(a):
+        v, avant = a["st"]["wr"], (prec["aja"].get(a["nom"]) if prec else None)
+        return None if v is None or avant is None else v - avant
+
+    armees = [a for a in an["armees"] if a["st"]["wr"] is not None]
+    lignes.append("")
+    if prec and any(ecart(a) is not None for a in armees):
+        lignes.append(f"Évolution du WR de nos armées (vs semaine {num_prec}) :")
+        for a in sorted(armees, key=lambda a: -(ecart(a) if ecart(a) is not None else -99)):
+            d = ecart(a)
+            if d is None:
+                lignes.append(f"• {court[a['nom']]} {pct(a['st']['wr'])}")
+            else:
+                fl = "=" if abs(d) < 0.05 else "▲" if d > 0 else "▼"
+                lignes.append(f"{fl} {court[a['nom']]} {pct(a['st']['wr'])} ({'+' if d >= 0 else '−'}{fr(abs(d))})")
+    else:
+        lignes.append("Win rate de nos armées :")
+        lignes += [f"• {court[a['nom']]} {pct(a['st']['wr'])}" for a in sorted(armees, key=lambda a: -a["st"]["wr"])]
+
+    # Plus fortes progressions, factions classées (100+ parties) les deux semaines
+    if prec:
+        prog = sorted(((r["faction"], r["wr"], r["wr"] - prec["factions"][r["faction"]]) for r in an["classement"]
+                       if r["faction"] in prec["classees"] and prec["factions"].get(r["faction"]) is not None),
+                      key=lambda x: -x[2])
+        prog = [x for x in prog if x[2] > 0][:3]
+        if prog:
+            lignes += ["", "Les armées qui progressent le plus :"]
+            lignes += [f"{i}. {f} {pct(w)} (+{fr(d)})" for i, (f, w, d) in enumerate(prog, 1)]
+
+    lignes += ["", f"Le détail : {url}"]
     return "\n".join(lignes).replace(NNBSP, " ").replace(NBSP, " ")
 
 
