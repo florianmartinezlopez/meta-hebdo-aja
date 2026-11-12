@@ -7,11 +7,11 @@
   "total": 454,
   "winRate": "49.34"
  },
- "joueurs": 86,
+ "joueurs": 88,
  "invaincus": 2,
  "x1": 6,
  "victoires_tournoi": 2,
- "sur_representation": "0.56",
+ "sur_representation": "0.55",
  "dispositions": {
   "Disruption": 2,
   "Priority Assets": 14,
@@ -23,7 +23,7 @@
   {
    "detachment": "War Horde",
    "players": 9,
-   "fieldPercent": 10.465116279069768,
+   "fieldPercent": 10.227272727272728,
    "wins": 22,
    "losses": 19,
    "total": 41,
@@ -32,7 +32,7 @@
   {
    "detachment": "Brute Bosses | Bully Boyz | Da Big Hunt",
    "players": 7,
-   "fieldPercent": 8.13953488372093,
+   "fieldPercent": 7.954545454545454,
    "wins": 25,
    "losses": 10,
    "total": 35,
@@ -41,7 +41,7 @@
   {
    "detachment": "Bully Boyz | Runt Swarm | Wreckas",
    "players": 5,
-   "fieldPercent": 5.813953488372093,
+   "fieldPercent": 5.681818181818182,
    "wins": 12,
    "losses": 10,
    "total": 22,
@@ -50,7 +50,7 @@
   {
    "detachment": "Dread Mob | Shoota Boyz | Wreckas",
    "players": 5,
-   "fieldPercent": 5.813953488372093,
+   "fieldPercent": 5.681818181818182,
    "wins": 12,
    "losses": 13,
    "total": 25,
@@ -59,7 +59,7 @@
   {
    "detachment": "Bully Boyz | Dread Mob | Kult of Speed",
    "players": 3,
-   "fieldPercent": 3.488372093023256,
+   "fieldPercent": 3.4090909090909087,
    "wins": 8,
    "losses": 5,
    "total": 13,
@@ -68,7 +68,7 @@
   {
    "detachment": "Bully Boyz | Dread Mob | Wreckas",
    "players": 3,
-   "fieldPercent": 3.488372093023256,
+   "fieldPercent": 3.4090909090909087,
    "wins": 9,
    "losses": 10,
    "total": 19,
@@ -77,7 +77,7 @@
   {
    "detachment": "Dread Mob | Flyboyz | Kult of Speed",
    "players": 3,
-   "fieldPercent": 3.488372093023256,
+   "fieldPercent": 3.4090909090909087,
    "wins": 12,
    "losses": 6,
    "total": 18,
@@ -86,7 +86,7 @@
   {
    "detachment": "Green Tide | Runt Swarm | Taktikal Brigade",
    "players": 3,
-   "fieldPercent": 3.488372093023256,
+   "fieldPercent": 3.4090909090909087,
    "wins": 6,
    "losses": 8,
    "total": 14,
@@ -95,7 +95,7 @@
   {
    "detachment": "Blitz Brigade | Bully Boyz | Dread Mob",
    "players": 2,
-   "fieldPercent": 2.3255813953488373,
+   "fieldPercent": 2.272727272727273,
    "wins": 6,
    "losses": 7,
    "total": 13,
@@ -104,7 +104,7 @@
   {
    "detachment": "Blitz Brigade | Bully Boyz | Wreckas",
    "players": 2,
-   "fieldPercent": 2.3255813953488373,
+   "fieldPercent": 2.272727272727273,
    "wins": 7,
    "losses": 4,
    "total": 11,
@@ -113,16 +113,25 @@
   {
    "detachment": "Blitz Brigade | Da Big Hunt | Wreckas",
    "players": 2,
-   "fieldPercent": 2.3255813953488373,
+   "fieldPercent": 2.272727272727273,
    "wins": 4,
    "losses": 5,
    "total": 9,
    "winRate": "44.44"
   },
   {
+   "detachment": "Blitz Brigade | Dread Mob | Wreckas",
+   "players": 2,
+   "fieldPercent": 2.272727272727273,
+   "wins": 5,
+   "losses": 5,
+   "total": 10,
+   "winRate": "50.00"
+  },
+  {
    "detachment": "Brute Bosses | Da Big Hunt | Dread Mob",
    "players": 2,
-   "fieldPercent": 2.3255813953488373,
+   "fieldPercent": 2.272727272727273,
    "wins": 5,
    "losses": 6,
    "total": 11,
@@ -131,7 +140,7 @@
   {
    "detachment": "Bully Boyz | Dread Mob | Green Tide",
    "players": 2,
-   "fieldPercent": 2.3255813953488373,
+   "fieldPercent": 2.272727272727273,
    "wins": 3,
    "losses": 8,
    "total": 11,
@@ -140,7 +149,7 @@
   {
    "detachment": "Bully Boyz | Green Tide | Runt Swarm",
    "players": 2,
-   "fieldPercent": 2.3255813953488373,
+   "fieldPercent": 2.272727272727273,
    "wins": 6,
    "losses": 4,
    "total": 10,
@@ -149,7 +158,7 @@
   {
    "detachment": "Bully Boyz | Shoota Boyz | Wreckas",
    "players": 2,
-   "fieldPercent": 2.3255813953488373,
+   "fieldPercent": 2.272727272727273,
    "wins": 8,
    "losses": 2,
    "total": 10,
@@ -158,7 +167,7 @@
   {
    "detachment": "Da Big Hunt | Kult of Speed | Runt Swarm",
    "players": 2,
-   "fieldPercent": 2.3255813953488373,
+   "fieldPercent": 2.272727272727273,
    "wins": 1,
    "losses": 8,
    "total": 9,
@@ -167,16 +176,25 @@
   {
    "detachment": "Blitz Brigade | Brute Bosses | Da Big Hunt",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 5,
    "losses": 0,
    "total": 5,
    "winRate": "100.00"
   },
   {
+   "detachment": "Blitz Brigade | Brute Bosses | Green Tide",
+   "players": 1,
+   "fieldPercent": 1.1363636363636365,
+   "wins": 1,
+   "losses": 4,
+   "total": 5,
+   "winRate": "20.00"
+  },
+  {
    "detachment": "Blitz Brigade | Bully Boyz | Runt Swarm",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 3,
    "losses": 2,
    "total": 5,
@@ -185,7 +203,7 @@
   {
    "detachment": "Blitz Brigade | Bully Boyz | Shoota Boyz",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 2,
    "losses": 2,
    "total": 4,
@@ -194,25 +212,16 @@
   {
    "detachment": "Blitz Brigade | Da Big Hunt | Wurrband",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 0,
    "losses": 5,
    "total": 5,
    "winRate": "0.00"
   },
   {
-   "detachment": "Blitz Brigade | Dread Mob | Wreckas",
-   "players": 1,
-   "fieldPercent": 1.1627906976744187,
-   "wins": 5,
-   "losses": 5,
-   "total": 10,
-   "winRate": "50.00"
-  },
-  {
    "detachment": "Blitz Brigade | Runt Swarm | Wreckas",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 5,
    "losses": 2,
    "total": 7,
@@ -221,7 +230,7 @@
   {
    "detachment": "Blitz Brigade | Shoota Boyz | Wreckas",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 2,
    "losses": 6,
    "total": 8,
@@ -230,7 +239,7 @@
   {
    "detachment": "Blitz Brigade | Wreckas | Wurrband",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 0,
    "losses": 5,
    "total": 5,
@@ -239,7 +248,7 @@
   {
    "detachment": "Brute Bosses | Bully Boyz | Dread Mob",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 2,
    "losses": 3,
    "total": 5,
@@ -248,7 +257,7 @@
   {
    "detachment": "Brute Bosses | Bully Boyz | Runt Swarm",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 4,
    "losses": 1,
    "total": 5,
@@ -257,7 +266,7 @@
   {
    "detachment": "Brute Bosses | Da Big Hunt | Flyboyz",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 5,
    "losses": 3,
    "total": 8,
@@ -266,7 +275,7 @@
   {
    "detachment": "Brute Bosses | Dread Mob | Green Tide",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 3,
    "losses": 5,
    "total": 8,
@@ -275,7 +284,7 @@
   {
    "detachment": "Brute Bosses | Dread Mob | Madcap Meks",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 2,
    "losses": 3,
    "total": 5,
@@ -284,7 +293,7 @@
   {
    "detachment": "Brute Bosses | Dread Mob | Wreckas",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 0,
    "losses": 4,
    "total": 4,
@@ -293,7 +302,7 @@
   {
    "detachment": "Brute Bosses | Green Tide | Kult of Speed",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 4,
    "losses": 4,
    "total": 8,
@@ -302,7 +311,7 @@
   {
    "detachment": "Brute Bosses | Green Tide | Taktikal Brigade",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 3,
    "losses": 5,
    "total": 8,
@@ -311,7 +320,7 @@
   {
    "detachment": "Brute Bosses | Kult of Speed | Wreckas",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 0,
    "losses": 3,
    "total": 3,
@@ -320,7 +329,7 @@
   {
    "detachment": "Bully Boyz | Da Big Hunt | Runt Swarm",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 2,
    "losses": 3,
    "total": 5,
@@ -329,7 +338,7 @@
   {
    "detachment": "Bully Boyz | Flyboyz | Kult of Speed",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 3,
    "losses": 0,
    "total": 3,
@@ -338,7 +347,7 @@
   {
    "detachment": "Bully Boyz | Green Tide | Shoota Boyz",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 1,
    "losses": 3,
    "total": 4,
@@ -347,7 +356,7 @@
   {
    "detachment": "Bully Boyz | Madcap Meks | Wreckas",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 2,
    "losses": 3,
    "total": 5,
@@ -356,7 +365,7 @@
   {
    "detachment": "Bully Boyz | Runt Swarm | Shoota Boyz",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 3,
    "losses": 2,
    "total": 5,
@@ -365,7 +374,7 @@
   {
    "detachment": "Da Big Hunt | Flyboyz | Kult of Speed",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 2,
    "losses": 2,
    "total": 4,
@@ -374,7 +383,7 @@
   {
    "detachment": "Dread Mob | Flyboyz | Madcap Meks",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 0,
    "losses": 4,
    "total": 4,
@@ -383,7 +392,7 @@
   {
    "detachment": "Dread Mob | Green Tide | Kult of Speed",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 2,
    "losses": 3,
    "total": 5,
@@ -392,7 +401,7 @@
   {
    "detachment": "Dread Mob | Kult of Speed | Wreckas",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 3,
    "losses": 1,
    "total": 4,
@@ -401,7 +410,7 @@
   {
    "detachment": "Dread Mob | Madcap Meks | Wreckas",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 1,
    "losses": 5,
    "total": 6,
@@ -410,7 +419,7 @@
   {
    "detachment": "Flyboyz | Kult of Speed | Runt Swarm",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 1,
    "losses": 3,
    "total": 4,
@@ -419,7 +428,7 @@
   {
    "detachment": "Flyboyz | Madcap Meks | Wreckas",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 3,
    "losses": 2,
    "total": 5,
@@ -428,7 +437,7 @@
   {
    "detachment": "Flyboyz | Runt Swarm | Taktikal Brigade",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 1,
    "losses": 4,
    "total": 5,
@@ -437,7 +446,7 @@
   {
    "detachment": "Green Tide | Runt Swarm",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 3,
    "losses": 5,
    "total": 8,
@@ -446,20 +455,11 @@
   {
    "detachment": "Green Tide | Shoota Boyz | Wurrband",
    "players": 1,
-   "fieldPercent": 1.1627906976744187,
+   "fieldPercent": 1.1363636363636365,
    "wins": 5,
    "losses": 3,
    "total": 8,
    "winRate": "62.50"
-  },
-  {
-   "detachment": "Blitz Brigade | Brute Bosses | Green Tide",
-   "players": 0,
-   "fieldPercent": 0,
-   "wins": 1,
-   "losses": 4,
-   "total": 5,
-   "winRate": "20.00"
   }
  ],
  "adversaires": [

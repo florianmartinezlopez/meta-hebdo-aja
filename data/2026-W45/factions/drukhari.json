@@ -7,11 +7,11 @@
   "total": 110,
   "winRate": "46.36"
  },
- "joueurs": 23,
+ "joueurs": 24,
  "invaincus": 0,
  "x1": 2,
  "victoires_tournoi": 0,
- "sur_representation": "0.52",
+ "sur_representation": "0.50",
  "dispositions": {
   "Disruption": 2,
   "Priority Assets": 1,
@@ -21,27 +21,27 @@
  },
  "combinaisons": [
   {
-   "detachment": "Exhibition of Slaughter | Spectacle of Spite",
-   "players": 6,
-   "fieldPercent": 26.08695652173913,
-   "wins": 17,
-   "losses": 11,
-   "total": 28,
-   "winRate": "60.71"
-  },
-  {
    "detachment": "Exhibition of Slaughter | Skysplinter Assault",
-   "players": 5,
-   "fieldPercent": 21.73913043478261,
+   "players": 6,
+   "fieldPercent": 25,
    "wins": 10,
    "losses": 19,
    "total": 29,
    "winRate": "34.48"
   },
   {
+   "detachment": "Exhibition of Slaughter | Spectacle of Spite",
+   "players": 6,
+   "fieldPercent": 25,
+   "wins": 17,
+   "losses": 11,
+   "total": 28,
+   "winRate": "60.71"
+  },
+  {
    "detachment": "Exhibition of Slaughter | Kabalite Cartel",
    "players": 4,
-   "fieldPercent": 17.391304347826086,
+   "fieldPercent": 16.666666666666664,
    "wins": 10,
    "losses": 8,
    "total": 18,
@@ -50,7 +50,7 @@
   {
    "detachment": "Kabalite Agonysts | Skysplinter Assault",
    "players": 4,
-   "fieldPercent": 17.391304347826086,
+   "fieldPercent": 16.666666666666664,
    "wins": 8,
    "losses": 10,
    "total": 18,
@@ -59,7 +59,7 @@
   {
    "detachment": "Covenite Coterie | Kabalite Agonysts",
    "players": 1,
-   "fieldPercent": 4.3478260869565215,
+   "fieldPercent": 4.166666666666666,
    "wins": 0,
    "losses": 1,
    "total": 1,
@@ -68,7 +68,7 @@
   {
    "detachment": "Exhibition of Slaughter | Realspace Raiders",
    "players": 1,
-   "fieldPercent": 4.3478260869565215,
+   "fieldPercent": 4.166666666666666,
    "wins": 3,
    "losses": 3,
    "total": 6,
@@ -77,7 +77,7 @@
   {
    "detachment": "Kabalite Agonysts | Spectacle of Spite",
    "players": 1,
-   "fieldPercent": 4.3478260869565215,
+   "fieldPercent": 4.166666666666666,
    "wins": 0,
    "losses": 4,
    "total": 4,
@@ -86,7 +86,7 @@
   {
    "detachment": "Kabalite Cartel | Tools of Torment",
    "players": 1,
-   "fieldPercent": 4.3478260869565215,
+   "fieldPercent": 4.166666666666666,
    "wins": 3,
    "losses": 3,
    "total": 6,

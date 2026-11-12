@@ -1,6 +1,6 @@
 {
  "semaine": "2026-W45",
- "releve_le": "2026-11-09T18:05+00:00",
+ "releve_le": "2026-11-12T08:42+00:00",
  "fenetre": {
   "debut": "2026-11-05",
   "fin": "2026-11-10",
@@ -261,7 +261,7 @@
    "xMinus1": 2,
    "top4": 6,
    "eventWins": 2,
-   "overrep": "2.32"
+   "overrep": "2.34"
   },
   {
    "faction": "Adeptus Custodes",
@@ -269,12 +269,12 @@
    "losses": 221,
    "total": 472,
    "winRate": "53.18",
-   "players": 98,
+   "players": 100,
    "undefeated": 1,
    "xMinus1": 14,
    "top4": 5,
    "eventWins": 0,
-   "overrep": "0.61"
+   "overrep": "0.60"
   },
   {
    "faction": "Adeptus Mechanicus",
@@ -287,7 +287,7 @@
    "xMinus1": 5,
    "top4": 2,
    "eventWins": 0,
-   "overrep": "0.77"
+   "overrep": "0.78"
   },
   {
    "faction": "Aeldari",
@@ -300,7 +300,7 @@
    "xMinus1": 3,
    "top4": 1,
    "eventWins": 0,
-   "overrep": "0.35"
+   "overrep": "0.36"
   },
   {
    "faction": "Astra Militarum",
@@ -321,12 +321,12 @@
    "losses": 41,
    "total": 91,
    "winRate": "54.95",
-   "players": 16,
+   "players": 17,
    "undefeated": 1,
    "xMinus1": 3,
    "top4": 3,
    "eventWins": 1,
-   "overrep": "2.24"
+   "overrep": "2.13"
   },
   {
    "faction": "Blood Angels",
@@ -373,7 +373,7 @@
    "losses": 154,
    "total": 259,
    "winRate": "40.54",
-   "players": 51,
+   "players": 52,
    "undefeated": 1,
    "xMinus1": 3,
    "top4": 3,
@@ -391,7 +391,7 @@
    "xMinus1": 10,
    "top4": 14,
    "eventWins": 4,
-   "overrep": "2.70"
+   "overrep": "2.73"
   },
   {
    "faction": "Death Guard",
@@ -399,12 +399,12 @@
    "losses": 165,
    "total": 344,
    "winRate": "52.03",
-   "players": 70,
+   "players": 71,
    "undefeated": 2,
    "xMinus1": 14,
    "top4": 7,
    "eventWins": 1,
-   "overrep": "1.20"
+   "overrep": "1.19"
   },
   {
    "faction": "Deathwatch",
@@ -425,12 +425,12 @@
    "losses": 59,
    "total": 110,
    "winRate": "46.36",
-   "players": 23,
+   "players": 24,
    "undefeated": 0,
    "xMinus1": 2,
    "top4": 1,
    "eventWins": 0,
-   "overrep": "0.52"
+   "overrep": "0.50"
   },
   {
    "faction": "Emperor's Children",
@@ -438,7 +438,7 @@
    "losses": 99,
    "total": 177,
    "winRate": "44.07",
-   "players": 33,
+   "players": 34,
    "undefeated": 0,
    "xMinus1": 1,
    "top4": 0,
@@ -456,7 +456,7 @@
    "xMinus1": 2,
    "top4": 1,
    "eventWins": 0,
-   "overrep": "2.39"
+   "overrep": "2.41"
   },
   {
    "faction": "Grey Knights",
@@ -508,7 +508,7 @@
    "xMinus1": 7,
    "top4": 5,
    "eventWins": 2,
-   "overrep": "1.09"
+   "overrep": "1.10"
   },
   {
    "faction": "Orks",
@@ -516,12 +516,12 @@
    "losses": 230,
    "total": 454,
    "winRate": "49.34",
-   "players": 86,
+   "players": 88,
    "undefeated": 2,
    "xMinus1": 6,
    "top4": 4,
    "eventWins": 2,
-   "overrep": "0.56"
+   "overrep": "0.55"
   },
   {
    "faction": "Space Marines",
@@ -534,7 +534,7 @@
    "xMinus1": 18,
    "top4": 13,
    "eventWins": 4,
-   "overrep": "1.24"
+   "overrep": "1.26"
   },
   {
    "faction": "Space Wolves",
@@ -547,7 +547,7 @@
    "xMinus1": 7,
    "top4": 5,
    "eventWins": 2,
-   "overrep": "1.50"
+   "overrep": "1.51"
   },
   {
    "faction": "T'au Empire",
@@ -555,12 +555,12 @@
    "losses": 101,
    "total": 197,
    "winRate": "48.73",
-   "players": 41,
+   "players": 42,
    "undefeated": 0,
    "xMinus1": 4,
    "top4": 3,
    "eventWins": 0,
-   "overrep": "0.88"
+   "overrep": "0.86"
   },
   {
    "faction": "Thousand Sons",
@@ -573,7 +573,7 @@
    "xMinus1": 2,
    "top4": 1,
    "eventWins": 0,
-   "overrep": "0.66"
+   "overrep": "0.67"
   },
   {
    "faction": "Tyranids",
@@ -586,7 +586,7 @@
    "xMinus1": 8,
    "top4": 5,
    "eventWins": 1,
-   "overrep": "1.13"
+   "overrep": "1.14"
   },
   {
    "faction": "World Eaters",
@@ -599,7 +599,7 @@
    "xMinus1": 9,
    "top4": 7,
    "eventWins": 2,
-   "overrep": "1.21"
+   "overrep": "1.22"
   }
  ],
  "dispositions": [

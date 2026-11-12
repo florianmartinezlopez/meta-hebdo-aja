@@ -196,8 +196,8 @@
   "Astra Militarum | Abhuman Auxiliaries + Steel Hammer": 46.15,
   "Astra Militarum | Designation Force + Steel Hammer": 54.55,
   "Black Templars | Assault Brethren + Vow-sworn Crusaders": 65.52,
-  "Black Templars | Fist of the God-Emperor + Vow-sworn Crusaders": 61.54,
   "Black Templars | Assault Brethren + Ironstorm Spearhead + Terminator Storm Force": 27.27,
+  "Black Templars | Fist of the God-Emperor + Vow-sworn Crusaders": 61.54,
   "Blood Angels | Assault Brethren + Encarmine Speartip + Terminator Storm Force": 42.31,
   "Blood Angels | Angelic Inheritors": 42.11,
   "Blood Angels | Assault Brethren + Ironclad Champions + Tacticus Attack Force": 80.95,
@@ -233,8 +233,8 @@
   "Death Guard | Death Lord's Chosen + Paragons of Putrescence": 44.44,
   "Death Guard | Contagion Engines + Mortarion's Hammer": 52.0,
   "Death Guard | Champions of Contagion + Paragons of Putrescence": 60.0,
-  "Drukhari | Exhibition of Slaughter + Spectacle of Spite": 60.71,
   "Drukhari | Exhibition of Slaughter + Skysplinter Assault": 34.48,
+  "Drukhari | Exhibition of Slaughter + Spectacle of Spite": 60.71,
   "Drukhari | Exhibition of Slaughter + Kabalite Cartel": 55.56,
   "Drukhari | Kabalite Agonysts + Skysplinter Assault": 44.44,
   "Emperor's Children | Coterie of the Conceited": 41.3,
@@ -274,11 +274,11 @@
   "Orks | Green Tide + Runt Swarm + Taktikal Brigade": 42.86,
   "Orks | Blitz Brigade + Bully Boyz + Dread Mob": 46.15,
   "Orks | Blitz Brigade + Bully Boyz + Wreckas": 63.64,
+  "Orks | Blitz Brigade + Dread Mob + Wreckas": 50.0,
   "Orks | Brute Bosses + Da Big Hunt + Dread Mob": 45.45,
   "Orks | Bully Boyz + Dread Mob + Green Tide": 27.27,
   "Orks | Bully Boyz + Green Tide + Runt Swarm": 60.0,
   "Orks | Bully Boyz + Shoota Boyz + Wreckas": 80.0,
-  "Orks | Blitz Brigade + Dread Mob + Wreckas": 50.0,
   "Space Marines | Assault Brethren + Deathwatch Support + Terminator Storm Force": 64.33,
   "Space Marines | Assault Brethren + Forgefather's Seekers": 44.19,
   "Space Marines | Devastator Brethren + Medusa's Wrath": 68.0,
@@ -318,32 +318,32 @@
  "prep": [
   [
    "Dark Angels",
-   5.48,
+   5.43,
    58.42
   ],
   [
    "Space Marines",
-   11.05,
+   10.96,
    54.0
   ],
   [
    "Adeptus Custodes",
-   8.66,
+   8.76,
    53.18
   ],
   [
    "World Eaters",
-   6.1,
+   6.05,
    53.54
   ],
   [
    "Adepta Sororitas",
-   2.74,
+   2.72,
    56.57
   ],
   [
    "Death Guard",
-   6.19,
+   6.22,
    52.03
   ]
  ],

@@ -7,11 +7,11 @@
   "total": 91,
   "winRate": "54.95"
  },
- "joueurs": 16,
+ "joueurs": 17,
  "invaincus": 1,
  "x1": 3,
  "victoires_tournoi": 1,
- "sur_representation": "2.24",
+ "sur_representation": "2.13",
  "dispositions": {
   "Priority Assets": 2,
   "Purge the Foe": 6,
@@ -21,16 +21,25 @@
   {
    "detachment": "Assault Brethren | Vow-sworn Crusaders",
    "players": 5,
-   "fieldPercent": 31.25,
+   "fieldPercent": 29.411764705882355,
    "wins": 19,
    "losses": 10,
    "total": 29,
    "winRate": "65.52"
   },
   {
+   "detachment": "Assault Brethren | Ironstorm Spearhead | Terminator Storm Force",
+   "players": 2,
+   "fieldPercent": 11.76470588235294,
+   "wins": 3,
+   "losses": 8,
+   "total": 11,
+   "winRate": "27.27"
+  },
+  {
    "detachment": "Fist of the God-Emperor | Vow-sworn Crusaders",
    "players": 2,
-   "fieldPercent": 12.5,
+   "fieldPercent": 11.76470588235294,
    "wins": 8,
    "losses": 5,
    "total": 13,
@@ -39,7 +48,7 @@
   {
    "detachment": "Assault Brethren | Gauntlet Task Force | Ironstorm Spearhead",
    "players": 1,
-   "fieldPercent": 6.25,
+   "fieldPercent": 5.88235294117647,
    "wins": 2,
    "losses": 2,
    "total": 4,
@@ -48,7 +57,7 @@
   {
    "detachment": "Assault Brethren | Gauntlet Task Force | Marshal's Household",
    "players": 1,
-   "fieldPercent": 6.25,
+   "fieldPercent": 5.88235294117647,
    "wins": 2,
    "losses": 2,
    "total": 4,
@@ -57,7 +66,7 @@
   {
    "detachment": "Assault Brethren | Gravis Siege Force | Ironstorm Spearhead",
    "players": 1,
-   "fieldPercent": 6.25,
+   "fieldPercent": 5.88235294117647,
    "wins": 2,
    "losses": 3,
    "total": 5,
@@ -66,25 +75,16 @@
   {
    "detachment": "Assault Brethren | Ironclad Champions | Ironstorm Spearhead",
    "players": 1,
-   "fieldPercent": 6.25,
+   "fieldPercent": 5.88235294117647,
    "wins": 3,
    "losses": 2,
    "total": 5,
    "winRate": "60.00"
   },
   {
-   "detachment": "Assault Brethren | Ironstorm Spearhead | Terminator Storm Force",
-   "players": 1,
-   "fieldPercent": 6.25,
-   "wins": 3,
-   "losses": 8,
-   "total": 11,
-   "winRate": "27.27"
-  },
-  {
    "detachment": "Assault Brethren | Marshal's Household | Tacticus Attack Force",
    "players": 1,
-   "fieldPercent": 6.25,
+   "fieldPercent": 5.88235294117647,
    "wins": 5,
    "losses": 0,
    "total": 5,
@@ -93,7 +93,7 @@
   {
    "detachment": "Assault Brethren | Tacticus Attack Force | Terminator Storm Force",
    "players": 1,
-   "fieldPercent": 6.25,
+   "fieldPercent": 5.88235294117647,
    "wins": 3,
    "losses": 2,
    "total": 5,
@@ -102,7 +102,7 @@
   {
    "detachment": "Gravis Linebreaker Force | Ironstorm Spearhead | Tactical Brethren",
    "players": 1,
-   "fieldPercent": 6.25,
+   "fieldPercent": 5.88235294117647,
    "wins": 3,
    "losses": 3,
    "total": 6,
@@ -111,7 +111,7 @@
   {
    "detachment": "Ironstorm Spearhead | Vow-sworn Crusaders",
    "players": 1,
-   "fieldPercent": 6.25,
+   "fieldPercent": 5.88235294117647,
    "wins": 0,
    "losses": 4,
    "total": 4,

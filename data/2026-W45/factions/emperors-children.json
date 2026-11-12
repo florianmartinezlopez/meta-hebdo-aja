@@ -7,7 +7,7 @@
   "total": 177,
   "winRate": "44.07"
  },
- "joueurs": 33,
+ "joueurs": 34,
  "invaincus": 0,
  "x1": 1,
  "victoires_tournoi": 0,
@@ -22,7 +22,7 @@
   {
    "detachment": "Coterie of the Conceited",
    "players": 9,
-   "fieldPercent": 27.27272727272727,
+   "fieldPercent": 26.47058823529412,
    "wins": 19,
    "losses": 27,
    "total": 46,
@@ -31,7 +31,7 @@
   {
    "detachment": "Court of the Phoenician | Frenzied Host",
    "players": 4,
-   "fieldPercent": 12.121212121212121,
+   "fieldPercent": 11.76470588235294,
    "wins": 9,
    "losses": 13,
    "total": 22,
@@ -40,7 +40,7 @@
   {
    "detachment": "Court of the Phoenician | Slaanesh's Chosen",
    "players": 4,
-   "fieldPercent": 12.121212121212121,
+   "fieldPercent": 11.76470588235294,
    "wins": 10,
    "losses": 7,
    "total": 17,
@@ -49,7 +49,7 @@
   {
    "detachment": "Court of the Phoenician | Spectacle of Slaughter",
    "players": 4,
-   "fieldPercent": 12.121212121212121,
+   "fieldPercent": 11.76470588235294,
    "wins": 12,
    "losses": 10,
    "total": 22,
@@ -58,7 +58,7 @@
   {
    "detachment": "Peerless Bladesmen | Spectacle of Slaughter",
    "players": 3,
-   "fieldPercent": 9.090909090909092,
+   "fieldPercent": 8.823529411764707,
    "wins": 9,
    "losses": 9,
    "total": 18,
@@ -67,7 +67,7 @@
   {
    "detachment": "Carnival of Excess",
    "players": 2,
-   "fieldPercent": 6.0606060606060606,
+   "fieldPercent": 5.88235294117647,
    "wins": 4,
    "losses": 9,
    "total": 13,
@@ -76,7 +76,7 @@
   {
    "detachment": "Mercurial Host | Spectacle of Slaughter",
    "players": 2,
-   "fieldPercent": 6.0606060606060606,
+   "fieldPercent": 5.88235294117647,
    "wins": 4,
    "losses": 6,
    "total": 10,
@@ -85,16 +85,25 @@
   {
    "detachment": "Frenzied Host | Mercurial Host",
    "players": 1,
-   "fieldPercent": 3.0303030303030303,
+   "fieldPercent": 2.941176470588235,
    "wins": 1,
    "losses": 4,
    "total": 5,
    "winRate": "20.00"
   },
   {
+   "detachment": "Frenzied Host | Peerless Bladesmen",
+   "players": 1,
+   "fieldPercent": 2.941176470588235,
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00"
+  },
+  {
    "detachment": "Mercurial Host | Slaanesh's Chosen",
    "players": 1,
-   "fieldPercent": 3.0303030303030303,
+   "fieldPercent": 2.941176470588235,
    "wins": 4,
    "losses": 4,
    "total": 8,
@@ -103,7 +112,7 @@
   {
    "detachment": "Peerless Bladesmen | Slaanesh's Chosen",
    "players": 1,
-   "fieldPercent": 3.0303030303030303,
+   "fieldPercent": 2.941176470588235,
    "wins": 2,
    "losses": 3,
    "total": 5,
@@ -112,7 +121,7 @@
   {
    "detachment": "Spectacle of Slaughter",
    "players": 1,
-   "fieldPercent": 3.0303030303030303,
+   "fieldPercent": 2.941176470588235,
    "wins": 2,
    "losses": 3,
    "total": 5,
@@ -121,20 +130,11 @@
   {
    "detachment": "Unknown",
    "players": 1,
-   "fieldPercent": 3.0303030303030303,
+   "fieldPercent": 2.941176470588235,
    "wins": 2,
    "losses": 3,
    "total": 5,
    "winRate": "40.00"
-  },
-  {
-   "detachment": "Frenzied Host | Peerless Bladesmen",
-   "players": 0,
-   "fieldPercent": 0,
-   "wins": 0,
-   "losses": 1,
-   "total": 1,
-   "winRate": "0.00"
   }
  ],
  "adversaires": [
