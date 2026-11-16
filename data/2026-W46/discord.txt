@@ -1,0 +1,18 @@
+/// Message auto analyse méta ///
+Semaine 46 (26 tournois, 963 joueurs)
+
+Évolution du WR de nos armées (vs semaine 45) :
+▲ Imperial Knights 52,6 % (+9,2)
+▲ T'au 52,5 % (+3,7)
+▲ AdMech 55,2 % (+3,1)
+▲ Orks 51,9 % (+2,6)
+▼ Space Marines 52,7 % (−1,3)
+▼ Emperor's Children 37,5 % (−6,6)
+▼ Necrons 42,3 % (−9,4)
+
+Les armées qui progressent le plus :
+1. Aeldari 52,5 % (+10,0)
+2. Astra Militarum 46,6 % (+8,1)
+3. Space Wolves 55,2 % (+4,9)
+
+Le détail : https://florianmartinezlopez.github.io/meta-hebdo-aja/

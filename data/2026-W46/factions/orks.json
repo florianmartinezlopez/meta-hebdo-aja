@@ -1,0 +1,1310 @@
+{
+ "nom": "Orks",
+ "slug": "orks",
+ "periode": {
+  "wins": 123,
+  "losses": 114,
+  "total": 237,
+  "winRate": "51.90"
+ },
+ "joueurs": 56,
+ "invaincus": 4,
+ "x1": 11,
+ "victoires_tournoi": 2,
+ "sur_representation": "1.76",
+ "dispositions": {
+  "Priority Assets": 10,
+  "Purge the Foe": 23,
+  "Reconnaissance": 4,
+  "Take and Hold": 24
+ },
+ "combinaisons": [
+  {
+   "detachment": "Brute Bosses | Bully Boyz | Green Tide",
+   "players": 4,
+   "fieldPercent": 7.142857142857142,
+   "wins": 8,
+   "losses": 8,
+   "total": 16,
+   "winRate": "50.00"
+  },
+  {
+   "detachment": "War Horde",
+   "players": 4,
+   "fieldPercent": 7.142857142857142,
+   "wins": 6,
+   "losses": 12,
+   "total": 18,
+   "winRate": "33.33"
+  },
+  {
+   "detachment": "Blitz Brigade | Brute Bosses | Bully Boyz",
+   "players": 3,
+   "fieldPercent": 5.357142857142857,
+   "wins": 7,
+   "losses": 4,
+   "total": 11,
+   "winRate": "63.64"
+  },
+  {
+   "detachment": "Bully Boyz | Dread Mob | Wreckas",
+   "players": 3,
+   "fieldPercent": 5.357142857142857,
+   "wins": 6,
+   "losses": 5,
+   "total": 11,
+   "winRate": "54.55"
+  },
+  {
+   "detachment": "Bully Boyz | Green Tide | Shoota Boyz",
+   "players": 3,
+   "fieldPercent": 5.357142857142857,
+   "wins": 4,
+   "losses": 10,
+   "total": 14,
+   "winRate": "28.57"
+  },
+  {
+   "detachment": "Blitz Brigade | Bully Boyz | Wreckas",
+   "players": 2,
+   "fieldPercent": 3.571428571428571,
+   "wins": 5,
+   "losses": 3,
+   "total": 8,
+   "winRate": "62.50"
+  },
+  {
+   "detachment": "Blitz Brigade | Shoota Boyz | Wreckas",
+   "players": 2,
+   "fieldPercent": 3.571428571428571,
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00"
+  },
+  {
+   "detachment": "Brute Bosses | Bully Boyz | Da Big Hunt",
+   "players": 2,
+   "fieldPercent": 3.571428571428571,
+   "wins": 5,
+   "losses": 4,
+   "total": 9,
+   "winRate": "55.56"
+  },
+  {
+   "detachment": "Bully Boyz | Dread Mob | Flyboyz",
+   "players": 2,
+   "fieldPercent": 3.571428571428571,
+   "wins": 6,
+   "losses": 3,
+   "total": 9,
+   "winRate": "66.67"
+  },
+  {
+   "detachment": "Bully Boyz | Green Tide | Runt Swarm",
+   "players": 2,
+   "fieldPercent": 3.571428571428571,
+   "wins": 3,
+   "losses": 4,
+   "total": 7,
+   "winRate": "42.86"
+  },
+  {
+   "detachment": "Blitz Brigade | Brute Bosses | Da Big Hunt",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00"
+  },
+  {
+   "detachment": "Blitz Brigade | Bully Boyz | Dread Mob",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 0,
+   "losses": 3,
+   "total": 3,
+   "winRate": "0.00"
+  },
+  {
+   "detachment": "Blitz Brigade | Bully Boyz | Runt Swarm",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 4,
+   "losses": 1,
+   "total": 5,
+   "winRate": "80.00"
+  },
+  {
+   "detachment": "Blitz Brigade | Da Big Hunt | Flyboyz",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 5,
+   "losses": 0,
+   "total": 5,
+   "winRate": "100.00"
+  },
+  {
+   "detachment": "Blitz Brigade | Da Big Hunt | Wreckas",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00"
+  },
+  {
+   "detachment": "Blitz Brigade | Dread Mob | Runt Swarm",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00"
+  },
+  {
+   "detachment": "Blitz Brigade | Dread Mob | Wreckas",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 3,
+   "losses": 1,
+   "total": 4,
+   "winRate": "75.00"
+  },
+  {
+   "detachment": "Blitz Brigade | Runt Swarm | Wreckas",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 5,
+   "losses": 0,
+   "total": 5,
+   "winRate": "100.00"
+  },
+  {
+   "detachment": "Brute Bosses | Bully Boyz | Runt Swarm",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 1,
+   "losses": 3,
+   "total": 4,
+   "winRate": "25.00"
+  },
+  {
+   "detachment": "Brute Bosses | Da Big Hunt | Runt Swarm",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 0,
+   "losses": 4,
+   "total": 4,
+   "winRate": "0.00"
+  },
+  {
+   "detachment": "Brute Bosses | Da Big Hunt | Wreckas",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 3,
+   "losses": 1,
+   "total": 4,
+   "winRate": "75.00"
+  },
+  {
+   "detachment": "Brute Bosses | Flyboyz | Kult of Speed",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 3,
+   "losses": 1,
+   "total": 4,
+   "winRate": "75.00"
+  },
+  {
+   "detachment": "Brute Bosses | Green Tide | Kult of Speed",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00"
+  },
+  {
+   "detachment": "Brute Bosses | Green Tide | Taktikal Brigade",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 4,
+   "losses": 1,
+   "total": 5,
+   "winRate": "80.00"
+  },
+  {
+   "detachment": "Brute Bosses | Shoota Boyz | Taktikal Brigade",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00"
+  },
+  {
+   "detachment": "Bully Boyz | Da Big Hunt | Kult of Speed",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 4,
+   "losses": 1,
+   "total": 5,
+   "winRate": "80.00"
+  },
+  {
+   "detachment": "Bully Boyz | Dread Mob | Green Tide",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00"
+  },
+  {
+   "detachment": "Bully Boyz | Runt Swarm | Shoota Boyz",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00"
+  },
+  {
+   "detachment": "Bully Boyz | Runt Swarm | Wreckas",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 3,
+   "losses": 2,
+   "total": 5,
+   "winRate": "60.00"
+  },
+  {
+   "detachment": "Da Big Hunt | Dread Mob | Wreckas",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00"
+  },
+  {
+   "detachment": "Da Big Hunt | Green Tide | Wreckas",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00"
+  },
+  {
+   "detachment": "Dread Mob | Madcap Meks | Shoota Boyz",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00"
+  },
+  {
+   "detachment": "Dread Mob | Madcap Meks | Taktikal Brigade",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 0,
+   "losses": 4,
+   "total": 4,
+   "winRate": "0.00"
+  },
+  {
+   "detachment": "Dread Mob | Shoota Boyz | Wreckas",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 4,
+   "losses": 1,
+   "total": 5,
+   "winRate": "80.00"
+  },
+  {
+   "detachment": "Flyboyz | Kult of Speed | Wreckas",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00"
+  },
+  {
+   "detachment": "Green Tide | Kult of Speed | Runt Swarm",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00"
+  },
+  {
+   "detachment": "Green Tide | Runt Swarm",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 3,
+   "losses": 1,
+   "total": 4,
+   "winRate": "75.00"
+  },
+  {
+   "detachment": "Green Tide | Runt Swarm | Taktikal Brigade",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 2,
+   "losses": 3,
+   "total": 5,
+   "winRate": "40.00"
+  },
+  {
+   "detachment": "Green Tide | Shoota Boyz | Taktikal Brigade",
+   "players": 1,
+   "fieldPercent": 1.7857142857142856,
+   "wins": 1,
+   "losses": 4,
+   "total": 5,
+   "winRate": "20.00"
+  }
+ ],
+ "adversaires": [
+  {
+   "opponentFaction": "Adepta Sororitas",
+   "wins": 4,
+   "losses": 1,
+   "total": 5,
+   "winRate": "80.00",
+   "avgDifferential": 5.2,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 4,
+    "losses": 0,
+    "total": 4,
+    "winRate": "100.00",
+    "avgDifferential": 15,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "Adeptus Custodes",
+   "wins": 12,
+   "losses": 11,
+   "total": 23,
+   "winRate": "52.17",
+   "avgDifferential": -7.434782608695652,
+   "differentialGames": 23,
+   "goingFirst": {
+    "wins": 9,
+    "losses": 6,
+    "total": 15,
+    "winRate": "60.00",
+    "avgDifferential": 4,
+    "differentialGames": 15
+   }
+  },
+  {
+   "opponentFaction": "Adeptus Mechanicus",
+   "wins": 1,
+   "losses": 4,
+   "total": 5,
+   "winRate": "20.00",
+   "avgDifferential": -27,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 3,
+    "total": 4,
+    "winRate": "25.00",
+    "avgDifferential": -20.25,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "Aeldari",
+   "wins": 2,
+   "losses": 2,
+   "total": 4,
+   "winRate": "50.00",
+   "avgDifferential": -6,
+   "differentialGames": 4,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 2,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Astra Militarum",
+   "wins": 2,
+   "losses": 4,
+   "total": 6,
+   "winRate": "33.33",
+   "avgDifferential": -1.3333333333333333,
+   "differentialGames": 6,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 4,
+    "total": 4,
+    "winRate": "0.00",
+    "avgDifferential": -26.75,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "Black Templars",
+   "wins": 5,
+   "losses": 3,
+   "total": 8,
+   "winRate": "62.50",
+   "avgDifferential": 8.625,
+   "differentialGames": 8,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 1,
+    "total": 4,
+    "winRate": "75.00",
+    "avgDifferential": 10.5,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "Blood Angels",
+   "wins": 2,
+   "losses": 1,
+   "total": 3,
+   "winRate": "66.67",
+   "avgDifferential": 10.666666666666666,
+   "differentialGames": 3,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": -7.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Chaos Daemons",
+   "wins": 2,
+   "losses": 0,
+   "total": 2,
+   "winRate": "100.00",
+   "avgDifferential": 58.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": "100.00",
+    "avgDifferential": 58.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Chaos Space Marines",
+   "wins": 8,
+   "losses": 1,
+   "total": 9,
+   "winRate": "88.89",
+   "avgDifferential": 31.77777777777778,
+   "differentialGames": 9,
+   "goingFirst": {
+    "wins": 6,
+    "losses": 1,
+    "total": 7,
+    "winRate": "85.71",
+    "avgDifferential": 32.142857142857146,
+    "differentialGames": 7
+   }
+  },
+  {
+   "opponentFaction": "Dark Angels",
+   "wins": 10,
+   "losses": 7,
+   "total": 17,
+   "winRate": "58.82",
+   "avgDifferential": 14.352941176470589,
+   "differentialGames": 17,
+   "goingFirst": {
+    "wins": 6,
+    "losses": 2,
+    "total": 8,
+    "winRate": "75.00",
+    "avgDifferential": 32.875,
+    "differentialGames": 8
+   }
+  },
+  {
+   "opponentFaction": "Death Guard",
+   "wins": 6,
+   "losses": 12,
+   "total": 18,
+   "winRate": "33.33",
+   "avgDifferential": -18.11111111111111,
+   "differentialGames": 18,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 4,
+    "total": 7,
+    "winRate": "42.86",
+    "avgDifferential": -17.142857142857142,
+    "differentialGames": 7
+   }
+  },
+  {
+   "opponentFaction": "Deathwatch",
+   "wins": 1,
+   "losses": 1,
+   "total": 2,
+   "winRate": "50.00",
+   "avgDifferential": 12.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": "100.00",
+    "avgDifferential": 72,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Drukhari",
+   "wins": 3,
+   "losses": 3,
+   "total": 6,
+   "winRate": "50.00",
+   "avgDifferential": 0.6666666666666666,
+   "differentialGames": 6,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 1,
+    "total": 3,
+    "winRate": "66.67",
+    "avgDifferential": 24.666666666666668,
+    "differentialGames": 3
+   }
+  },
+  {
+   "opponentFaction": "Emperor's Children",
+   "wins": 7,
+   "losses": 4,
+   "total": 11,
+   "winRate": "63.64",
+   "avgDifferential": 21.363636363636363,
+   "differentialGames": 11,
+   "goingFirst": {
+    "wins": 4,
+    "losses": 2,
+    "total": 6,
+    "winRate": "66.67",
+    "avgDifferential": 37.166666666666664,
+    "differentialGames": 6
+   }
+  },
+  {
+   "opponentFaction": "Grey Knights",
+   "wins": 4,
+   "losses": 3,
+   "total": 7,
+   "winRate": "57.14",
+   "avgDifferential": 1.1428571428571428,
+   "differentialGames": 7,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": "0.00",
+    "avgDifferential": -71,
+    "differentialGames": 1
+   }
+  },
+  {
+   "opponentFaction": "Imperial Knights",
+   "wins": 4,
+   "losses": 4,
+   "total": 8,
+   "winRate": "50.00",
+   "avgDifferential": -5.25,
+   "differentialGames": 8,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": -9.5,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Leagues of Votann",
+   "wins": 1,
+   "losses": 4,
+   "total": 5,
+   "winRate": "20.00",
+   "avgDifferential": -21.2,
+   "differentialGames": 5,
+   "goingFirst": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": "50.00",
+    "avgDifferential": 11,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Necrons",
+   "wins": 12,
+   "losses": 4,
+   "total": 16,
+   "winRate": "75.00",
+   "avgDifferential": 23.5625,
+   "differentialGames": 16,
+   "goingFirst": {
+    "wins": 6,
+    "losses": 1,
+    "total": 7,
+    "winRate": "85.71",
+    "avgDifferential": 39.714285714285715,
+    "differentialGames": 7
+   }
+  },
+  {
+   "opponentFaction": "Space Marines (Astartes)",
+   "wins": 13,
+   "losses": 19,
+   "total": 32,
+   "winRate": "40.63",
+   "avgDifferential": -9.5,
+   "differentialGames": 32,
+   "goingFirst": {
+    "wins": 4,
+    "losses": 9,
+    "total": 13,
+    "winRate": "30.77",
+    "avgDifferential": -7.923076923076923,
+    "differentialGames": 13
+   }
+  },
+  {
+   "opponentFaction": "Space Wolves",
+   "wins": 7,
+   "losses": 7,
+   "total": 14,
+   "winRate": "50.00",
+   "avgDifferential": -10.142857142857142,
+   "differentialGames": 14,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 1,
+    "total": 4,
+    "winRate": "75.00",
+    "avgDifferential": 19.75,
+    "differentialGames": 4
+   }
+  },
+  {
+   "opponentFaction": "T'au Empire",
+   "wins": 2,
+   "losses": 4,
+   "total": 6,
+   "winRate": "33.33",
+   "avgDifferential": -2.8333333333333335,
+   "differentialGames": 6,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 2,
+    "total": 2,
+    "winRate": "0.00",
+    "avgDifferential": -39,
+    "differentialGames": 2
+   }
+  },
+  {
+   "opponentFaction": "Tyranids",
+   "wins": 9,
+   "losses": 5,
+   "total": 14,
+   "winRate": "64.29",
+   "avgDifferential": 9.857142857142858,
+   "differentialGames": 14,
+   "goingFirst": {
+    "wins": 3,
+    "losses": 2,
+    "total": 5,
+    "winRate": "60.00",
+    "avgDifferential": 16.4,
+    "differentialGames": 5
+   }
+  },
+  {
+   "opponentFaction": "World Eaters",
+   "wins": 6,
+   "losses": 7,
+   "total": 13,
+   "winRate": "46.15",
+   "avgDifferential": -3.3076923076923075,
+   "differentialGames": 13,
+   "goingFirst": {
+    "wins": 2,
+    "losses": 3,
+    "total": 5,
+    "winRate": "40.00",
+    "avgDifferential": -4.2,
+    "differentialGames": 5
+   }
+  },
+  {
+   "opponentFaction": "Chaos Knights",
+   "wins": 0,
+   "losses": 1,
+   "total": 1,
+   "winRate": "0.00",
+   "avgDifferential": -72,
+   "differentialGames": 1,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 0,
+    "total": 0,
+    "winRate": "0",
+    "avgDifferential": null,
+    "differentialGames": 0
+   }
+  },
+  {
+   "opponentFaction": "Thousand Sons",
+   "wins": 0,
+   "losses": 2,
+   "total": 2,
+   "winRate": "0.00",
+   "avgDifferential": -24.5,
+   "differentialGames": 2,
+   "goingFirst": {
+    "wins": 0,
+    "losses": 2,
+    "total": 2,
+    "winRate": "0.00",
+    "avgDifferential": -24.5,
+    "differentialGames": 2
+   }
+  }
+ ],
+ "tendance": [
+  {
+   "week": "2026-06-21",
+   "wins": 8,
+   "losses": 8,
+   "total": 16,
+   "winRate": "50.00"
+  },
+  {
+   "week": "2026-06-28",
+   "wins": 55,
+   "losses": 39,
+   "total": 94,
+   "winRate": "58.51"
+  },
+  {
+   "week": "2026-07-05",
+   "wins": 71,
+   "losses": 59,
+   "total": 130,
+   "winRate": "54.62"
+  },
+  {
+   "week": "2026-07-12",
+   "wins": 166,
+   "losses": 100,
+   "total": 266,
+   "winRate": "62.41"
+  },
+  {
+   "week": "2026-07-19",
+   "wins": 309,
+   "losses": 206,
+   "total": 515,
+   "winRate": "60.00"
+  },
+  {
+   "week": "2026-07-26",
+   "wins": 195,
+   "losses": 119,
+   "total": 314,
+   "winRate": "62.10"
+  },
+  {
+   "week": "2026-08-02",
+   "wins": 205,
+   "losses": 171,
+   "total": 376,
+   "winRate": "54.52"
+  },
+  {
+   "week": "2026-08-09",
+   "wins": 93,
+   "losses": 58,
+   "total": 151,
+   "winRate": "61.59"
+  },
+  {
+   "week": "2026-08-16",
+   "wins": 309,
+   "losses": 211,
+   "total": 520,
+   "winRate": "59.42"
+  },
+  {
+   "week": "2026-08-23",
+   "wins": 141,
+   "losses": 122,
+   "total": 263,
+   "winRate": "53.61"
+  },
+  {
+   "week": "2026-08-30",
+   "wins": 191,
+   "losses": 161,
+   "total": 352,
+   "winRate": "54.26"
+  },
+  {
+   "week": "2026-09-06",
+   "wins": 149,
+   "losses": 112,
+   "total": 261,
+   "winRate": "57.09"
+  },
+  {
+   "week": "2026-09-13",
+   "wins": 229,
+   "losses": 218,
+   "total": 447,
+   "winRate": "51.23"
+  },
+  {
+   "week": "2026-09-20",
+   "wins": 145,
+   "losses": 96,
+   "total": 241,
+   "winRate": "60.17"
+  },
+  {
+   "week": "2026-09-27",
+   "wins": 353,
+   "losses": 268,
+   "total": 621,
+   "winRate": "56.84"
+  },
+  {
+   "week": "2026-10-04",
+   "wins": 309,
+   "losses": 223,
+   "total": 532,
+   "winRate": "58.08"
+  },
+  {
+   "week": "2026-10-11",
+   "wins": 195,
+   "losses": 149,
+   "total": 344,
+   "winRate": "56.69"
+  },
+  {
+   "week": "2026-10-18",
+   "wins": 315,
+   "losses": 274,
+   "total": 589,
+   "winRate": "53.48"
+  },
+  {
+   "week": "2026-10-25",
+   "wins": 207,
+   "losses": 190,
+   "total": 397,
+   "winRate": "52.14"
+  },
+  {
+   "week": "2026-11-01",
+   "wins": 15,
+   "losses": 14,
+   "total": 29,
+   "winRate": "51.72"
+  },
+  {
+   "week": "2026-11-08",
+   "wins": 224,
+   "losses": 230,
+   "total": 454,
+   "winRate": "49.34"
+  },
+  {
+   "week": "2026-11-15",
+   "wins": 123,
+   "losses": 114,
+   "total": 237,
+   "winRate": "51.90"
+  }
+ ],
+ "listes_recentes": [
+  {
+   "playerName": "Tom Godfrey",
+   "playerUid": "0cf1d47932e58157bb",
+   "eventName": "Warhammer 40,000 Grand Tournament - Kempton Park",
+   "eventUid": "25351ae31762d64bde",
+   "numberOfPlayers": 121,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Brute Bosses | Bully Boyz | Green Tide",
+   "disposition": "Take and Hold",
+   "startDate": "2026-11-14"
+  },
+  {
+   "playerName": "Jonathan Arkin",
+   "playerUid": "8c05f13593bf9d1ff3",
+   "eventName": "Exterminatus 2k26",
+   "eventUid": "d88f56a9e6f9061a00",
+   "numberOfPlayers": 48,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Blitz Brigade | Flyboyz | Da Big Hunt",
+   "disposition": "Take and Hold",
+   "startDate": "2026-11-14"
+  },
+  {
+   "playerName": "Harout Baltayan",
+   "playerUid": "f5748e0c97e5335726",
+   "eventName": "Bam's Birthday Bash GT",
+   "eventUid": "fe4b6abd0f5f7d6563",
+   "numberOfPlayers": 40,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Blitz Brigade | Wreckas | Runt Swarm",
+   "disposition": "Take and Hold",
+   "startDate": "2026-11-14"
+  },
+  {
+   "playerName": "Grimmjollow",
+   "playerUid": "2016681d59fe91d709",
+   "eventName": "Evry Figz 2026",
+   "eventUid": "57bc5d97519ad9fbce",
+   "numberOfPlayers": 17,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Blitz Brigade | Wreckas | Shoota Boyz",
+   "disposition": "Take and Hold",
+   "startDate": "2026-11-14"
+  },
+  {
+   "playerName": "Jon Scrivens",
+   "playerUid": "9a73ca8507b3f191c4",
+   "eventName": "Warhammer 40,000 Grand Tournament - Kempton Park",
+   "eventUid": "25351ae31762d64bde",
+   "numberOfPlayers": 121,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Blitz Brigade | Bully Boyz | Wreckas",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-11-14"
+  },
+  {
+   "playerName": "Steven Pampreen",
+   "playerUid": "027f8ed7f1f7c776e6",
+   "eventName": "Springs Thundercluckers November 2026 GT WCW Qualifier",
+   "eventUid": "736d74dbb81270e43b",
+   "numberOfPlayers": 62,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Runt Swarm | Green Tide",
+   "disposition": "Priority Assets",
+   "startDate": "2026-11-14"
+  },
+  {
+   "playerName": "Kit Latimer",
+   "playerUid": "61aea1f610bfc11076",
+   "eventName": "Manawatu Maelstrom 2026",
+   "eventUid": "0e638aa73b811031b1",
+   "numberOfPlayers": 47,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Brute Bosses | Taktikal Brigade | Green Tide",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-11-13"
+  },
+  {
+   "playerName": "Lluis ThYr0N",
+   "playerUid": "4c1dfcbfe91cd032da",
+   "eventName": "GT Terra'n'dins 2026",
+   "eventUid": "c4ff9c62d4e668d33a",
+   "numberOfPlayers": 41,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Blitz Brigade | Bully Boyz | Runt Swarm",
+   "disposition": "Priority Assets",
+   "startDate": "2026-11-14"
+  },
+  {
+   "playerName": "Grant Eastman",
+   "playerUid": "a063585070dead4d1c",
+   "eventName": "Bam's Birthday Bash GT",
+   "eventUid": "fe4b6abd0f5f7d6563",
+   "numberOfPlayers": 40,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Blitz Brigade | Brute Bosses | Bully Boyz",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-11-14"
+  },
+  {
+   "playerName": "Simon MacRae",
+   "playerUid": "e5717660eec52741b4",
+   "eventName": "Trinity Hobby - GT 11th 2000pts 40k Tournament - Nov 14th",
+   "eventUid": "592eaf24b9b50c9e4d",
+   "numberOfPlayers": 35,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Bully Boyz | Flyboyz | Dread Mob",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-11-14"
+  },
+  {
+   "playerName": "Yun SHEN",
+   "playerUid": "0fbab83272809f0743",
+   "eventName": "STC 40K GT - November 2026",
+   "eventUid": "0a64f8b136dcdc4a40",
+   "numberOfPlayers": 32,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Kult of Speed | Bully Boyz | Da Big Hunt",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-11-14"
+  },
+  {
+   "playerName": "Peter W. Szabo",
+   "playerUid": "b7c99e1417be08a4ed",
+   "eventName": "Marcus Miniatures 40K Golden Rumble (Event 4)",
+   "eventUid": "d30934874cd8df326f",
+   "numberOfPlayers": 30,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Brute Bosses | Bully Boyz | Da Big Hunt",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-11-14"
+  },
+  {
+   "playerName": "Danny Shankland",
+   "playerUid": "202ff10783af086988",
+   "eventName": "Caledonian Carnage Autumn GT",
+   "eventUid": "e6ae6aac880850991f",
+   "numberOfPlayers": 27,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Brute Bosses | Kult of Speed | Flyboyz",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-11-14"
+  },
+  {
+   "playerName": "Matt Thornhill",
+   "playerUid": "51114b06c8a9857cd3",
+   "eventName": "40k 2k ITC/UKTC Singles Two Day 14th-15th Nov",
+   "eventUid": "249c98b893364636ea",
+   "numberOfPlayers": 22,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Wreckas | Shoota Boyz | Dread Mob",
+   "disposition": "Priority Assets",
+   "startDate": "2026-11-14"
+  },
+  {
+   "playerName": "Jeremy Aitken",
+   "playerUid": "a67c3c6672d0440de3",
+   "eventName": "ConQuest Auto 2026",
+   "eventUid": "7fe3efa2eba02ca731",
+   "numberOfPlayers": 18,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Brute Bosses | Wreckas | Da Big Hunt",
+   "disposition": "Priority Assets",
+   "startDate": "2026-11-13"
+  },
+  {
+   "playerName": "Robin \"RtheKnight\" Lechevalier",
+   "playerUid": "f0686d3977806db132",
+   "eventName": "OGRE 2026, Open du Grand Est 4ème EDITION",
+   "eventUid": "b37cce4ba8de6efa23",
+   "numberOfPlayers": 100,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Bully Boyz | Wreckas | Shoota Boyz",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-11-07"
+  },
+  {
+   "playerName": "Adam Douglas",
+   "playerUid": "65a1e23eed21497a5f",
+   "eventName": "40k RoGCon GT",
+   "eventUid": "65cffab98df87fd5a6",
+   "numberOfPlayers": 33,
+   "numberOfRounds": 5,
+   "wins": 5,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "Blitz Brigade | Brute Bosses | Da Big Hunt",
+   "disposition": "Take and Hold",
+   "startDate": "2026-11-06"
+  },
+  {
+   "playerName": "Roman Kleiber",
+   "playerUid": "b57bce8f80900d4d3a",
+   "eventName": "Raccoon Rumble 2026 40K",
+   "eventUid": "0f1e84b350111fff65",
+   "numberOfPlayers": 191,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Bully Boyz | Wreckas | Runt Swarm",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-11-06"
+  },
+  {
+   "playerName": "Max Kanter",
+   "playerUid": "254adab70b6956bb1a",
+   "eventName": "Raccoon Rumble 2026 40K",
+   "eventUid": "0f1e84b350111fff65",
+   "numberOfPlayers": 191,
+   "numberOfRounds": 6,
+   "wins": 5,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Flyboyz | Kult of Speed | Dread Mob",
+   "disposition": "Reconnaissance",
+   "startDate": "2026-11-06"
+  },
+  {
+   "playerName": "Martin Hultgren",
+   "playerUid": "2ebda2c353310696e7",
+   "eventName": "SSG & MM Shuffle Wars IV: Makari's Hope",
+   "eventUid": "4365b12b2b9fc92a41",
+   "numberOfPlayers": 79,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 1,
+   "losses": 0,
+   "detachment": "War Horde",
+   "disposition": "Take and Hold",
+   "startDate": "2026-11-07"
+  },
+  {
+   "playerName": "Moritz Hanacher",
+   "playerUid": "10dd2761a445cd7ddd",
+   "eventName": "124. Bedburger Scheunenkloppen - Zweitagesturnier",
+   "eventUid": "a65930ba13ab2a3fd0",
+   "numberOfPlayers": 42,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Brute Bosses | Bully Boyz | Runt Swarm",
+   "disposition": "Priority Assets",
+   "startDate": "2026-11-07"
+  },
+  {
+   "playerName": "William Barden",
+   "playerUid": "6ef2cd364e1ab32d43",
+   "eventName": "The Cro's Nest 40K Major: The Final Stand",
+   "eventUid": "e23def9e9d8bc6b15e",
+   "numberOfPlayers": 32,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Brute Bosses | Bully Boyz | Da Big Hunt",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-11-06"
+  },
+  {
+   "playerName": "Daniel Larrea",
+   "playerUid": "c0301d39f5caa81c1e",
+   "eventName": "Torneo TTop Noviembre",
+   "eventUid": "b1e07a91cc7fa81657",
+   "numberOfPlayers": 22,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Brute Bosses | Bully Boyz | Da Big Hunt",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-11-07"
+  },
+  {
+   "playerName": "Edward Askey",
+   "playerUid": "816e486cc64d420fda",
+   "eventName": "Calling the Banners 2026",
+   "eventUid": "ec72160fd4efaf7d15",
+   "numberOfPlayers": 67,
+   "numberOfRounds": 5,
+   "wins": 4,
+   "draws": 0,
+   "losses": 1,
+   "detachment": "Brute Bosses | Bully Boyz | Da Big Hunt",
+   "disposition": "Purge the Foe",
+   "startDate": "2026-10-30"
+  },
+  {
+   "playerName": "Fred Otto",
+   "playerUid": "6d526a0f1073af3212",
+   "eventName": "9th Corsair Open Grand Tournament",
+   "eventUid": "32fa6b613a957918cf",
+   "numberOfPlayers": 43,
+   "numberOfRounds": 6,
+   "wins": 6,
+   "draws": 0,
+   "losses": 0,
+   "detachment": "War Horde",
+   "disposition": "Take and Hold",
+   "startDate": "2026-10-23"
+  }
+ ],
+ "listes_total_site": 333
+}
